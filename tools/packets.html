@@ -33,7 +33,7 @@
         <div>waiting for message...</div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/jacdac-ts@1.0.30"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jacdac-ts@1.0.31"></script>
     <script>
         // webusb
         let jd;
@@ -68,7 +68,7 @@
             const logDiv = document.getElementById("log");
             logDiv.innerHTML = ''
             const text = await file.text();
-            jacdac.replayLog(bus, text);
+            jacdac.replayLog(jd, text);
         }
 
         // binding ui
