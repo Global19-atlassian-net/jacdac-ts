@@ -1,0 +1,70 @@
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: monospace;
+        }
+
+        .device {
+            margin: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JACDAC/Devices</h1>
+    <div>
+        <button id="connect">connect to jacdac device</button>
+    </div>
+    <div id="devices">
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jacdac-ts@1.0.30"></script>
+    <script>
+        const devicesDiv = document.getElementById("devices");
+        const log = console.log;
+        let jd;
+
+        async function scan() {
+            log('starting')
+            jd = await jacdac.requestUSBBus();
+            jd.on('deviceconnect', dev => {
+                console.log(`connect ${dev}`)
+                connect(dev)
+            })
+            jd.on('devicedisconnect', dev => disconnect(dev))
+            jd.on('deviceannounce', render)
+            render()
+            log('started')
+        }
+
+        function connect(device) {
+            let div = document.getElementById(device.deviceId);
+            if (!div) {
+                div = document.createElement("div");
+                div.id = device.deviceId;
+                div.className = "device";
+                devicesDiv.append(div);
+            }
+            div.innerText = `${device.toString()} - ${device.deviceId}: ${jacdac.printServices(device)}`;
+        }
+
+        function disconnect(device) {
+            console.log(`disconnect ${device}`)
+            let div = document.getElementById(device.deviceId);
+            if (div)
+                div.remove();
+        }
+
+        function render() {
+            const devices = jd.devices();
+            devices.forEach(device => connect(device));
+        }
+
+        const btn = document.getElementById("connect");
+        btn.onclick = scan;
+    </script>
+</body>
+
+</html>
