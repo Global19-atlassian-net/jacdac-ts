@@ -9,6 +9,13 @@
         .field {
             margin-top: 0.5rem;
         }
+        button, textarea {
+            margin: 0.5rem
+        }
+        textarea {
+            width: calc(100% - 1rem)
+
+        }
 
         #log {
             margin-top: 1rem;
@@ -32,7 +39,20 @@
         <button id="disconnect">disconnect</button>
     </div>
     <div class="field">
-        <input id="queryinput" type="text" value="{ devices { deviceId } }" />
+        <textarea id="queryinput" rows="10">
+{ 
+    devices(serviceName: "SLIDER") { 
+        deviceId
+        services(serviceName: "SLIDER")  {
+            serviceClass
+            name
+            register(address: 257) {
+                intValue
+            }
+        }
+    } 
+}   
+        </textarea>
         <button id="querybtn">query</button>
     </div>
     <pre id="result">
@@ -58,6 +78,7 @@
         }
 
         async function query(source) {
+            console.log(source)
             const res = await jd.queryAsync(source)
             console.log(res)
             result.innerHTML = JSON.stringify(res, null, 2);
