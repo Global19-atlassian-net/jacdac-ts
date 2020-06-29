@@ -49,10 +49,10 @@
             await jd.disconnectAsync();
             await jd.connectAsync();
             jd.minConsolePriority = jacdac.ConsolePriority.Debug;
-            jd.on('deviceConnect', d => {
+            jd.on('deviceconnect', d => {
                 devicesDiv.innerText = jd.devices().map(d => d.toString()).join(', ')
             });
-            jd.on('packetReceive', pkt => {
+            jd.on('packetreceive', pkt => {
                 const decoded = jacdac.decodePacketData(pkt);
                 console.debug(jacdac.printPacket(pkt))
                 if (decoded)
