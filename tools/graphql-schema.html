@@ -36,11 +36,12 @@
 
 <body>
     <h1>JACDAC/GraphQL/Schema</h1>
-    <script src="https://cdn.jsdelivr.net/npm/jacdac-ts@1.1.3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jacdac-ts@1.1.3/dist/jacdac.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jacdac-ts@1.1.3/dist/jacdac-graphql.umd.js"></script>
     <script>
             (async function () {
                 const jd = jacdac.createUSBBus()
-                const res = await jacdac.jdql(`
+                const res = await jacdacGraphql.jdql(`
 {
   __schema {
     types {
