@@ -56,12 +56,8 @@
         // replace
         async function importLog(file) {
             await jd.disconnectAsync();
-            const opts = {
-                skipRepeatedAnnounce: true
-            }
             jd = new jacdac.Bus()
-            jd.on(jacdac.PACKET_RECEIVE, pkt => log(jacdac.printPacket(pkt, opts)))
-            jd.on(jacdac.PACKET_RECEIVE_ANNOUNCE, pkt => log(jacdac.printPacket(pkt, opts)))
+            jd.on(jacdac.PACKET_PROCESS, pkt => log(jacdac.printPacket(pkt)))
             const logDiv = document.getElementById("log");
             logDiv.innerHTML = ''
             const text = await file.text();
@@ -88,8 +84,6 @@
         }
 
         function log(msg) {
-            if (!msg)
-                return
             const logDiv = document.getElementById("log");
             const line = document.createElement("div");
             line.innerText = "" + msg;
