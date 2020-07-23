@@ -65,7 +65,7 @@
             const opts = {
                 skipRepeatedAnnounce: true
             }
-            jd = new jacdac.Bus()
+            jd = new jacdac.JDBus()
             jd.on(jacdac.PACKET_RECEIVE, pkt => log(jacdac.printPacket(pkt, opts)))
             jd.on(jacdac.PACKET_RECEIVE_ANNOUNCE, pkt => log(jacdac.printPacket(pkt, opts)))
             const logDiv = document.getElementById("log");
@@ -99,6 +99,7 @@
             const logDiv = document.getElementById("log");
             const line = document.createElement("div");
             line.innerText = "" + msg;
+            line.style.whiteSpace = "pre-wrap";
             logDiv.appendChild(line);
             while (logDiv.childElementCount > 500)
                 logDiv.firstChild.remove();
