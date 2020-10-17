@@ -27,7 +27,7 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-e06822824e88e1de25ee.js"
+    "url": "webpack-runtime-2097989b98958b38b8e6.js"
   },
   {
     "url": "styles.273c79667365f697bf1c.css"
@@ -45,11 +45,11 @@ self.__precacheManifest = [
     "url": "f65a48b9-047a011c6021491af099.js"
   },
   {
-    "url": "app-c77dbab1562cf19637f9.js"
+    "url": "app-e4735574bfa16795337e.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "daf9fae382fe51264c0b3582d7c1cc42"
+    "revision": "bffea27e909f94f35e4e710c956b7509"
   },
   {
     "url": "static/webfonts/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"
@@ -69,7 +69,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "92ecd8ed871ffcaff731d5ad36ff033f"
+    "revision": "86f3a7aea6f6f0db756cbe68e7372f0d"
   },
   {
     "url": "polyfill-557a1d3e3c5faa9f0e99.js"
@@ -168,7 +168,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/jacdac-ts/app-c77dbab1562cf19637f9.js`))) {
+  if (!resources || !(await caches.match(`/jacdac-ts/app-e4735574bfa16795337e.js`))) {
     return await fetch(event.request)
   }
 
