@@ -27,7 +27,7 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-189eff1988600540ff1f.js"
+    "url": "webpack-runtime-aed681cad0cd50ae9071.js"
   },
   {
     "url": "styles.273c79667365f697bf1c.css"
@@ -45,11 +45,11 @@ self.__precacheManifest = [
     "url": "f65a48b9-047a011c6021491af099.js"
   },
   {
-    "url": "app-04c1317b7d479c84f8e6.js"
+    "url": "app-e24275d713737a00696a.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "12bc45b72fcfba31ab13af05a9bf8d43"
+    "revision": "8ce66d5335762f68ff65cda0a51b5b75"
   },
   {
     "url": "static/webfonts/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"
@@ -69,13 +69,13 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "d3007f2f5379730e4349d95baae90582"
+    "revision": "1055e0bfdbfd06ac4a54c4d2200e0fc8"
   },
   {
     "url": "polyfill-557a1d3e3c5faa9f0e99.js"
   },
   {
-    "url": "2fd446977d3c6a804676c9c51a676f612d0ec86a-76d7b638e5c857bed9cc.js"
+    "url": "2fd446977d3c6a804676c9c51a676f612d0ec86a-e7ff8924816f8cec887e.js"
   },
   {
     "url": "component---src-pages-404-mdx-a08bea98d44065751215.js"
@@ -496,7 +496,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/jacdac-ts/app-04c1317b7d479c84f8e6.js`))) {
+  if (!resources || !(await caches.match(`/jacdac-ts/app-e24275d713737a00696a.js`))) {
     return await fetch(event.request)
   }
 
