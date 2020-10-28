@@ -27,7 +27,7 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-40199109421dedd71ec9.js"
+    "url": "webpack-runtime-e4a945317af1cd14c40b.js"
   },
   {
     "url": "styles.4846cb2b6033eb0b568f.css"
@@ -49,7 +49,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "c6b229e547d346eee8cd9a1ca76f04ec"
+    "revision": "72c867d12a5a5183c7731555bc3bab61"
   },
   {
     "url": "static/webfonts/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"
@@ -69,7 +69,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "8b2462f4835934c9fceec2ac2d08b506"
+    "revision": "761e4e711442575d7c0920a2e2bd112f"
   },
   {
     "url": "polyfill-568330c3e85cde5da1cf.js"
@@ -90,7 +90,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2214083594.json",
-    "revision": "435f3852ccde3344205b09c12a7e78a4"
+    "revision": "7b9b13244c1674264c7bdef5ebd86a54"
   },
   {
     "url": "page-data/sq/d/2461311362.json",
@@ -127,7 +127,7 @@ self.__precacheManifest = [
     "revision": "1b88e484f4a8ad40c01aaca0c990d188"
   },
   {
-    "url": "component---src-pages-index-mdx-146596b7d54df04e7c6f.js"
+    "url": "component---src-pages-index-mdx-1f569f1dc2ac0c759fbe.js"
   },
   {
     "url": "page-data/index/page-data.json",
@@ -152,7 +152,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/specification/page-data.json",
-    "revision": "639c3ba42d045bac26d699da9feace78"
+    "revision": "8608e95d764fbf177cdd7b492ebd2b82"
   },
   {
     "url": "component---src-pages-tools-mdx-c246a00302797fce2a34.js"
@@ -175,6 +175,10 @@ self.__precacheManifest = [
   {
     "url": "page-data/specification/glossary/page-data.json",
     "revision": "8929a828c8adee0008f453ee7a1513b7"
+  },
+  {
+    "url": "page-data/specification/jacdac-protocol/page-data.json",
+    "revision": "5132ef47f72893913f64a685193426d9"
   },
   {
     "url": "page-data/specification/service-spec-language/page-data.json",
