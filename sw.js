@@ -27,7 +27,7 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-b8b612ab3deef26a0955.js"
+    "url": "webpack-runtime-64f389d3915400b18358.js"
   },
   {
     "url": "styles.4846cb2b6033eb0b568f.css"
@@ -49,7 +49,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "376ea062aaddba732885123295e07985"
+    "revision": "aa6e571bc8ae90c849aba37c123c5db6"
   },
   {
     "url": "static/webfonts/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"
@@ -69,7 +69,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "ee78e9cd23380e8cf9fd54b9f2f14442"
+    "revision": "0be4f50eb91425a2a9b287bfcfafeaf6"
   },
   {
     "url": "polyfill-568330c3e85cde5da1cf.js"
@@ -86,11 +86,11 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/1539982312.json",
-    "revision": "ed5c7a921b78f97c0de4f19c69809c9f"
+    "revision": "8c37433f856b394c03d7c13674257efa"
   },
   {
     "url": "page-data/sq/d/2214083594.json",
-    "revision": "7ed9d35af6a4fe4e387242f1fa41289a"
+    "revision": "174d71976d4140cf0ea7712f41b7e4bb"
   },
   {
     "url": "page-data/sq/d/2461311362.json",
@@ -120,7 +120,7 @@ self.__precacheManifest = [
     "revision": "05e7c9880417d6a55e5103b67fd95fce"
   },
   {
-    "url": "component---src-pages-devices-mdx-b4df95eb4e0341336749.js"
+    "url": "component---src-pages-devices-mdx-6c431adbc3c725734137.js"
   },
   {
     "url": "page-data/devices/page-data.json",
@@ -170,7 +170,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/reference/device-catalog/page-data.json",
-    "revision": "c9e1732831a3f86ec384b74e812e10dc"
+    "revision": "f1aac6ecc5e42b33de554f148ba6574f"
   },
   {
     "url": "page-data/reference/glossary/page-data.json",
@@ -186,7 +186,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/reference/service-spec-language/page-data.json",
-    "revision": "5e36199c368982ee4fcd664302dac8ad"
+    "revision": "e096dd2ca6a9e031b867dc0c9b7df308"
   },
   {
     "url": "component---src-templates-service-mdx-f9ff445e7c2119fb4f16.js"
