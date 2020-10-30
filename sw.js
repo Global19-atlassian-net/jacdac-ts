@@ -27,7 +27,7 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-0a982a60030e0ce0c019.js"
+    "url": "webpack-runtime-7bef4e77f0e34572f39d.js"
   },
   {
     "url": "styles.4846cb2b6033eb0b568f.css"
@@ -45,11 +45,11 @@ self.__precacheManifest = [
     "url": "f65a48b9-98ce7bf9e6017f705a09.js"
   },
   {
-    "url": "app-c9bc5228ba8f4d77e892.js"
+    "url": "app-6f7f46332c00f6d15859.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "a457651c1456f03dd9f8681d29756b83"
+    "revision": "c4065e1a08fd0b0cd0619ec6bc862fae"
   },
   {
     "url": "static/webfonts/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"
@@ -69,28 +69,28 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "5820bc7341a9d0d2b3bf60f7ea1a9dce"
+    "revision": "d92318a4f5d1731456925051d9b8cf2d"
   },
   {
     "url": "polyfill-568330c3e85cde5da1cf.js"
   },
   {
-    "url": "61f5d369348cc6042d40c62aacf11e2d3f96f0ff-dec9885fadeb160a3445.js"
+    "url": "61f5d369348cc6042d40c62aacf11e2d3f96f0ff-488015a5e7fce8177f4a.js"
   },
   {
     "url": "component---src-pages-404-mdx-a08bea98d44065751215.js"
   },
   {
     "url": "page-data/404/page-data.json",
-    "revision": "98b020da972f833c829fa8b48f157843"
-  },
-  {
-    "url": "page-data/sq/d/1539982312.json",
-    "revision": "6f2b9b6a3b366681e6336cd816a33d4e"
+    "revision": "47a96ecf4e2bbf95bd9343fdabe7e56e"
   },
   {
     "url": "page-data/sq/d/2214083594.json",
-    "revision": "4a260b01d7b8af64db0615ff5f713154"
+    "revision": "d33d14abbd7f22778b697870783805f5"
+  },
+  {
+    "url": "page-data/sq/d/2270080012.json",
+    "revision": "6f2b9b6a3b366681e6336cd816a33d4e"
   },
   {
     "url": "page-data/sq/d/2461311362.json",
@@ -110,328 +110,328 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/404.html/page-data.json",
-    "revision": "36f976e0a8b69f8fbb040f89f23428c2"
+    "revision": "7db1a2d81e41fad25886cc9eb2894bed"
   },
   {
     "url": "component---src-pages-clients-mdx-36d76dcef6c9497cb1ce.js"
   },
   {
     "url": "page-data/clients/page-data.json",
-    "revision": "05e7c9880417d6a55e5103b67fd95fce"
+    "revision": "825f2320478b72cd99ef5e3068c39bfc"
   },
   {
-    "url": "component---src-pages-devices-mdx-6c431adbc3c725734137.js"
+    "url": "component---src-pages-devices-mdx-7490b8abf703de7e624e.js"
   },
   {
     "url": "page-data/devices/page-data.json",
-    "revision": "1b88e484f4a8ad40c01aaca0c990d188"
+    "revision": "48baaf3bf0843e7a0acb507651fa43ba"
   },
   {
-    "url": "component---src-pages-index-mdx-9162837af30bcda9299e.js"
+    "url": "component---src-pages-index-mdx-39207d488d329d51bc8c.js"
   },
   {
     "url": "page-data/index/page-data.json",
-    "revision": "6559737e47853dd0838a1401fb6d94c0"
+    "revision": "0b54cb4c348931ae5b54f2dd7441f5e8"
   },
   {
     "url": "component---src-components-spec-tsx-4ec68cdba1ca324546e0.js"
   },
   {
     "url": "page-data/reference/page-data.json",
-    "revision": "e853dc2dc1c8a67b27ec879e1aceba50"
+    "revision": "1c2c411b76fef4a9f3f8c6b8b63f82e0"
   },
   {
     "url": "component---src-pages-sandbox-mdx-0be9c5b6e3042368afc8.js"
   },
   {
     "url": "page-data/sandbox/page-data.json",
-    "revision": "677ae5e6981e0d47a75baa9df951cd58"
+    "revision": "ec3bc9e8cd07dec5d6754708eccdd2ee"
   },
   {
     "url": "component---src-pages-services-mdx-5781095333a3b0e1bd3b.js"
   },
   {
     "url": "page-data/services/page-data.json",
-    "revision": "b2e717c06b58f30bdcdb177c9c15ea90"
+    "revision": "72d5ffbf0643058631187bfe8daefe33"
   },
   {
     "url": "component---src-pages-tools-mdx-c246a00302797fce2a34.js"
   },
   {
     "url": "page-data/tools/page-data.json",
-    "revision": "bfc6c30d5848a776eba87db510679a04"
+    "revision": "a6d8ba9573e62b5aa245e865cc224ad8"
   },
   {
     "url": "component---src-pages-traces-mdx-bb53ed2b706218b4373a.js"
   },
   {
     "url": "page-data/traces/page-data.json",
-    "revision": "ba54cf9459f6ed7d8be94284ae9de2e3"
+    "revision": "625a43dbab03fab9961120cf48157c19"
   },
   {
-    "url": "page-data/reference/device-catalog/page-data.json",
-    "revision": "825ea8dbd05316b3f2de698b796cafe1"
+    "url": "page-data/reference/device-entry/page-data.json",
+    "revision": "ac578aa4460ac0d0a186216005f6fae4"
   },
   {
     "url": "page-data/reference/glossary/page-data.json",
-    "revision": "a21aa3823b4249f2da2063ff8fa03263"
+    "revision": "3d9600d48fa3ecad6c65337e8cddebe9"
   },
   {
     "url": "page-data/reference/jacdac-protocol/page-data.json",
-    "revision": "41c4561eaf2440717c63a51ba4a7c90c"
+    "revision": "a693ccc1fef2af5c66f8cbb95fac8c10"
   },
   {
-    "url": "page-data/reference/serial-protocol/page-data.json",
-    "revision": "5b962abe347d70743f36f957ff804505"
+    "url": "page-data/reference/service-specification/page-data.json",
+    "revision": "b10ee617e686f51deaa8a4e320ce7e58"
   },
   {
-    "url": "page-data/reference/service-spec-language/page-data.json",
-    "revision": "59a8e792d7aee9896c292822d7bf3278"
+    "url": "page-data/reference/sws-protocol/page-data.json",
+    "revision": "3592cc8698c30614e465216b39814129"
   },
   {
-    "url": "component---src-templates-service-mdx-f9ff445e7c2119fb4f16.js"
+    "url": "component---src-templates-service-mdx-0ad73ff5d5a1b4f18fae.js"
   },
   {
     "url": "page-data/services/_base/page-data.json",
-    "revision": "76033c39ef2ed1e0c4092c4ed62943fc"
+    "revision": "9216785351b7dfde0f3460ca679906fd"
   },
   {
     "url": "page-data/services/_sensor/page-data.json",
-    "revision": "378529046065546174b14558ef22bd7f"
+    "revision": "4ba8c686a8120a360b3d0d2147f32dc5"
   },
   {
     "url": "page-data/services/accelerometer/page-data.json",
-    "revision": "52cf776eb9aeb2ea49f17ac5a8127cb6"
+    "revision": "cb136eaaf62fae369a0f026dbc826729"
   },
   {
     "url": "page-data/services/aggregator/page-data.json",
-    "revision": "747f4378a321eb379965ac2444730062"
+    "revision": "727cd686267e1ba2954a8ebb360f6e5a"
   },
   {
     "url": "page-data/services/bootloader/page-data.json",
-    "revision": "549f8265b748ca579e31542697153139"
+    "revision": "b7504854b451872b408e68e94dc816ae"
   },
   {
     "url": "page-data/services/button/page-data.json",
-    "revision": "dcfb3f9b33a70c7303612bbed871a169"
+    "revision": "6984706cfa150286600307972400a24f"
   },
   {
     "url": "page-data/services/codalmessagebus/page-data.json",
-    "revision": "fb2a5d88962dddc8f3a4eba9969993f5"
+    "revision": "7f9cf6d9ace94885807f66b4ce327204"
   },
   {
     "url": "page-data/services/control/page-data.json",
-    "revision": "ff6271c4f1b63c505eb7897cf517a573"
+    "revision": "5f3aa1156653395ff44a020cc7328f97"
   },
   {
     "url": "page-data/services/crank/page-data.json",
-    "revision": "31f6b994b389da18f031d5a3755ff953"
+    "revision": "365475d7deab09be946fd3c3e064e539"
   },
   {
     "url": "page-data/services/gamepad/page-data.json",
-    "revision": "c3b1ba1fc235971d3df7e6559f8c2857"
+    "revision": "bf0419b13e859612de00e8f992ed26c2"
   },
   {
     "url": "page-data/services/humidity/page-data.json",
-    "revision": "6a5508dd8493a2ebab2dd761583e90b9"
+    "revision": "3fb61fa61fd05a8f5564209aa5c40df0"
   },
   {
     "url": "page-data/services/keyboard/page-data.json",
-    "revision": "889e26cc97c1c19e3d7aa32bfb1a6714"
+    "revision": "fa8a6de0a7ce6b5c3fadae92e2fbec4a"
   },
   {
     "url": "page-data/services/light/page-data.json",
-    "revision": "aa6a8653ffe7471b8c942221a353dcaa"
+    "revision": "588ee5188138745be96d1728ccd08094"
   },
   {
     "url": "page-data/services/logger/page-data.json",
-    "revision": "271ef2f7419e999c250d1e209097035f"
+    "revision": "ca655cba27a9ddc27d62298c46a8838d"
   },
   {
     "url": "page-data/services/modelrunner/page-data.json",
-    "revision": "5a037c40ca9ffc0af858a4d8e7ec2ba0"
+    "revision": "67ee96c8030d851479be674367979205"
   },
   {
     "url": "page-data/services/motor/page-data.json",
-    "revision": "29633126fa213c0ca50451b399d5c1c3"
+    "revision": "21b33e1435e5768357b489b7e96d4fac"
   },
   {
     "url": "page-data/services/mouse/page-data.json",
-    "revision": "cf68d19329afdb3bbe0020965cef2dcf"
+    "revision": "9651b035a568e98dedb34bc73765b5ce"
   },
   {
     "url": "page-data/services/multitouch/page-data.json",
-    "revision": "d87790d39799db3b9915e54ada5bf098"
+    "revision": "0ca70521c57e91aa5474e58799b998d5"
   },
   {
     "url": "page-data/services/music/page-data.json",
-    "revision": "c00dc6c7b9606380a559a87bc53c89e4"
+    "revision": "655f14d221d9bdbb44223b17fea9788d"
   },
   {
     "url": "page-data/services/power/page-data.json",
-    "revision": "47132e9852eafe0bc33f3bbc29d40928"
+    "revision": "5fb951ed6c169b31e654e9618152849e"
   },
   {
     "url": "page-data/services/pwmlight/page-data.json",
-    "revision": "50bd32abf489c1ea96d8afc8e24642a3"
+    "revision": "385f9ab20e7a5e5b9ca93cbed389901a"
   },
   {
     "url": "page-data/services/rolemanager/page-data.json",
-    "revision": "9c8b8b26c8a4430e3c29d0a3af0e7728"
+    "revision": "48f3b31aa02192105fa984eb130d72a0"
   },
   {
     "url": "page-data/services/servo/page-data.json",
-    "revision": "4b9ab5fa1843b4735caf0b135648f87a"
+    "revision": "c406951b3a0b0c26e58f8f09572e4533"
   },
   {
     "url": "page-data/services/slider/page-data.json",
-    "revision": "ef5663a6184ee6cf962382625aa78d91"
+    "revision": "5334062de2d30b7448d37b1ac50f3b70"
   },
   {
     "url": "page-data/services/tcp/page-data.json",
-    "revision": "8d1aeac6ad5bd1bfff51ce64cd04f7b9"
+    "revision": "85235cf579392ee7137cdb6b3cfe1d94"
   },
   {
     "url": "page-data/services/temperature/page-data.json",
-    "revision": "18f115fd11fdceebf7cd9282f75fd44f"
+    "revision": "5fc2e329e9c47bb0f95a34e784c4ce62"
   },
   {
     "url": "page-data/services/wifi/page-data.json",
-    "revision": "8d744ca83288cc3269ac68a226acd845"
+    "revision": "a48427804b9e99a1daddee275999df29"
   },
   {
     "url": "component---src-templates-device-mdx-081c5febc80e95d07441.js"
   },
   {
     "url": "page-data/devices/microsoft-jm-acc/page-data.json",
-    "revision": "8ed73f7029b66a8548da7e9e2f10e944"
+    "revision": "b25fee8a1799b328736d6ee913dfa4bf"
   },
   {
     "url": "page-data/devices/microsoft-jm-arcade-btn/page-data.json",
-    "revision": "eab892ec7c08e37a5612e8ae8d89a735"
+    "revision": "69f75c8ca0572afc3c04fab40085c2b5"
   },
   {
     "url": "page-data/devices/microsoft-jm-arcade-ctrls/page-data.json",
-    "revision": "3173ac9fe288b58bb976ef13b264ca51"
+    "revision": "e18e1c4fcfebd88a04dfef2ca5f815c5"
   },
   {
     "url": "page-data/devices/microsoft-jm-crank/page-data.json",
-    "revision": "a635fdb2d76019a51faa349c9c819ac2"
+    "revision": "5c5c011d968289603b776214180b6b02"
   },
   {
     "url": "page-data/devices/microsoft-jm-crank-btn/page-data.json",
-    "revision": "2a476210e2db0954f2c4b6dda6ecc813"
+    "revision": "3d4cb1e1a09072f108afda2e63d0ce8f"
   },
   {
     "url": "page-data/devices/microsoft-jm-gamepad/page-data.json",
-    "revision": "ec61d44b0e732759434e13dd46e4ac98"
+    "revision": "9bc3db64b3fd43694669d9af73cfbde0"
   },
   {
     "url": "page-data/devices/microsoft-jm-ml/page-data.json",
-    "revision": "0c1dae0a1d19f9a57f56b24281e4a319"
+    "revision": "6b29fd04fad61b9f544bc0cf789f2a1e"
   },
   {
     "url": "page-data/devices/microsoft-jm-motor/page-data.json",
-    "revision": "5f8d039bf044f0bd7d3b1f3568c1a772"
+    "revision": "602249e47ebbfa6b2401c73cb607984d"
   },
   {
     "url": "page-data/devices/microsoft-jm-npx/page-data.json",
-    "revision": "b17de1505c38f87eae4932800b27b13e"
+    "revision": "2852341b0153ea57c770f40e044a41e1"
   },
   {
     "url": "page-data/devices/microsoft-jm-npx-pwr/page-data.json",
-    "revision": "33aa8f932ae08cde8439715db07fca9b"
+    "revision": "f52ccdca90b9bdecc0425ec1d8d4b6f4"
   },
   {
     "url": "page-data/devices/microsoft-jm-proto/page-data.json",
-    "revision": "b59e65c5d486a91bb45c2ab3e47024fc"
+    "revision": "18fd626f315aa3a86304568a1cfcee8f"
   },
   {
     "url": "page-data/devices/microsoft-jm-proto-touch/page-data.json",
-    "revision": "bcda5521f7a78c47fb15a86c320ed66c"
+    "revision": "9515a78ddde70ae6450215b437909d17"
   },
   {
     "url": "page-data/devices/microsoft-jm-pwr/page-data.json",
-    "revision": "d03a9fac78c4c7849816a19b29407627"
+    "revision": "1a54c9e587873e42793df09864c4e1dd"
   },
   {
     "url": "page-data/devices/microsoft-jm-servo/page-data.json",
-    "revision": "f443f9f76b6956481f3c6749317b1ffd"
+    "revision": "e01a8a0092d509eff5177350e81a0069"
   },
   {
     "url": "page-data/devices/microsoft-jm-servo-pwr/page-data.json",
-    "revision": "2fb903abf1314089a2355db7f80a35a8"
+    "revision": "ab14fef1ec5ecd241573503f7cf146d6"
   },
   {
     "url": "page-data/devices/microsoft-jm-slider/page-data.json",
-    "revision": "537823bffe1b33e1e3328d01c8c680ec"
+    "revision": "20815299351e41e00bf7c2050e7066cd"
   },
   {
     "url": "page-data/devices/microsoft-jm-snd/page-data.json",
-    "revision": "b236b7028b824a6095f9129b7de3179a"
+    "revision": "041b891d473d81e7b47d983a4c500c6b"
   },
   {
     "url": "component---src-pages-tools-collector-mdx-009345a49f1121e67396.js"
   },
   {
     "url": "page-data/tools/collector/page-data.json",
-    "revision": "a2e7df289860285d69d6178e06426473"
+    "revision": "3918ecfae6b3dbf4b30148731ae2086b"
   },
   {
     "url": "component---src-pages-tools-edge-impulse-mdx-fc94dd4053ab6fa3bd37.js"
   },
   {
     "url": "page-data/tools/edge-impulse/page-data.json",
-    "revision": "43d218c0d880803f3fa55190cbd2b9e4"
+    "revision": "9b5312946da22a3db5a9e8d029698684"
   },
   {
     "url": "component---src-pages-tools-jupyterlab-mdx-54364c830db87903fa30.js"
   },
   {
     "url": "page-data/tools/jupyterlab/page-data.json",
-    "revision": "c11843b7c8288d6626fde0cabe8932a1"
+    "revision": "643f7326d4eb2b8e0a48be8cdc8caf05"
   },
   {
     "url": "component---src-pages-tools-model-uploader-mdx-5a261033d3abbcc91d93.js"
   },
   {
     "url": "page-data/tools/model-uploader/page-data.json",
-    "revision": "4536f7c45d607f2548118055af2bb87a"
+    "revision": "36ef66d4931b6a1e9260967465b24019"
   },
   {
     "url": "component---src-pages-tools-packet-inspector-mdx-475bc542d7db3aab9eba.js"
   },
   {
     "url": "page-data/tools/packet-inspector/page-data.json",
-    "revision": "1adcb562f396937290f8d9f184d93036"
+    "revision": "26e0531cf602601b6e0465330de4cd6e"
   },
   {
     "url": "component---src-pages-tools-player-mdx-7facf1b4efe3d5858cd7.js"
   },
   {
     "url": "page-data/tools/player/page-data.json",
-    "revision": "7acc243538919d8758925c2eb0c8fddc"
+    "revision": "9d90b558a80f810519add2ac577a567e"
   },
   {
     "url": "component---src-pages-tools-role-manager-mdx-d6d681bf765a16cd282f.js"
   },
   {
     "url": "page-data/tools/role-manager/page-data.json",
-    "revision": "4ce9092293866a038edf5e5e68f2423f"
+    "revision": "0f303877fb25fe93bfd7b9220de61284"
   },
   {
     "url": "component---src-pages-tools-service-editor-mdx-d0a5639f4636e86beee2.js"
   },
   {
     "url": "page-data/tools/service-editor/page-data.json",
-    "revision": "2b985d6aa2031b313a42438dff73696e"
+    "revision": "00e79016650118a94881aa39282be27c"
   },
   {
     "url": "component---src-pages-tools-updater-mdx-e5a1101e0793e475c124.js"
   },
   {
     "url": "page-data/tools/updater/page-data.json",
-    "revision": "49e989d5a3d906f14694053678c5de6e"
+    "revision": "ba4cd48f540781dc7cc09b5874030171"
   },
   {
     "url": "manifest.webmanifest",
@@ -527,7 +527,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/jacdac-ts/app-c9bc5228ba8f4d77e892.js`))) {
+  if (!resources || !(await caches.match(`/jacdac-ts/app-6f7f46332c00f6d15859.js`))) {
     return await fetch(event.request)
   }
 
