@@ -2,8 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/reference/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/reference/device-entry/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/reference/glossary/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/reference/jacdac-protocol/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/reference/glossary/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/reference/service-specification/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/reference/sws-protocol/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/_base/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -36,6 +36,7 @@
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/ledmatrixdisplay/test/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/light/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/light/test/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/logger/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/logger/test/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/microphone/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/microphone/test/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -50,12 +51,12 @@
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/music/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/music/test/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/power/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/logger/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/power/test/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/pwmlight/test/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/pwmlight/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/pwmlight/test/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/rolemanager/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/rolemanager/test/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/servo/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/servo/test/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/slider/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/slider/test/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -71,7 +72,6 @@
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/devices/microsoft-jm-crank-btn/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/devices/microsoft-jm-crank/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/devices/microsoft-jm-gamepad/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/servo/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/devices/microsoft-jm-ml/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/devices/microsoft-jm-motor/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/devices/microsoft-jm-npx-pwr/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>

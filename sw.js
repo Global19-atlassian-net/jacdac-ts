@@ -80,7 +80,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2214083594.json",
-    "revision": "b3aafeec92132ae9aa5da7d29251d66b"
+    "revision": "659b181030fee3440d7400a5c7c433d0"
   },
   {
     "url": "page-data/sq/d/2270080012.json",
@@ -172,7 +172,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/reference/jacdac-protocol/page-data.json",
-    "revision": "1a5642ca80d456dece951194430b407c"
+    "revision": "0fad577aa130065ee9fc36d56bb525fc"
   },
   {
     "url": "page-data/reference/service-specification/page-data.json",
@@ -180,7 +180,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/reference/sws-protocol/page-data.json",
-    "revision": "cbf8c03df284c836d2e3175965f82143"
+    "revision": "289695c0f4f6a3f8b717bed28d550800"
   },
   {
     "url": "component---src-templates-service-mdx-22f32ec08e4e972105d1.js"
