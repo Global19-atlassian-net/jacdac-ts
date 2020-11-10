@@ -80,7 +80,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2214083594.json",
-    "revision": "85f28d64ddcf198e26bfb8f830feadb5"
+    "revision": "51d83a401580b59aded426c14cfa8249"
   },
   {
     "url": "page-data/sq/d/2270080012.json",
@@ -172,7 +172,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/reference/jacdac-protocol/page-data.json",
-    "revision": "0fad577aa130065ee9fc36d56bb525fc"
+    "revision": "769385c00a32037413254f931e6641de"
   },
   {
     "url": "page-data/reference/service-specification/page-data.json",
