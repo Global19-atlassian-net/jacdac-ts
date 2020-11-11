@@ -1,30 +1,22 @@
 import React, { } from 'react';
 // tslint:disable-next-line: no-submodule-imports
-import { Box, Card, CardActions, CardContent, CardHeader, Link, Typography } from '@material-ui/core';
-import { useGithubRepository } from './github';
+import { Card, CardContent, Typography } from '@material-ui/core';
+import { useRepository } from './github';
+import GithubRepositoryCardHeader from './GithubRepositoryCardHeader';
 
-export default function GithubRepositoryCard(props: { repo: string }) {
-    const { repo } = props;
-    const { response, loading, status } = useGithubRepository(repo);
+export default function GithubRepositoryCard(props: {
+    slug: string,
+    showRelease?: boolean,
+    showDescription?: boolean
+}) {
+    const { slug, showRelease, showDescription } = props;
+    const { response: repo } = useRepository(slug);
+    const description = showDescription && repo?.description;
 
     return <Card>
-        {response &&
-            <CardHeader
-                title={<>
-                    <Link href={response.organization.html_url}>
-                        <Typography component="span" variant="h6">{response.organization.login}</Typography>
-                    </Link>
-                    <Box component="span" ml={0.2} mr={0.2}>/</Box>
-                    <Link href={response.html_url}>                    
-                        {response.name}
-                    </Link>
-                </>} 
-            />}
-        <CardContent>
-            {response && <Typography>{response.description}</Typography>}
-        </CardContent>
-        <CardActions>
-
-        </CardActions>
+        <GithubRepositoryCardHeader slug={slug} showRelease={showRelease} />
+        {description && <CardContent>
+            {description && <Typography>{description}</Typography>}
+        </CardContent>}
     </Card>
 }
