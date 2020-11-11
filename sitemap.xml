@@ -3,8 +3,8 @@
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/reference/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/reference/device-entry/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/reference/glossary/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/reference/jacdac-protocol/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/reference/service-specification/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/reference/jacdac-protocol/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/reference/sws-protocol/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/_base/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/_base/test/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -80,8 +80,8 @@
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/devices/microsoft-jm-proto/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/devices/microsoft-jm-pwr/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/devices/microsoft-jm-servo-pwr/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/devices/microsoft-jm-slider/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/devices/microsoft-jm-servo/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/devices/microsoft-jm-slider/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/devices/microsoft-jm-snd/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/clients/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/devices/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
