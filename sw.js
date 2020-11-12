@@ -33,11 +33,11 @@ self.__precacheManifest = [
     "url": "framework-f2d7662fd094223b1c90.js"
   },
   {
-    "url": "app-57169d2748b15be3e077.js"
+    "url": "app-243915b758720cf29e9b.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "5b49da0c5c028e730f506e5ae8ac0ac0"
+    "revision": "c48318228f7f82a782f48e09aea03718"
   },
   {
     "url": "static/webfonts/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"
@@ -57,7 +57,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "a34d81d25362ba617170ee8e12d4e1ce"
+    "revision": "a90a42ac57b55ae887fb72eefe3898f4"
   },
   {
     "url": "polyfill-117f0c623e316690b005.js"
@@ -80,7 +80,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2214083594.json",
-    "revision": "741cc1b1ff4f25e68d6549e94d73cd17"
+    "revision": "2a1d2c19d8716250a6cfe65ff822a871"
   },
   {
     "url": "page-data/sq/d/2270080012.json",
@@ -317,71 +317,71 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/devices/microsoft-jm-acc/page-data.json",
-    "revision": "b25fee8a1799b328736d6ee913dfa4bf"
+    "revision": "1482dace5d88b91f26286a805d2429de"
   },
   {
     "url": "page-data/devices/microsoft-jm-arcade-btn/page-data.json",
-    "revision": "69f75c8ca0572afc3c04fab40085c2b5"
+    "revision": "07ec942a32583d9331897b1ed57f0ab5"
   },
   {
     "url": "page-data/devices/microsoft-jm-arcade-ctrls/page-data.json",
-    "revision": "e18e1c4fcfebd88a04dfef2ca5f815c5"
+    "revision": "f2c34d100be6f85cbf40105a4ec82b0c"
   },
   {
     "url": "page-data/devices/microsoft-jm-crank/page-data.json",
-    "revision": "5c5c011d968289603b776214180b6b02"
+    "revision": "ed7f62ede1b1cf67ff761e1601f99991"
   },
   {
     "url": "page-data/devices/microsoft-jm-crank-btn/page-data.json",
-    "revision": "3d4cb1e1a09072f108afda2e63d0ce8f"
+    "revision": "4c081a611d9a4f5d22a2f2c58dc44c1e"
   },
   {
     "url": "page-data/devices/microsoft-jm-gamepad/page-data.json",
-    "revision": "9bc3db64b3fd43694669d9af73cfbde0"
+    "revision": "e026cc2ab4e300de30cb2c3200eccc37"
   },
   {
     "url": "page-data/devices/microsoft-jm-ml/page-data.json",
-    "revision": "6b29fd04fad61b9f544bc0cf789f2a1e"
+    "revision": "a702913be8b4183d1e4c9555af8a224a"
   },
   {
     "url": "page-data/devices/microsoft-jm-motor/page-data.json",
-    "revision": "602249e47ebbfa6b2401c73cb607984d"
+    "revision": "cfeb5069a83ca8106c322ecc12bd0730"
   },
   {
     "url": "page-data/devices/microsoft-jm-npx/page-data.json",
-    "revision": "2852341b0153ea57c770f40e044a41e1"
+    "revision": "a36c2f7a66fb7e81d1cbd7c792a40780"
   },
   {
     "url": "page-data/devices/microsoft-jm-npx-pwr/page-data.json",
-    "revision": "f52ccdca90b9bdecc0425ec1d8d4b6f4"
+    "revision": "f5b7714c0966609b8317e0d9a53f6280"
   },
   {
     "url": "page-data/devices/microsoft-jm-proto/page-data.json",
-    "revision": "18fd626f315aa3a86304568a1cfcee8f"
+    "revision": "2362f947f0c34adbeab232cc1b1a6e37"
   },
   {
     "url": "page-data/devices/microsoft-jm-proto-touch/page-data.json",
-    "revision": "9515a78ddde70ae6450215b437909d17"
+    "revision": "18a15d71068ea06f0c6c4b2d497a7ea6"
   },
   {
     "url": "page-data/devices/microsoft-jm-pwr/page-data.json",
-    "revision": "1a54c9e587873e42793df09864c4e1dd"
+    "revision": "b825409ff205a37f7983bd9ce74eb8e5"
   },
   {
     "url": "page-data/devices/microsoft-jm-servo/page-data.json",
-    "revision": "e01a8a0092d509eff5177350e81a0069"
+    "revision": "717f05395ad617f0f7f3b79e7b72de4b"
   },
   {
     "url": "page-data/devices/microsoft-jm-servo-pwr/page-data.json",
-    "revision": "ab14fef1ec5ecd241573503f7cf146d6"
+    "revision": "7bd2c8b14fd5153c2ea72e65aa2814a2"
   },
   {
     "url": "page-data/devices/microsoft-jm-slider/page-data.json",
-    "revision": "20815299351e41e00bf7c2050e7066cd"
+    "revision": "f1e22d1cc37c1a192b821680efbb9455"
   },
   {
     "url": "page-data/devices/microsoft-jm-snd/page-data.json",
-    "revision": "041b891d473d81e7b47d983a4c500c6b"
+    "revision": "64fd4abf0f2907c822f5a0f90c3756fb"
   },
   {
     "url": "component---src-pages-tools-collector-mdx-c333d512c3d600994781.js"
@@ -540,7 +540,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/jacdac-ts/app-57169d2748b15be3e077.js`))) {
+  if (!resources || !(await caches.match(`/jacdac-ts/app-243915b758720cf29e9b.js`))) {
     return await fetch(event.request)
   }
 
