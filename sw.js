@@ -27,7 +27,7 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-85a6db2b672599ae3afa.js"
+    "url": "webpack-runtime-60b619681e7c6dbd1f82.js"
   },
   {
     "url": "framework-42776f85416e151aa8b2.js"
@@ -37,7 +37,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "477d577de14225bc5f06813773c724b0"
+    "revision": "fc204797a69bd11d68885b8b31ef5945"
   },
   {
     "url": "static/webfonts/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"
@@ -57,7 +57,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "823dc8a59f9a17ef08ac6b5b3ddeb54d"
+    "revision": "41deb3a804885f856928a33c3e91399d"
   },
   {
     "url": "polyfill-54eb59dc70b6e3f2d957.js"
@@ -80,7 +80,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2214083594.json",
-    "revision": "d35267f1d69977d1ef4a9cedf435e916"
+    "revision": "09d0240e15920b4258c810fdf5494aa9"
   },
   {
     "url": "page-data/sq/d/2270080012.json",
@@ -128,7 +128,7 @@ self.__precacheManifest = [
     "revision": "404d25f81fa7ba6fd213458984768fad"
   },
   {
-    "url": "component---src-pages-index-mdx-8f7fdfe61bf543867078.js"
+    "url": "component---src-pages-index-mdx-ee5ac2f659277065a91d.js"
   },
   {
     "url": "page-data/index/page-data.json",
@@ -139,7 +139,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/reference/page-data.json",
-    "revision": "b6c35361af39540fd82d01e25cdc15d6"
+    "revision": "ec56946e8e530b77cb5d623938202c11"
   },
   {
     "url": "component---src-pages-services-mdx-305af546877f7196c166.js"
@@ -167,20 +167,36 @@ self.__precacheManifest = [
     "revision": "4f23c450311132ec441b01cbe9ac8581"
   },
   {
-    "url": "page-data/reference/glossary/page-data.json",
-    "revision": "7ac4ca510675b13da4b87bc9d1ba2146"
+    "url": "page-data/reference/device-identity/page-data.json",
+    "revision": "f28ae8be3b16ab531a4117a908fa22e9"
   },
   {
-    "url": "page-data/reference/jacdac-protocol/page-data.json",
-    "revision": "6f9b6e03db56a443994865789ec74af7"
+    "url": "page-data/reference/glossary/page-data.json",
+    "revision": "5dc50cfefba0fa5247e9c65f67b8db51"
+  },
+  {
+    "url": "page-data/reference/jd-highlevel/page-data.json",
+    "revision": "2bcc75d2c34b079886fc6220189bdd9a"
+  },
+  {
+    "url": "page-data/reference/motivation/page-data.json",
+    "revision": "f60db8a43c2a8171a267340bd0e08e46"
+  },
+  {
+    "url": "page-data/reference/physical-layer/page-data.json",
+    "revision": "01de8c014e0d01e23dc135f557246cde"
+  },
+  {
+    "url": "page-data/reference/service-layer/page-data.json",
+    "revision": "c7556e985646e121cfbec1a541fa37ea"
   },
   {
     "url": "page-data/reference/service-specification/page-data.json",
     "revision": "1ea75cfc4b154e4bf9e6df8b3053897a"
   },
   {
-    "url": "page-data/reference/sws-protocol/page-data.json",
-    "revision": "d4cf25a0a3c8d7624184217a1c0d3248"
+    "url": "page-data/reference/transport-layer/page-data.json",
+    "revision": "324a5bcb1909b2f799ef376a6524f544"
   },
   {
     "url": "component---src-templates-service-mdx-e66d5709b13d657ebbab.js"
