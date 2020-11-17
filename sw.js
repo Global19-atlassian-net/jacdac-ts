@@ -80,7 +80,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2214083594.json",
-    "revision": "6260587c16f9d8bff881a40c25851ad5"
+    "revision": "a08fd047a962a7ea87eeea2c16e3f397"
   },
   {
     "url": "page-data/sq/d/2270080012.json",
@@ -92,7 +92,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2744294623.json",
-    "revision": "8d678aafb569c1c362baf232c9320a34"
+    "revision": "e9eb9a852b1c77fff7ec92d4efc03522"
   },
   {
     "url": "page-data/sq/d/3159585216.json",
@@ -143,7 +143,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/reference/page-data.json",
-    "revision": "eed7affd424a65dfffd7f1caf4598f4a"
+    "revision": "64e1f3e77e035ade6a2cbe0542b90f1a"
   },
   {
     "url": "component---src-pages-services-mdx-305af546877f7196c166.js"
@@ -171,36 +171,20 @@ self.__precacheManifest = [
     "revision": "8f9c539af4ebdd3be20581ec2e53136a"
   },
   {
-    "url": "page-data/reference/device-identity/page-data.json",
-    "revision": "dc1d37a27449c85888b9d809d2a6cc72"
-  },
-  {
     "url": "page-data/reference/glossary/page-data.json",
     "revision": "ee3da7a4cfc2770885e3695c5931b719"
-  },
-  {
-    "url": "page-data/reference/jd-highlevel/page-data.json",
-    "revision": "2f752df5ab8deea99f7fdd117c2f8e54"
   },
   {
     "url": "page-data/reference/motivation/page-data.json",
     "revision": "bacbb18ec8bffd27ec52d9802d647940"
   },
   {
-    "url": "page-data/reference/physical-layer/page-data.json",
-    "revision": "7eb6edbb1c694151948e40d73dccb24c"
-  },
-  {
-    "url": "page-data/reference/service-layer/page-data.json",
-    "revision": "63f7be8df33f0f88ae89c3fb199a6083"
+    "url": "page-data/reference/protocol/page-data.json",
+    "revision": "e04c53135f4bf8a7fa5bc46cb003377e"
   },
   {
     "url": "page-data/reference/service-specification/page-data.json",
     "revision": "0c237c12363641af0fd61f1c83e39aee"
-  },
-  {
-    "url": "page-data/reference/transport-layer/page-data.json",
-    "revision": "22a0cda5734bb4ccda7e85011eb81cbd"
   },
   {
     "url": "component---src-templates-service-mdx-e66d5709b13d657ebbab.js"
