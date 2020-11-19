@@ -6,8 +6,8 @@
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/reference/motivation/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/reference/protocol/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/reference/service-specification/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/reference/protocol/physical-layer/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/reference/protocol/device-identity/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/reference/protocol/physical-layer/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/reference/protocol/service-layer/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/reference/protocol/transport-layer/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/reference/protocol/physical-layer/sws/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -65,6 +65,8 @@
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/rolemanager/test/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/servo/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/servo/test/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/settings/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/settings/test/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/slider/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/slider/test/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/tcp/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -114,9 +116,9 @@
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/clients/web/react/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/clients/web/setup/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/clients/web/jdom/bus/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/clients/web/jdom/device/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/clients/web/jdom/event/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/clients/web/jdom/field/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/clients/web/jdom/device/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/clients/web/jdom/node/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/clients/web/jdom/register/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/clients/web/jdom/service/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
