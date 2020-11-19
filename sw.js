@@ -27,17 +27,17 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-c6393e1f198d3a4318c0.js"
+    "url": "webpack-runtime-dcaa36bbc4ab21bb7241.js"
   },
   {
     "url": "framework-d9d76db5be1d465b14c8.js"
   },
   {
-    "url": "app-f27c41aee80255c2321e.js"
+    "url": "app-691f2efacd0c21c5719b.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "dda148c5232aa90c3f79258a77abb84d"
+    "revision": "dbb1b5bc00a6d0ed3546d74c5f083656"
   },
   {
     "url": "static/webfonts/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"
@@ -57,7 +57,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "f7b57d4d334277f33f5af4c5969cedec"
+    "revision": "750fed85a8878ce1a5a7fb453a4715ec"
   },
   {
     "url": "polyfill-70ded200b3d23a2b3e6d.js"
@@ -69,7 +69,7 @@ self.__precacheManifest = [
     "url": "styles-e9d24b1846c7d6eb9685.js"
   },
   {
-    "url": "a5757cca9773271559c7b1c7264e2a47fc46d744-ecb52540a75efddf4410.js"
+    "url": "a5757cca9773271559c7b1c7264e2a47fc46d744-e60b872f5bb4af8d96bc.js"
   },
   {
     "url": "component---src-pages-404-mdx-1058db2afbe64e5c3852.js"
@@ -80,7 +80,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2214083594.json",
-    "revision": "ecf5ea691c3a0fba1bf2a8b76c60b314"
+    "revision": "f72bb2b6014648fef2daa333fc1b4fa8"
   },
   {
     "url": "page-data/sq/d/2270080012.json",
@@ -92,7 +92,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2744294623.json",
-    "revision": "8aac7b133b6c3dcedbf8b644dcd4481d"
+    "revision": "858afabecf823dd12f33e1648f86177d"
   },
   {
     "url": "page-data/sq/d/3159585216.json",
@@ -403,11 +403,11 @@ self.__precacheManifest = [
     "revision": "e794e1985cb4abf4e3496339193577da"
   },
   {
-    "url": "component---src-pages-tools-device-designer-mdx-633f75162b9387c9f672.js"
+    "url": "component---src-pages-tools-device-designer-mdx-ed0c9377629291fdfead.js"
   },
   {
     "url": "page-data/tools/device-designer/page-data.json",
-    "revision": "89c91492e55b090d7840a0518c004950"
+    "revision": "66cd6bdc9d2f1fbd86502191a9295844"
   },
   {
     "url": "component---src-pages-tools-edge-impulse-mdx-ca10c5027b227c6f1962.js"
@@ -559,7 +559,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/jacdac-ts/app-f27c41aee80255c2321e.js`))) {
+  if (!resources || !(await caches.match(`/jacdac-ts/app-691f2efacd0c21c5719b.js`))) {
     return await fetch(event.request)
   }
 
