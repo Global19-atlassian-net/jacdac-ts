@@ -27,17 +27,17 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-c80ab440ba2d561aafb5.js"
+    "url": "webpack-runtime-4f29a975a07ce9dc9b87.js"
   },
   {
     "url": "framework-d9d76db5be1d465b14c8.js"
   },
   {
-    "url": "app-7eef8b818d42459cb15e.js"
+    "url": "app-f6926f6db3057bd0ac35.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "94904f7a6f25137656f03e4a61d83ed2"
+    "revision": "c4e9425baa65232d99bccd3802d88cf1"
   },
   {
     "url": "static/webfonts/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"
@@ -57,7 +57,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "fa74ff86b046e78cb7019a0d54020b73"
+    "revision": "55af840fb885680ad5ba973f411f7200"
   },
   {
     "url": "polyfill-70ded200b3d23a2b3e6d.js"
@@ -69,18 +69,18 @@ self.__precacheManifest = [
     "url": "styles-e9d24b1846c7d6eb9685.js"
   },
   {
-    "url": "e7b23b8c66383a2a7be4029010afed99c841733e-98f8da058c222f8eaedf.js"
+    "url": "e7b23b8c66383a2a7be4029010afed99c841733e-ecf440f90c8e8c0833cd.js"
   },
   {
     "url": "component---src-pages-404-mdx-1058db2afbe64e5c3852.js"
   },
   {
     "url": "page-data/404/page-data.json",
-    "revision": "fea1d7a7fe73fd6a94ee8107e2af37d7"
+    "revision": "820dd72aa6eacc5f81f4ed469d13dd1e"
   },
   {
-    "url": "page-data/sq/d/2214083594.json",
-    "revision": "bc106dd51a49685c0cf8182d04418e46"
+    "url": "page-data/sq/d/1762892263.json",
+    "revision": "4bc3eb2436036c484f06ce730ec062c9"
   },
   {
     "url": "page-data/sq/d/2270080012.json",
@@ -92,7 +92,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2744294623.json",
-    "revision": "39be75ad524799e0e0e54a185eb51961"
+    "revision": "a26bba4dd2fa36def2ca8b599faa336b"
   },
   {
     "url": "page-data/sq/d/3159585216.json",
@@ -108,362 +108,362 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/404.html/page-data.json",
-    "revision": "b2e58e1e4369775e0442ebd30889d4ec"
+    "revision": "95759de080807bf891806eb7d7a24d31"
   },
   {
     "url": "component---src-pages-clients-mdx-b2f0ea5dd056dd78df36.js"
   },
   {
     "url": "page-data/clients/page-data.json",
-    "revision": "967f4b012ebab966fb4d10ea9cb683ee"
+    "revision": "0d1b1d337fba39749ce76a49f8c9493c"
   },
   {
     "url": "component---src-pages-github-mdx-ad1a2334e500f3aff616.js"
   },
   {
     "url": "page-data/github/page-data.json",
-    "revision": "a2cb2967940b7b20a25d80d17b28b568"
+    "revision": "dd6993ef8be1c39e15d2f3a4cd66c4ca"
   },
   {
     "url": "component---src-pages-index-mdx-2fd220ab52ef088b4331.js"
   },
   {
     "url": "page-data/index/page-data.json",
-    "revision": "60abf29b69db739dc65718c6cb6e0936"
+    "revision": "200568b01d8be439895b2f2e143bae80"
   },
   {
     "url": "component---src-pages-modules-mdx-39058639c1dff4eec758.js"
   },
   {
     "url": "page-data/modules/page-data.json",
-    "revision": "10b33d5c10717863fbe2e1ea3e131bb5"
+    "revision": "2604932e1d45c53cd58fa07683532d7b"
   },
   {
     "url": "component---src-components-spec-tsx-5b5e966ffcbd698d05d1.js"
   },
   {
     "url": "page-data/reference/page-data.json",
-    "revision": "76cc7a3bbfcb79a56ad712eb5b3d7c39"
+    "revision": "3a36f7feb84b29e5e12da22dea964b90"
   },
   {
     "url": "component---src-pages-services-mdx-9da5e6b58240c9172be0.js"
   },
   {
     "url": "page-data/services/page-data.json",
-    "revision": "52a87321a4c66709786ff93f64a5beba"
+    "revision": "650822ef41b8605617fa6c523879df43"
   },
   {
     "url": "component---src-pages-tools-mdx-a839abf73b9174ee23ee.js"
   },
   {
     "url": "page-data/tools/page-data.json",
-    "revision": "45eeac4fa29132d0ef24419b38be985a"
+    "revision": "a33bebfdf9f2dc291570e6a337eee784"
   },
   {
     "url": "component---src-pages-traces-mdx-96469dd7261ecd1caade.js"
   },
   {
     "url": "page-data/traces/page-data.json",
-    "revision": "836a2e833df7e847bcee04985b16f10b"
+    "revision": "b119ff3d843d4bc5ea13d2dea12e04bb"
   },
   {
     "url": "page-data/reference/glossary/page-data.json",
-    "revision": "69f1d64cc4a78f4b126fea6bd95c104d"
+    "revision": "4c71a330fa74aa20aef772a01af30765"
   },
   {
     "url": "page-data/reference/module-definition/page-data.json",
-    "revision": "e6133f0b09c627799c331cd8ca582407"
+    "revision": "1d6f7a6b8c61ee8145455f86955ffab6"
   },
   {
     "url": "page-data/reference/motivation/page-data.json",
-    "revision": "819187928426d218879c9d84a27cdffe"
+    "revision": "c445de19f2301bd17d555deb6cf7efc6"
   },
   {
     "url": "page-data/reference/protocol/page-data.json",
-    "revision": "fcdffbe4521226b44bb42ed8ac625df6"
+    "revision": "8a7c5d7c845cdfaf9485f94cd4133dc1"
   },
   {
     "url": "page-data/reference/service-specification/page-data.json",
-    "revision": "8b18077fd15893fff51199534484cd0a"
+    "revision": "9f89a86b862b4cfb55cb8a54d9ec03f2"
   },
   {
-    "url": "component---src-templates-service-mdx-caa5af864d38f90bf71a.js"
+    "url": "component---src-templates-service-mdx-434425f4777487551247.js"
   },
   {
     "url": "page-data/services/_base/page-data.json",
-    "revision": "dbfbbb7d537ae2a389473c0c4158fc90"
+    "revision": "b2dfdbcbceb42adc9127bac2d90b661f"
   },
   {
     "url": "page-data/services/_sensor/page-data.json",
-    "revision": "7997a8c4adb848a69b3b7d800ccd1dec"
+    "revision": "bda824f3aacc5de28625acbd9fb36b3e"
   },
   {
     "url": "page-data/services/accelerometer/page-data.json",
-    "revision": "1e60a576f366363675f4aaf292a23863"
+    "revision": "b553c606c4535fa61b06b44e8d2ea00f"
   },
   {
     "url": "page-data/services/aggregator/page-data.json",
-    "revision": "b369fb76c0bd96c1075b57ecb3e46dd8"
+    "revision": "4d6f37f8a01ddc2641ebd40ccf09fa19"
   },
   {
     "url": "page-data/services/bootloader/page-data.json",
-    "revision": "1be1d030523679131a50230949cc4306"
+    "revision": "62f295149b587732f2f12f9b24c21729"
   },
   {
     "url": "page-data/services/button/page-data.json",
-    "revision": "40122295c68835131544fab375c68945"
+    "revision": "6840415678684c1d03da36ef7fb9b659"
   },
   {
     "url": "page-data/services/codalmessagebus/page-data.json",
-    "revision": "bfbb0371fbcc679793f617616fdde7a9"
+    "revision": "e3614c2070e5af7723820c6afda7154d"
   },
   {
     "url": "page-data/services/control/page-data.json",
-    "revision": "1d5d4b08250508a41129db4969ed362a"
+    "revision": "329900455e68da5412cb2682d4295692"
   },
   {
     "url": "page-data/services/crank/page-data.json",
-    "revision": "29833893a1ea96e14ac22f5f25f650c0"
+    "revision": "a8ce7cceb8f05db61f1c0fe0f128ca80"
   },
   {
     "url": "page-data/services/gamepad/page-data.json",
-    "revision": "81c3949cd6ee2666d16fc2f6115380db"
+    "revision": "8c65606cfee0b483aee93f670806ad9f"
   },
   {
     "url": "page-data/services/humidity/page-data.json",
-    "revision": "807e74b345002e5ebccbc5b0a4f24123"
+    "revision": "6f8e6f26c5c32de7293b3184a3a0523a"
   },
   {
     "url": "page-data/services/iothub/page-data.json",
-    "revision": "bafe4ac030c1c55cd5a51fc7300ea22f"
+    "revision": "a94c631b7a86116b1a7bc5d7757dd9fe"
   },
   {
     "url": "page-data/services/keyboard/page-data.json",
-    "revision": "db0e476e95e586280562dc9961a7003d"
+    "revision": "06d2a1e3d5ae6e4e1cc465f164f8751f"
   },
   {
     "url": "page-data/services/ledmatrixcontroller/page-data.json",
-    "revision": "04deeea27f02989132777a7b979397e2"
+    "revision": "4c60f8f25458f298f56698e5554ce4c6"
   },
   {
     "url": "page-data/services/ledmatrixdisplay/page-data.json",
-    "revision": "7bbcaf977ff5ca3bde98d91e7a060273"
+    "revision": "9541124d6f4e4688dfde5c647b217397"
   },
   {
     "url": "page-data/services/light/page-data.json",
-    "revision": "f4efa475b949b7ace37ff11c948ddfa7"
+    "revision": "c8a3cd483ee705e9b754ce5f526bbbf9"
   },
   {
     "url": "page-data/services/logger/page-data.json",
-    "revision": "86c1513b6ab9721c93cd3efa4afa83fd"
+    "revision": "29a9821496d59b1c31361cee127ae61e"
   },
   {
     "url": "page-data/services/microphone/page-data.json",
-    "revision": "7c7d94cc50eaaa082d13f3747f4b7071"
+    "revision": "5da4b938c17a7793c8279be8abcb65ce"
   },
   {
     "url": "page-data/services/modelrunner/page-data.json",
-    "revision": "1fa83280bfcb01407670825474062d4a"
+    "revision": "c940052ffbe6a8c9bc7eeab29a889ddc"
   },
   {
     "url": "page-data/services/motor/page-data.json",
-    "revision": "2e0c0dc46222c91d32fb710a6d4e81e7"
+    "revision": "1ad9fa89acd56ddac9c742ea8978d13b"
   },
   {
     "url": "page-data/services/mouse/page-data.json",
-    "revision": "ac02d5154021edcb91f6c9f9e337c21d"
+    "revision": "28ff1efc09c50c13f4d5e5f15e7dcdfc"
   },
   {
     "url": "page-data/services/multitouch/page-data.json",
-    "revision": "181c050ec881aee47f4d630139eaf098"
+    "revision": "67ab2a81289c29394fce729dfb940734"
   },
   {
     "url": "page-data/services/music/page-data.json",
-    "revision": "efd5d6fbed251196622c9cc140390dd3"
+    "revision": "4d14903819788dd89c42491c76a26de1"
   },
   {
     "url": "page-data/services/power/page-data.json",
-    "revision": "7f854456caada9a40bdd4bff73adb927"
+    "revision": "cd98c1257adfddc769f4310957a9cfa4"
   },
   {
     "url": "page-data/services/pwmlight/page-data.json",
-    "revision": "c53cbeca66f70ec0b1596bfa9fc37cae"
+    "revision": "02f70274956666847aaf3a12686a36a9"
   },
   {
     "url": "page-data/services/rolemanager/page-data.json",
-    "revision": "e7c66378a44265187d258773b9a0bfd1"
+    "revision": "d8383e9f6071055a22eccd9340c4a8be"
   },
   {
     "url": "page-data/services/servo/page-data.json",
-    "revision": "d3a7c13bab535bfeb46ed2fd923365c8"
+    "revision": "a819b1b9b63274d3a184793d0ae95bed"
   },
   {
     "url": "page-data/services/settings/page-data.json",
-    "revision": "6adc657d1949400ecffb4f6bd522cab7"
+    "revision": "971fac37cc0b0cd19cad93f93367c499"
   },
   {
     "url": "page-data/services/slider/page-data.json",
-    "revision": "69beecb9ce2fcfa61b46f38a7a23cb68"
+    "revision": "05ce621e230b53b145caa86cad8156e5"
   },
   {
     "url": "page-data/services/tcp/page-data.json",
-    "revision": "bfa92fb86bc8d2d8e31ae6a8c9c9e061"
+    "revision": "2d38617d2c640e04ebdd3ba5bfd37877"
   },
   {
     "url": "page-data/services/temperature/page-data.json",
-    "revision": "3cf86e10159ff6033bc6865c0f0a76f2"
+    "revision": "e9fd954e23bdeb84485ea07c3aa95948"
   },
   {
     "url": "page-data/services/wifi/page-data.json",
-    "revision": "a107cd4ee6583cdb263e22c8a3035dc2"
+    "revision": "62bc1472cc5f33d704452e87b3ceffe6"
   },
   {
-    "url": "component---src-templates-device-mdx-f79cda87125a229e3b7f.js"
+    "url": "component---src-templates-device-mdx-c035db80933c02877257.js"
   },
   {
     "url": "page-data/modules/microsoft-jm-acc/page-data.json",
-    "revision": "c5fd0793645412f0fcf0af58c0e747b5"
+    "revision": "26311750bcfe59627bc1abe3f30f8fa7"
   },
   {
     "url": "page-data/modules/microsoft-jm-arcade-btn/page-data.json",
-    "revision": "472ddb7f7842aa19fcf2342267126699"
+    "revision": "9b837054d61cbbae0822fa1d8ef4dff9"
   },
   {
     "url": "page-data/modules/microsoft-jm-arcade-ctrls/page-data.json",
-    "revision": "7618712a0cefc217eb5d70844de8dea5"
+    "revision": "3830264088148e30fac2777ff7057f7c"
   },
   {
     "url": "page-data/modules/microsoft-jm-crank/page-data.json",
-    "revision": "dcca04b7aa73d7ba3eb11547cb019b1a"
+    "revision": "bae4f1b9c755026cc3819a954ccb6d52"
   },
   {
     "url": "page-data/modules/microsoft-jm-crank-btn/page-data.json",
-    "revision": "58fd8b32713f8d7215e8360188348099"
+    "revision": "0bf2c0984931ed4fa640fe6ce35e5b78"
   },
   {
     "url": "page-data/modules/microsoft-jm-gamepad/page-data.json",
-    "revision": "1f5a8e2e09a24477e059448f4f4cb865"
+    "revision": "9b739e5ecfc617e2238a5c3323beeef4"
   },
   {
     "url": "page-data/modules/microsoft-jm-ml/page-data.json",
-    "revision": "d5f3cbd2da26c83fc8e14e4b42e76dd2"
+    "revision": "d34823eb195da56fce9ad743dc057f6e"
   },
   {
     "url": "page-data/modules/microsoft-jm-motor/page-data.json",
-    "revision": "1547db1f7d3587a81a47523cd8715a2c"
+    "revision": "01cd60e2a4ea6db901d863c0a0b9281f"
   },
   {
     "url": "page-data/modules/microsoft-jm-npx/page-data.json",
-    "revision": "f491d22fc2638ff6c6c8e0ca09fc5814"
+    "revision": "b835c263f9f36ca488254ffb86f15958"
   },
   {
     "url": "page-data/modules/microsoft-jm-npx-pwr/page-data.json",
-    "revision": "b342e905cb58a5d5e0a099387a8bc94f"
+    "revision": "5e9b15f5778d7677c9635e526cf1215b"
   },
   {
     "url": "page-data/modules/microsoft-jm-proto/page-data.json",
-    "revision": "bab99c10e96ec7571fb72b222075635b"
+    "revision": "fa50813754d16c0453e844b30e1e15ed"
   },
   {
     "url": "page-data/modules/microsoft-jm-proto-touch/page-data.json",
-    "revision": "5c1a127ef7601ee8d2e0450a31eb9d49"
+    "revision": "bfd663a3a8c8eb46a42d4b7a53bad56a"
   },
   {
     "url": "page-data/modules/microsoft-jm-pwr/page-data.json",
-    "revision": "49a58484777b6abf00a1410f59e22b66"
+    "revision": "8ebb0d8f88d87f44ff9eddd2e91ee9cc"
   },
   {
     "url": "page-data/modules/microsoft-jm-servo/page-data.json",
-    "revision": "a2efeee2b9b5dafac0086d9e0cc7c90f"
+    "revision": "21a0ebf24c1f9b690fe1ca08dd3e8d30"
   },
   {
     "url": "page-data/modules/microsoft-jm-servo-pwr/page-data.json",
-    "revision": "c024f133e96bd72058170a17b4ffa0f6"
+    "revision": "c55081f6c04aa030de6cd739186a7ebf"
   },
   {
     "url": "page-data/modules/microsoft-jm-slider/page-data.json",
-    "revision": "306195cfbc9f57c1138b5fcb2268c862"
+    "revision": "0a35bd3efd8ff00f4043ffcce2c86479"
   },
   {
     "url": "page-data/modules/microsoft-jm-snd/page-data.json",
-    "revision": "50885c9938b76b602416db29e1dfcac0"
+    "revision": "31c3e6cdb1f7bf8e99e25c9002f47ce8"
   },
   {
     "url": "component---src-pages-tools-azure-iot-hub-mdx-6c68589c1ba82f5871b4.js"
   },
   {
     "url": "page-data/tools/azure-iot-hub/page-data.json",
-    "revision": "fdbcc3e317efdc95fb1eb244c409d897"
+    "revision": "8fda24128b86a23eeb6be1a9c176ca2c"
   },
   {
     "url": "component---src-pages-tools-collector-mdx-c333d512c3d600994781.js"
   },
   {
     "url": "page-data/tools/collector/page-data.json",
-    "revision": "e794e1985cb4abf4e3496339193577da"
+    "revision": "b69c4c7d48f6ea8dc1ac9d7b9034c32a"
   },
   {
     "url": "component---src-pages-tools-edge-impulse-mdx-2e3d51abd2a00be01bba.js"
   },
   {
     "url": "page-data/tools/edge-impulse/page-data.json",
-    "revision": "e353a00467b35419c18a983f8e1516ef"
+    "revision": "6eb3fd9dec1f80524d1c3835d977cde5"
   },
   {
     "url": "component---src-pages-tools-jupyterlab-mdx-c8d3496b7a5e722791a9.js"
   },
   {
     "url": "page-data/tools/jupyterlab/page-data.json",
-    "revision": "312c3ecfca56255b9067d034380928cd"
+    "revision": "d9dacd28b5839c821b622b5e55a4646c"
   },
   {
     "url": "component---src-pages-tools-model-uploader-mdx-237490971ef6eff3d549.js"
   },
   {
     "url": "page-data/tools/model-uploader/page-data.json",
-    "revision": "930148ed2d8dcf5c605cf00def46e4cc"
+    "revision": "20e3db06bbe880cb49ceb2d9dec01c42"
   },
   {
     "url": "component---src-pages-tools-module-designer-mdx-58b4a20c92ee94ca5064.js"
   },
   {
     "url": "page-data/tools/module-designer/page-data.json",
-    "revision": "f7043cfd7ac118884d02915e581dcc42"
+    "revision": "1db1b48c8a643b1f35e9dfa65b71bad4"
   },
   {
     "url": "component---src-pages-tools-packet-inspector-mdx-be0cd91923b4c3231074.js"
   },
   {
     "url": "page-data/tools/packet-inspector/page-data.json",
-    "revision": "c0fca0b4752772f0997c647159a71051"
+    "revision": "5938d95f61f16c7b19a5b2c5776392b4"
   },
   {
     "url": "component---src-pages-tools-player-mdx-c1c1ff7bc9d0d53e07e1.js"
   },
   {
     "url": "page-data/tools/player/page-data.json",
-    "revision": "b143b3245e2a0bac973323c207be1e77"
+    "revision": "f613d89381696e093f84cdbce6e7ec49"
   },
   {
     "url": "component---src-pages-tools-role-manager-mdx-bae1773dd00b838dac73.js"
   },
   {
     "url": "page-data/tools/role-manager/page-data.json",
-    "revision": "78567749eefd3cf7a91ebfb583f99272"
+    "revision": "dc50f090e73960ed25f9aa78ba70815f"
   },
   {
     "url": "component---src-pages-tools-service-editor-mdx-bd9193aed23c128ffc1a.js"
   },
   {
     "url": "page-data/tools/service-editor/page-data.json",
-    "revision": "94f948cf0fa7517a3508b36fe7fa2f39"
+    "revision": "114c47dc3e91589935b7881ae3d8006f"
   },
   {
     "url": "component---src-pages-tools-updater-mdx-66d03ea2215fcba31bef.js"
   },
   {
     "url": "page-data/tools/updater/page-data.json",
-    "revision": "2a7024aa52aa377dee0162d2381b18d8"
+    "revision": "6bcd485c9c719dbe1f57ab1b7bb22fe7"
   },
   {
     "url": "manifest.webmanifest",
@@ -559,7 +559,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/jacdac-ts/app-7eef8b818d42459cb15e.js`))) {
+  if (!resources || !(await caches.match(`/jacdac-ts/app-f6926f6db3057bd0ac35.js`))) {
     return await fetch(event.request)
   }
 
