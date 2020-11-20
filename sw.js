@@ -27,17 +27,17 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-dcaa36bbc4ab21bb7241.js"
+    "url": "webpack-runtime-b5b26a0333264be5b8b9.js"
   },
   {
     "url": "framework-d9d76db5be1d465b14c8.js"
   },
   {
-    "url": "app-691f2efacd0c21c5719b.js"
+    "url": "app-7d1ca6c7868faf563f94.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "dbb1b5bc00a6d0ed3546d74c5f083656"
+    "revision": "4aad41fa6b878ab5a03b1354fcbfc8c1"
   },
   {
     "url": "static/webfonts/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"
@@ -57,7 +57,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "750fed85a8878ce1a5a7fb453a4715ec"
+    "revision": "d144250b354a06e5df46d8ba4c2ff8d6"
   },
   {
     "url": "polyfill-70ded200b3d23a2b3e6d.js"
@@ -69,7 +69,7 @@ self.__precacheManifest = [
     "url": "styles-e9d24b1846c7d6eb9685.js"
   },
   {
-    "url": "a5757cca9773271559c7b1c7264e2a47fc46d744-e60b872f5bb4af8d96bc.js"
+    "url": "a5757cca9773271559c7b1c7264e2a47fc46d744-934b60b64073b7c57229.js"
   },
   {
     "url": "component---src-pages-404-mdx-1058db2afbe64e5c3852.js"
@@ -80,7 +80,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2214083594.json",
-    "revision": "f72bb2b6014648fef2daa333fc1b4fa8"
+    "revision": "618f68849708c79b14e26b7baf2991ac"
   },
   {
     "url": "page-data/sq/d/2270080012.json",
@@ -92,7 +92,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2744294623.json",
-    "revision": "858afabecf823dd12f33e1648f86177d"
+    "revision": "e88f8e6e441f91e790b79ac004d83857"
   },
   {
     "url": "page-data/sq/d/3159585216.json",
@@ -187,7 +187,7 @@ self.__precacheManifest = [
     "revision": "8b18077fd15893fff51199534484cd0a"
   },
   {
-    "url": "component---src-templates-service-mdx-434425f4777487551247.js"
+    "url": "component---src-templates-service-mdx-caa5af864d38f90bf71a.js"
   },
   {
     "url": "page-data/services/_base/page-data.json",
@@ -318,7 +318,7 @@ self.__precacheManifest = [
     "revision": "a107cd4ee6583cdb263e22c8a3035dc2"
   },
   {
-    "url": "component---src-templates-device-mdx-f94577b9ee32d18c3aec.js"
+    "url": "component---src-templates-device-mdx-d1e73b51e9b345d2cba5.js"
   },
   {
     "url": "page-data/devices/microsoft-jm-acc/page-data.json",
@@ -559,7 +559,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/jacdac-ts/app-691f2efacd0c21c5719b.js`))) {
+  if (!resources || !(await caches.match(`/jacdac-ts/app-7d1ca6c7868faf563f94.js`))) {
     return await fetch(event.request)
   }
 
