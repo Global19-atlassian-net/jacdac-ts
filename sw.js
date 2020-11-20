@@ -27,17 +27,17 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-b5b26a0333264be5b8b9.js"
+    "url": "webpack-runtime-c80ab440ba2d561aafb5.js"
   },
   {
     "url": "framework-d9d76db5be1d465b14c8.js"
   },
   {
-    "url": "app-7d1ca6c7868faf563f94.js"
+    "url": "app-7eef8b818d42459cb15e.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "4aad41fa6b878ab5a03b1354fcbfc8c1"
+    "revision": "94904f7a6f25137656f03e4a61d83ed2"
   },
   {
     "url": "static/webfonts/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"
@@ -57,7 +57,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "d144250b354a06e5df46d8ba4c2ff8d6"
+    "revision": "fa74ff86b046e78cb7019a0d54020b73"
   },
   {
     "url": "polyfill-70ded200b3d23a2b3e6d.js"
@@ -69,7 +69,7 @@ self.__precacheManifest = [
     "url": "styles-e9d24b1846c7d6eb9685.js"
   },
   {
-    "url": "a5757cca9773271559c7b1c7264e2a47fc46d744-934b60b64073b7c57229.js"
+    "url": "e7b23b8c66383a2a7be4029010afed99c841733e-98f8da058c222f8eaedf.js"
   },
   {
     "url": "component---src-pages-404-mdx-1058db2afbe64e5c3852.js"
@@ -80,7 +80,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2214083594.json",
-    "revision": "618f68849708c79b14e26b7baf2991ac"
+    "revision": "bc106dd51a49685c0cf8182d04418e46"
   },
   {
     "url": "page-data/sq/d/2270080012.json",
@@ -92,7 +92,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2744294623.json",
-    "revision": "e88f8e6e441f91e790b79ac004d83857"
+    "revision": "39be75ad524799e0e0e54a185eb51961"
   },
   {
     "url": "page-data/sq/d/3159585216.json",
@@ -118,42 +118,42 @@ self.__precacheManifest = [
     "revision": "967f4b012ebab966fb4d10ea9cb683ee"
   },
   {
-    "url": "component---src-pages-devices-mdx-991d708c637f122be84e.js"
-  },
-  {
-    "url": "page-data/devices/page-data.json",
-    "revision": "dd6e13fea94a3994796c69399ca408ca"
-  },
-  {
-    "url": "component---src-pages-github-mdx-8967849246d69767f9d0.js"
+    "url": "component---src-pages-github-mdx-ad1a2334e500f3aff616.js"
   },
   {
     "url": "page-data/github/page-data.json",
     "revision": "a2cb2967940b7b20a25d80d17b28b568"
   },
   {
-    "url": "component---src-pages-index-mdx-9d015800eaa72b69349e.js"
+    "url": "component---src-pages-index-mdx-2fd220ab52ef088b4331.js"
   },
   {
     "url": "page-data/index/page-data.json",
     "revision": "60abf29b69db739dc65718c6cb6e0936"
   },
   {
+    "url": "component---src-pages-modules-mdx-39058639c1dff4eec758.js"
+  },
+  {
+    "url": "page-data/modules/page-data.json",
+    "revision": "10b33d5c10717863fbe2e1ea3e131bb5"
+  },
+  {
     "url": "component---src-components-spec-tsx-5b5e966ffcbd698d05d1.js"
   },
   {
     "url": "page-data/reference/page-data.json",
-    "revision": "713079fde91c04cadb204a15ec2749bc"
+    "revision": "76cc7a3bbfcb79a56ad712eb5b3d7c39"
   },
   {
-    "url": "component---src-pages-services-mdx-305af546877f7196c166.js"
+    "url": "component---src-pages-services-mdx-9da5e6b58240c9172be0.js"
   },
   {
     "url": "page-data/services/page-data.json",
     "revision": "52a87321a4c66709786ff93f64a5beba"
   },
   {
-    "url": "component---src-pages-tools-mdx-a8d9f5587a21f1ef72bf.js"
+    "url": "component---src-pages-tools-mdx-a839abf73b9174ee23ee.js"
   },
   {
     "url": "page-data/tools/page-data.json",
@@ -167,12 +167,12 @@ self.__precacheManifest = [
     "revision": "836a2e833df7e847bcee04985b16f10b"
   },
   {
-    "url": "page-data/reference/device-entry/page-data.json",
-    "revision": "de3c44a4b0541e49c3ca18362949547f"
+    "url": "page-data/reference/glossary/page-data.json",
+    "revision": "69f1d64cc4a78f4b126fea6bd95c104d"
   },
   {
-    "url": "page-data/reference/glossary/page-data.json",
-    "revision": "be4f9a311fe9bcef4f566159672ab9ff"
+    "url": "page-data/reference/module-definition/page-data.json",
+    "revision": "e6133f0b09c627799c331cd8ca582407"
   },
   {
     "url": "page-data/reference/motivation/page-data.json",
@@ -318,75 +318,75 @@ self.__precacheManifest = [
     "revision": "a107cd4ee6583cdb263e22c8a3035dc2"
   },
   {
-    "url": "component---src-templates-device-mdx-d1e73b51e9b345d2cba5.js"
+    "url": "component---src-templates-device-mdx-f79cda87125a229e3b7f.js"
   },
   {
-    "url": "page-data/devices/microsoft-jm-acc/page-data.json",
-    "revision": "409fd32a1ab82da1050aed688d607fa6"
+    "url": "page-data/modules/microsoft-jm-acc/page-data.json",
+    "revision": "c5fd0793645412f0fcf0af58c0e747b5"
   },
   {
-    "url": "page-data/devices/microsoft-jm-arcade-btn/page-data.json",
-    "revision": "226526832d10ca7b34c78cf3442447b4"
+    "url": "page-data/modules/microsoft-jm-arcade-btn/page-data.json",
+    "revision": "472ddb7f7842aa19fcf2342267126699"
   },
   {
-    "url": "page-data/devices/microsoft-jm-arcade-ctrls/page-data.json",
-    "revision": "e203480485d1f1d3b33e81eea9762680"
+    "url": "page-data/modules/microsoft-jm-arcade-ctrls/page-data.json",
+    "revision": "7618712a0cefc217eb5d70844de8dea5"
   },
   {
-    "url": "page-data/devices/microsoft-jm-crank/page-data.json",
-    "revision": "30bde79e8247628242b2062b18005b42"
+    "url": "page-data/modules/microsoft-jm-crank/page-data.json",
+    "revision": "dcca04b7aa73d7ba3eb11547cb019b1a"
   },
   {
-    "url": "page-data/devices/microsoft-jm-crank-btn/page-data.json",
-    "revision": "dbdc3f50ff10636dd39367b166517cd4"
+    "url": "page-data/modules/microsoft-jm-crank-btn/page-data.json",
+    "revision": "58fd8b32713f8d7215e8360188348099"
   },
   {
-    "url": "page-data/devices/microsoft-jm-gamepad/page-data.json",
-    "revision": "85b0e50686acf40b05e5595610193e7f"
+    "url": "page-data/modules/microsoft-jm-gamepad/page-data.json",
+    "revision": "1f5a8e2e09a24477e059448f4f4cb865"
   },
   {
-    "url": "page-data/devices/microsoft-jm-ml/page-data.json",
-    "revision": "b0fb9a53db770298f8eed4ce07429f3d"
+    "url": "page-data/modules/microsoft-jm-ml/page-data.json",
+    "revision": "d5f3cbd2da26c83fc8e14e4b42e76dd2"
   },
   {
-    "url": "page-data/devices/microsoft-jm-motor/page-data.json",
-    "revision": "e2c2503118d2132a1d887d270d724a1f"
+    "url": "page-data/modules/microsoft-jm-motor/page-data.json",
+    "revision": "1547db1f7d3587a81a47523cd8715a2c"
   },
   {
-    "url": "page-data/devices/microsoft-jm-npx/page-data.json",
-    "revision": "083a31728e6319de6627c651be45ff29"
+    "url": "page-data/modules/microsoft-jm-npx/page-data.json",
+    "revision": "f491d22fc2638ff6c6c8e0ca09fc5814"
   },
   {
-    "url": "page-data/devices/microsoft-jm-npx-pwr/page-data.json",
-    "revision": "6a4dd9a6b4ee69f632c4b140ab8e4f95"
+    "url": "page-data/modules/microsoft-jm-npx-pwr/page-data.json",
+    "revision": "b342e905cb58a5d5e0a099387a8bc94f"
   },
   {
-    "url": "page-data/devices/microsoft-jm-proto/page-data.json",
-    "revision": "7e95902254883a0b2380dd3610dbbfdc"
+    "url": "page-data/modules/microsoft-jm-proto/page-data.json",
+    "revision": "bab99c10e96ec7571fb72b222075635b"
   },
   {
-    "url": "page-data/devices/microsoft-jm-proto-touch/page-data.json",
-    "revision": "83d93a920643c9fc3a36b1504ecd8ae8"
+    "url": "page-data/modules/microsoft-jm-proto-touch/page-data.json",
+    "revision": "5c1a127ef7601ee8d2e0450a31eb9d49"
   },
   {
-    "url": "page-data/devices/microsoft-jm-pwr/page-data.json",
-    "revision": "0447dc3ffce8b5ea2230dac9e7f89777"
+    "url": "page-data/modules/microsoft-jm-pwr/page-data.json",
+    "revision": "49a58484777b6abf00a1410f59e22b66"
   },
   {
-    "url": "page-data/devices/microsoft-jm-servo/page-data.json",
-    "revision": "bac1c9a4b190459634993febab0c6ed1"
+    "url": "page-data/modules/microsoft-jm-servo/page-data.json",
+    "revision": "a2efeee2b9b5dafac0086d9e0cc7c90f"
   },
   {
-    "url": "page-data/devices/microsoft-jm-servo-pwr/page-data.json",
-    "revision": "9b5460f57a911df5f57cfa6676fbbc21"
+    "url": "page-data/modules/microsoft-jm-servo-pwr/page-data.json",
+    "revision": "c024f133e96bd72058170a17b4ffa0f6"
   },
   {
-    "url": "page-data/devices/microsoft-jm-slider/page-data.json",
-    "revision": "63b19fd37d71a9d80b64bd681ab48aca"
+    "url": "page-data/modules/microsoft-jm-slider/page-data.json",
+    "revision": "306195cfbc9f57c1138b5fcb2268c862"
   },
   {
-    "url": "page-data/devices/microsoft-jm-snd/page-data.json",
-    "revision": "06b34a378e61cdcb9e8245064b228f2e"
+    "url": "page-data/modules/microsoft-jm-snd/page-data.json",
+    "revision": "50885c9938b76b602416db29e1dfcac0"
   },
   {
     "url": "component---src-pages-tools-azure-iot-hub-mdx-6c68589c1ba82f5871b4.js"
@@ -403,32 +403,32 @@ self.__precacheManifest = [
     "revision": "e794e1985cb4abf4e3496339193577da"
   },
   {
-    "url": "component---src-pages-tools-device-designer-mdx-ed0c9377629291fdfead.js"
-  },
-  {
-    "url": "page-data/tools/device-designer/page-data.json",
-    "revision": "66cd6bdc9d2f1fbd86502191a9295844"
-  },
-  {
-    "url": "component---src-pages-tools-edge-impulse-mdx-ca10c5027b227c6f1962.js"
+    "url": "component---src-pages-tools-edge-impulse-mdx-2e3d51abd2a00be01bba.js"
   },
   {
     "url": "page-data/tools/edge-impulse/page-data.json",
     "revision": "e353a00467b35419c18a983f8e1516ef"
   },
   {
-    "url": "component---src-pages-tools-jupyterlab-mdx-5efafe621e1a40d5ad5d.js"
+    "url": "component---src-pages-tools-jupyterlab-mdx-c8d3496b7a5e722791a9.js"
   },
   {
     "url": "page-data/tools/jupyterlab/page-data.json",
     "revision": "312c3ecfca56255b9067d034380928cd"
   },
   {
-    "url": "component---src-pages-tools-model-uploader-mdx-555a0ff2b49553f6d62c.js"
+    "url": "component---src-pages-tools-model-uploader-mdx-237490971ef6eff3d549.js"
   },
   {
     "url": "page-data/tools/model-uploader/page-data.json",
     "revision": "930148ed2d8dcf5c605cf00def46e4cc"
+  },
+  {
+    "url": "component---src-pages-tools-module-designer-mdx-58b4a20c92ee94ca5064.js"
+  },
+  {
+    "url": "page-data/tools/module-designer/page-data.json",
+    "revision": "f7043cfd7ac118884d02915e581dcc42"
   },
   {
     "url": "component---src-pages-tools-packet-inspector-mdx-be0cd91923b4c3231074.js"
@@ -559,7 +559,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/jacdac-ts/app-7d1ca6c7868faf563f94.js`))) {
+  if (!resources || !(await caches.match(`/jacdac-ts/app-7eef8b818d42459cb15e.js`))) {
     return await fetch(event.request)
   }
 
