@@ -27,7 +27,7 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-283c8c36c916fb60180a.js"
+    "url": "webpack-runtime-e24ecd0d2f7a02adf564.js"
   },
   {
     "url": "framework-d9d76db5be1d465b14c8.js"
@@ -37,7 +37,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "f6abad128660ad5b448b9a68aeec6883"
+    "revision": "56164e7ab61c6e8f483d1238f44d68be"
   },
   {
     "url": "static/webfonts/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"
@@ -57,7 +57,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "29dfea26969308a51a1da6b12b79a500"
+    "revision": "b7891ef6059315257d033a2221b24bce"
   },
   {
     "url": "polyfill-70ded200b3d23a2b3e6d.js"
@@ -318,7 +318,7 @@ self.__precacheManifest = [
     "revision": "62bc1472cc5f33d704452e87b3ceffe6"
   },
   {
-    "url": "component---src-templates-device-mdx-ed75f14c464d3fc5e506.js"
+    "url": "component---src-templates-device-mdx-3430bb5d514ddf57bfd0.js"
   },
   {
     "url": "page-data/modules/microsoft-research-jmaccv2/page-data.json",
