@@ -27,17 +27,17 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-7fca2382a0d317b3e1f2.js"
+    "url": "webpack-runtime-a36d4e64efc55db96768.js"
   },
   {
-    "url": "framework-d9d76db5be1d465b14c8.js"
+    "url": "framework-121104c7d63f4270e872.js"
   },
   {
-    "url": "app-2f1587d16832f2e9e50d.js"
+    "url": "app-6125c3f749ea8240dfe3.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "4de78bc5c7736ba0ab01ab9f751e31a5"
+    "revision": "dbe240cfd94a1ef0b5cd17358dc3c417"
   },
   {
     "url": "static/webfonts/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"
@@ -57,10 +57,10 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "725668596ee6fc9ec38c896543236b6f"
+    "revision": "b480091dc5040a2ea9d6b080ee693d2b"
   },
   {
-    "url": "polyfill-70ded200b3d23a2b3e6d.js"
+    "url": "polyfill-2615d46d8e1742b8d3d4.js"
   },
   {
     "url": "styles.1bcf0d809ee48396e628.css"
@@ -69,7 +69,7 @@ self.__precacheManifest = [
     "url": "styles-e9d24b1846c7d6eb9685.js"
   },
   {
-    "url": "61115c5e57891a4876cdd83bd42ccc94d5232f85-fc4723060d90030f0cb1.js"
+    "url": "fe68d5fb184fa24f4d8e0568976efc32de3a2bb2-b0d44a8f1326ca9f76e1.js"
   },
   {
     "url": "component---src-pages-404-mdx-1058db2afbe64e5c3852.js"
@@ -80,7 +80,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2214083594.json",
-    "revision": "997cb12db712bffe897e88322b7f00cb"
+    "revision": "78ccce316f14455b18883bb00fee603d"
   },
   {
     "url": "page-data/sq/d/2270080012.json",
@@ -92,7 +92,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2744294623.json",
-    "revision": "2c56fd94294b29db5a6a331477999ad9"
+    "revision": "50fe576041aaf8d01969e440cc74440d"
   },
   {
     "url": "page-data/sq/d/3159585216.json",
@@ -100,7 +100,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/413816803.json",
-    "revision": "775dd4a361fe5f2979c987059acfe4c8"
+    "revision": "c99133966d0c859df4766a6900521b27"
   },
   {
     "url": "page-data/sq/d/63159454.json",
@@ -118,25 +118,25 @@ self.__precacheManifest = [
     "revision": "967f4b012ebab966fb4d10ea9cb683ee"
   },
   {
-    "url": "component---src-pages-github-mdx-ad1a2334e500f3aff616.js"
+    "url": "component---src-pages-devices-mdx-ff186ee0a0f7b8e210d8.js"
+  },
+  {
+    "url": "page-data/devices/page-data.json",
+    "revision": "dd6e13fea94a3994796c69399ca408ca"
+  },
+  {
+    "url": "component---src-pages-github-mdx-8967849246d69767f9d0.js"
   },
   {
     "url": "page-data/github/page-data.json",
     "revision": "a2cb2967940b7b20a25d80d17b28b568"
   },
   {
-    "url": "component---src-pages-index-mdx-27a400975d5d43902da8.js"
+    "url": "component---src-pages-index-mdx-c866dbb10054249cbc79.js"
   },
   {
     "url": "page-data/index/page-data.json",
     "revision": "60abf29b69db739dc65718c6cb6e0936"
-  },
-  {
-    "url": "component---src-pages-modules-mdx-e6ba2066e7d4d034b76d.js"
-  },
-  {
-    "url": "page-data/modules/page-data.json",
-    "revision": "4cf4ae6069f2eeec7ada9437c9289791"
   },
   {
     "url": "component---src-components-spec-tsx-5b5e966ffcbd698d05d1.js"
@@ -187,7 +187,7 @@ self.__precacheManifest = [
     "revision": "8b18077fd15893fff51199534484cd0a"
   },
   {
-    "url": "component---src-templates-service-mdx-434425f4777487551247.js"
+    "url": "component---src-templates-service-mdx-9e1c0569dc37be9204fc.js"
   },
   {
     "url": "page-data/services/_base/page-data.json",
@@ -316,77 +316,6 @@ self.__precacheManifest = [
   {
     "url": "page-data/services/wifi/page-data.json",
     "revision": "a107cd4ee6583cdb263e22c8a3035dc2"
-  },
-  {
-    "url": "component---src-templates-device-mdx-0ead678e2619fc3d3ab0.js"
-  },
-  {
-    "url": "page-data/devices/microsoft-research-jmaccv2/page-data.json",
-    "revision": "637cdbaeeea4c6744a483597245473d4"
-  },
-  {
-    "url": "page-data/devices/microsoft-research-jmarcadebtnv20/page-data.json",
-    "revision": "e3c63c1501aa2349deeae40e358671a7"
-  },
-  {
-    "url": "page-data/devices/microsoft-research-jmarcadecontrolsv2/page-data.json",
-    "revision": "59e60ca2b7804a3987e58299d901ed30"
-  },
-  {
-    "url": "page-data/devices/microsoft-research-jmcrankbtnv2/page-data.json",
-    "revision": "7977e05729a4ea81d00868d83c2bdbca"
-  },
-  {
-    "url": "page-data/devices/microsoft-research-jmcrankv2/page-data.json",
-    "revision": "8467a45de43b7bda2bd5bd86a878ef1b"
-  },
-  {
-    "url": "page-data/devices/microsoft-research-jmgamepadv2/page-data.json",
-    "revision": "ca8dd879ccc07e1da3485bed6f3fc420"
-  },
-  {
-    "url": "page-data/devices/microsoft-research-jmmachinelearning/page-data.json",
-    "revision": "7047fc62408697abaf99aab095426cf5"
-  },
-  {
-    "url": "page-data/devices/microsoft-research-jmmotorv21/page-data.json",
-    "revision": "a24ec073894600d4bd03ba92bed516fe"
-  },
-  {
-    "url": "page-data/devices/microsoft-research-jmpower/page-data.json",
-    "revision": "4c1256fe11f38a00b0ca6c5c0e46c747"
-  },
-  {
-    "url": "page-data/devices/microsoft-research-jmprotov20/page-data.json",
-    "revision": "b1207b5d69b084a03aa243f74bce5be4"
-  },
-  {
-    "url": "page-data/devices/microsoft-research-jmpwmnpxv20/page-data.json",
-    "revision": "21ca77a436cf1f78d8785b75861f821d"
-  },
-  {
-    "url": "page-data/devices/microsoft-research-jmpwmnpxv21/page-data.json",
-    "revision": "e81ff39ef7125d0f3c356cd8cf3e6af0"
-  },
-  {
-    "url": "page-data/devices/microsoft-research-jmpwmservov20/page-data.json",
-    "revision": "2a78efde7539f33a7acc552bc7716cfc"
-  },
-  {
-    "url": "page-data/devices/microsoft-research-jmpwmservov21/page-data.json",
-    "revision": "8310666627abbe6fa2c47dc652fe2105"
-  },
-  {
-    "url": "page-data/devices/microsoft-research-jmsliderv2/page-data.json",
-    "revision": "7493257a9eb2403c6350d9f24225a275"
-  },
-  {
-    "url": "page-data/devices/microsoft-research-jmsndv20/page-data.json",
-    "revision": "e87952ca6900945b51b281ce9d6ead87"
-  },
-  {
-    "url": "page-data/devices/microsoft-research-jmtouchprotov20/page-data.json",
-    "revision": "8765026c402c93192f49fd19d21ac9de"
   },
   {
     "url": "component---src-pages-tools-azure-iot-hub-mdx-6c68589c1ba82f5871b4.js"
@@ -559,7 +488,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/jacdac-ts/app-2f1587d16832f2e9e50d.js`))) {
+  if (!resources || !(await caches.match(`/jacdac-ts/app-6125c3f749ea8240dfe3.js`))) {
     return await fetch(event.request)
   }
 
