@@ -33,11 +33,11 @@ self.__precacheManifest = [
     "url": "framework-d9d76db5be1d465b14c8.js"
   },
   {
-    "url": "app-b10d233bdd9a5dbd9cdd.js"
+    "url": "app-2d2ca53aa5c92c0a7fc6.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "d06aa17df6a50388478d2f8d077cfb90"
+    "revision": "f6abad128660ad5b448b9a68aeec6883"
   },
   {
     "url": "static/webfonts/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"
@@ -57,7 +57,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "f5f09acb69e9a4e404e2153d5eab7054"
+    "revision": "29dfea26969308a51a1da6b12b79a500"
   },
   {
     "url": "polyfill-70ded200b3d23a2b3e6d.js"
@@ -80,7 +80,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/1762892263.json",
-    "revision": "1e4e9c806ff941f16fac93a10747ba56"
+    "revision": "bbcb2ab524a704eaf06b6165304439b8"
   },
   {
     "url": "page-data/sq/d/2270080012.json",
@@ -321,72 +321,72 @@ self.__precacheManifest = [
     "url": "component---src-templates-device-mdx-ed75f14c464d3fc5e506.js"
   },
   {
-    "url": "page-data/modules/microsoft-jm-acc/page-data.json",
-    "revision": "26311750bcfe59627bc1abe3f30f8fa7"
+    "url": "page-data/modules/microsoft-research-jmaccv2/page-data.json",
+    "revision": "e631eabebd0cdcd696f0d9c41ebb98db"
   },
   {
-    "url": "page-data/modules/microsoft-jm-arcade-btn/page-data.json",
-    "revision": "9b837054d61cbbae0822fa1d8ef4dff9"
+    "url": "page-data/modules/microsoft-research-jmarcadebtnv20/page-data.json",
+    "revision": "1f35aefc772941d1a1823976660902d0"
   },
   {
-    "url": "page-data/modules/microsoft-jm-arcade-ctrls/page-data.json",
-    "revision": "3830264088148e30fac2777ff7057f7c"
+    "url": "page-data/modules/microsoft-research-jmarcadecontrolsv2/page-data.json",
+    "revision": "d83d46fe60f74a7c5c4d7cb98aef143e"
   },
   {
-    "url": "page-data/modules/microsoft-jm-crank/page-data.json",
-    "revision": "bae4f1b9c755026cc3819a954ccb6d52"
+    "url": "page-data/modules/microsoft-research-jmcrankbtnv2/page-data.json",
+    "revision": "48f57c9f53f32f72176c2b2f7449f1b6"
   },
   {
-    "url": "page-data/modules/microsoft-jm-crank-btn/page-data.json",
-    "revision": "0bf2c0984931ed4fa640fe6ce35e5b78"
+    "url": "page-data/modules/microsoft-research-jmcrankv2/page-data.json",
+    "revision": "88b68a3c9ecc704a6618eb1ba3682967"
   },
   {
-    "url": "page-data/modules/microsoft-jm-gamepad/page-data.json",
-    "revision": "9b739e5ecfc617e2238a5c3323beeef4"
+    "url": "page-data/modules/microsoft-research-jmgamepadv2/page-data.json",
+    "revision": "b4248f20bb99f34cf3f1448c61719554"
   },
   {
-    "url": "page-data/modules/microsoft-jm-ml/page-data.json",
-    "revision": "d34823eb195da56fce9ad743dc057f6e"
+    "url": "page-data/modules/microsoft-research-jmmachinelearning/page-data.json",
+    "revision": "eb2dad2a9f4ac3708d209252459ebcc0"
   },
   {
-    "url": "page-data/modules/microsoft-jm-motor/page-data.json",
-    "revision": "01cd60e2a4ea6db901d863c0a0b9281f"
+    "url": "page-data/modules/microsoft-research-jmmotorv21/page-data.json",
+    "revision": "e8f03d7038128cd9fc76ec8754134526"
   },
   {
-    "url": "page-data/modules/microsoft-jm-npx/page-data.json",
-    "revision": "b835c263f9f36ca488254ffb86f15958"
+    "url": "page-data/modules/microsoft-research-jmpower/page-data.json",
+    "revision": "abcdd7ed31ebb56e2f858328edb666d7"
   },
   {
-    "url": "page-data/modules/microsoft-jm-npx-pwr/page-data.json",
-    "revision": "5e9b15f5778d7677c9635e526cf1215b"
+    "url": "page-data/modules/microsoft-research-jmprotov20/page-data.json",
+    "revision": "b897a514ba95f7fb7920da2181cac8f4"
   },
   {
-    "url": "page-data/modules/microsoft-jm-proto/page-data.json",
-    "revision": "fa50813754d16c0453e844b30e1e15ed"
+    "url": "page-data/modules/microsoft-research-jmpwmnpxv20/page-data.json",
+    "revision": "4897f87756bd1cd376815174ef903f25"
   },
   {
-    "url": "page-data/modules/microsoft-jm-proto-touch/page-data.json",
-    "revision": "bfd663a3a8c8eb46a42d4b7a53bad56a"
+    "url": "page-data/modules/microsoft-research-jmpwmnpxv21/page-data.json",
+    "revision": "89f5875b12c78f8c39b9f2228db188eb"
   },
   {
-    "url": "page-data/modules/microsoft-jm-pwr/page-data.json",
-    "revision": "8ebb0d8f88d87f44ff9eddd2e91ee9cc"
+    "url": "page-data/modules/microsoft-research-jmpwmservov20/page-data.json",
+    "revision": "b5bfa62cdf245f0f11e46ef7da499077"
   },
   {
-    "url": "page-data/modules/microsoft-jm-servo/page-data.json",
-    "revision": "21a0ebf24c1f9b690fe1ca08dd3e8d30"
+    "url": "page-data/modules/microsoft-research-jmpwmservov21/page-data.json",
+    "revision": "f79cc34f85811bf86144aa15095e51fb"
   },
   {
-    "url": "page-data/modules/microsoft-jm-servo-pwr/page-data.json",
-    "revision": "c55081f6c04aa030de6cd739186a7ebf"
+    "url": "page-data/modules/microsoft-research-jmsliderv2/page-data.json",
+    "revision": "da9cb43c5a849231544d1e3e849db875"
   },
   {
-    "url": "page-data/modules/microsoft-jm-slider/page-data.json",
-    "revision": "0a35bd3efd8ff00f4043ffcce2c86479"
+    "url": "page-data/modules/microsoft-research-jmsndv20/page-data.json",
+    "revision": "45cc036f93cca9e1e7c54662e460b755"
   },
   {
-    "url": "page-data/modules/microsoft-jm-snd/page-data.json",
-    "revision": "31c3e6cdb1f7bf8e99e25c9002f47ce8"
+    "url": "page-data/modules/microsoft-research-jmtouchprotov20/page-data.json",
+    "revision": "715d814fd3eeae22ed57a91ae7497df8"
   },
   {
     "url": "component---src-pages-tools-azure-iot-hub-mdx-6c68589c1ba82f5871b4.js"
@@ -559,7 +559,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/jacdac-ts/app-b10d233bdd9a5dbd9cdd.js`))) {
+  if (!resources || !(await caches.match(`/jacdac-ts/app-2d2ca53aa5c92c0a7fc6.js`))) {
     return await fetch(event.request)
   }
 
