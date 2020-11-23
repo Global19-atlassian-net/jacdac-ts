@@ -27,7 +27,7 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-a36d4e64efc55db96768.js"
+    "url": "webpack-runtime-2a5fe3e03848093ce611.js"
   },
   {
     "url": "framework-121104c7d63f4270e872.js"
@@ -37,7 +37,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "dbe240cfd94a1ef0b5cd17358dc3c417"
+    "revision": "6ba2e11372768bcca73275ce2f0809df"
   },
   {
     "url": "static/webfonts/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"
@@ -57,7 +57,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "b480091dc5040a2ea9d6b080ee693d2b"
+    "revision": "9eaf032c5231789f64ee4d6438e8438d"
   },
   {
     "url": "polyfill-2615d46d8e1742b8d3d4.js"
@@ -80,7 +80,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2214083594.json",
-    "revision": "78ccce316f14455b18883bb00fee603d"
+    "revision": "b08cb05d7681f83aae9d2bb3131907ad"
   },
   {
     "url": "page-data/sq/d/2270080012.json",
@@ -92,7 +92,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2744294623.json",
-    "revision": "50fe576041aaf8d01969e440cc74440d"
+    "revision": "63cd781552534e848df77cf5fdd50768"
   },
   {
     "url": "page-data/sq/d/3159585216.json",
@@ -100,7 +100,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/413816803.json",
-    "revision": "c99133966d0c859df4766a6900521b27"
+    "revision": "775dd4a361fe5f2979c987059acfe4c8"
   },
   {
     "url": "page-data/sq/d/63159454.json",
@@ -118,7 +118,7 @@ self.__precacheManifest = [
     "revision": "967f4b012ebab966fb4d10ea9cb683ee"
   },
   {
-    "url": "component---src-pages-devices-mdx-ff186ee0a0f7b8e210d8.js"
+    "url": "component---src-pages-devices-mdx-06db08d634b9018e406d.js"
   },
   {
     "url": "page-data/devices/page-data.json",
@@ -132,7 +132,7 @@ self.__precacheManifest = [
     "revision": "a2cb2967940b7b20a25d80d17b28b568"
   },
   {
-    "url": "component---src-pages-index-mdx-c866dbb10054249cbc79.js"
+    "url": "component---src-pages-index-mdx-9d015800eaa72b69349e.js"
   },
   {
     "url": "page-data/index/page-data.json",
