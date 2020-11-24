@@ -11,12 +11,12 @@
       "valueSchema": "integer",
       "enumValues": [
         {
-          "name": "InvalidCommand",
+          "name": "invalidCommand",
           "displayName": "InvalidCommand",
           "enumValue": 1
         },
         {
-          "name": "InvalidCommandPayload",
+          "name": "invalidCommandPayload",
           "displayName": "InvalidCommandPayload",
           "enumValue": 2
         }

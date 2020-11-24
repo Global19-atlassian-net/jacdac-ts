@@ -34,32 +34,32 @@
       "valueSchema": "integer",
       "enumValues": [
         {
-          "name": "U8",
+          "name": "u8",
           "displayName": "U8",
           "enumValue": 8
         },
         {
-          "name": "I8",
+          "name": "i8",
           "displayName": "I8",
           "enumValue": 136
         },
         {
-          "name": "U16",
+          "name": "u16",
           "displayName": "U16",
           "enumValue": 16
         },
         {
-          "name": "I16",
+          "name": "i16",
           "displayName": "I16",
           "enumValue": 144
         },
         {
-          "name": "U32",
+          "name": "u32",
           "displayName": "U32",
           "enumValue": 32
         },
         {
-          "name": "I32",
+          "name": "i32",
           "displayName": "I32",
           "enumValue": 160
         }

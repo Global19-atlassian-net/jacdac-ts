@@ -49,57 +49,57 @@
       "valueSchema": "integer",
       "enumValues": [
         {
-          "name": "HasPassword",
+          "name": "hasPassword",
           "displayName": "HasPassword",
           "enumValue": 1
         },
         {
-          "name": "WPS",
+          "name": "wPS",
           "displayName": "WPS",
           "enumValue": 2
         },
         {
-          "name": "HasSecondaryChannelAbove",
+          "name": "hasSecondaryChannelAbove",
           "displayName": "HasSecondaryChannelAbove",
           "enumValue": 4
         },
         {
-          "name": "HasSecondaryChannelBelow",
+          "name": "hasSecondaryChannelBelow",
           "displayName": "HasSecondaryChannelBelow",
           "enumValue": 8
         },
         {
-          "name": "IEEE_802_11B",
+          "name": "iEEE_802_11B",
           "displayName": "IEEE_802_11B",
           "enumValue": 256
         },
         {
-          "name": "IEEE_802_11A",
+          "name": "iEEE_802_11A",
           "displayName": "IEEE_802_11A",
           "enumValue": 512
         },
         {
-          "name": "IEEE_802_11G",
+          "name": "iEEE_802_11G",
           "displayName": "IEEE_802_11G",
           "enumValue": 1024
         },
         {
-          "name": "IEEE_802_11N",
+          "name": "iEEE_802_11N",
           "displayName": "IEEE_802_11N",
           "enumValue": 2048
         },
         {
-          "name": "IEEE_802_11AC",
+          "name": "iEEE_802_11AC",
           "displayName": "IEEE_802_11AC",
           "enumValue": 4096
         },
         {
-          "name": "IEEE_802_11AX",
+          "name": "iEEE_802_11AX",
           "displayName": "IEEE_802_11AX",
           "enumValue": 8192
         },
         {
-          "name": "IEEE_802_LongRange",
+          "name": "iEEE_802_LongRange",
           "displayName": "IEEE_802_LongRange",
           "enumValue": 32768
         }

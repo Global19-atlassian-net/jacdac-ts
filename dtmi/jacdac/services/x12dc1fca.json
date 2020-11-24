@@ -20,22 +20,22 @@
       "valueSchema": "integer",
       "enumValues": [
         {
-          "name": "Debug",
+          "name": "debug",
           "displayName": "Debug",
           "enumValue": 0
         },
         {
-          "name": "Log",
+          "name": "log",
           "displayName": "Log",
           "enumValue": 1
         },
         {
-          "name": "Warning",
+          "name": "warning",
           "displayName": "Warning",
           "enumValue": 2
         },
         {
-          "name": "Error",
+          "name": "error",
           "displayName": "Error",
           "enumValue": 3
         }

@@ -11,42 +11,42 @@
       "valueSchema": "integer",
       "enumValues": [
         {
-          "name": "LeftControl",
+          "name": "leftControl",
           "displayName": "LeftControl",
           "enumValue": 224
         },
         {
-          "name": "LeftShift",
+          "name": "leftShift",
           "displayName": "LeftShift",
           "enumValue": 225
         },
         {
-          "name": "LeftAlt",
+          "name": "leftAlt",
           "displayName": "LeftAlt",
           "enumValue": 226
         },
         {
-          "name": "LeftGUID",
+          "name": "leftGUID",
           "displayName": "LeftGUID",
           "enumValue": 227
         },
         {
-          "name": "RightControl",
+          "name": "rightControl",
           "displayName": "RightControl",
           "enumValue": 228
         },
         {
-          "name": "RightShift",
+          "name": "rightShift",
           "displayName": "RightShift",
           "enumValue": 229
         },
         {
-          "name": "RightAlt",
+          "name": "rightAlt",
           "displayName": "RightAlt",
           "enumValue": 230
         },
         {
-          "name": "RightGUID",
+          "name": "rightGUID",
           "displayName": "RightGUID",
           "enumValue": 231
         }
@@ -58,17 +58,17 @@
       "valueSchema": "integer",
       "enumValues": [
         {
-          "name": "Press",
+          "name": "press",
           "displayName": "Press",
           "enumValue": 0
         },
         {
-          "name": "Up",
+          "name": "up",
           "displayName": "Up",
           "enumValue": 1
         },
         {
-          "name": "Down",
+          "name": "down",
           "displayName": "Down",
           "enumValue": 2
         }

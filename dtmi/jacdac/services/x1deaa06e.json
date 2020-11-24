@@ -60,52 +60,52 @@
       "valueSchema": "integer",
       "enumValues": [
         {
-          "name": "Left",
+          "name": "left",
           "displayName": "Left",
           "enumValue": 1
         },
         {
-          "name": "Up",
+          "name": "up",
           "displayName": "Up",
           "enumValue": 2
         },
         {
-          "name": "Right",
+          "name": "right",
           "displayName": "Right",
           "enumValue": 3
         },
         {
-          "name": "Down",
+          "name": "down",
           "displayName": "Down",
           "enumValue": 4
         },
         {
-          "name": "A",
+          "name": "a",
           "displayName": "A",
           "enumValue": 5
         },
         {
-          "name": "B",
+          "name": "b",
           "displayName": "B",
           "enumValue": 6
         },
         {
-          "name": "Menu",
+          "name": "menu",
           "displayName": "Menu",
           "enumValue": 7
         },
         {
-          "name": "MenuAlt",
+          "name": "menuAlt",
           "displayName": "MenuAlt",
           "enumValue": 8
         },
         {
-          "name": "Reset",
+          "name": "reset",
           "displayName": "Reset",
           "enumValue": 9
         },
         {
-          "name": "Exit",
+          "name": "exit",
           "displayName": "Exit",
           "enumValue": 10
         }

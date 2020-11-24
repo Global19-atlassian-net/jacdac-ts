@@ -73,17 +73,17 @@
       "valueSchema": "integer",
       "enumValues": [
         {
-          "name": "TFLite",
+          "name": "tFLite",
           "displayName": "TFLite",
           "enumValue": 860636756
         },
         {
-          "name": "ML4F",
+          "name": "mL4F",
           "displayName": "ML4F",
           "enumValue": 809963362
         },
         {
-          "name": "EdgeImpulseCompiled",
+          "name": "edgeImpulseCompiled",
           "displayName": "EdgeImpulseCompiled",
           "enumValue": 810961221
         }

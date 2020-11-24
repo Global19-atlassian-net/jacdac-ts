@@ -11,17 +11,17 @@
       "valueSchema": "integer",
       "enumValues": [
         {
-          "name": "Right",
+          "name": "right",
           "displayName": "Right",
           "enumValue": 1
         },
         {
-          "name": "Middle",
+          "name": "middle",
           "displayName": "Middle",
           "enumValue": 4
         },
         {
-          "name": "Left",
+          "name": "left",
           "displayName": "Left",
           "enumValue": 2
         }
@@ -33,22 +33,22 @@
       "valueSchema": "integer",
       "enumValues": [
         {
-          "name": "Up",
+          "name": "up",
           "displayName": "Up",
           "enumValue": 1
         },
         {
-          "name": "Down",
+          "name": "down",
           "displayName": "Down",
           "enumValue": 2
         },
         {
-          "name": "Click",
+          "name": "click",
           "displayName": "Click",
           "enumValue": 3
         },
         {
-          "name": "DoubleClick",
+          "name": "doubleClick",
           "displayName": "DoubleClick",
           "enumValue": 4
         }

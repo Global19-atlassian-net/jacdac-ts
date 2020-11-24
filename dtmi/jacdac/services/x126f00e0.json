@@ -55,17 +55,17 @@
       "valueSchema": "integer",
       "enumValues": [
         {
-          "name": "WS2812B_GRB",
+          "name": "wS2812B_GRB",
           "displayName": "WS2812B_GRB",
           "enumValue": 0
         },
         {
-          "name": "APA102",
+          "name": "aPA102",
           "displayName": "APA102",
           "enumValue": 16
         },
         {
-          "name": "SK9822",
+          "name": "sK9822",
           "displayName": "SK9822",
           "enumValue": 17
         }

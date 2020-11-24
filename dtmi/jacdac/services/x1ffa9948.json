@@ -11,27 +11,27 @@
       "valueSchema": "integer",
       "enumValues": [
         {
-          "name": "NoError",
+          "name": "noError",
           "displayName": "NoError",
           "enumValue": 0
         },
         {
-          "name": "PacketTooSmall",
+          "name": "packetTooSmall",
           "displayName": "PacketTooSmall",
           "enumValue": 1
         },
         {
-          "name": "OutOfFlashableRange",
+          "name": "outOfFlashableRange",
           "displayName": "OutOfFlashableRange",
           "enumValue": 2
         },
         {
-          "name": "InvalidPageOffset",
+          "name": "invalidPageOffset",
           "displayName": "InvalidPageOffset",
           "enumValue": 3
         },
         {
-          "name": "NotPageAligned",
+          "name": "notPageAligned",
           "displayName": "NotPageAligned",
           "enumValue": 4
         }

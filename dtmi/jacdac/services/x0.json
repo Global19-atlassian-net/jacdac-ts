@@ -62,7 +62,7 @@
       "valueSchema": "integer",
       "enumValues": [
         {
-          "name": "SupportsACK",
+          "name": "supportsACK",
           "displayName": "SupportsACK",
           "enumValue": 1
         }
