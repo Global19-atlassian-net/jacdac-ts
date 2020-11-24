@@ -1,0 +1,8 @@
+{
+  "@type": "Interface",
+  "@id": "dtmi:jacdac:services:x1107dc4a;1",
+  "displayName": "Settings Storage",
+  "description": "Non-volatile key-value storage interface for storing settings.",
+  "contents": [],
+  "@context": "dtmi:dtdl:context;2"
+}

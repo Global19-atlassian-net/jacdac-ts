@@ -1,0 +1,39 @@
+{
+  "@type": "Interface",
+  "@id": "dtmi:jacdac:services:x1d35e393;1",
+  "displayName": "LED Matrix Controller",
+  "description": "A service that allows to control a rectangular matrix of monochrome LEDs.\nTo stream the state of the screen, use [LED Matrix display](/services/led-matrix-display) instead.",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "enabled",
+      "@id": "dtmi:jacdac:x1d35e393:rw:enabled;1",
+      "description": "Disables or enables the whole screen.",
+      "schema": "boolean",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "brightness",
+      "@id": "dtmi:jacdac:x1d35e393:rw:brightness;1",
+      "description": "Sets the general brightness of the LEDs.",
+      "schema": "integer",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "rows",
+      "@id": "dtmi:jacdac:x1d35e393:const:rows;1",
+      "description": "Number of rows on the screen",
+      "schema": "integer"
+    },
+    {
+      "@type": "Property",
+      "name": "columns",
+      "@id": "dtmi:jacdac:x1d35e393:const:columns;1",
+      "description": "Number of columns on the screen",
+      "schema": "integer"
+    }
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

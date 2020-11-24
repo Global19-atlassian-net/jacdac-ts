@@ -1,0 +1,59 @@
+{
+  "@type": "Interface",
+  "@id": "dtmi:jacdac:services:x1885dc1c;1",
+  "displayName": "Mouse",
+  "description": "Control a device that acts as a mouse.",
+  "contents": [],
+  "schemas": [
+    {
+      "@type": "Enum",
+      "@id": "dtmi:jacdac:x1885dc1c:button;1",
+      "valueSchema": "integer",
+      "enumValues": [
+        {
+          "name": "Right",
+          "displayName": "Right",
+          "enumValue": 1
+        },
+        {
+          "name": "Middle",
+          "displayName": "Middle",
+          "enumValue": 4
+        },
+        {
+          "name": "Left",
+          "displayName": "Left",
+          "enumValue": 2
+        }
+      ]
+    },
+    {
+      "@type": "Enum",
+      "@id": "dtmi:jacdac:x1885dc1c:buttonevent;1",
+      "valueSchema": "integer",
+      "enumValues": [
+        {
+          "name": "Up",
+          "displayName": "Up",
+          "enumValue": 1
+        },
+        {
+          "name": "Down",
+          "displayName": "Down",
+          "enumValue": 2
+        },
+        {
+          "name": "Click",
+          "displayName": "Click",
+          "enumValue": 3
+        },
+        {
+          "name": "DoubleClick",
+          "displayName": "DoubleClick",
+          "enumValue": 4
+        }
+      ]
+    }
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

@@ -1,0 +1,16 @@
+{
+  "@type": "Interface",
+  "@id": "dtmi:jacdac:services:x1f274746;1",
+  "displayName": "Slider",
+  "description": "A slider potentiometer.",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "position",
+      "@id": "dtmi:jacdac:x1f274746:ro:position;1",
+      "description": "The relative position of the slider between `0x0000` and `0xffff`.",
+      "schema": "integer"
+    }
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

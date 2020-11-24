@@ -1,0 +1,25 @@
+{
+  "@type": "Interface",
+  "@id": "dtmi:jacdac:services:x17004cd8;1",
+  "displayName": "Motor",
+  "description": "A bi-directional DC motor.",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "duty",
+      "@id": "dtmi:jacdac:x17004cd8:rw:duty;1",
+      "description": "PWM duty cycle of the motor. Use negative/positive values to run the motor forwards and backwards.\nPositive is recommended to be clockwise rotation and negative counterclockwise.",
+      "schema": "integer",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "enabled",
+      "@id": "dtmi:jacdac:x17004cd8:rw:enabled;1",
+      "description": "Turn the power to the motor on/off.",
+      "schema": "boolean",
+      "writable": true
+    }
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

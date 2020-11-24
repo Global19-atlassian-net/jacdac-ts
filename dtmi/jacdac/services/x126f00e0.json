@@ -1,0 +1,76 @@
+{
+  "@type": "Interface",
+  "@id": "dtmi:jacdac:services:x126f00e0;1",
+  "displayName": "Light",
+  "description": "A controller for strips of RGB LEDs.",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "brightness",
+      "@id": "dtmi:jacdac:x126f00e0:rw:brightness;1",
+      "description": "Set the luminosity of the strip.\nAt `0` the power to the strip is completely shut down.",
+      "schema": "integer",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "actual_brightness",
+      "@id": "dtmi:jacdac:x126f00e0:ro:actualbrightness;1",
+      "description": "This is the luminosity actually applied to the strip.\nMay be lower than `brightness` if power-limited by the `max_power` register.\nIt will rise slowly (few seconds) back to `brightness` is limits are no longer required.",
+      "schema": "integer"
+    },
+    {
+      "@type": "Property",
+      "name": "light_type",
+      "@id": "dtmi:jacdac:x126f00e0:rw:lighttype;1",
+      "description": "Specifies the type of light strip connected to controller.\nControllers which are sold with lights should default to the correct type\nand could not allow change.",
+      "schema": "dtmi:jacdac:x126f00e0:lighttype;1",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "num_pixels",
+      "@id": "dtmi:jacdac:x126f00e0:rw:numpixels;1",
+      "description": "Specifies the number of pixels in the strip.\nControllers which are sold with lights should default to the correct length\nand could not allow change.\nIncreasing length at runtime leads to ineffective use of memory and may lead to controller reboot.",
+      "schema": "integer",
+      "writable": true
+    },
+    {
+      "@type": [
+        "Property",
+        "Current"
+      ],
+      "name": "max_power",
+      "@id": "dtmi:jacdac:x126f00e0:rw:maxpower;1",
+      "description": "Limit the power drawn by the light-strip (and controller).",
+      "unit": "milliampere",
+      "schema": "integer",
+      "writable": true
+    }
+  ],
+  "schemas": [
+    {
+      "@type": "Enum",
+      "@id": "dtmi:jacdac:x126f00e0:lighttype;1",
+      "valueSchema": "integer",
+      "enumValues": [
+        {
+          "name": "WS2812B_GRB",
+          "displayName": "WS2812B_GRB",
+          "enumValue": 0
+        },
+        {
+          "name": "APA102",
+          "displayName": "APA102",
+          "enumValue": 16
+        },
+        {
+          "name": "SK9822",
+          "displayName": "SK9822",
+          "enumValue": 17
+        }
+      ]
+    }
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

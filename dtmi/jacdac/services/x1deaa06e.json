@@ -1,0 +1,116 @@
+{
+  "@type": "Interface",
+  "@id": "dtmi:jacdac:services:x1deaa06e;1",
+  "displayName": "Gamepad",
+  "description": "A gamepad with direction and action buttons for 1 or more players.",
+  "contents": [
+    {
+      "@type": "Telemetry",
+      "name": "down",
+      "@id": "dtmi:jacdac:x1deaa06e:event:down;1",
+      "description": "Emitted when button goes from inactive to active.",
+      "schema": {
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "button",
+            "schema": "dtmi:jacdac:x1deaa06e:button;1"
+          },
+          {
+            "name": "player_index",
+            "schema": "integer"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Telemetry",
+      "name": "up",
+      "@id": "dtmi:jacdac:x1deaa06e:event:up;1",
+      "description": "Emitted when button goes from active to inactive.",
+      "schema": {
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "button",
+            "schema": "dtmi:jacdac:x1deaa06e:button;1"
+          },
+          {
+            "name": "player_index",
+            "schema": "integer"
+          }
+        ]
+      }
+    }
+  ],
+  "schemas": [
+    {
+      "@id": "dtmi:jacdac:x1deaa06e:event;1",
+      "@type": "Object",
+      "fields": [
+        {
+          "name": "count",
+          "schema": "integer"
+        }
+      ]
+    },
+    {
+      "@type": "Enum",
+      "@id": "dtmi:jacdac:x1deaa06e:button;1",
+      "valueSchema": "integer",
+      "enumValues": [
+        {
+          "name": "Left",
+          "displayName": "Left",
+          "enumValue": 1
+        },
+        {
+          "name": "Up",
+          "displayName": "Up",
+          "enumValue": 2
+        },
+        {
+          "name": "Right",
+          "displayName": "Right",
+          "enumValue": 3
+        },
+        {
+          "name": "Down",
+          "displayName": "Down",
+          "enumValue": 4
+        },
+        {
+          "name": "A",
+          "displayName": "A",
+          "enumValue": 5
+        },
+        {
+          "name": "B",
+          "displayName": "B",
+          "enumValue": 6
+        },
+        {
+          "name": "Menu",
+          "displayName": "Menu",
+          "enumValue": 7
+        },
+        {
+          "name": "MenuAlt",
+          "displayName": "MenuAlt",
+          "enumValue": 8
+        },
+        {
+          "name": "Reset",
+          "displayName": "Reset",
+          "enumValue": 9
+        },
+        {
+          "name": "Exit",
+          "displayName": "Exit",
+          "enumValue": 10
+        }
+      ]
+    }
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

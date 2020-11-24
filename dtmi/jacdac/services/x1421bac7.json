@@ -1,0 +1,20 @@
+{
+  "@type": "Interface",
+  "@id": "dtmi:jacdac:services:x1421bac7;1",
+  "displayName": "Temperature",
+  "description": "A thermometer measuring outside environment.",
+  "contents": [
+    {
+      "@type": [
+        "Property",
+        "Temperature"
+      ],
+      "name": "temperature",
+      "@id": "dtmi:jacdac:x1421bac7:ro:temperature;1",
+      "description": "The temperature.",
+      "unit": "degreeCelsius",
+      "schema": "float"
+    }
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

@@ -1,0 +1,8 @@
+{
+  "@type": "Interface",
+  "@id": "dtmi:jacdac:services:x119c3ad1;1",
+  "displayName": "Role Manager",
+  "description": "Assign roles to devices on JACDAC bus.",
+  "contents": [],
+  "@context": "dtmi:dtdl:context;2"
+}
