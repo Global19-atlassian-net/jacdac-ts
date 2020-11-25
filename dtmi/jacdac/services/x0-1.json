@@ -37,8 +37,8 @@
         "Property",
         "Temperature"
       ],
-      "name": "temperature",
-      "@id": "dtmi:jacdac:x0:ro:temperature;1",
+      "name": "mcu_temperature",
+      "@id": "dtmi:jacdac:x0:ro:mcutemperature;1",
       "description": "MCU temperature in degrees Celsius (approximate).",
       "unit": "degreeCelsius",
       "schema": "integer"
