@@ -1,0 +1,1558 @@
+[
+  {
+    "@type": "Interface",
+    "@id": "dtmi:jacdac:services:x1f140409;1",
+    "displayName": "Accelerometer",
+    "description": "A 3-axis accelerometer.",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "forces",
+        "@id": "dtmi:jacdac:x1f140409:ro:forces;1",
+        "description": "Indicates the current forces acting on accelerometer.",
+        "schema": {
+          "@type": "Object",
+          "fields": [
+            {
+              "name": "x",
+              "schema": "float"
+            },
+            {
+              "name": "y",
+              "schema": "float"
+            },
+            {
+              "name": "z",
+              "schema": "float"
+            }
+          ]
+        }
+      },
+      {
+        "@type": [
+          "Telemetry",
+          "Event"
+        ],
+        "name": "tilt_up",
+        "@id": "dtmi:jacdac:x1f140409:event:tiltup;1",
+        "description": "Emitted when accelerometer is tilted in the given direction.",
+        "schema": "dtmi:jacdac:x1f140409:event;1"
+      },
+      {
+        "@type": [
+          "Telemetry",
+          "Event"
+        ],
+        "name": "tilt_down",
+        "@id": "dtmi:jacdac:x1f140409:event:tiltdown;1",
+        "description": "Emitted when accelerometer is tilted in the given direction.",
+        "schema": "dtmi:jacdac:x1f140409:event;1"
+      },
+      {
+        "@type": [
+          "Telemetry",
+          "Event"
+        ],
+        "name": "tilt_left",
+        "@id": "dtmi:jacdac:x1f140409:event:tiltleft;1",
+        "description": "Emitted when accelerometer is tilted in the given direction.",
+        "schema": "dtmi:jacdac:x1f140409:event;1"
+      },
+      {
+        "@type": [
+          "Telemetry",
+          "Event"
+        ],
+        "name": "tilt_right",
+        "@id": "dtmi:jacdac:x1f140409:event:tiltright;1",
+        "description": "Emitted when accelerometer is tilted in the given direction.",
+        "schema": "dtmi:jacdac:x1f140409:event;1"
+      },
+      {
+        "@type": [
+          "Telemetry",
+          "Event"
+        ],
+        "name": "face_up",
+        "@id": "dtmi:jacdac:x1f140409:event:faceup;1",
+        "description": "Emitted when accelerometer is laying flat in the given direction.",
+        "schema": "dtmi:jacdac:x1f140409:event;1"
+      },
+      {
+        "@type": [
+          "Telemetry",
+          "Event"
+        ],
+        "name": "face_down",
+        "@id": "dtmi:jacdac:x1f140409:event:facedown;1",
+        "description": "Emitted when accelerometer is laying flat in the given direction.",
+        "schema": "dtmi:jacdac:x1f140409:event;1"
+      },
+      {
+        "@type": [
+          "Telemetry",
+          "Event"
+        ],
+        "name": "freefall",
+        "@id": "dtmi:jacdac:x1f140409:event:freefall;1",
+        "description": "Emitted when total force acting on accelerometer is much less than 1g.",
+        "schema": "dtmi:jacdac:x1f140409:event;1"
+      },
+      {
+        "@type": [
+          "Telemetry",
+          "Event"
+        ],
+        "name": "shake",
+        "@id": "dtmi:jacdac:x1f140409:event:shake;1",
+        "description": "Emitted when forces change violently a few times.",
+        "schema": "dtmi:jacdac:x1f140409:event;1"
+      },
+      {
+        "@type": [
+          "Telemetry",
+          "Event"
+        ],
+        "name": "force_2g",
+        "@id": "dtmi:jacdac:x1f140409:event:force2g;1",
+        "description": "Emitted when force in any direction exceeds given threshold.",
+        "schema": "dtmi:jacdac:x1f140409:event;1"
+      },
+      {
+        "@type": [
+          "Telemetry",
+          "Event"
+        ],
+        "name": "force_3g",
+        "@id": "dtmi:jacdac:x1f140409:event:force3g;1",
+        "description": "Emitted when force in any direction exceeds given threshold.",
+        "schema": "dtmi:jacdac:x1f140409:event;1"
+      },
+      {
+        "@type": [
+          "Telemetry",
+          "Event"
+        ],
+        "name": "force_6g",
+        "@id": "dtmi:jacdac:x1f140409:event:force6g;1",
+        "description": "Emitted when force in any direction exceeds given threshold.",
+        "schema": "dtmi:jacdac:x1f140409:event;1"
+      },
+      {
+        "@type": [
+          "Telemetry",
+          "Event"
+        ],
+        "name": "force_8g",
+        "@id": "dtmi:jacdac:x1f140409:event:force8g;1",
+        "description": "Emitted when force in any direction exceeds given threshold.",
+        "schema": "dtmi:jacdac:x1f140409:event;1"
+      }
+    ],
+    "schemas": [
+      {
+        "@id": "dtmi:jacdac:x1f140409:event;1",
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "count",
+            "schema": "integer"
+          }
+        ]
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@type": "Interface",
+    "@id": "dtmi:jacdac:services:x1d90e1c5;1",
+    "displayName": "Sensor Aggregator",
+    "description": "Aggregate data from multiple sensors into a single stream\n(often used as input to machine learning models on the same device, see model runner service).",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "num_samples",
+        "@id": "dtmi:jacdac:x1d90e1c5:ro:numsamples;1",
+        "description": "Number of input samples collected so far.",
+        "schema": "integer"
+      },
+      {
+        "@type": "Property",
+        "name": "sample_size",
+        "@id": "dtmi:jacdac:x1d90e1c5:ro:samplesize;1",
+        "description": "Size of a single sample.",
+        "schema": "integer"
+      },
+      {
+        "@type": "Property",
+        "name": "stream_samples",
+        "@id": "dtmi:jacdac:x1d90e1c5:rw:streamsamples;1",
+        "description": "When set to `N`, will stream `N` samples as `current_sample` reading.",
+        "schema": "integer",
+        "writable": true
+      }
+    ],
+    "schemas": [
+      {
+        "@type": "Enum",
+        "@id": "dtmi:jacdac:x1d90e1c5:sampletype;1",
+        "valueSchema": "integer",
+        "enumValues": [
+          {
+            "name": "u8",
+            "displayName": "U8",
+            "enumValue": 8
+          },
+          {
+            "name": "i8",
+            "displayName": "I8",
+            "enumValue": 136
+          },
+          {
+            "name": "u16",
+            "displayName": "U16",
+            "enumValue": 16
+          },
+          {
+            "name": "i16",
+            "displayName": "I16",
+            "enumValue": 144
+          },
+          {
+            "name": "u32",
+            "displayName": "U32",
+            "enumValue": 32
+          },
+          {
+            "name": "i32",
+            "displayName": "I32",
+            "enumValue": 160
+          }
+        ]
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@type": "Interface",
+    "@id": "dtmi:jacdac:services:x1ffa9948;1",
+    "displayName": "Bootloader",
+    "description": "Allows flashing (reprogramming) devices over JACDAC.",
+    "contents": [],
+    "schemas": [
+      {
+        "@type": "Enum",
+        "@id": "dtmi:jacdac:x1ffa9948:error;1",
+        "valueSchema": "integer",
+        "enumValues": [
+          {
+            "name": "noError",
+            "displayName": "NoError",
+            "enumValue": 0
+          },
+          {
+            "name": "packetTooSmall",
+            "displayName": "PacketTooSmall",
+            "enumValue": 1
+          },
+          {
+            "name": "outOfFlashableRange",
+            "displayName": "OutOfFlashableRange",
+            "enumValue": 2
+          },
+          {
+            "name": "invalidPageOffset",
+            "displayName": "InvalidPageOffset",
+            "enumValue": 3
+          },
+          {
+            "name": "notPageAligned",
+            "displayName": "NotPageAligned",
+            "enumValue": 4
+          }
+        ]
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@type": "Interface",
+    "@id": "dtmi:jacdac:services:x1473a263;1",
+    "displayName": "Button",
+    "description": "A simple push-button.\n\nNote: this service will stream readings while the button is pressed and shortly after it's released, even\nwhen `stream_samples == 0`. TODO remove this?",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "pressed",
+        "@id": "dtmi:jacdac:x1473a263:ro:pressed;1",
+        "description": "Indicates whether the button is currently active (pressed).",
+        "schema": "boolean"
+      },
+      {
+        "@type": [
+          "Telemetry",
+          "Event"
+        ],
+        "name": "down",
+        "@id": "dtmi:jacdac:x1473a263:event:down;1",
+        "description": "Emitted when button goes from inactive (`pressed == 0`) to active.",
+        "schema": "dtmi:jacdac:x1473a263:event;1"
+      },
+      {
+        "@type": [
+          "Telemetry",
+          "Event"
+        ],
+        "name": "up",
+        "@id": "dtmi:jacdac:x1473a263:event:up;1",
+        "description": "Emitted when button goes from active (`pressed == 1`) to inactive.",
+        "schema": "dtmi:jacdac:x1473a263:event;1"
+      },
+      {
+        "@type": [
+          "Telemetry",
+          "Event"
+        ],
+        "name": "click",
+        "@id": "dtmi:jacdac:x1473a263:event:click;1",
+        "description": "Emitted together with `up` when the press time was not longer than 500ms.",
+        "schema": "dtmi:jacdac:x1473a263:event;1"
+      },
+      {
+        "@type": [
+          "Telemetry",
+          "Event"
+        ],
+        "name": "long_click",
+        "@id": "dtmi:jacdac:x1473a263:event:longclick;1",
+        "description": "Emitted together with `up` when the press time was more than 500ms.",
+        "schema": "dtmi:jacdac:x1473a263:event;1"
+      }
+    ],
+    "schemas": [
+      {
+        "@id": "dtmi:jacdac:x1473a263:event;1",
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "count",
+            "schema": "integer"
+          }
+        ]
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@type": "Interface",
+    "@id": "dtmi:jacdac:services:x16ad7cd5;1",
+    "displayName": "CODAL Message Bus",
+    "description": "A service that allows passing events through the [CODAL Message Bus](https://lancaster-university.github.io/microbit-docs/ubit/messageBus/)\n* ``id`` is a unique identifier that identifies a component in the device. Use ``0`` to address all sources. The value of other identifiers is typically hardware dependent.\n* ``event`` is an identifier that determines the event type. Use ``0`` as a wildcard.",
+    "contents": [],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@type": "Interface",
+    "@id": "dtmi:jacdac:services:x0;1",
+    "displayName": "Control",
+    "description": "Control service is always service index `0`.\nIt handles actions common to all services on a device.",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "device_description",
+        "@id": "dtmi:jacdac:x0:const:devicedescription;1",
+        "description": "Identifies the type of hardware (eg., ACME Corp. Servo X-42 Rev C)",
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "firmware_identifier",
+        "@id": "dtmi:jacdac:x0:const:firmwareidentifier;1",
+        "description": "A numeric code for the string above; used to identify firmware images and devices.",
+        "schema": "integer"
+      },
+      {
+        "@type": "Property",
+        "name": "bootloader_firmware_identifier",
+        "@id": "dtmi:jacdac:x0:const:bootloaderfirmwareidentifier;1",
+        "description": "Typically the same as `firmware_identifier` unless device was flashed by hand; the bootloader will respond to that code.",
+        "schema": "integer"
+      },
+      {
+        "@type": "Property",
+        "name": "firmware_version",
+        "@id": "dtmi:jacdac:x0:const:firmwareversion;1",
+        "description": "A string describing firmware version; typically semver.",
+        "schema": "string"
+      },
+      {
+        "@type": [
+          "Property",
+          "Temperature"
+        ],
+        "name": "temperature",
+        "@id": "dtmi:jacdac:x0:ro:temperature;1",
+        "description": "MCU temperature in degrees Celsius (approximate).",
+        "unit": "degreeCelsius",
+        "schema": "integer"
+      },
+      {
+        "@type": [
+          "Property",
+          "TimeSpan"
+        ],
+        "name": "uptime",
+        "@id": "dtmi:jacdac:x0:ro:uptime;1",
+        "description": "Number of microseconds since boot.",
+        "unit": "microsecond",
+        "schema": "integer"
+      }
+    ],
+    "schemas": [
+      {
+        "@type": "Enum",
+        "@id": "dtmi:jacdac:x0:announceflags;1",
+        "valueSchema": "integer",
+        "enumValues": [
+          {
+            "name": "supportsACK",
+            "displayName": "SupportsACK",
+            "enumValue": 1
+          }
+        ]
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@type": "Interface",
+    "@id": "dtmi:jacdac:services:x10fa29c9;1",
+    "displayName": "Rotary encoder",
+    "description": "An incremental rotary encoder - converts angular motion of a shaft to digital signal.",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "position",
+        "@id": "dtmi:jacdac:x10fa29c9:ro:position;1",
+        "description": "Upon device reset starts at `0` (regardless of the shaft position).\nIncreases by `1` for a clockwise \"click\", by `-1` for counter-clockwise.",
+        "schema": "integer"
+      },
+      {
+        "@type": "Property",
+        "name": "clicks_per_turn",
+        "@id": "dtmi:jacdac:x10fa29c9:const:clicksperturn;1",
+        "description": "This specifies by how much `position` changes when the crank does 360 degree turn. Typically 12 or 24.",
+        "schema": "integer"
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@type": "Interface",
+    "@id": "dtmi:jacdac:services:x1deaa06e;1",
+    "displayName": "Gamepad",
+    "description": "A gamepad with direction and action buttons for 1 or more players.",
+    "contents": [
+      {
+        "@type": "Telemetry",
+        "name": "down",
+        "@id": "dtmi:jacdac:x1deaa06e:event:down;1",
+        "description": "Emitted when button goes from inactive to active.",
+        "schema": {
+          "@type": "Object",
+          "fields": [
+            {
+              "name": "button",
+              "schema": "dtmi:jacdac:x1deaa06e:button;1"
+            },
+            {
+              "name": "player_index",
+              "schema": "integer"
+            }
+          ]
+        }
+      },
+      {
+        "@type": "Telemetry",
+        "name": "up",
+        "@id": "dtmi:jacdac:x1deaa06e:event:up;1",
+        "description": "Emitted when button goes from active to inactive.",
+        "schema": {
+          "@type": "Object",
+          "fields": [
+            {
+              "name": "button",
+              "schema": "dtmi:jacdac:x1deaa06e:button;1"
+            },
+            {
+              "name": "player_index",
+              "schema": "integer"
+            }
+          ]
+        }
+      }
+    ],
+    "schemas": [
+      {
+        "@id": "dtmi:jacdac:x1deaa06e:event;1",
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "count",
+            "schema": "integer"
+          }
+        ]
+      },
+      {
+        "@type": "Enum",
+        "@id": "dtmi:jacdac:x1deaa06e:button;1",
+        "valueSchema": "integer",
+        "enumValues": [
+          {
+            "name": "left",
+            "displayName": "Left",
+            "enumValue": 1
+          },
+          {
+            "name": "up",
+            "displayName": "Up",
+            "enumValue": 2
+          },
+          {
+            "name": "right",
+            "displayName": "Right",
+            "enumValue": 3
+          },
+          {
+            "name": "down",
+            "displayName": "Down",
+            "enumValue": 4
+          },
+          {
+            "name": "a",
+            "displayName": "A",
+            "enumValue": 5
+          },
+          {
+            "name": "b",
+            "displayName": "B",
+            "enumValue": 6
+          },
+          {
+            "name": "menu",
+            "displayName": "Menu",
+            "enumValue": 7
+          },
+          {
+            "name": "menuAlt",
+            "displayName": "MenuAlt",
+            "enumValue": 8
+          },
+          {
+            "name": "reset",
+            "displayName": "Reset",
+            "enumValue": 9
+          },
+          {
+            "name": "exit",
+            "displayName": "Exit",
+            "enumValue": 10
+          }
+        ]
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@type": "Interface",
+    "@id": "dtmi:jacdac:services:x16c810b8;1",
+    "displayName": "Humidity",
+    "description": "A sensor measuring humidity of outside environment.",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "humidity",
+        "@id": "dtmi:jacdac:x16c810b8:ro:humidity;1",
+        "description": "The relative humidity in percentage of full water saturation.",
+        "schema": "float"
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@type": "Interface",
+    "@id": "dtmi:jacdac:services:x19ed364c;1",
+    "displayName": "Azure IoT Hub",
+    "description": "Send messages, receive commands, and work with device twins in Azure IoT Hub.",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "connection_status",
+        "@id": "dtmi:jacdac:x19ed364c:ro:connectionstatus;1",
+        "description": "Returns `\"ok\"` when connected, and an error description otherwise.",
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "connection_string",
+        "@id": "dtmi:jacdac:x19ed364c:rw:connectionstring;1",
+        "description": "Connection string typically looks something like \n`HostName=my-iot-hub.azure-devices.net;DeviceId=my-dev-007;SharedAccessKey=xyz+base64key`.\nYou can get it in `Shared access policies -> iothubowner -> Connection string-primary key` in the Azure Portal.\nThis register is write-only.\nYou can use `hub_name` and `device_id` to check if connection string is set, but you cannot get the shared access key.",
+        "schema": "string",
+        "writable": true
+      },
+      {
+        "@type": "Property",
+        "name": "hub_name",
+        "@id": "dtmi:jacdac:x19ed364c:ro:hubname;1",
+        "description": "Something like `my-iot-hub.azure-devices.net`; empty string when `connection_string` is not set.",
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "device_id",
+        "@id": "dtmi:jacdac:x19ed364c:ro:deviceid;1",
+        "description": "Something like `my-dev-007`; empty string when `connection_string` is not set.",
+        "schema": "string"
+      },
+      {
+        "@type": [
+          "Telemetry",
+          "Event"
+        ],
+        "name": "connected",
+        "@id": "dtmi:jacdac:x19ed364c:event:connected;1",
+        "description": "Emitted upon successful connection.",
+        "schema": "dtmi:jacdac:x19ed364c:event;1"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "connection_error",
+        "@id": "dtmi:jacdac:x19ed364c:event:connectionerror;1",
+        "description": "Emitted when connection was lost.",
+        "schema": "string"
+      },
+      {
+        "@type": [
+          "Telemetry",
+          "Event"
+        ],
+        "name": "devicebound_str",
+        "@id": "dtmi:jacdac:x19ed364c:event:deviceboundstr;1",
+        "description": "This event is emitted upon reception of a cloud to device message, that is a string\n(doesn't contain NUL bytes) and fits in a single event packet.\nFor reliable reception, use the `subscribe` command above.",
+        "schema": "dtmi:jacdac:x19ed364c:event;1"
+      }
+    ],
+    "schemas": [
+      {
+        "@id": "dtmi:jacdac:x19ed364c:event;1",
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "count",
+            "schema": "integer"
+          }
+        ]
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@type": "Interface",
+    "@id": "dtmi:jacdac:services:x18b05b6a;1",
+    "displayName": "Keyboard",
+    "description": "A keyboard that can send keystrokes.\n\nThe codes for the key (selectors) is defined in the [HID Keyboard\nspecification](https://usb.org/sites/default/files/hut1_21.pdf), chapter 10 Keyboard/Keypad Page, page 81.\n\nThe device keeps tracks of the key state and is able to clear it all with the clear command.",
+    "contents": [],
+    "schemas": [
+      {
+        "@type": "Enum",
+        "@id": "dtmi:jacdac:x18b05b6a:modifiers;1",
+        "valueSchema": "integer",
+        "enumValues": [
+          {
+            "name": "leftControl",
+            "displayName": "LeftControl",
+            "enumValue": 224
+          },
+          {
+            "name": "leftShift",
+            "displayName": "LeftShift",
+            "enumValue": 225
+          },
+          {
+            "name": "leftAlt",
+            "displayName": "LeftAlt",
+            "enumValue": 226
+          },
+          {
+            "name": "leftGUID",
+            "displayName": "LeftGUID",
+            "enumValue": 227
+          },
+          {
+            "name": "rightControl",
+            "displayName": "RightControl",
+            "enumValue": 228
+          },
+          {
+            "name": "rightShift",
+            "displayName": "RightShift",
+            "enumValue": 229
+          },
+          {
+            "name": "rightAlt",
+            "displayName": "RightAlt",
+            "enumValue": 230
+          },
+          {
+            "name": "rightGUID",
+            "displayName": "RightGUID",
+            "enumValue": 231
+          }
+        ]
+      },
+      {
+        "@type": "Enum",
+        "@id": "dtmi:jacdac:x18b05b6a:action;1",
+        "valueSchema": "integer",
+        "enumValues": [
+          {
+            "name": "press",
+            "displayName": "Press",
+            "enumValue": 0
+          },
+          {
+            "name": "up",
+            "displayName": "Up",
+            "enumValue": 1
+          },
+          {
+            "name": "down",
+            "displayName": "Down",
+            "enumValue": 2
+          }
+        ]
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@type": "Interface",
+    "@id": "dtmi:jacdac:services:x1d35e393;1",
+    "displayName": "LED Matrix Controller",
+    "description": "A service that allows to control a rectangular matrix of monochrome LEDs.\nTo stream the state of the screen, use [LED Matrix display](/services/led-matrix-display) instead.",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "enabled",
+        "@id": "dtmi:jacdac:x1d35e393:rw:enabled;1",
+        "description": "Disables or enables the whole screen.",
+        "schema": "boolean",
+        "writable": true
+      },
+      {
+        "@type": "Property",
+        "name": "brightness",
+        "@id": "dtmi:jacdac:x1d35e393:rw:brightness;1",
+        "description": "Sets the general brightness of the LEDs.",
+        "schema": "integer",
+        "writable": true
+      },
+      {
+        "@type": "Property",
+        "name": "rows",
+        "@id": "dtmi:jacdac:x1d35e393:const:rows;1",
+        "description": "Number of rows on the screen",
+        "schema": "integer"
+      },
+      {
+        "@type": "Property",
+        "name": "columns",
+        "@id": "dtmi:jacdac:x1d35e393:const:columns;1",
+        "description": "Number of columns on the screen",
+        "schema": "integer"
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@type": "Interface",
+    "@id": "dtmi:jacdac:services:x110d154b;1",
+    "displayName": "LED Matrix Display",
+    "description": "A sensor that streams the state of a rectangular LED matrix.\nTo control the state of the screen, use [LED Matrix Controller](/services/led-matrix-controller) instead.",
+    "contents": [],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@type": "Interface",
+    "@id": "dtmi:jacdac:services:x126f00e0;1",
+    "displayName": "Light",
+    "description": "A controller for strips of RGB LEDs.",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "brightness",
+        "@id": "dtmi:jacdac:x126f00e0:rw:brightness;1",
+        "description": "Set the luminosity of the strip.\nAt `0` the power to the strip is completely shut down.",
+        "schema": "integer",
+        "writable": true
+      },
+      {
+        "@type": "Property",
+        "name": "actual_brightness",
+        "@id": "dtmi:jacdac:x126f00e0:ro:actualbrightness;1",
+        "description": "This is the luminosity actually applied to the strip.\nMay be lower than `brightness` if power-limited by the `max_power` register.\nIt will rise slowly (few seconds) back to `brightness` is limits are no longer required.",
+        "schema": "integer"
+      },
+      {
+        "@type": "Property",
+        "name": "light_type",
+        "@id": "dtmi:jacdac:x126f00e0:rw:lighttype;1",
+        "description": "Specifies the type of light strip connected to controller.\nControllers which are sold with lights should default to the correct type\nand could not allow change.",
+        "schema": "dtmi:jacdac:x126f00e0:lighttype;1",
+        "writable": true
+      },
+      {
+        "@type": "Property",
+        "name": "num_pixels",
+        "@id": "dtmi:jacdac:x126f00e0:rw:numpixels;1",
+        "description": "Specifies the number of pixels in the strip.\nControllers which are sold with lights should default to the correct length\nand could not allow change.\nIncreasing length at runtime leads to ineffective use of memory and may lead to controller reboot.",
+        "schema": "integer",
+        "writable": true
+      },
+      {
+        "@type": [
+          "Property",
+          "Current"
+        ],
+        "name": "max_power",
+        "@id": "dtmi:jacdac:x126f00e0:rw:maxpower;1",
+        "description": "Limit the power drawn by the light-strip (and controller).",
+        "unit": "milliampere",
+        "schema": "integer",
+        "writable": true
+      }
+    ],
+    "schemas": [
+      {
+        "@type": "Enum",
+        "@id": "dtmi:jacdac:x126f00e0:lighttype;1",
+        "valueSchema": "integer",
+        "enumValues": [
+          {
+            "name": "wS2812B_GRB",
+            "displayName": "WS2812B_GRB",
+            "enumValue": 0
+          },
+          {
+            "name": "aPA102",
+            "displayName": "APA102",
+            "enumValue": 16
+          },
+          {
+            "name": "sK9822",
+            "displayName": "SK9822",
+            "enumValue": 17
+          }
+        ]
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@type": "Interface",
+    "@id": "dtmi:jacdac:services:x12dc1fca;1",
+    "displayName": "Logger",
+    "description": "A service which can report messages to the bus.",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "min_priority",
+        "@id": "dtmi:jacdac:x12dc1fca:rw:minpriority;1",
+        "description": "Messages with level lower than this won't be emitted. The default setting may vary.\nLoggers should revert this to their default setting if the register has not been\nupdated in 3000ms, and also keep the lowest setting they have seen in the last 1500ms.\nThus, clients should write this register every 1000ms and ignore messages which are\ntoo verbose for them.",
+        "schema": "dtmi:jacdac:x12dc1fca:priority;1",
+        "writable": true
+      }
+    ],
+    "schemas": [
+      {
+        "@type": "Enum",
+        "@id": "dtmi:jacdac:x12dc1fca:priority;1",
+        "valueSchema": "integer",
+        "enumValues": [
+          {
+            "name": "debug",
+            "displayName": "Debug",
+            "enumValue": 0
+          },
+          {
+            "name": "log",
+            "displayName": "Log",
+            "enumValue": 1
+          },
+          {
+            "name": "warning",
+            "displayName": "Warning",
+            "enumValue": 2
+          },
+          {
+            "name": "error",
+            "displayName": "Error",
+            "enumValue": 3
+          }
+        ]
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@type": "Interface",
+    "@id": "dtmi:jacdac:services:x113dac86;1",
+    "displayName": "Microphone",
+    "description": "A single-channel microphone.",
+    "contents": [
+      {
+        "@type": [
+          "Property",
+          "TimeSpan"
+        ],
+        "name": "sampling_period",
+        "@id": "dtmi:jacdac:x113dac86:rw:samplingperiod;1",
+        "description": "Get or set microphone sampling period.\nSampling rate is `1_000_000 / sampling_period Hz`.",
+        "unit": "microsecond",
+        "schema": "integer",
+        "writable": true
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@type": "Interface",
+    "@id": "dtmi:jacdac:services:x140f9a78;1",
+    "displayName": "Model Runner",
+    "description": "Run machine learning models.\nOnly models with a single input tensor and a single output tensor are supported at the moment.\nInput is provided by Sensor Aggregator service on the same device.\nMultiple instances of this service may be present, if more than one model format is supported by a device.",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "auto_invoke_every",
+        "@id": "dtmi:jacdac:x140f9a78:rw:autoinvokeevery;1",
+        "description": "When register contains `N > 0`, run the model automatically every time new `N` samples are collected.\nModel may be run less often if it takes longer to run than `N * sampling_interval`.\nThe `outputs` register will stream its value after each run.\nThis register is not stored in flash.",
+        "schema": "integer",
+        "writable": true
+      },
+      {
+        "@type": [
+          "Property",
+          "TimeSpan"
+        ],
+        "name": "last_run_time",
+        "@id": "dtmi:jacdac:x140f9a78:ro:lastruntime;1",
+        "description": "The time consumed in last model execution.",
+        "unit": "microsecond",
+        "schema": "integer"
+      },
+      {
+        "@type": "Property",
+        "name": "allocated_arena_size",
+        "@id": "dtmi:jacdac:x140f9a78:ro:allocatedarenasize;1",
+        "description": "Number of RAM bytes allocated for model execution.",
+        "schema": "integer"
+      },
+      {
+        "@type": "Property",
+        "name": "model_size",
+        "@id": "dtmi:jacdac:x140f9a78:ro:modelsize;1",
+        "description": "The size of the model in bytes.",
+        "schema": "integer"
+      },
+      {
+        "@type": "Property",
+        "name": "last_error",
+        "@id": "dtmi:jacdac:x140f9a78:ro:lasterror;1",
+        "description": "Textual description of last error when running or loading model (if any).",
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "format",
+        "@id": "dtmi:jacdac:x140f9a78:const:format;1",
+        "description": "The type of ML models supported by this service.\n`TFLite` is flatbuffer `.tflite` file.\n`ML4F` is compiled machine code model for Cortex-M4F.\nThe format is typically present as first or second little endian word of model file.",
+        "schema": "dtmi:jacdac:x140f9a78:modelformat;1"
+      },
+      {
+        "@type": "Property",
+        "name": "format_version",
+        "@id": "dtmi:jacdac:x140f9a78:const:formatversion;1",
+        "description": "A version number for the format.",
+        "schema": "integer"
+      },
+      {
+        "@type": "Property",
+        "name": "parallel",
+        "@id": "dtmi:jacdac:x140f9a78:const:parallel;1",
+        "description": "If present and true this service can run models independently of other\ninstances of this service on the device.",
+        "schema": "boolean"
+      }
+    ],
+    "schemas": [
+      {
+        "@type": "Enum",
+        "@id": "dtmi:jacdac:x140f9a78:modelformat;1",
+        "valueSchema": "integer",
+        "enumValues": [
+          {
+            "name": "tFLite",
+            "displayName": "TFLite",
+            "enumValue": 860636756
+          },
+          {
+            "name": "mL4F",
+            "displayName": "ML4F",
+            "enumValue": 809963362
+          },
+          {
+            "name": "edgeImpulseCompiled",
+            "displayName": "EdgeImpulseCompiled",
+            "enumValue": 810961221
+          }
+        ]
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@type": "Interface",
+    "@id": "dtmi:jacdac:services:x17004cd8;1",
+    "displayName": "Motor",
+    "description": "A bi-directional DC motor.",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "duty",
+        "@id": "dtmi:jacdac:x17004cd8:rw:duty;1",
+        "description": "PWM duty cycle of the motor. Use negative/positive values to run the motor forwards and backwards.\nPositive is recommended to be clockwise rotation and negative counterclockwise.",
+        "schema": "integer",
+        "writable": true
+      },
+      {
+        "@type": "Property",
+        "name": "enabled",
+        "@id": "dtmi:jacdac:x17004cd8:rw:enabled;1",
+        "description": "Turn the power to the motor on/off.",
+        "schema": "boolean",
+        "writable": true
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@type": "Interface",
+    "@id": "dtmi:jacdac:services:x1885dc1c;1",
+    "displayName": "Mouse",
+    "description": "Control a device that acts as a mouse.",
+    "contents": [],
+    "schemas": [
+      {
+        "@type": "Enum",
+        "@id": "dtmi:jacdac:x1885dc1c:button;1",
+        "valueSchema": "integer",
+        "enumValues": [
+          {
+            "name": "right",
+            "displayName": "Right",
+            "enumValue": 1
+          },
+          {
+            "name": "middle",
+            "displayName": "Middle",
+            "enumValue": 4
+          },
+          {
+            "name": "left",
+            "displayName": "Left",
+            "enumValue": 2
+          }
+        ]
+      },
+      {
+        "@type": "Enum",
+        "@id": "dtmi:jacdac:x1885dc1c:buttonevent;1",
+        "valueSchema": "integer",
+        "enumValues": [
+          {
+            "name": "up",
+            "displayName": "Up",
+            "enumValue": 1
+          },
+          {
+            "name": "down",
+            "displayName": "Down",
+            "enumValue": 2
+          },
+          {
+            "name": "click",
+            "displayName": "Click",
+            "enumValue": 3
+          },
+          {
+            "name": "doubleClick",
+            "displayName": "DoubleClick",
+            "enumValue": 4
+          }
+        ]
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@type": "Interface",
+    "@id": "dtmi:jacdac:services:x18d55e2b;1",
+    "displayName": "Multitouch",
+    "description": "A capacitive touch sensor with multiple inputs.",
+    "contents": [
+      {
+        "@type": "Telemetry",
+        "name": "touch",
+        "@id": "dtmi:jacdac:x18d55e2b:event:touch;1",
+        "description": "Emitted when an input is touched.",
+        "schema": "integer"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "release",
+        "@id": "dtmi:jacdac:x18d55e2b:event:release;1",
+        "description": "Emitted when an input is no longer touched.",
+        "schema": "integer"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "tap",
+        "@id": "dtmi:jacdac:x18d55e2b:event:tap;1",
+        "description": "Emitted when an input is briefly touched. TODO Not implemented.",
+        "schema": "integer"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "long_press",
+        "@id": "dtmi:jacdac:x18d55e2b:event:longpress;1",
+        "description": "Emitted when an input is touched for longer than 500ms. TODO Not implemented.",
+        "schema": "integer"
+      },
+      {
+        "@type": [
+          "Telemetry",
+          "Event"
+        ],
+        "name": "swipe_pos",
+        "@id": "dtmi:jacdac:x18d55e2b:event:swipepos;1",
+        "description": "Emitted when input channels are successively touched in order of increasing channel numbers.",
+        "schema": "dtmi:jacdac:x18d55e2b:event;1"
+      },
+      {
+        "@type": [
+          "Telemetry",
+          "Event"
+        ],
+        "name": "swipe_neg",
+        "@id": "dtmi:jacdac:x18d55e2b:event:swipeneg;1",
+        "description": "Emitted when input channels are successively touched in order of decreasing channel numbers.",
+        "schema": "dtmi:jacdac:x18d55e2b:event;1"
+      }
+    ],
+    "schemas": [
+      {
+        "@id": "dtmi:jacdac:x18d55e2b:event;1",
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "count",
+            "schema": "integer"
+          }
+        ]
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@type": "Interface",
+    "@id": "dtmi:jacdac:services:x1b57b1d7;1",
+    "displayName": "Music",
+    "description": "A simple buzzer.",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "volume",
+        "@id": "dtmi:jacdac:x1b57b1d7:rw:volume;1",
+        "description": "The volume (duty cycle) of the buzzer.",
+        "schema": "integer",
+        "writable": true
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@type": "Interface",
+    "@id": "dtmi:jacdac:services:x1fa4c95a;1",
+    "displayName": "Power",
+    "description": "A power-provider service.",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "enabled",
+        "@id": "dtmi:jacdac:x1fa4c95a:rw:enabled;1",
+        "description": "Turn the power to the bus on/off.",
+        "schema": "boolean",
+        "writable": true
+      },
+      {
+        "@type": [
+          "Property",
+          "Current"
+        ],
+        "name": "max_power",
+        "@id": "dtmi:jacdac:x1fa4c95a:rw:maxpower;1",
+        "description": "Limit the power provided by the service. The actual maximum limit will depend on hardware.\nThis field may be read-only in some implementations - you should read it back after setting.",
+        "unit": "milliampere",
+        "schema": "integer",
+        "writable": true
+      },
+      {
+        "@type": "Property",
+        "name": "overload",
+        "@id": "dtmi:jacdac:x1fa4c95a:ro:overload;1",
+        "description": "Indicates whether the power has been shut down due to overdraw.",
+        "schema": "boolean"
+      },
+      {
+        "@type": [
+          "Property",
+          "Current"
+        ],
+        "name": "current_draw",
+        "@id": "dtmi:jacdac:x1fa4c95a:ro:currentdraw;1",
+        "description": "Present current draw from the bus.",
+        "unit": "milliampere",
+        "schema": "integer"
+      },
+      {
+        "@type": [
+          "Property",
+          "Voltage"
+        ],
+        "name": "battery_voltage",
+        "@id": "dtmi:jacdac:x1fa4c95a:ro:batteryvoltage;1",
+        "description": "Voltage on input.",
+        "unit": "millivolt",
+        "schema": "integer"
+      },
+      {
+        "@type": "Property",
+        "name": "battery_charge",
+        "@id": "dtmi:jacdac:x1fa4c95a:ro:batterycharge;1",
+        "description": "Fraction of charge in the battery.",
+        "schema": "integer"
+      },
+      {
+        "@type": "Property",
+        "name": "battery_capacity",
+        "@id": "dtmi:jacdac:x1fa4c95a:const:batterycapacity;1",
+        "description": "Energy that can be delivered to the bus when battery is fully charged.\nThis excludes conversion overheads if any.",
+        "schema": "integer"
+      },
+      {
+        "@type": [
+          "Property",
+          "TimeSpan"
+        ],
+        "name": "keep_on_pulse_duration",
+        "@id": "dtmi:jacdac:x1fa4c95a:rw:keeponpulseduration;1",
+        "description": "Many USB power packs need current to be drawn from time to time to prevent shutdown.\nThis regulates how often and for how long such current is drawn.\nTypically a 1/8W 22 ohm resistor is used as load. This limits the duty cycle to 10%.",
+        "unit": "millisecond",
+        "schema": "integer",
+        "writable": true
+      },
+      {
+        "@type": [
+          "Property",
+          "TimeSpan"
+        ],
+        "name": "keep_on_pulse_period",
+        "@id": "dtmi:jacdac:x1fa4c95a:rw:keeponpulseperiod;1",
+        "description": "Many USB power packs need current to be drawn from time to time to prevent shutdown.\nThis regulates how often and for how long such current is drawn.\nTypically a 1/8W 22 ohm resistor is used as load. This limits the duty cycle to 10%.",
+        "unit": "millisecond",
+        "schema": "integer",
+        "writable": true
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@type": "Interface",
+    "@id": "dtmi:jacdac:services:x1fb57453;1",
+    "displayName": "PWM Light",
+    "description": "A controller for 1 or more LEDs connected in parallel.",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "brightness",
+        "@id": "dtmi:jacdac:x1fb57453:rw:brightness;1",
+        "description": "Set the luminosity of the strip. The value is used to scale `start_intensity` in `steps` register.\nAt `0` the power to the strip is completely shut down.",
+        "schema": "integer",
+        "writable": true
+      },
+      {
+        "@type": [
+          "Property",
+          "Current"
+        ],
+        "name": "max_power",
+        "@id": "dtmi:jacdac:x1fb57453:rw:maxpower;1",
+        "description": "Limit the power drawn by the light-strip (and controller).",
+        "unit": "milliampere",
+        "schema": "integer",
+        "writable": true
+      },
+      {
+        "@type": "Property",
+        "name": "max_steps",
+        "@id": "dtmi:jacdac:x1fb57453:const:maxsteps;1",
+        "description": "Maximum number of steps allowed in animation definition. This determines the size of the `steps` register.",
+        "schema": "integer"
+      },
+      {
+        "@type": "Property",
+        "name": "current_iteration",
+        "@id": "dtmi:jacdac:x1fb57453:rw:currentiteration;1",
+        "description": "Currently excecuting iteration of animation. Can be set to `0` to restart current animation.\nIf `current_iteration > max_iterations`, then no animation is currently running.",
+        "schema": "integer",
+        "writable": true
+      },
+      {
+        "@type": "Property",
+        "name": "max_iterations",
+        "@id": "dtmi:jacdac:x1fb57453:rw:maxiterations;1",
+        "description": "The animation will be repeated `max_iterations + 1` times.",
+        "schema": "integer",
+        "writable": true
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@type": "Interface",
+    "@id": "dtmi:jacdac:services:x119c3ad1;1",
+    "displayName": "Role Manager",
+    "description": "Assign roles to devices on JACDAC bus.",
+    "contents": [],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@type": "Interface",
+    "@id": "dtmi:jacdac:services:x12fc9103;1",
+    "displayName": "Servo",
+    "description": "Servo is a small motor directed with a PWM signal.\nThis services fixes the servo period at 20ms, and the pulse can be regulated.",
+    "contents": [
+      {
+        "@type": [
+          "Property",
+          "TimeSpan"
+        ],
+        "name": "pulse",
+        "@id": "dtmi:jacdac:x12fc9103:rw:pulse;1",
+        "description": "Specifies length of the pulse in microseconds. The period is always 20ms.",
+        "unit": "microsecond",
+        "schema": "integer",
+        "writable": true
+      },
+      {
+        "@type": "Property",
+        "name": "enabled",
+        "@id": "dtmi:jacdac:x12fc9103:rw:enabled;1",
+        "description": "Turn the power to the servo on/off.",
+        "schema": "boolean",
+        "writable": true
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@type": "Interface",
+    "@id": "dtmi:jacdac:services:x1107dc4a;1",
+    "displayName": "Settings Storage",
+    "description": "Non-volatile key-value storage interface for storing settings.",
+    "contents": [],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@type": "Interface",
+    "@id": "dtmi:jacdac:services:x1f274746;1",
+    "displayName": "Slider",
+    "description": "A slider potentiometer.",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "position",
+        "@id": "dtmi:jacdac:x1f274746:ro:position;1",
+        "description": "The relative position of the slider between `0x0000` and `0xffff`.",
+        "schema": "integer"
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@type": "Interface",
+    "@id": "dtmi:jacdac:services:x1b43b70b;1",
+    "displayName": "TCP",
+    "description": "Data transfer over TCP/IP and TLS stream sockets.",
+    "contents": [],
+    "schemas": [
+      {
+        "@type": "Enum",
+        "@id": "dtmi:jacdac:x1b43b70b:tcperror;1",
+        "valueSchema": "integer",
+        "enumValues": [
+          {
+            "name": "invalidCommand",
+            "displayName": "InvalidCommand",
+            "enumValue": 1
+          },
+          {
+            "name": "invalidCommandPayload",
+            "displayName": "InvalidCommandPayload",
+            "enumValue": 2
+          }
+        ]
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@type": "Interface",
+    "@id": "dtmi:jacdac:services:x1421bac7;1",
+    "displayName": "Temperature",
+    "description": "A thermometer measuring outside environment.",
+    "contents": [
+      {
+        "@type": [
+          "Property",
+          "Temperature"
+        ],
+        "name": "temperature",
+        "@id": "dtmi:jacdac:x1421bac7:ro:temperature;1",
+        "description": "The temperature.",
+        "unit": "degreeCelsius",
+        "schema": "float"
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@type": "Interface",
+    "@id": "dtmi:jacdac:services:x18aae1fa;1",
+    "displayName": "WIFI",
+    "description": "Discovery and connection to WiFi networks. Separate TCP service is used for data transfer.",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "connected",
+        "@id": "dtmi:jacdac:x18aae1fa:ro:connected;1",
+        "description": "Indicates whether or not we currently have an IP address assigned.",
+        "schema": "boolean"
+      },
+      {
+        "@type": [
+          "Telemetry",
+          "Event"
+        ],
+        "name": "got_ip",
+        "@id": "dtmi:jacdac:x18aae1fa:event:gotip;1",
+        "description": "Emitted upon successful join and IP address assignment.",
+        "schema": "dtmi:jacdac:x18aae1fa:event;1"
+      },
+      {
+        "@type": [
+          "Telemetry",
+          "Event"
+        ],
+        "name": "lost_ip",
+        "@id": "dtmi:jacdac:x18aae1fa:event:lostip;1",
+        "description": "Emitted when disconnected from network.",
+        "schema": "dtmi:jacdac:x18aae1fa:event;1"
+      }
+    ],
+    "schemas": [
+      {
+        "@id": "dtmi:jacdac:x18aae1fa:event;1",
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "count",
+            "schema": "integer"
+          }
+        ]
+      },
+      {
+        "@type": "Enum",
+        "@id": "dtmi:jacdac:x18aae1fa:apflags;1",
+        "valueSchema": "integer",
+        "enumValues": [
+          {
+            "name": "hasPassword",
+            "displayName": "HasPassword",
+            "enumValue": 1
+          },
+          {
+            "name": "wPS",
+            "displayName": "WPS",
+            "enumValue": 2
+          },
+          {
+            "name": "hasSecondaryChannelAbove",
+            "displayName": "HasSecondaryChannelAbove",
+            "enumValue": 4
+          },
+          {
+            "name": "hasSecondaryChannelBelow",
+            "displayName": "HasSecondaryChannelBelow",
+            "enumValue": 8
+          },
+          {
+            "name": "iEEE_802_11B",
+            "displayName": "IEEE_802_11B",
+            "enumValue": 256
+          },
+          {
+            "name": "iEEE_802_11A",
+            "displayName": "IEEE_802_11A",
+            "enumValue": 512
+          },
+          {
+            "name": "iEEE_802_11G",
+            "displayName": "IEEE_802_11G",
+            "enumValue": 1024
+          },
+          {
+            "name": "iEEE_802_11N",
+            "displayName": "IEEE_802_11N",
+            "enumValue": 2048
+          },
+          {
+            "name": "iEEE_802_11AC",
+            "displayName": "IEEE_802_11AC",
+            "enumValue": 4096
+          },
+          {
+            "name": "iEEE_802_11AX",
+            "displayName": "IEEE_802_11AX",
+            "enumValue": 8192
+          },
+          {
+            "name": "iEEE_802_LongRange",
+            "displayName": "IEEE_802_LongRange",
+            "enumValue": 32768
+          }
+        ]
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  }
+]
