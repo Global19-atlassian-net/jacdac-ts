@@ -27,17 +27,17 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-340a3683b5a1fbd41578.js"
+    "url": "webpack-runtime-90f84ec267ead3e0d735.js"
   },
   {
     "url": "framework-3078d08ec5413fe4924e.js"
   },
   {
-    "url": "app-a474e4bff852b0bd520b.js"
+    "url": "app-b2ca872248aa7f4008ec.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "65de0c785326839e38b15c97b5609b59"
+    "revision": "49ee280db4ce1f4c65204ab04b24606c"
   },
   {
     "url": "static/webfonts/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"
@@ -57,7 +57,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "85bbf27baec3fa70ca853fea68ec7290"
+    "revision": "4729578a98d226dac06368c53eb8ab67"
   },
   {
     "url": "polyfill-0151a648e2fdd934da58.js"
@@ -69,7 +69,7 @@ self.__precacheManifest = [
     "url": "styles-e9d24b1846c7d6eb9685.js"
   },
   {
-    "url": "64b32d90096fd9ae25fd7f9485d4d348bcf9f765-0ef4e983928409c7bd55.js"
+    "url": "f82e4e6b7f31e4c0086dbceddccf60bd4dc0a5fc-ea7bab175216970004ff.js"
   },
   {
     "url": "component---src-pages-404-mdx-1058db2afbe64e5c3852.js"
@@ -80,7 +80,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2214083594.json",
-    "revision": "68f358038a1ae07771f74dfca4c5c404"
+    "revision": "32de83b33d46d305da39197549aaa8c5"
   },
   {
     "url": "page-data/sq/d/2270080012.json",
@@ -92,7 +92,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2744294623.json",
-    "revision": "28f634951f5c68d4d79bbe0e799ca41c"
+    "revision": "74d1f9f93b0f0adca6d6e07492bb7855"
   },
   {
     "url": "page-data/sq/d/3159585216.json",
@@ -125,7 +125,7 @@ self.__precacheManifest = [
     "revision": "dd6e13fea94a3994796c69399ca408ca"
   },
   {
-    "url": "component---src-pages-dtmi-mdx-44e9b22f4b300e07a5d3.js"
+    "url": "component---src-pages-dtmi-mdx-3af243c9a4ced0646a2d.js"
   },
   {
     "url": "page-data/dtmi/page-data.json",
@@ -325,18 +325,18 @@ self.__precacheManifest = [
     "revision": "a107cd4ee6583cdb263e22c8a3035dc2"
   },
   {
-    "url": "component---src-pages-tools-azure-iot-hub-mdx-705e3dc8837ec9818f28.js"
+    "url": "component---src-pages-tools-azure-device-twin-designer-mdx-5e5475116b174abe03c1.js"
+  },
+  {
+    "url": "page-data/tools/azure-device-twin-designer/page-data.json",
+    "revision": "761ee3f09fcab2bac4b1ea2d10bd8f71"
+  },
+  {
+    "url": "component---src-pages-tools-azure-iot-hub-mdx-84d8a622e69c869db238.js"
   },
   {
     "url": "page-data/tools/azure-iot-hub/page-data.json",
     "revision": "fdbcc3e317efdc95fb1eb244c409d897"
-  },
-  {
-    "url": "component---src-pages-tools-azure-twin-designer-mdx-f4b0300feb5af6894cce.js"
-  },
-  {
-    "url": "page-data/tools/azure-twin-designer/page-data.json",
-    "revision": "86a2eb6f67dfec244225635629dfd01e"
   },
   {
     "url": "component---src-pages-tools-collector-mdx-1636fb3f74d4bb2a1950.js"
@@ -502,7 +502,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/jacdac-ts/app-a474e4bff852b0bd520b.js`))) {
+  if (!resources || !(await caches.match(`/jacdac-ts/app-b2ca872248aa7f4008ec.js`))) {
     return await fetch(event.request)
   }
 
