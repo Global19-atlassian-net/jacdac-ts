@@ -4,6 +4,9 @@
   "displayName": "TCP",
   "description": "Data transfer over TCP/IP and TLS stream sockets.",
   "contents": [],
+  "extends": [
+    "dtmi:jacdac:services:x1ffffff3;1"
+  ],
   "schemas": [
     {
       "@type": "Enum",

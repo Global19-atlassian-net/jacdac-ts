@@ -5,7 +5,7 @@
   "description": "Discovery and connection to WiFi networks. Separate TCP service is used for data transfer.",
   "contents": [
     {
-      "@type": "Property",
+      "@type": "Telemetry",
       "name": "connected",
       "@id": "dtmi:jacdac:x18aae1fa:ro:connected;1",
       "description": "Indicates whether or not we currently have an IP address assigned.",
@@ -31,6 +31,9 @@
       "description": "Emitted when disconnected from network.",
       "schema": "dtmi:jacdac:x18aae1fa:event;1"
     }
+  ],
+  "extends": [
+    "dtmi:jacdac:services:x1ffffff3;1"
   ],
   "schemas": [
     {

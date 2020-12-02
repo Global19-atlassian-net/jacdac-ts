@@ -6,7 +6,7 @@
   "contents": [
     {
       "@type": [
-        "Property",
+        "Telemetry",
         "Temperature"
       ],
       "name": "temperature",
@@ -15,6 +15,10 @@
       "unit": "degreeCelsius",
       "schema": "float"
     }
+  ],
+  "extends": [
+    "dtmi:jacdac:services:x1ffffff3;1",
+    "dtmi:jacdac:services:x1ffffff2;1"
   ],
   "@context": "dtmi:dtdl:context;2"
 }

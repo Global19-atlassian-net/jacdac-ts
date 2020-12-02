@@ -14,7 +14,7 @@
     },
     {
       "@type": [
-        "Property",
+        "Telemetry",
         "TimeSpan"
       ],
       "name": "last_run_time",
@@ -24,21 +24,21 @@
       "schema": "integer"
     },
     {
-      "@type": "Property",
+      "@type": "Telemetry",
       "name": "allocated_arena_size",
       "@id": "dtmi:jacdac:x140f9a78:ro:allocatedarenasize;1",
       "description": "Number of RAM bytes allocated for model execution.",
       "schema": "integer"
     },
     {
-      "@type": "Property",
+      "@type": "Telemetry",
       "name": "model_size",
       "@id": "dtmi:jacdac:x140f9a78:ro:modelsize;1",
       "description": "The size of the model in bytes.",
       "schema": "integer"
     },
     {
-      "@type": "Property",
+      "@type": "Telemetry",
       "name": "last_error",
       "@id": "dtmi:jacdac:x140f9a78:ro:lasterror;1",
       "description": "Textual description of last error when running or loading model (if any).",
@@ -65,6 +65,9 @@
       "description": "If present and true this service can run models independently of other\ninstances of this service on the device.",
       "schema": "boolean"
     }
+  ],
+  "extends": [
+    "dtmi:jacdac:services:x1ffffff3;1"
   ],
   "schemas": [
     {

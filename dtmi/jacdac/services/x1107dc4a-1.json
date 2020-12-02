@@ -4,5 +4,8 @@
   "displayName": "Settings Storage",
   "description": "Non-volatile key-value storage interface for storing settings.",
   "contents": [],
+  "extends": [
+    "dtmi:jacdac:services:x1ffffff3;1"
+  ],
   "@context": "dtmi:dtdl:context;2"
 }

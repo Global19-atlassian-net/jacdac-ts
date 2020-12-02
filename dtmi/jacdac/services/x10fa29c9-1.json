@@ -5,7 +5,7 @@
   "description": "An incremental rotary encoder - converts angular motion of a shaft to digital signal.",
   "contents": [
     {
-      "@type": "Property",
+      "@type": "Telemetry",
       "name": "position",
       "@id": "dtmi:jacdac:x10fa29c9:ro:position;1",
       "description": "Upon device reset starts at `0` (regardless of the shaft position).\nIncreases by `1` for a clockwise \"click\", by `-1` for counter-clockwise.",
@@ -18,6 +18,10 @@
       "description": "This specifies by how much `position` changes when the crank does 360 degree turn. Typically 12 or 24.",
       "schema": "integer"
     }
+  ],
+  "extends": [
+    "dtmi:jacdac:services:x1ffffff3;1",
+    "dtmi:jacdac:services:x1ffffff2;1"
   ],
   "@context": "dtmi:dtdl:context;2"
 }

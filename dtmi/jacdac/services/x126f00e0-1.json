@@ -13,7 +13,7 @@
       "writable": true
     },
     {
-      "@type": "Property",
+      "@type": "Telemetry",
       "name": "actual_brightness",
       "@id": "dtmi:jacdac:x126f00e0:ro:actualbrightness;1",
       "description": "This is the luminosity actually applied to the strip.\nMay be lower than `brightness` if power-limited by the `max_power` register.\nIt will rise slowly (few seconds) back to `brightness` is limits are no longer required.",
@@ -47,6 +47,9 @@
       "schema": "integer",
       "writable": true
     }
+  ],
+  "extends": [
+    "dtmi:jacdac:services:x1ffffff3;1"
   ],
   "schemas": [
     {

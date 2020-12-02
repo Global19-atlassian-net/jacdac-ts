@@ -5,14 +5,14 @@
   "description": "Aggregate data from multiple sensors into a single stream\n(often used as input to machine learning models on the same device, see model runner service).",
   "contents": [
     {
-      "@type": "Property",
+      "@type": "Telemetry",
       "name": "num_samples",
       "@id": "dtmi:jacdac:x1d90e1c5:ro:numsamples;1",
       "description": "Number of input samples collected so far.",
       "schema": "integer"
     },
     {
-      "@type": "Property",
+      "@type": "Telemetry",
       "name": "sample_size",
       "@id": "dtmi:jacdac:x1d90e1c5:ro:samplesize;1",
       "description": "Size of a single sample.",
@@ -26,6 +26,9 @@
       "schema": "integer",
       "writable": true
     }
+  ],
+  "extends": [
+    "dtmi:jacdac:services:x1ffffff3;1"
   ],
   "schemas": [
     {

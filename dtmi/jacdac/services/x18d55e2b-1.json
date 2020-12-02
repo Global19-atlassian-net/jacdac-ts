@@ -53,6 +53,10 @@
       "schema": "dtmi:jacdac:x18d55e2b:event;1"
     }
   ],
+  "extends": [
+    "dtmi:jacdac:services:x1ffffff3;1",
+    "dtmi:jacdac:services:x1ffffff2;1"
+  ],
   "schemas": [
     {
       "@id": "dtmi:jacdac:x18d55e2b:event;1",

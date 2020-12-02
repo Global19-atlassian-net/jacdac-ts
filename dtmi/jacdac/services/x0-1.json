@@ -34,7 +34,7 @@
     },
     {
       "@type": [
-        "Property",
+        "Telemetry",
         "Temperature"
       ],
       "name": "mcu_temperature",
@@ -45,7 +45,7 @@
     },
     {
       "@type": [
-        "Property",
+        "Telemetry",
         "TimeSpan"
       ],
       "name": "uptime",
@@ -68,6 +68,9 @@
       "description": "URL with machine-readable metadata information about updating device firmware",
       "schema": "string"
     }
+  ],
+  "extends": [
+    "dtmi:jacdac:services:x1ffffff3;1"
   ],
   "schemas": [
     {

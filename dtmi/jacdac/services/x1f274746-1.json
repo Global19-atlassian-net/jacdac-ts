@@ -5,12 +5,16 @@
   "description": "A slider potentiometer.",
   "contents": [
     {
-      "@type": "Property",
+      "@type": "Telemetry",
       "name": "position",
       "@id": "dtmi:jacdac:x1f274746:ro:position;1",
       "description": "The relative position of the slider between `0x0000` and `0xffff`.",
       "schema": "integer"
     }
+  ],
+  "extends": [
+    "dtmi:jacdac:services:x1ffffff3;1",
+    "dtmi:jacdac:services:x1ffffff2;1"
   ],
   "@context": "dtmi:dtdl:context;2"
 }

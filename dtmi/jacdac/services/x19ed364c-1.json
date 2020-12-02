@@ -5,7 +5,7 @@
   "description": "Send messages, receive commands, and work with device twins in Azure IoT Hub.",
   "contents": [
     {
-      "@type": "Property",
+      "@type": "Telemetry",
       "name": "connection_status",
       "@id": "dtmi:jacdac:x19ed364c:ro:connectionstatus;1",
       "description": "Returns `\"ok\"` when connected, and an error description otherwise.",
@@ -20,14 +20,14 @@
       "writable": true
     },
     {
-      "@type": "Property",
+      "@type": "Telemetry",
       "name": "hub_name",
       "@id": "dtmi:jacdac:x19ed364c:ro:hubname;1",
       "description": "Something like `my-iot-hub.azure-devices.net`; empty string when `connection_string` is not set.",
       "schema": "string"
     },
     {
-      "@type": "Property",
+      "@type": "Telemetry",
       "name": "device_id",
       "@id": "dtmi:jacdac:x19ed364c:ro:deviceid;1",
       "description": "Something like `my-dev-007`; empty string when `connection_string` is not set.",
@@ -60,6 +60,9 @@
       "description": "This event is emitted upon reception of a cloud to device message, that is a string\n(doesn't contain NUL bytes) and fits in a single event packet.\nFor reliable reception, use the `subscribe` command above.",
       "schema": "dtmi:jacdac:x19ed364c:event;1"
     }
+  ],
+  "extends": [
+    "dtmi:jacdac:services:x1ffffff3;1"
   ],
   "schemas": [
     {

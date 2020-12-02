@@ -13,6 +13,9 @@
       "writable": true
     }
   ],
+  "extends": [
+    "dtmi:jacdac:services:x1ffffff3;1"
+  ],
   "schemas": [
     {
       "@type": "Enum",

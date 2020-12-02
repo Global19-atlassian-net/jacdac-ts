@@ -35,5 +35,8 @@
       "schema": "integer"
     }
   ],
+  "extends": [
+    "dtmi:jacdac:services:x1ffffff3;1"
+  ],
   "@context": "dtmi:dtdl:context;2"
 }

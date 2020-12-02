@@ -5,7 +5,7 @@
   "description": "A simple push-button.\n\nNote: this service will stream readings while the button is pressed and shortly after it's released, even\nwhen `stream_samples == 0`. TODO remove this?",
   "contents": [
     {
-      "@type": "Property",
+      "@type": "Telemetry",
       "name": "pressed",
       "@id": "dtmi:jacdac:x1473a263:ro:pressed;1",
       "description": "Indicates whether the button is currently active (pressed).",
@@ -51,6 +51,10 @@
       "description": "Emitted together with `up` when the press time was more than 500ms.",
       "schema": "dtmi:jacdac:x1473a263:event;1"
     }
+  ],
+  "extends": [
+    "dtmi:jacdac:services:x1ffffff3;1",
+    "dtmi:jacdac:services:x1ffffff2;1"
   ],
   "schemas": [
     {

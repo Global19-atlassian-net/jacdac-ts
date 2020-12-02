@@ -4,5 +4,8 @@
   "displayName": "Role Manager",
   "description": "Assign roles to devices on JACDAC bus.",
   "contents": [],
+  "extends": [
+    "dtmi:jacdac:services:x1ffffff3;1"
+  ],
   "@context": "dtmi:dtdl:context;2"
 }

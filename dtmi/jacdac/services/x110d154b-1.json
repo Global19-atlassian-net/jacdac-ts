@@ -4,5 +4,9 @@
   "displayName": "LED Matrix Display",
   "description": "A sensor that streams the state of a rectangular LED matrix.\nTo control the state of the screen, use [LED Matrix Controller](/services/led-matrix-controller) instead.",
   "contents": [],
+  "extends": [
+    "dtmi:jacdac:services:x1ffffff3;1",
+    "dtmi:jacdac:services:x1ffffff2;1"
+  ],
   "@context": "dtmi:dtdl:context;2"
 }

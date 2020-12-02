@@ -6,7 +6,7 @@
     "description": "A 3-axis accelerometer.",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Telemetry",
         "name": "forces",
         "@id": "dtmi:jacdac:x1f140409:ro:forces;1",
         "description": "Indicates the current forces acting on accelerometer.",
@@ -149,6 +149,10 @@
         "schema": "dtmi:jacdac:x1f140409:event;1"
       }
     ],
+    "extends": [
+      "dtmi:jacdac:services:x1ffffff3;1",
+      "dtmi:jacdac:services:x1ffffff2;1"
+    ],
     "schemas": [
       {
         "@id": "dtmi:jacdac:x1f140409:event;1",
@@ -170,14 +174,14 @@
     "description": "Aggregate data from multiple sensors into a single stream\n(often used as input to machine learning models on the same device, see model runner service).",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Telemetry",
         "name": "num_samples",
         "@id": "dtmi:jacdac:x1d90e1c5:ro:numsamples;1",
         "description": "Number of input samples collected so far.",
         "schema": "integer"
       },
       {
-        "@type": "Property",
+        "@type": "Telemetry",
         "name": "sample_size",
         "@id": "dtmi:jacdac:x1d90e1c5:ro:samplesize;1",
         "description": "Size of a single sample.",
@@ -191,6 +195,9 @@
         "schema": "integer",
         "writable": true
       }
+    ],
+    "extends": [
+      "dtmi:jacdac:services:x1ffffff3;1"
     ],
     "schemas": [
       {
@@ -239,6 +246,9 @@
     "displayName": "Bootloader",
     "description": "Allows flashing (reprogramming) devices over JACDAC.",
     "contents": [],
+    "extends": [
+      "dtmi:jacdac:services:x1ffffff3;1"
+    ],
     "schemas": [
       {
         "@type": "Enum",
@@ -282,7 +292,7 @@
     "description": "A simple push-button.\n\nNote: this service will stream readings while the button is pressed and shortly after it's released, even\nwhen `stream_samples == 0`. TODO remove this?",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Telemetry",
         "name": "pressed",
         "@id": "dtmi:jacdac:x1473a263:ro:pressed;1",
         "description": "Indicates whether the button is currently active (pressed).",
@@ -329,6 +339,10 @@
         "schema": "dtmi:jacdac:x1473a263:event;1"
       }
     ],
+    "extends": [
+      "dtmi:jacdac:services:x1ffffff3;1",
+      "dtmi:jacdac:services:x1ffffff2;1"
+    ],
     "schemas": [
       {
         "@id": "dtmi:jacdac:x1473a263:event;1",
@@ -349,6 +363,9 @@
     "displayName": "CODAL Message Bus",
     "description": "A service that allows passing events through the [CODAL Message Bus](https://lancaster-university.github.io/microbit-docs/ubit/messageBus/)\n* ``id`` is a unique identifier that identifies a component in the device. Use ``0`` to address all sources. The value of other identifiers is typically hardware dependent.\n* ``event`` is an identifier that determines the event type. Use ``0`` as a wildcard.",
     "contents": [],
+    "extends": [
+      "dtmi:jacdac:services:x1ffffff3;1"
+    ],
     "@context": "dtmi:dtdl:context;2"
   },
   {
@@ -387,7 +404,7 @@
       },
       {
         "@type": [
-          "Property",
+          "Telemetry",
           "Temperature"
         ],
         "name": "mcu_temperature",
@@ -398,7 +415,7 @@
       },
       {
         "@type": [
-          "Property",
+          "Telemetry",
           "TimeSpan"
         ],
         "name": "uptime",
@@ -421,6 +438,9 @@
         "description": "URL with machine-readable metadata information about updating device firmware",
         "schema": "string"
       }
+    ],
+    "extends": [
+      "dtmi:jacdac:services:x1ffffff3;1"
     ],
     "schemas": [
       {
@@ -445,7 +465,7 @@
     "description": "An incremental rotary encoder - converts angular motion of a shaft to digital signal.",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Telemetry",
         "name": "position",
         "@id": "dtmi:jacdac:x10fa29c9:ro:position;1",
         "description": "Upon device reset starts at `0` (regardless of the shaft position).\nIncreases by `1` for a clockwise \"click\", by `-1` for counter-clockwise.",
@@ -458,6 +478,10 @@
         "description": "This specifies by how much `position` changes when the crank does 360 degree turn. Typically 12 or 24.",
         "schema": "integer"
       }
+    ],
+    "extends": [
+      "dtmi:jacdac:services:x1ffffff3;1",
+      "dtmi:jacdac:services:x1ffffff2;1"
     ],
     "@context": "dtmi:dtdl:context;2"
   },
@@ -505,6 +529,10 @@
           ]
         }
       }
+    ],
+    "extends": [
+      "dtmi:jacdac:services:x1ffffff3;1",
+      "dtmi:jacdac:services:x1ffffff2;1"
     ],
     "schemas": [
       {
@@ -584,12 +612,16 @@
     "description": "A sensor measuring humidity of outside environment.",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Telemetry",
         "name": "humidity",
         "@id": "dtmi:jacdac:x16c810b8:ro:humidity;1",
         "description": "The relative humidity in percentage of full water saturation.",
         "schema": "float"
       }
+    ],
+    "extends": [
+      "dtmi:jacdac:services:x1ffffff3;1",
+      "dtmi:jacdac:services:x1ffffff2;1"
     ],
     "@context": "dtmi:dtdl:context;2"
   },
@@ -600,7 +632,7 @@
     "description": "Send messages, receive commands, and work with device twins in Azure IoT Hub.",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Telemetry",
         "name": "connection_status",
         "@id": "dtmi:jacdac:x19ed364c:ro:connectionstatus;1",
         "description": "Returns `\"ok\"` when connected, and an error description otherwise.",
@@ -615,14 +647,14 @@
         "writable": true
       },
       {
-        "@type": "Property",
+        "@type": "Telemetry",
         "name": "hub_name",
         "@id": "dtmi:jacdac:x19ed364c:ro:hubname;1",
         "description": "Something like `my-iot-hub.azure-devices.net`; empty string when `connection_string` is not set.",
         "schema": "string"
       },
       {
-        "@type": "Property",
+        "@type": "Telemetry",
         "name": "device_id",
         "@id": "dtmi:jacdac:x19ed364c:ro:deviceid;1",
         "description": "Something like `my-dev-007`; empty string when `connection_string` is not set.",
@@ -656,6 +688,9 @@
         "schema": "dtmi:jacdac:x19ed364c:event;1"
       }
     ],
+    "extends": [
+      "dtmi:jacdac:services:x1ffffff3;1"
+    ],
     "schemas": [
       {
         "@id": "dtmi:jacdac:x19ed364c:event;1",
@@ -676,6 +711,9 @@
     "displayName": "Keyboard",
     "description": "A keyboard that can send keystrokes.\n\nThe codes for the key (selectors) is defined in the [HID Keyboard\nspecification](https://usb.org/sites/default/files/hut1_21.pdf), chapter 10 Keyboard/Keypad Page, page 81.\n\nThe device keeps tracks of the key state and is able to clear it all with the clear command.",
     "contents": [],
+    "extends": [
+      "dtmi:jacdac:services:x1ffffff3;1"
+    ],
     "schemas": [
       {
         "@type": "Enum",
@@ -786,6 +824,9 @@
         "schema": "integer"
       }
     ],
+    "extends": [
+      "dtmi:jacdac:services:x1ffffff3;1"
+    ],
     "@context": "dtmi:dtdl:context;2"
   },
   {
@@ -794,6 +835,10 @@
     "displayName": "LED Matrix Display",
     "description": "A sensor that streams the state of a rectangular LED matrix.\nTo control the state of the screen, use [LED Matrix Controller](/services/led-matrix-controller) instead.",
     "contents": [],
+    "extends": [
+      "dtmi:jacdac:services:x1ffffff3;1",
+      "dtmi:jacdac:services:x1ffffff2;1"
+    ],
     "@context": "dtmi:dtdl:context;2"
   },
   {
@@ -811,7 +856,7 @@
         "writable": true
       },
       {
-        "@type": "Property",
+        "@type": "Telemetry",
         "name": "actual_brightness",
         "@id": "dtmi:jacdac:x126f00e0:ro:actualbrightness;1",
         "description": "This is the luminosity actually applied to the strip.\nMay be lower than `brightness` if power-limited by the `max_power` register.\nIt will rise slowly (few seconds) back to `brightness` is limits are no longer required.",
@@ -845,6 +890,9 @@
         "schema": "integer",
         "writable": true
       }
+    ],
+    "extends": [
+      "dtmi:jacdac:services:x1ffffff3;1"
     ],
     "schemas": [
       {
@@ -886,6 +934,9 @@
         "schema": "dtmi:jacdac:x12dc1fca:priority;1",
         "writable": true
       }
+    ],
+    "extends": [
+      "dtmi:jacdac:services:x1ffffff3;1"
     ],
     "schemas": [
       {
@@ -937,6 +988,9 @@
         "writable": true
       }
     ],
+    "extends": [
+      "dtmi:jacdac:services:x1ffffff3;1"
+    ],
     "@context": "dtmi:dtdl:context;2"
   },
   {
@@ -955,7 +1009,7 @@
       },
       {
         "@type": [
-          "Property",
+          "Telemetry",
           "TimeSpan"
         ],
         "name": "last_run_time",
@@ -965,21 +1019,21 @@
         "schema": "integer"
       },
       {
-        "@type": "Property",
+        "@type": "Telemetry",
         "name": "allocated_arena_size",
         "@id": "dtmi:jacdac:x140f9a78:ro:allocatedarenasize;1",
         "description": "Number of RAM bytes allocated for model execution.",
         "schema": "integer"
       },
       {
-        "@type": "Property",
+        "@type": "Telemetry",
         "name": "model_size",
         "@id": "dtmi:jacdac:x140f9a78:ro:modelsize;1",
         "description": "The size of the model in bytes.",
         "schema": "integer"
       },
       {
-        "@type": "Property",
+        "@type": "Telemetry",
         "name": "last_error",
         "@id": "dtmi:jacdac:x140f9a78:ro:lasterror;1",
         "description": "Textual description of last error when running or loading model (if any).",
@@ -1006,6 +1060,9 @@
         "description": "If present and true this service can run models independently of other\ninstances of this service on the device.",
         "schema": "boolean"
       }
+    ],
+    "extends": [
+      "dtmi:jacdac:services:x1ffffff3;1"
     ],
     "schemas": [
       {
@@ -1056,6 +1113,9 @@
         "writable": true
       }
     ],
+    "extends": [
+      "dtmi:jacdac:services:x1ffffff3;1"
+    ],
     "@context": "dtmi:dtdl:context;2"
   },
   {
@@ -1064,6 +1124,9 @@
     "displayName": "Mouse",
     "description": "Control a device that acts as a mouse.",
     "contents": [],
+    "extends": [
+      "dtmi:jacdac:services:x1ffffff3;1"
+    ],
     "schemas": [
       {
         "@type": "Enum",
@@ -1172,6 +1235,10 @@
         "schema": "dtmi:jacdac:x18d55e2b:event;1"
       }
     ],
+    "extends": [
+      "dtmi:jacdac:services:x1ffffff3;1",
+      "dtmi:jacdac:services:x1ffffff2;1"
+    ],
     "schemas": [
       {
         "@id": "dtmi:jacdac:x18d55e2b:event;1",
@@ -1200,6 +1267,9 @@
         "schema": "integer",
         "writable": true
       }
+    ],
+    "extends": [
+      "dtmi:jacdac:services:x1ffffff3;1"
     ],
     "@context": "dtmi:dtdl:context;2"
   },
@@ -1230,7 +1300,7 @@
         "writable": true
       },
       {
-        "@type": "Property",
+        "@type": "Telemetry",
         "name": "overload",
         "@id": "dtmi:jacdac:x1fa4c95a:ro:overload;1",
         "description": "Indicates whether the power has been shut down due to overdraw.",
@@ -1238,7 +1308,7 @@
       },
       {
         "@type": [
-          "Property",
+          "Telemetry",
           "Current"
         ],
         "name": "current_draw",
@@ -1249,7 +1319,7 @@
       },
       {
         "@type": [
-          "Property",
+          "Telemetry",
           "Voltage"
         ],
         "name": "battery_voltage",
@@ -1259,7 +1329,7 @@
         "schema": "integer"
       },
       {
-        "@type": "Property",
+        "@type": "Telemetry",
         "name": "battery_charge",
         "@id": "dtmi:jacdac:x1fa4c95a:ro:batterycharge;1",
         "description": "Fraction of charge in the battery.",
@@ -1296,6 +1366,9 @@
         "schema": "integer",
         "writable": true
       }
+    ],
+    "extends": [
+      "dtmi:jacdac:services:x1ffffff3;1"
     ],
     "@context": "dtmi:dtdl:context;2"
   },
@@ -1349,6 +1422,9 @@
         "writable": true
       }
     ],
+    "extends": [
+      "dtmi:jacdac:services:x1ffffff3;1"
+    ],
     "@context": "dtmi:dtdl:context;2"
   },
   {
@@ -1357,6 +1433,9 @@
     "displayName": "Role Manager",
     "description": "Assign roles to devices on JACDAC bus.",
     "contents": [],
+    "extends": [
+      "dtmi:jacdac:services:x1ffffff3;1"
+    ],
     "@context": "dtmi:dtdl:context;2"
   },
   {
@@ -1386,6 +1465,9 @@
         "writable": true
       }
     ],
+    "extends": [
+      "dtmi:jacdac:services:x1ffffff3;1"
+    ],
     "@context": "dtmi:dtdl:context;2"
   },
   {
@@ -1394,6 +1476,9 @@
     "displayName": "Settings Storage",
     "description": "Non-volatile key-value storage interface for storing settings.",
     "contents": [],
+    "extends": [
+      "dtmi:jacdac:services:x1ffffff3;1"
+    ],
     "@context": "dtmi:dtdl:context;2"
   },
   {
@@ -1403,12 +1488,16 @@
     "description": "A slider potentiometer.",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Telemetry",
         "name": "position",
         "@id": "dtmi:jacdac:x1f274746:ro:position;1",
         "description": "The relative position of the slider between `0x0000` and `0xffff`.",
         "schema": "integer"
       }
+    ],
+    "extends": [
+      "dtmi:jacdac:services:x1ffffff3;1",
+      "dtmi:jacdac:services:x1ffffff2;1"
     ],
     "@context": "dtmi:dtdl:context;2"
   },
@@ -1418,6 +1507,9 @@
     "displayName": "TCP",
     "description": "Data transfer over TCP/IP and TLS stream sockets.",
     "contents": [],
+    "extends": [
+      "dtmi:jacdac:services:x1ffffff3;1"
+    ],
     "schemas": [
       {
         "@type": "Enum",
@@ -1447,7 +1539,7 @@
     "contents": [
       {
         "@type": [
-          "Property",
+          "Telemetry",
           "Temperature"
         ],
         "name": "temperature",
@@ -1456,6 +1548,10 @@
         "unit": "degreeCelsius",
         "schema": "float"
       }
+    ],
+    "extends": [
+      "dtmi:jacdac:services:x1ffffff3;1",
+      "dtmi:jacdac:services:x1ffffff2;1"
     ],
     "@context": "dtmi:dtdl:context;2"
   },
@@ -1466,7 +1562,7 @@
     "description": "Discovery and connection to WiFi networks. Separate TCP service is used for data transfer.",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Telemetry",
         "name": "connected",
         "@id": "dtmi:jacdac:x18aae1fa:ro:connected;1",
         "description": "Indicates whether or not we currently have an IP address assigned.",
@@ -1492,6 +1588,9 @@
         "description": "Emitted when disconnected from network.",
         "schema": "dtmi:jacdac:x18aae1fa:event;1"
       }
+    ],
+    "extends": [
+      "dtmi:jacdac:services:x1ffffff3;1"
     ],
     "schemas": [
       {

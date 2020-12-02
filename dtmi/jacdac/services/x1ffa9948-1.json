@@ -4,6 +4,9 @@
   "displayName": "Bootloader",
   "description": "Allows flashing (reprogramming) devices over JACDAC.",
   "contents": [],
+  "extends": [
+    "dtmi:jacdac:services:x1ffffff3;1"
+  ],
   "schemas": [
     {
       "@type": "Enum",

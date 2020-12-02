@@ -5,12 +5,16 @@
   "description": "A sensor measuring humidity of outside environment.",
   "contents": [
     {
-      "@type": "Property",
+      "@type": "Telemetry",
       "name": "humidity",
       "@id": "dtmi:jacdac:x16c810b8:ro:humidity;1",
       "description": "The relative humidity in percentage of full water saturation.",
       "schema": "float"
     }
+  ],
+  "extends": [
+    "dtmi:jacdac:services:x1ffffff3;1",
+    "dtmi:jacdac:services:x1ffffff2;1"
   ],
   "@context": "dtmi:dtdl:context;2"
 }

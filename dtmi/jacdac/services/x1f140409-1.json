@@ -5,7 +5,7 @@
   "description": "A 3-axis accelerometer.",
   "contents": [
     {
-      "@type": "Property",
+      "@type": "Telemetry",
       "name": "forces",
       "@id": "dtmi:jacdac:x1f140409:ro:forces;1",
       "description": "Indicates the current forces acting on accelerometer.",
@@ -147,6 +147,10 @@
       "description": "Emitted when force in any direction exceeds given threshold.",
       "schema": "dtmi:jacdac:x1f140409:event;1"
     }
+  ],
+  "extends": [
+    "dtmi:jacdac:services:x1ffffff3;1",
+    "dtmi:jacdac:services:x1ffffff2;1"
   ],
   "schemas": [
     {

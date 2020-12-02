@@ -25,7 +25,7 @@
       "writable": true
     },
     {
-      "@type": "Property",
+      "@type": "Telemetry",
       "name": "overload",
       "@id": "dtmi:jacdac:x1fa4c95a:ro:overload;1",
       "description": "Indicates whether the power has been shut down due to overdraw.",
@@ -33,7 +33,7 @@
     },
     {
       "@type": [
-        "Property",
+        "Telemetry",
         "Current"
       ],
       "name": "current_draw",
@@ -44,7 +44,7 @@
     },
     {
       "@type": [
-        "Property",
+        "Telemetry",
         "Voltage"
       ],
       "name": "battery_voltage",
@@ -54,7 +54,7 @@
       "schema": "integer"
     },
     {
-      "@type": "Property",
+      "@type": "Telemetry",
       "name": "battery_charge",
       "@id": "dtmi:jacdac:x1fa4c95a:ro:batterycharge;1",
       "description": "Fraction of charge in the battery.",
@@ -91,6 +91,9 @@
       "schema": "integer",
       "writable": true
     }
+  ],
+  "extends": [
+    "dtmi:jacdac:services:x1ffffff3;1"
   ],
   "@context": "dtmi:dtdl:context;2"
 }
