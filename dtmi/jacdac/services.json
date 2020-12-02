@@ -1,6 +1,77 @@
 [
   {
     "@type": "Interface",
+    "@id": "dtmi:jacdac:services:x1ffffff3;1",
+    "displayName": "Base service",
+    "description": "Base class for all services.",
+    "contents": [
+      {
+        "@type": "Telemetry",
+        "name": "status_code",
+        "@id": "dtmi:jacdac:x1ffffff3:ro:statuscode;1",
+        "description": "Reports the current state or error status of the device. ``code`` is a standardized value from \nthe JACDAC error codes. ``vendor_code`` is any vendor specific error code describing the device\nstate. This report is typically not queried, when a device has an error, it will typically\nadd this report in frame along with the anounce packet.",
+        "schema": {
+          "@type": "Object",
+          "fields": [
+            {
+              "name": "code",
+              "schema": "integer"
+            },
+            {
+              "name": "vendor_code",
+              "schema": "integer"
+            }
+          ]
+        }
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@type": "Interface",
+    "@id": "dtmi:jacdac:services:x1ffffff2;1",
+    "displayName": "Sensor",
+    "description": "Base class for sensors.",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "streaming_samples",
+        "@id": "dtmi:jacdac:x1ffffff2:rw:streamingsamples;1",
+        "description": "Asks device to stream a given number of samples\n(clients will typically write `255` to this register every second or so, while streaming is required).",
+        "schema": "integer",
+        "writable": true
+      },
+      {
+        "@type": [
+          "Property",
+          "TimeSpan"
+        ],
+        "name": "streaming_interval",
+        "@id": "dtmi:jacdac:x1ffffff2:rw:streaminginterval;1",
+        "description": "Period between packets of data when streaming in milliseconds.",
+        "unit": "millisecond",
+        "schema": "integer",
+        "writable": true
+      },
+      {
+        "@type": [
+          "Property",
+          "TimeSpan"
+        ],
+        "name": "streaming_preferred_interval",
+        "@id": "dtmi:jacdac:x1ffffff2:const:streamingpreferredinterval;1",
+        "description": "Preferred default streaming interval for sensor in milliseconds.",
+        "unit": "millisecond",
+        "schema": "integer"
+      }
+    ],
+    "extends": [
+      "dtmi:jacdac:services:x1ffffff3;1"
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@type": "Interface",
     "@id": "dtmi:jacdac:services:x1f140409;1",
     "displayName": "Accelerometer",
     "description": "A 3-axis accelerometer.",
