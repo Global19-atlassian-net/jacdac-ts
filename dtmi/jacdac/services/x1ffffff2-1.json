@@ -5,14 +5,6 @@
   "description": "Base class for sensors.",
   "contents": [
     {
-      "@type": "Property",
-      "name": "streaming_samples",
-      "@id": "dtmi:jacdac:x1ffffff2:rw:streamingsamples;1",
-      "description": "Asks device to stream a given number of samples\n(clients will typically write `255` to this register every second or so, while streaming is required).",
-      "schema": "integer",
-      "writable": true
-    },
-    {
       "@type": [
         "Property",
         "TimeSpan"
@@ -23,17 +15,6 @@
       "unit": "millisecond",
       "schema": "integer",
       "writable": true
-    },
-    {
-      "@type": [
-        "Property",
-        "TimeSpan"
-      ],
-      "name": "streaming_preferred_interval",
-      "@id": "dtmi:jacdac:x1ffffff2:const:streamingpreferredinterval;1",
-      "description": "Preferred default streaming interval for sensor in milliseconds.",
-      "unit": "millisecond",
-      "schema": "integer"
     }
   ],
   "extends": [
