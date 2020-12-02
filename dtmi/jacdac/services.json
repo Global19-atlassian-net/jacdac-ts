@@ -411,6 +411,26 @@
   },
   {
     "@type": "Interface",
+    "@id": "dtmi:jacdac:services:x1b57b1d7;1",
+    "displayName": "Buzzer",
+    "description": "A simple buzzer.",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "volume",
+        "@id": "dtmi:jacdac:x1b57b1d7:rw:volume;1",
+        "description": "The volume (duty cycle) of the buzzer.",
+        "schema": "integer",
+        "writable": true
+      }
+    ],
+    "extends": [
+      "dtmi:jacdac:services:x1ffffff3;1"
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@type": "Interface",
     "@id": "dtmi:jacdac:services:x16ad7cd5;1",
     "displayName": "CODAL Message Bus",
     "description": "A service that allows passing events through the [CODAL Message Bus](https://lancaster-university.github.io/microbit-docs/ubit/messageBus/)\n* ``id`` is a unique identifier that identifies a component in the device. Use ``0`` to address all sources. The value of other identifiers is typically hardware dependent.\n* ``event`` is an identifier that determines the event type. Use ``0`` as a wildcard.",
@@ -1302,26 +1322,6 @@
           }
         ]
       }
-    ],
-    "@context": "dtmi:dtdl:context;2"
-  },
-  {
-    "@type": "Interface",
-    "@id": "dtmi:jacdac:services:x1b57b1d7;1",
-    "displayName": "Music",
-    "description": "A simple buzzer.",
-    "contents": [
-      {
-        "@type": "Property",
-        "name": "volume",
-        "@id": "dtmi:jacdac:x1b57b1d7:rw:volume;1",
-        "description": "The volume (duty cycle) of the buzzer.",
-        "schema": "integer",
-        "writable": true
-      }
-    ],
-    "extends": [
-      "dtmi:jacdac:services:x1ffffff3;1"
     ],
     "@context": "dtmi:dtdl:context;2"
   },

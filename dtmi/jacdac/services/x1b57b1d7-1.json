@@ -1,7 +1,7 @@
 {
   "@type": "Interface",
   "@id": "dtmi:jacdac:services:x1b57b1d7;1",
-  "displayName": "Music",
+  "displayName": "Buzzer",
   "description": "A simple buzzer.",
   "contents": [
     {
