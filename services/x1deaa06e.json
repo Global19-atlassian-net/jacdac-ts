@@ -1,0 +1,247 @@
+{
+  "name": "Gamepad",
+  "status": "experimental",
+  "shortId": "gamepad",
+  "camelName": "Gamepad",
+  "shortName": "Gamepad",
+  "extends": [
+    "_base",
+    "_sensor"
+  ],
+  "notes": {
+    "short": "A gamepad with direction and action buttons for 1 or more players."
+  },
+  "classIdentifier": 501915758,
+  "enums": {
+    "Button": {
+      "name": "Button",
+      "storage": 2,
+      "members": {
+        "Left": 1,
+        "Up": 2,
+        "Right": 3,
+        "Down": 4,
+        "A": 5,
+        "B": 6,
+        "Menu": 7,
+        "MenuAlt": 8,
+        "Reset": 9,
+        "Exit": 10
+      }
+    }
+  },
+  "packets": [
+    {
+      "kind": "ro",
+      "name": "status_code",
+      "identifier": 7,
+      "description": "Reports the current state or error status of the device. ``code`` is a standardized value from \nthe JACDAC error codes. ``vendor_code`` is any vendor specific error code describing the device\nstate. This report is typically not queried, when a device has an error, it will typically\nadd this report in frame along with the anounce packet.",
+      "fields": [
+        {
+          "name": "code",
+          "unit": "",
+          "isFloat": false,
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true
+        },
+        {
+          "name": "vendor_code",
+          "unit": "",
+          "isFloat": false,
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true
+        }
+      ],
+      "optional": true,
+      "identifierName": "status_code",
+      "derived": "_base"
+    },
+    {
+      "kind": "rw",
+      "name": "streaming_samples",
+      "identifier": 3,
+      "description": "Asks device to stream a given number of samples\n(clients will typically write `255` to this register every second or so, while streaming is required).",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "",
+          "isFloat": false,
+          "type": "u8",
+          "storage": 1,
+          "isSimpleType": true
+        }
+      ],
+      "internal": true,
+      "identifierName": "streaming_samples",
+      "derived": "_sensor"
+    },
+    {
+      "kind": "rw",
+      "name": "streaming_interval",
+      "identifier": 4,
+      "description": "Period between packets of data when streaming in milliseconds.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "ms",
+          "isFloat": false,
+          "type": "u32",
+          "storage": 4,
+          "isSimpleType": true,
+          "defaultValue": 100,
+          "typicalMin": 1,
+          "typicalMax": 60000
+        }
+      ],
+      "identifierName": "streaming_interval",
+      "derived": "_sensor"
+    },
+    {
+      "kind": "const",
+      "name": "streaming_preferred_interval",
+      "identifier": 258,
+      "description": "Preferred default streaming interval for sensor in milliseconds.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "ms",
+          "isFloat": false,
+          "type": "u32",
+          "storage": 4,
+          "isSimpleType": true
+        }
+      ],
+      "internal": true,
+      "optional": true,
+      "identifierName": "streaming_preferred_interval",
+      "derived": "_sensor"
+    },
+    {
+      "kind": "command",
+      "name": "announce",
+      "identifier": 0,
+      "description": "Indicates number of players supported and which buttons are present on the controller.",
+      "fields": [],
+      "identifierName": "announce",
+      "hasReport": true
+    },
+    {
+      "kind": "report",
+      "name": "announce",
+      "identifier": 0,
+      "description": "Indicates number of players supported and which buttons are present on the controller.",
+      "fields": [
+        {
+          "name": "flags",
+          "unit": "",
+          "isFloat": false,
+          "type": "u8",
+          "storage": 1,
+          "isSimpleType": true
+        },
+        {
+          "name": "num_players",
+          "unit": "",
+          "isFloat": false,
+          "type": "u8",
+          "storage": 1,
+          "isSimpleType": true,
+          "typicalMax": 4,
+          "typicalMin": 0
+        },
+        {
+          "name": "button_present",
+          "unit": "",
+          "isFloat": false,
+          "type": "Button",
+          "storage": 2,
+          "startRepeats": true
+        }
+      ],
+      "secondary": true
+    },
+    {
+      "kind": "ro",
+      "name": "buttons",
+      "identifier": 257,
+      "description": "Indicates which buttons are currently active (pressed).\n`pressure` should be `0xff` for digital buttons, and proportional for analog ones.",
+      "fields": [
+        {
+          "name": "button",
+          "unit": "",
+          "isFloat": false,
+          "type": "Button",
+          "storage": 2,
+          "startRepeats": true
+        },
+        {
+          "name": "player_index",
+          "unit": "",
+          "isFloat": false,
+          "type": "u8",
+          "storage": 1,
+          "isSimpleType": true
+        },
+        {
+          "name": "pressure",
+          "unit": "/",
+          "shift": 8,
+          "isFloat": false,
+          "type": "u8",
+          "storage": 1,
+          "isSimpleType": true
+        }
+      ],
+      "identifierName": "reading"
+    },
+    {
+      "kind": "event",
+      "name": "down",
+      "identifier": 1,
+      "description": "Emitted when button goes from inactive to active.",
+      "fields": [
+        {
+          "name": "button",
+          "unit": "",
+          "isFloat": false,
+          "type": "Button",
+          "storage": 2
+        },
+        {
+          "name": "player_index",
+          "unit": "",
+          "isFloat": false,
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "name": "up",
+      "identifier": 2,
+      "description": "Emitted when button goes from active to inactive.",
+      "fields": [
+        {
+          "name": "button",
+          "unit": "",
+          "isFloat": false,
+          "type": "Button",
+          "storage": 2
+        },
+        {
+          "name": "player_index",
+          "unit": "",
+          "isFloat": false,
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true
+        }
+      ]
+    }
+  ],
+  "source": "# Gamepad\n\n    identifier: 0x1deaa06e\n    extends: _sensor\n\nA gamepad with direction and action buttons for 1 or more players.\n\n## Commands\n\n    enum Button : u16 {\n        Left = 1\n        Up = 2\n        Right = 3\n        Down = 4\n        A = 5\n        B = 6\n        Menu = 7\n        MenuAlt = 8\n        Reset = 9\n        Exit = 10\n    }\n    command announce @ announce {}\n    report {\n        flags: u8\n        num_players: u8 {typical_max = 4}\n    repeats:\n        button_present: Button\n    }\n\nIndicates number of players supported and which buttons are present on the controller.\n\n## Registers\n\n    ro buttons @ reading {\n    repeats:\n        button: Button\n        player_index: u8\n        pressure: u8 /\n    }\n\nIndicates which buttons are currently active (pressed).\n`pressure` should be `0xff` for digital buttons, and proportional for analog ones.\n\n## Events\n\n    event down @ 0x01 {\n        button: Button\n        player_index: u16\n    }\n\nEmitted when button goes from inactive to active.\n\n    event up @ 0x02 {\n        button: Button\n        player_index: u16\n    }\n\nEmitted when button goes from active to inactive.\n"
+}

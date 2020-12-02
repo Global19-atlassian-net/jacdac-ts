@@ -1,0 +1,102 @@
+{
+  "name": "Sensor",
+  "status": "experimental",
+  "shortId": "_sensor",
+  "camelName": "sensor",
+  "shortName": "sensor",
+  "extends": [
+    "_base"
+  ],
+  "notes": {
+    "short": "Base class for sensors."
+  },
+  "classIdentifier": 536870898,
+  "enums": {},
+  "packets": [
+    {
+      "kind": "ro",
+      "name": "status_code",
+      "identifier": 7,
+      "description": "Reports the current state or error status of the device. ``code`` is a standardized value from \nthe JACDAC error codes. ``vendor_code`` is any vendor specific error code describing the device\nstate. This report is typically not queried, when a device has an error, it will typically\nadd this report in frame along with the anounce packet.",
+      "fields": [
+        {
+          "name": "code",
+          "unit": "",
+          "isFloat": false,
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true
+        },
+        {
+          "name": "vendor_code",
+          "unit": "",
+          "isFloat": false,
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true
+        }
+      ],
+      "optional": true,
+      "identifierName": "status_code",
+      "derived": "_base"
+    },
+    {
+      "kind": "rw",
+      "name": "streaming_samples",
+      "identifier": 3,
+      "description": "Asks device to stream a given number of samples\n(clients will typically write `255` to this register every second or so, while streaming is required).",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "",
+          "isFloat": false,
+          "type": "u8",
+          "storage": 1,
+          "isSimpleType": true
+        }
+      ],
+      "internal": true,
+      "identifierName": "streaming_samples"
+    },
+    {
+      "kind": "rw",
+      "name": "streaming_interval",
+      "identifier": 4,
+      "description": "Period between packets of data when streaming in milliseconds.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "ms",
+          "isFloat": false,
+          "type": "u32",
+          "storage": 4,
+          "isSimpleType": true,
+          "defaultValue": 100,
+          "typicalMin": 1,
+          "typicalMax": 60000
+        }
+      ],
+      "identifierName": "streaming_interval"
+    },
+    {
+      "kind": "const",
+      "name": "streaming_preferred_interval",
+      "identifier": 258,
+      "description": "Preferred default streaming interval for sensor in milliseconds.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "ms",
+          "isFloat": false,
+          "type": "u32",
+          "storage": 4,
+          "isSimpleType": true
+        }
+      ],
+      "internal": true,
+      "optional": true,
+      "identifierName": "streaming_preferred_interval"
+    }
+  ],
+  "source": "# Sensor\n\n    camel: sensor\n\nBase class for sensors.\n\n## Registers\n\n    rw internal streaming_samples: u8 @ streaming_samples\n\nAsks device to stream a given number of samples\n(clients will typically write `255` to this register every second or so, while streaming is required).\n\n    rw streaming_interval = 100: u32 ms {typical_min = 1, typical_max = 60000} @ streaming_interval\n\nPeriod between packets of data when streaming in milliseconds.\n\n    const internal streaming_preferred_interval?: u32 ms @ streaming_preferred_interval\n\nPreferred default streaming interval for sensor in milliseconds.\n"
+}

@@ -1,0 +1,201 @@
+{
+  "name": "Power",
+  "status": "experimental",
+  "shortId": "power",
+  "camelName": "Power",
+  "shortName": "Power",
+  "extends": [
+    "_base"
+  ],
+  "notes": {
+    "short": "A power-provider service."
+  },
+  "classIdentifier": 530893146,
+  "enums": {},
+  "packets": [
+    {
+      "kind": "ro",
+      "name": "status_code",
+      "identifier": 7,
+      "description": "Reports the current state or error status of the device. ``code`` is a standardized value from \nthe JACDAC error codes. ``vendor_code`` is any vendor specific error code describing the device\nstate. This report is typically not queried, when a device has an error, it will typically\nadd this report in frame along with the anounce packet.",
+      "fields": [
+        {
+          "name": "code",
+          "unit": "",
+          "isFloat": false,
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true
+        },
+        {
+          "name": "vendor_code",
+          "unit": "",
+          "isFloat": false,
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true
+        }
+      ],
+      "optional": true,
+      "identifierName": "status_code",
+      "derived": "_base"
+    },
+    {
+      "kind": "rw",
+      "name": "enabled",
+      "identifier": 1,
+      "description": "Turn the power to the bus on/off.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "",
+          "isFloat": false,
+          "type": "bool",
+          "storage": 1,
+          "defaultValue": 1
+        }
+      ],
+      "identifierName": "intensity"
+    },
+    {
+      "kind": "rw",
+      "name": "max_power",
+      "identifier": 7,
+      "description": "Limit the power provided by the service. The actual maximum limit will depend on hardware.\nThis field may be read-only in some implementations - you should read it back after setting.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "mA",
+          "isFloat": false,
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true,
+          "defaultValue": 500,
+          "typicalMax": 500,
+          "typicalMin": 0
+        }
+      ],
+      "identifierName": "max_power"
+    },
+    {
+      "kind": "ro",
+      "name": "overload",
+      "identifier": 385,
+      "description": "Indicates whether the power has been shut down due to overdraw.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "",
+          "isFloat": false,
+          "type": "bool",
+          "storage": 1
+        }
+      ]
+    },
+    {
+      "kind": "ro",
+      "name": "current_draw",
+      "identifier": 257,
+      "description": "Present current draw from the bus.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "mA",
+          "isFloat": false,
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true
+        }
+      ],
+      "identifierName": "reading"
+    },
+    {
+      "kind": "ro",
+      "name": "battery_voltage",
+      "identifier": 384,
+      "description": "Voltage on input.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "mV",
+          "isFloat": false,
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true,
+          "typicalMin": 4500,
+          "typicalMax": 5500
+        }
+      ]
+    },
+    {
+      "kind": "ro",
+      "name": "battery_charge",
+      "identifier": 386,
+      "description": "Fraction of charge in the battery.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "/",
+          "shift": 16,
+          "isFloat": false,
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true
+        }
+      ],
+      "optional": true
+    },
+    {
+      "kind": "const",
+      "name": "battery_capacity",
+      "identifier": 387,
+      "description": "Energy that can be delivered to the bus when battery is fully charged.\nThis excludes conversion overheads if any.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "mWh",
+          "isFloat": false,
+          "type": "u32",
+          "storage": 4,
+          "isSimpleType": true
+        }
+      ],
+      "optional": true
+    },
+    {
+      "kind": "rw",
+      "name": "keep_on_pulse_duration",
+      "identifier": 128,
+      "description": "Many USB power packs need current to be drawn from time to time to prevent shutdown.\nThis regulates how often and for how long such current is drawn.\nTypically a 1/8W 22 ohm resistor is used as load. This limits the duty cycle to 10%.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "ms",
+          "isFloat": false,
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true,
+          "defaultValue": 600
+        }
+      ]
+    },
+    {
+      "kind": "rw",
+      "name": "keep_on_pulse_period",
+      "identifier": 129,
+      "description": "Many USB power packs need current to be drawn from time to time to prevent shutdown.\nThis regulates how often and for how long such current is drawn.\nTypically a 1/8W 22 ohm resistor is used as load. This limits the duty cycle to 10%.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "ms",
+          "isFloat": false,
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true,
+          "defaultValue": 20000
+        }
+      ]
+    }
+  ],
+  "source": "# Power\n\n    identifier: 0x1fa4c95a\n\nA power-provider service.\n\n## Registers\n\n    rw enabled = 1: bool @ intensity\n\nTurn the power to the bus on/off.\n\n    rw max_power = 500: u16 mA {typical_max = 500} @ max_power\n\nLimit the power provided by the service. The actual maximum limit will depend on hardware.\nThis field may be read-only in some implementations - you should read it back after setting.\n\n    ro overload: bool @ 0x181\n\nIndicates whether the power has been shut down due to overdraw.\n\n    ro current_draw: u16 mA @ reading\n\nPresent current draw from the bus.\n\n    ro battery_voltage: u16 mV {typical_min = 4500, typical_max = 5500} @ 0x180\n\nVoltage on input.\n\n    ro battery_charge?: u16 / @ 0x182\n\nFraction of charge in the battery.\n\n    const battery_capacity?: u32 mWh @ 0x183\n\nEnergy that can be delivered to the bus when battery is fully charged.\nThis excludes conversion overheads if any.\n\n    rw keep_on_pulse_duration = 600: u16 ms @ 0x80\n    rw keep_on_pulse_period = 20000: u16 ms @ 0x81\n\nMany USB power packs need current to be drawn from time to time to prevent shutdown.\nThis regulates how often and for how long such current is drawn.\nTypically a 1/8W 22 ohm resistor is used as load. This limits the duty cycle to 10%.\n"
+}

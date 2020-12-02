@@ -1,0 +1,163 @@
+{
+  "name": "TCP",
+  "status": "experimental",
+  "shortId": "tcp",
+  "camelName": "TCP",
+  "shortName": "TCP",
+  "extends": [
+    "_base"
+  ],
+  "notes": {
+    "short": "Data transfer over TCP/IP and TLS stream sockets.",
+    "commands": "## Pipes"
+  },
+  "classIdentifier": 457422603,
+  "enums": {
+    "TcpError": {
+      "name": "TcpError",
+      "storage": -4,
+      "members": {
+        "InvalidCommand": 1,
+        "InvalidCommandPayload": 2
+      }
+    }
+  },
+  "packets": [
+    {
+      "kind": "ro",
+      "name": "status_code",
+      "identifier": 7,
+      "description": "Reports the current state or error status of the device. ``code`` is a standardized value from \nthe JACDAC error codes. ``vendor_code`` is any vendor specific error code describing the device\nstate. This report is typically not queried, when a device has an error, it will typically\nadd this report in frame along with the anounce packet.",
+      "fields": [
+        {
+          "name": "code",
+          "unit": "",
+          "isFloat": false,
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true
+        },
+        {
+          "name": "vendor_code",
+          "unit": "",
+          "isFloat": false,
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true
+        }
+      ],
+      "optional": true,
+      "identifierName": "status_code",
+      "derived": "_base"
+    },
+    {
+      "kind": "command",
+      "name": "open",
+      "identifier": 128,
+      "description": "Open pair of pipes between network peripheral and a controlling device. In/outbound refers to direction from/to internet.",
+      "fields": [
+        {
+          "name": "inbound",
+          "unit": "",
+          "isFloat": false,
+          "type": "pipe",
+          "storage": 12
+        }
+      ],
+      "pipeType": "open",
+      "hasReport": true
+    },
+    {
+      "kind": "report",
+      "name": "open",
+      "identifier": 128,
+      "description": "Open pair of pipes between network peripheral and a controlling device. In/outbound refers to direction from/to internet.",
+      "fields": [
+        {
+          "name": "outbound_port",
+          "unit": "",
+          "isFloat": false,
+          "type": "pipe_port",
+          "storage": 2
+        }
+      ],
+      "secondary": true,
+      "pipeType": "open"
+    },
+    {
+      "kind": "meta_pipe_command",
+      "name": "open_ssl",
+      "identifier": 1,
+      "description": "Open an SSL connection to a given host:port pair. Can be issued only once on given pipe.\nAfter the connection is established, an empty data report is sent.\nConnection is closed by closing the pipe.",
+      "fields": [
+        {
+          "name": "tcp_port",
+          "unit": "",
+          "isFloat": false,
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true
+        },
+        {
+          "name": "hostname",
+          "unit": "",
+          "isFloat": false,
+          "type": "string",
+          "storage": 0
+        }
+      ],
+      "pipeType": "open"
+    },
+    {
+      "kind": "pipe_command",
+      "name": "outdata",
+      "identifier": 0,
+      "description": "Bytes to be sent directly over an established TCP or SSL connection.",
+      "fields": [
+        {
+          "name": "data",
+          "unit": "",
+          "isFloat": false,
+          "type": "bytes",
+          "storage": 0,
+          "isSimpleType": true
+        }
+      ],
+      "pipeType": "open"
+    },
+    {
+      "kind": "pipe_report",
+      "name": "indata",
+      "identifier": 0,
+      "description": "Bytes read directly from directly over an established TCP or SSL connection.",
+      "fields": [
+        {
+          "name": "data",
+          "unit": "",
+          "isFloat": false,
+          "type": "bytes",
+          "storage": 0,
+          "isSimpleType": true
+        }
+      ],
+      "pipeType": "open"
+    },
+    {
+      "kind": "meta_pipe_report",
+      "name": "error",
+      "identifier": 0,
+      "description": "Reported when an error is encountered. Negative error codes come directly from the SSL implementation.",
+      "fields": [
+        {
+          "name": "error",
+          "unit": "",
+          "isFloat": false,
+          "type": "TcpError",
+          "storage": -4
+        }
+      ],
+      "pipeType": "open"
+    }
+  ],
+  "source": "# TCP\n\n    identifier: 0x1b43b70b\n\nData transfer over TCP/IP and TLS stream sockets.\n\n## Commands\n\n    command open @ 0x80 {\n        inbound: pipe\n    }\n    report {\n        outbound_port: pipe_port\n    }\n\nOpen pair of pipes between network peripheral and a controlling device. In/outbound refers to direction from/to internet.\n\n## Pipes\n\n    meta pipe command open_ssl @ 0x01 {\n        tcp_port: u16\n        hostname: string\n    }\n\nOpen an SSL connection to a given host:port pair. Can be issued only once on given pipe.\nAfter the connection is established, an empty data report is sent.\nConnection is closed by closing the pipe.\n\n    pipe command outdata {\n        data: bytes\n    }\n\nBytes to be sent directly over an established TCP or SSL connection.\n\n    pipe report indata {\n        data: bytes\n    }\n\nBytes read directly from directly over an established TCP or SSL connection.\n\n    enum TcpError : i32 {\n        InvalidCommand = 1\n        InvalidCommandPayload = 2\n    }\n    meta pipe report error @ 0x00 {\n        error: TcpError\n    }\n\nReported when an error is encountered. Negative error codes come directly from the SSL implementation.\n"
+}

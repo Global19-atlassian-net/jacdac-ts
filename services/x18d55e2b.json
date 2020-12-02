@@ -1,0 +1,203 @@
+{
+  "name": "Multitouch",
+  "status": "experimental",
+  "shortId": "multitouch",
+  "camelName": "Multitouch",
+  "shortName": "Multitouch",
+  "extends": [
+    "_base",
+    "_sensor"
+  ],
+  "notes": {
+    "short": "A capacitive touch sensor with multiple inputs.",
+    "events": "Most events include the channel number of the input."
+  },
+  "classIdentifier": 416636459,
+  "enums": {},
+  "packets": [
+    {
+      "kind": "ro",
+      "name": "status_code",
+      "identifier": 7,
+      "description": "Reports the current state or error status of the device. ``code`` is a standardized value from \nthe JACDAC error codes. ``vendor_code`` is any vendor specific error code describing the device\nstate. This report is typically not queried, when a device has an error, it will typically\nadd this report in frame along with the anounce packet.",
+      "fields": [
+        {
+          "name": "code",
+          "unit": "",
+          "isFloat": false,
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true
+        },
+        {
+          "name": "vendor_code",
+          "unit": "",
+          "isFloat": false,
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true
+        }
+      ],
+      "optional": true,
+      "identifierName": "status_code",
+      "derived": "_base"
+    },
+    {
+      "kind": "rw",
+      "name": "streaming_samples",
+      "identifier": 3,
+      "description": "Asks device to stream a given number of samples\n(clients will typically write `255` to this register every second or so, while streaming is required).",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "",
+          "isFloat": false,
+          "type": "u8",
+          "storage": 1,
+          "isSimpleType": true
+        }
+      ],
+      "internal": true,
+      "identifierName": "streaming_samples",
+      "derived": "_sensor"
+    },
+    {
+      "kind": "rw",
+      "name": "streaming_interval",
+      "identifier": 4,
+      "description": "Period between packets of data when streaming in milliseconds.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "ms",
+          "isFloat": false,
+          "type": "u32",
+          "storage": 4,
+          "isSimpleType": true,
+          "defaultValue": 100,
+          "typicalMin": 1,
+          "typicalMax": 60000
+        }
+      ],
+      "identifierName": "streaming_interval",
+      "derived": "_sensor"
+    },
+    {
+      "kind": "const",
+      "name": "streaming_preferred_interval",
+      "identifier": 258,
+      "description": "Preferred default streaming interval for sensor in milliseconds.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "ms",
+          "isFloat": false,
+          "type": "u32",
+          "storage": 4,
+          "isSimpleType": true
+        }
+      ],
+      "internal": true,
+      "optional": true,
+      "identifierName": "streaming_preferred_interval",
+      "derived": "_sensor"
+    },
+    {
+      "kind": "ro",
+      "name": "capacity",
+      "identifier": 257,
+      "description": "Capacitance of channels. The capacitance is continuously calibrated, and a value of `0` indicates\nno touch, wheres a value of around `100` or more indicates touch.\nIt's best to ignore this (unless debugging), and use events.",
+      "fields": [
+        {
+          "name": "capacitance",
+          "unit": "",
+          "isFloat": false,
+          "type": "i32",
+          "storage": -4,
+          "isSimpleType": true,
+          "startRepeats": true
+        }
+      ],
+      "identifierName": "reading"
+    },
+    {
+      "kind": "event",
+      "name": "touch",
+      "identifier": 1,
+      "description": "Emitted when an input is touched.",
+      "fields": [
+        {
+          "name": "channel",
+          "unit": "",
+          "isFloat": false,
+          "type": "u32",
+          "storage": 4,
+          "isSimpleType": true
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "name": "release",
+      "identifier": 2,
+      "description": "Emitted when an input is no longer touched.",
+      "fields": [
+        {
+          "name": "channel",
+          "unit": "",
+          "isFloat": false,
+          "type": "u32",
+          "storage": 4,
+          "isSimpleType": true
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "name": "tap",
+      "identifier": 3,
+      "description": "Emitted when an input is briefly touched. TODO Not implemented.",
+      "fields": [
+        {
+          "name": "channel",
+          "unit": "",
+          "isFloat": false,
+          "type": "u32",
+          "storage": 4,
+          "isSimpleType": true
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "name": "long_press",
+      "identifier": 4,
+      "description": "Emitted when an input is touched for longer than 500ms. TODO Not implemented.",
+      "fields": [
+        {
+          "name": "channel",
+          "unit": "",
+          "isFloat": false,
+          "type": "u32",
+          "storage": 4,
+          "isSimpleType": true
+        }
+      ]
+    },
+    {
+      "kind": "event",
+      "name": "swipe_pos",
+      "identifier": 16,
+      "description": "Emitted when input channels are successively touched in order of increasing channel numbers.",
+      "fields": []
+    },
+    {
+      "kind": "event",
+      "name": "swipe_neg",
+      "identifier": 17,
+      "description": "Emitted when input channels are successively touched in order of decreasing channel numbers.",
+      "fields": []
+    }
+  ],
+  "source": "# Multitouch\n\n    identifier: 0x18d55e2b\n    extends: _sensor\n\nA capacitive touch sensor with multiple inputs.\n\n## Registers\n\n    ro capacity @ reading {\n    repeats:\n        capacitance: i32\n    }\n\nCapacitance of channels. The capacitance is continuously calibrated, and a value of `0` indicates\nno touch, wheres a value of around `100` or more indicates touch.\nIt's best to ignore this (unless debugging), and use events.\n\n## Events\n\nMost events include the channel number of the input.\n\n    event touch @ 0x01 {\n        channel: u32\n    }\n\nEmitted when an input is touched.\n\n    event release @ 0x02 {\n        channel: u32\n    }\n\nEmitted when an input is no longer touched.\n\n    event tap @ 0x03 {\n        channel: u32\n    }\n\nEmitted when an input is briefly touched. TODO Not implemented.\n\n    event long_press @ 0x04 {\n        channel: u32\n    }\n\nEmitted when an input is touched for longer than 500ms. TODO Not implemented.\n\n    event swipe_pos @ 0x10\n\nEmitted when input channels are successively touched in order of increasing channel numbers.\n\n    event swipe_neg @ 0x11\n\nEmitted when input channels are successively touched in order of decreasing channel numbers.\n"
+}

@@ -1,0 +1,96 @@
+{
+  "name": "Music",
+  "status": "experimental",
+  "shortId": "music",
+  "camelName": "Music",
+  "shortName": "Music",
+  "extends": [
+    "_base"
+  ],
+  "notes": {
+    "short": "A simple buzzer."
+  },
+  "classIdentifier": 458731991,
+  "enums": {},
+  "packets": [
+    {
+      "kind": "ro",
+      "name": "status_code",
+      "identifier": 7,
+      "description": "Reports the current state or error status of the device. ``code`` is a standardized value from \nthe JACDAC error codes. ``vendor_code`` is any vendor specific error code describing the device\nstate. This report is typically not queried, when a device has an error, it will typically\nadd this report in frame along with the anounce packet.",
+      "fields": [
+        {
+          "name": "code",
+          "unit": "",
+          "isFloat": false,
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true
+        },
+        {
+          "name": "vendor_code",
+          "unit": "",
+          "isFloat": false,
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true
+        }
+      ],
+      "optional": true,
+      "identifierName": "status_code",
+      "derived": "_base"
+    },
+    {
+      "kind": "rw",
+      "name": "volume",
+      "identifier": 1,
+      "description": "The volume (duty cycle) of the buzzer.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "/",
+          "shift": 8,
+          "isFloat": false,
+          "type": "u8",
+          "storage": 1,
+          "isSimpleType": true,
+          "defaultValue": 255
+        }
+      ],
+      "identifierName": "intensity"
+    },
+    {
+      "kind": "command",
+      "name": "play_tone",
+      "identifier": 128,
+      "description": "Play a PWM tone with given period and duty for given duration.\nThe duty is scaled down with `volume` register.\nTo play tone at frequency `F` Hz and volume `V` (in `0..1`) you will want\nto send `P = 1000000 / F` and `D = P * V / 2`.",
+      "fields": [
+        {
+          "name": "period",
+          "unit": "us",
+          "isFloat": false,
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true
+        },
+        {
+          "name": "duty",
+          "unit": "us",
+          "isFloat": false,
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true
+        },
+        {
+          "name": "duration",
+          "unit": "ms",
+          "isFloat": false,
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true
+        }
+      ]
+    }
+  ],
+  "source": "# Music\n\n    identifier: 0x1b57b1d7\n\nA simple buzzer.\n\n## Registers\n\n    rw volume = 255: u8 / @ intensity\n\nThe volume (duty cycle) of the buzzer.\n\n## Commands\n\n    command play_tone @ 0x80 {\n        period: u16 us\n        duty: u16 us\n        duration: u16 ms\n    }\n\nPlay a PWM tone with given period and duty for given duration.\nThe duty is scaled down with `volume` register.\nTo play tone at frequency `F` Hz and volume `V` (in `0..1`) you will want\nto send `P = 1000000 / F` and `D = P * V / 2`.\n"
+}

@@ -1,0 +1,150 @@
+{
+  "name": "Button",
+  "status": "experimental",
+  "shortId": "button",
+  "camelName": "Button",
+  "shortName": "Button",
+  "extends": [
+    "_base",
+    "_sensor"
+  ],
+  "notes": {
+    "short": "A simple push-button.\n\nNote: this service will stream readings while the button is pressed and shortly after it's released, even\nwhen `stream_samples == 0`. TODO remove this?"
+  },
+  "classIdentifier": 343122531,
+  "enums": {},
+  "packets": [
+    {
+      "kind": "ro",
+      "name": "status_code",
+      "identifier": 7,
+      "description": "Reports the current state or error status of the device. ``code`` is a standardized value from \nthe JACDAC error codes. ``vendor_code`` is any vendor specific error code describing the device\nstate. This report is typically not queried, when a device has an error, it will typically\nadd this report in frame along with the anounce packet.",
+      "fields": [
+        {
+          "name": "code",
+          "unit": "",
+          "isFloat": false,
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true
+        },
+        {
+          "name": "vendor_code",
+          "unit": "",
+          "isFloat": false,
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true
+        }
+      ],
+      "optional": true,
+      "identifierName": "status_code",
+      "derived": "_base"
+    },
+    {
+      "kind": "rw",
+      "name": "streaming_samples",
+      "identifier": 3,
+      "description": "Asks device to stream a given number of samples\n(clients will typically write `255` to this register every second or so, while streaming is required).",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "",
+          "isFloat": false,
+          "type": "u8",
+          "storage": 1,
+          "isSimpleType": true
+        }
+      ],
+      "internal": true,
+      "identifierName": "streaming_samples",
+      "derived": "_sensor"
+    },
+    {
+      "kind": "rw",
+      "name": "streaming_interval",
+      "identifier": 4,
+      "description": "Period between packets of data when streaming in milliseconds.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "ms",
+          "isFloat": false,
+          "type": "u32",
+          "storage": 4,
+          "isSimpleType": true,
+          "defaultValue": 100,
+          "typicalMin": 1,
+          "typicalMax": 60000
+        }
+      ],
+      "identifierName": "streaming_interval",
+      "derived": "_sensor"
+    },
+    {
+      "kind": "const",
+      "name": "streaming_preferred_interval",
+      "identifier": 258,
+      "description": "Preferred default streaming interval for sensor in milliseconds.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "ms",
+          "isFloat": false,
+          "type": "u32",
+          "storage": 4,
+          "isSimpleType": true
+        }
+      ],
+      "internal": true,
+      "optional": true,
+      "identifierName": "streaming_preferred_interval",
+      "derived": "_sensor"
+    },
+    {
+      "kind": "ro",
+      "name": "pressed",
+      "identifier": 257,
+      "description": "Indicates whether the button is currently active (pressed).",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "",
+          "isFloat": false,
+          "type": "bool",
+          "storage": 1
+        }
+      ],
+      "identifierName": "reading"
+    },
+    {
+      "kind": "event",
+      "name": "down",
+      "identifier": 1,
+      "description": "Emitted when button goes from inactive (`pressed == 0`) to active.",
+      "fields": []
+    },
+    {
+      "kind": "event",
+      "name": "up",
+      "identifier": 2,
+      "description": "Emitted when button goes from active (`pressed == 1`) to inactive.",
+      "fields": []
+    },
+    {
+      "kind": "event",
+      "name": "click",
+      "identifier": 3,
+      "description": "Emitted together with `up` when the press time was not longer than 500ms.",
+      "fields": []
+    },
+    {
+      "kind": "event",
+      "name": "long_click",
+      "identifier": 4,
+      "description": "Emitted together with `up` when the press time was more than 500ms.",
+      "fields": []
+    }
+  ],
+  "source": "# Button\n\n    identifier: 0x1473a263\n    extends: _sensor\n\nA simple push-button.\n\nNote: this service will stream readings while the button is pressed and shortly after it's released, even\nwhen `stream_samples == 0`. TODO remove this?\n\n## Registers\n\n    ro pressed: bool @ reading\n\nIndicates whether the button is currently active (pressed).\n\n## Events\n\n    event down @ 0x01\n\nEmitted when button goes from inactive (`pressed == 0`) to active.\n\n    event up @ 0x02\n\nEmitted when button goes from active (`pressed == 1`) to inactive.\n\n    event click @ 0x03\n\nEmitted together with `up` when the press time was not longer than 500ms.\n\n    event long_click @ 0x04\n\nEmitted together with `up` when the press time was more than 500ms.\n"
+}

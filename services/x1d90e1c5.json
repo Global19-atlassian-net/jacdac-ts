@@ -1,0 +1,203 @@
+{
+  "name": "Sensor Aggregator",
+  "status": "experimental",
+  "shortId": "aggregator",
+  "camelName": "SensorAggregator",
+  "shortName": "SensorAggregator",
+  "extends": [
+    "_base"
+  ],
+  "notes": {
+    "short": "Aggregate data from multiple sensors into a single stream\n(often used as input to machine learning models on the same device, see model runner service)."
+  },
+  "classIdentifier": 496034245,
+  "enums": {
+    "SampleType": {
+      "name": "SampleType",
+      "storage": 1,
+      "members": {
+        "U8": 8,
+        "I8": 136,
+        "U16": 16,
+        "I16": 144,
+        "U32": 32,
+        "I32": 160
+      }
+    }
+  },
+  "packets": [
+    {
+      "kind": "ro",
+      "name": "status_code",
+      "identifier": 7,
+      "description": "Reports the current state or error status of the device. ``code`` is a standardized value from \nthe JACDAC error codes. ``vendor_code`` is any vendor specific error code describing the device\nstate. This report is typically not queried, when a device has an error, it will typically\nadd this report in frame along with the anounce packet.",
+      "fields": [
+        {
+          "name": "code",
+          "unit": "",
+          "isFloat": false,
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true
+        },
+        {
+          "name": "vendor_code",
+          "unit": "",
+          "isFloat": false,
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true
+        }
+      ],
+      "optional": true,
+      "identifierName": "status_code",
+      "derived": "_base"
+    },
+    {
+      "kind": "rw",
+      "name": "inputs",
+      "identifier": 128,
+      "description": "Set automatic input collection.\nThese settings are stored in flash.",
+      "fields": [
+        {
+          "name": "sampling_interval",
+          "unit": "ms",
+          "isFloat": false,
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true
+        },
+        {
+          "name": "samples_in_window",
+          "unit": "",
+          "isFloat": false,
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true
+        },
+        {
+          "name": "reserved",
+          "unit": "",
+          "isFloat": false,
+          "type": "u32",
+          "storage": 4,
+          "isSimpleType": true
+        },
+        {
+          "name": "device_id",
+          "unit": "",
+          "isFloat": false,
+          "type": "u64",
+          "storage": 8,
+          "isSimpleType": true,
+          "startRepeats": true
+        },
+        {
+          "name": "service_class",
+          "unit": "",
+          "isFloat": false,
+          "type": "u32",
+          "storage": 4,
+          "isSimpleType": true
+        },
+        {
+          "name": "service_num",
+          "unit": "",
+          "isFloat": false,
+          "type": "u8",
+          "storage": 1,
+          "isSimpleType": true
+        },
+        {
+          "name": "sample_size",
+          "unit": "B",
+          "isFloat": false,
+          "type": "u8",
+          "storage": 1,
+          "isSimpleType": true
+        },
+        {
+          "name": "sample_type",
+          "unit": "",
+          "isFloat": false,
+          "type": "SampleType",
+          "storage": 1
+        },
+        {
+          "name": "sample_shift",
+          "unit": "",
+          "isFloat": false,
+          "type": "i8",
+          "storage": -1,
+          "isSimpleType": true
+        }
+      ]
+    },
+    {
+      "kind": "ro",
+      "name": "num_samples",
+      "identifier": 384,
+      "description": "Number of input samples collected so far.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "",
+          "isFloat": false,
+          "type": "u32",
+          "storage": 4,
+          "isSimpleType": true
+        }
+      ]
+    },
+    {
+      "kind": "ro",
+      "name": "sample_size",
+      "identifier": 385,
+      "description": "Size of a single sample.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "B",
+          "isFloat": false,
+          "type": "u8",
+          "storage": 1,
+          "isSimpleType": true
+        }
+      ]
+    },
+    {
+      "kind": "rw",
+      "name": "stream_samples",
+      "identifier": 129,
+      "description": "When set to `N`, will stream `N` samples as `current_sample` reading.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "",
+          "isFloat": false,
+          "type": "u32",
+          "storage": 4,
+          "isSimpleType": true
+        }
+      ]
+    },
+    {
+      "kind": "ro",
+      "name": "current_sample",
+      "identifier": 257,
+      "description": "Last collected sample.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "",
+          "isFloat": false,
+          "type": "bytes",
+          "storage": 0,
+          "isSimpleType": true
+        }
+      ],
+      "identifierName": "reading"
+    }
+  ],
+  "source": "# Sensor Aggregator\n\n    identifier: 0x1d90e1c5\n\nAggregate data from multiple sensors into a single stream\n(often used as input to machine learning models on the same device, see model runner service).\n\n## Registers\n\n    enum SampleType : u8 {\n        U8 = 0x08\n        I8 = 0x88\n        U16 = 0x10\n        I16 = 0x90\n        U32 = 0x20\n        I32 = 0xA0\n    }\n    rw inputs @ 0x80 {\n        sampling_interval: u16 ms\n        samples_in_window: u16\n        reserved: u32\n    repeats:\n        device_id: u64\n        service_class: u32\n        service_num: u8\n        sample_size: u8 B\n        sample_type: SampleType\n        sample_shift: i8\n    }\n\nSet automatic input collection.\nThese settings are stored in flash.\n\n    ro num_samples: u32 @ 0x180\n\nNumber of input samples collected so far.\n\n    ro sample_size: u8 B @ 0x181\n\nSize of a single sample.\n\n    rw stream_samples: u32 @ 0x81\n\nWhen set to `N`, will stream `N` samples as `current_sample` reading.\n\n    ro current_sample: bytes @ reading\n\nLast collected sample.\n"
+}

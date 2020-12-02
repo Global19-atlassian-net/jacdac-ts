@@ -1,0 +1,79 @@
+{
+  "name": "Motor",
+  "status": "experimental",
+  "shortId": "motor",
+  "camelName": "Motor",
+  "shortName": "Motor",
+  "extends": [
+    "_base"
+  ],
+  "notes": {
+    "short": "A bi-directional DC motor."
+  },
+  "classIdentifier": 385895640,
+  "enums": {},
+  "packets": [
+    {
+      "kind": "ro",
+      "name": "status_code",
+      "identifier": 7,
+      "description": "Reports the current state or error status of the device. ``code`` is a standardized value from \nthe JACDAC error codes. ``vendor_code`` is any vendor specific error code describing the device\nstate. This report is typically not queried, when a device has an error, it will typically\nadd this report in frame along with the anounce packet.",
+      "fields": [
+        {
+          "name": "code",
+          "unit": "",
+          "isFloat": false,
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true
+        },
+        {
+          "name": "vendor_code",
+          "unit": "",
+          "isFloat": false,
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true
+        }
+      ],
+      "optional": true,
+      "identifierName": "status_code",
+      "derived": "_base"
+    },
+    {
+      "kind": "rw",
+      "name": "duty",
+      "identifier": 2,
+      "description": "PWM duty cycle of the motor. Use negative/positive values to run the motor forwards and backwards.\nPositive is recommended to be clockwise rotation and negative counterclockwise.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "/",
+          "shift": 15,
+          "isFloat": false,
+          "type": "i16",
+          "storage": -2,
+          "isSimpleType": true
+        }
+      ],
+      "identifierName": "value"
+    },
+    {
+      "kind": "rw",
+      "name": "enabled",
+      "identifier": 1,
+      "description": "Turn the power to the motor on/off.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "",
+          "isFloat": false,
+          "type": "bool",
+          "storage": 1
+        }
+      ],
+      "identifierName": "intensity"
+    }
+  ],
+  "source": "# Motor\n\n    identifier: 0x17004cd8\n\nA bi-directional DC motor.\n\n## Registers\n\n    rw duty: i16 / @ value\n\nPWM duty cycle of the motor. Use negative/positive values to run the motor forwards and backwards.\nPositive is recommended to be clockwise rotation and negative counterclockwise.\n\n    rw enabled: bool @ intensity\n\nTurn the power to the motor on/off.\n"
+}

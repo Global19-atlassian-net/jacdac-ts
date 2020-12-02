@@ -1,0 +1,85 @@
+{
+  "name": "Microphone",
+  "status": "experimental",
+  "shortId": "microphone",
+  "camelName": "Microphone",
+  "shortName": "Microphone",
+  "extends": [
+    "_base"
+  ],
+  "notes": {
+    "short": "A single-channel microphone."
+  },
+  "classIdentifier": 289254534,
+  "enums": {},
+  "packets": [
+    {
+      "kind": "ro",
+      "name": "status_code",
+      "identifier": 7,
+      "description": "Reports the current state or error status of the device. ``code`` is a standardized value from \nthe JACDAC error codes. ``vendor_code`` is any vendor specific error code describing the device\nstate. This report is typically not queried, when a device has an error, it will typically\nadd this report in frame along with the anounce packet.",
+      "fields": [
+        {
+          "name": "code",
+          "unit": "",
+          "isFloat": false,
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true
+        },
+        {
+          "name": "vendor_code",
+          "unit": "",
+          "isFloat": false,
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true
+        }
+      ],
+      "optional": true,
+      "identifierName": "status_code",
+      "derived": "_base"
+    },
+    {
+      "kind": "command",
+      "name": "sample",
+      "identifier": 129,
+      "description": "The samples will be streamed back over the `samples` pipe.\nIf `num_samples` is `0`, streaming will only stop when the pipe is closed.\nOtherwise the specified number of samples is streamed.\nSamples are sent as `i16`.",
+      "fields": [
+        {
+          "name": "samples",
+          "unit": "",
+          "isFloat": false,
+          "type": "pipe",
+          "storage": 12
+        },
+        {
+          "name": "num_samples",
+          "unit": "",
+          "isFloat": false,
+          "type": "u32",
+          "storage": 4,
+          "isSimpleType": true
+        }
+      ],
+      "pipeType": "sample"
+    },
+    {
+      "kind": "rw",
+      "name": "sampling_period",
+      "identifier": 128,
+      "description": "Get or set microphone sampling period.\nSampling rate is `1_000_000 / sampling_period Hz`.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "us",
+          "isFloat": false,
+          "type": "u32",
+          "storage": 4,
+          "isSimpleType": true
+        }
+      ]
+    }
+  ],
+  "source": "# Microphone\n\n    identifier: 0x113dac86\n\nA single-channel microphone.\n\n## Commands\n\n    command sample @ 0x81 {\n        samples: pipe\n        num_samples: u32\n    }\n\nThe samples will be streamed back over the `samples` pipe.\nIf `num_samples` is `0`, streaming will only stop when the pipe is closed.\nOtherwise the specified number of samples is streamed.\nSamples are sent as `i16`.\n\n## Registers\n\n    rw sampling_period: u32 us @ 0x80\n\nGet or set microphone sampling period.\nSampling rate is `1_000_000 / sampling_period Hz`.\n\n"
+}

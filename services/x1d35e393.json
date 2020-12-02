@@ -1,0 +1,131 @@
+{
+  "name": "LED Matrix Controller",
+  "status": "experimental",
+  "shortId": "ledmatrixcontroller",
+  "camelName": "LEDMatrixController",
+  "shortName": "LEDMatrixController",
+  "extends": [
+    "_base"
+  ],
+  "notes": {
+    "short": "A service that allows to control a rectangular matrix of monochrome LEDs.\nTo stream the state of the screen, use [LED Matrix display](/services/led-matrix-display) instead."
+  },
+  "classIdentifier": 490070931,
+  "enums": {},
+  "packets": [
+    {
+      "kind": "ro",
+      "name": "status_code",
+      "identifier": 7,
+      "description": "Reports the current state or error status of the device. ``code`` is a standardized value from \nthe JACDAC error codes. ``vendor_code`` is any vendor specific error code describing the device\nstate. This report is typically not queried, when a device has an error, it will typically\nadd this report in frame along with the anounce packet.",
+      "fields": [
+        {
+          "name": "code",
+          "unit": "",
+          "isFloat": false,
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true
+        },
+        {
+          "name": "vendor_code",
+          "unit": "",
+          "isFloat": false,
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true
+        }
+      ],
+      "optional": true,
+      "identifierName": "status_code",
+      "derived": "_base"
+    },
+    {
+      "kind": "rw",
+      "name": "leds",
+      "identifier": 128,
+      "description": "Read or writes the state of the screen where pixel on/off state is \nstored as a bit, column by column. The column should be byte aligned.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "",
+          "isFloat": false,
+          "type": "bytes",
+          "storage": 0,
+          "isSimpleType": true
+        }
+      ]
+    },
+    {
+      "kind": "rw",
+      "name": "enabled",
+      "identifier": 129,
+      "description": "Disables or enables the whole screen.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "",
+          "isFloat": false,
+          "type": "bool",
+          "storage": 1
+        }
+      ]
+    },
+    {
+      "kind": "rw",
+      "name": "brightness",
+      "identifier": 130,
+      "description": "Sets the general brightness of the LEDs.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "",
+          "isFloat": false,
+          "type": "u8",
+          "storage": 1,
+          "isSimpleType": true
+        }
+      ]
+    },
+    {
+      "kind": "const",
+      "name": "rows",
+      "identifier": 131,
+      "description": "Number of rows on the screen",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "#",
+          "isFloat": false,
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true
+        }
+      ]
+    },
+    {
+      "kind": "const",
+      "name": "columns",
+      "identifier": 132,
+      "description": "Number of columns on the screen",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "#",
+          "isFloat": false,
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true
+        }
+      ]
+    },
+    {
+      "kind": "command",
+      "name": "clear",
+      "identifier": 128,
+      "description": "Shorthand command to clear all the LEDs on the screen.",
+      "fields": []
+    }
+  ],
+  "source": "# LED Matrix Controller\n\n    identifier: 0x1d35e393\n    status: experimental\n\nA service that allows to control a rectangular matrix of monochrome LEDs.\nTo stream the state of the screen, use [LED Matrix display](/services/led-matrix-display) instead.\n\n## Registers\n\n    rw leds: bytes @ 0x80\n\nRead or writes the state of the screen where pixel on/off state is \nstored as a bit, column by column. The column should be byte aligned.\n\n    rw enabled: bool @ 0x81\n \n Disables or enables the whole screen.\n \n    rw brightness: u8 @ 0x82\n    \nSets the general brightness of the LEDs.\n \n    const rows: u16 # @ 0x83\n    \nNumber of rows on the screen\n\n    const columns: u16 # @ 0x84\n    \nNumber of columns on the screen\n\n## Commands\n\n    command clear @ 0x80 {}\n\nShorthand command to clear all the LEDs on the screen."
+}

@@ -1,0 +1,224 @@
+{
+  "name": "Accelerometer",
+  "status": "experimental",
+  "shortId": "accelerometer",
+  "camelName": "accel",
+  "shortName": "accel",
+  "extends": [
+    "_base",
+    "_sensor"
+  ],
+  "notes": {
+    "short": "A 3-axis accelerometer.",
+    "events": "All events are debounced."
+  },
+  "classIdentifier": 521405449,
+  "enums": {},
+  "packets": [
+    {
+      "kind": "ro",
+      "name": "status_code",
+      "identifier": 7,
+      "description": "Reports the current state or error status of the device. ``code`` is a standardized value from \nthe JACDAC error codes. ``vendor_code`` is any vendor specific error code describing the device\nstate. This report is typically not queried, when a device has an error, it will typically\nadd this report in frame along with the anounce packet.",
+      "fields": [
+        {
+          "name": "code",
+          "unit": "",
+          "isFloat": false,
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true
+        },
+        {
+          "name": "vendor_code",
+          "unit": "",
+          "isFloat": false,
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true
+        }
+      ],
+      "optional": true,
+      "identifierName": "status_code",
+      "derived": "_base"
+    },
+    {
+      "kind": "rw",
+      "name": "streaming_samples",
+      "identifier": 3,
+      "description": "Asks device to stream a given number of samples\n(clients will typically write `255` to this register every second or so, while streaming is required).",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "",
+          "isFloat": false,
+          "type": "u8",
+          "storage": 1,
+          "isSimpleType": true
+        }
+      ],
+      "internal": true,
+      "identifierName": "streaming_samples",
+      "derived": "_sensor"
+    },
+    {
+      "kind": "rw",
+      "name": "streaming_interval",
+      "identifier": 4,
+      "description": "Period between packets of data when streaming in milliseconds.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "ms",
+          "isFloat": false,
+          "type": "u32",
+          "storage": 4,
+          "isSimpleType": true,
+          "defaultValue": 100,
+          "typicalMin": 1,
+          "typicalMax": 60000
+        }
+      ],
+      "identifierName": "streaming_interval",
+      "derived": "_sensor"
+    },
+    {
+      "kind": "const",
+      "name": "streaming_preferred_interval",
+      "identifier": 258,
+      "description": "Preferred default streaming interval for sensor in milliseconds.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "ms",
+          "isFloat": false,
+          "type": "u32",
+          "storage": 4,
+          "isSimpleType": true
+        }
+      ],
+      "internal": true,
+      "optional": true,
+      "identifierName": "streaming_preferred_interval",
+      "derived": "_sensor"
+    },
+    {
+      "kind": "ro",
+      "name": "forces",
+      "identifier": 257,
+      "description": "Indicates the current forces acting on accelerometer.",
+      "fields": [
+        {
+          "name": "x",
+          "unit": "g",
+          "shift": 10,
+          "isFloat": false,
+          "type": "i6.10",
+          "storage": -2
+        },
+        {
+          "name": "y",
+          "unit": "g",
+          "shift": 10,
+          "isFloat": false,
+          "type": "i6.10",
+          "storage": -2
+        },
+        {
+          "name": "z",
+          "unit": "g",
+          "shift": 10,
+          "isFloat": false,
+          "type": "i6.10",
+          "storage": -2
+        }
+      ],
+      "identifierName": "reading"
+    },
+    {
+      "kind": "event",
+      "name": "tilt_up",
+      "identifier": 1,
+      "description": "Emitted when accelerometer is tilted in the given direction.",
+      "fields": []
+    },
+    {
+      "kind": "event",
+      "name": "tilt_down",
+      "identifier": 2,
+      "description": "Emitted when accelerometer is tilted in the given direction.",
+      "fields": []
+    },
+    {
+      "kind": "event",
+      "name": "tilt_left",
+      "identifier": 3,
+      "description": "Emitted when accelerometer is tilted in the given direction.",
+      "fields": []
+    },
+    {
+      "kind": "event",
+      "name": "tilt_right",
+      "identifier": 4,
+      "description": "Emitted when accelerometer is tilted in the given direction.",
+      "fields": []
+    },
+    {
+      "kind": "event",
+      "name": "face_up",
+      "identifier": 5,
+      "description": "Emitted when accelerometer is laying flat in the given direction.",
+      "fields": []
+    },
+    {
+      "kind": "event",
+      "name": "face_down",
+      "identifier": 6,
+      "description": "Emitted when accelerometer is laying flat in the given direction.",
+      "fields": []
+    },
+    {
+      "kind": "event",
+      "name": "freefall",
+      "identifier": 7,
+      "description": "Emitted when total force acting on accelerometer is much less than 1g.",
+      "fields": []
+    },
+    {
+      "kind": "event",
+      "name": "shake",
+      "identifier": 11,
+      "description": "Emitted when forces change violently a few times.",
+      "fields": []
+    },
+    {
+      "kind": "event",
+      "name": "force_2g",
+      "identifier": 12,
+      "description": "Emitted when force in any direction exceeds given threshold.",
+      "fields": []
+    },
+    {
+      "kind": "event",
+      "name": "force_3g",
+      "identifier": 8,
+      "description": "Emitted when force in any direction exceeds given threshold.",
+      "fields": []
+    },
+    {
+      "kind": "event",
+      "name": "force_6g",
+      "identifier": 9,
+      "description": "Emitted when force in any direction exceeds given threshold.",
+      "fields": []
+    },
+    {
+      "kind": "event",
+      "name": "force_8g",
+      "identifier": 10,
+      "description": "Emitted when force in any direction exceeds given threshold.",
+      "fields": []
+    }
+  ],
+  "source": "# Accelerometer\n\n    identifier: 0x1f140409\n    extends: _sensor\n    camel: accel\n\nA 3-axis accelerometer.\n\n## Registers\n\n    ro forces @ reading {\n        x: i6.10 g\n        y: i6.10 g\n        z: i6.10 g\n    }\n\nIndicates the current forces acting on accelerometer.\n\n## Events\n\nAll events are debounced.\n\n    event tilt_up @ 1\n    event tilt_down @ 2\n    event tilt_left @ 3\n    event tilt_right @ 4\n\nEmitted when accelerometer is tilted in the given direction.\n\n    event face_up @ 5\n    event face_down @ 6\n\nEmitted when accelerometer is laying flat in the given direction.\n\n    event freefall @ 7\n\nEmitted when total force acting on accelerometer is much less than 1g.\n\n    event shake @ 11\n\nEmitted when forces change violently a few times.\n\n    event force_2g @ 12\n    event force_3g @ 8\n    event force_6g @ 9\n    event force_8g @ 10\n\nEmitted when force in any direction exceeds given threshold.\n"
+}
