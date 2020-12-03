@@ -1462,6 +1462,21 @@
       },
       {
         "@type": "Property",
+        "name": "rw_i32",
+        "@id": "dtmi:jacdac:x16c7466a:rw:rwi32;1",
+        "description": "A read write i32 register.",
+        "schema": "integer",
+        "writable": true
+      },
+      {
+        "@type": "Telemetry",
+        "name": "ro_i32",
+        "@id": "dtmi:jacdac:x16c7466a:ro:roi32;1",
+        "description": "A read only i32 register.. Mirrors rw_i32.",
+        "schema": "integer"
+      },
+      {
+        "@type": "Property",
         "name": "rw_string",
         "@id": "dtmi:jacdac:x16c7466a:rw:rwstring;1",
         "description": "A read write string register.",
@@ -1487,6 +1502,13 @@
         "name": "e_u32",
         "@id": "dtmi:jacdac:x16c7466a:event:eu32;1",
         "description": "An event raised when rw_u32 is modified",
+        "schema": "integer"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "e_i32",
+        "@id": "dtmi:jacdac:x16c7466a:event:ei32;1",
+        "description": "An event raised when rw_i32 is modified",
         "schema": "integer"
       }
     ],
