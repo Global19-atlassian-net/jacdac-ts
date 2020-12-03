@@ -20,8 +20,8 @@
     },
     {
       "@type": "Property",
-      "name": "stream_samples",
-      "@id": "dtmi:jacdac:x1d90e1c5:rw:streamsamples;1",
+      "name": "streaming_samples",
+      "@id": "dtmi:jacdac:x1d90e1c5:rw:streamingsamples;1",
       "description": "When set to `N`, will stream `N` samples as `current_sample` reading.",
       "schema": "integer",
       "writable": true
