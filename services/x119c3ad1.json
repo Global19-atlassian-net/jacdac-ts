@@ -217,7 +217,7 @@
     {
       "kind": "event",
       "name": "change",
-      "identifier": 1,
+      "identifier": 2,
       "description": "Emit notifying that the internal state of the service changed.",
       "fields": [],
       "identifierName": "change"
