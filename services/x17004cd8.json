@@ -38,7 +38,7 @@
       ],
       "optional": true,
       "identifierName": "status_code",
-      "packFormat": "H`H",
+      "packFormat": "u16 u16",
       "derived": "_base"
     },
     {
@@ -58,7 +58,7 @@
         }
       ],
       "identifierName": "value",
-      "packFormat": "h"
+      "packFormat": "i16"
     },
     {
       "kind": "rw",
@@ -75,7 +75,7 @@
         }
       ],
       "identifierName": "intensity",
-      "packFormat": "B"
+      "packFormat": "u8"
     }
   ],
   "source": "# Motor\n\n    identifier: 0x17004cd8\n\nA bi-directional DC motor.\n\n## Registers\n\n    rw duty: i16 / @ value\n\nPWM duty cycle of the motor. Use negative/positive values to run the motor forwards and backwards.\nPositive is recommended to be clockwise rotation and negative counterclockwise.\n\n    rw enabled: bool @ intensity\n\nTurn the power to the motor on/off.\n"

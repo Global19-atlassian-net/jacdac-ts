@@ -38,7 +38,7 @@
       ],
       "optional": true,
       "identifierName": "status_code",
-      "packFormat": "H`H",
+      "packFormat": "u16 u16",
       "derived": "_base"
     },
     {
@@ -64,7 +64,7 @@
         }
       ],
       "pipeType": "sample",
-      "packFormat": "b12x`L"
+      "packFormat": "b12x u32"
     },
     {
       "kind": "rw",
@@ -81,7 +81,7 @@
           "isSimpleType": true
         }
       ],
-      "packFormat": "L"
+      "packFormat": "u32"
     }
   ],
   "source": "# Microphone\n\n    identifier: 0x113dac86\n\nA single-channel microphone.\n\n## Commands\n\n    command sample @ 0x81 {\n        samples: pipe\n        num_samples: u32\n    }\n\nThe samples will be streamed back over the `samples` pipe.\nIf `num_samples` is `0`, streaming will only stop when the pipe is closed.\nOtherwise the specified number of samples is streamed.\nSamples are sent as `i16`.\n\n## Registers\n\n    rw sampling_period: u32 us @ 0x80\n\nGet or set microphone sampling period.\nSampling rate is `1_000_000 / sampling_period Hz`.\n\n"

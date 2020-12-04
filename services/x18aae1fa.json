@@ -57,7 +57,7 @@
       ],
       "optional": true,
       "identifierName": "status_code",
-      "packFormat": "H`H",
+      "packFormat": "u16 u16",
       "derived": "_base"
     },
     {
@@ -135,7 +135,7 @@
         }
       ],
       "pipeType": "scan",
-      "packFormat": "L`L`b`B`b6x`s"
+      "packFormat": "u32 u32 i8 u8 b6x s"
     },
     {
       "kind": "command",
@@ -159,7 +159,7 @@
           "isOptional": true
         }
       ],
-      "packFormat": "z`z"
+      "packFormat": "z z"
     },
     {
       "kind": "command",
@@ -182,7 +182,7 @@
           "storage": 1
         }
       ],
-      "packFormat": "B"
+      "packFormat": "u8"
     },
     {
       "kind": "event",

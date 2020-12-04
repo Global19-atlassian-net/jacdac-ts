@@ -51,7 +51,7 @@
       ],
       "optional": true,
       "identifierName": "status_code",
-      "packFormat": "H`H",
+      "packFormat": "u16 u16",
       "derived": "_base"
     },
     {
@@ -133,7 +133,7 @@
           "isSimpleType": true
         }
       ],
-      "packFormat": "H`H`L`b8x`L`B`B`B`b"
+      "packFormat": "u16 u16 u32 b8x u32 u8 u8 u8 i8"
     },
     {
       "kind": "ro",
@@ -150,7 +150,7 @@
           "isSimpleType": true
         }
       ],
-      "packFormat": "L"
+      "packFormat": "u32"
     },
     {
       "kind": "ro",
@@ -167,7 +167,7 @@
           "isSimpleType": true
         }
       ],
-      "packFormat": "B"
+      "packFormat": "u8"
     },
     {
       "kind": "rw",
@@ -184,7 +184,7 @@
           "isSimpleType": true
         }
       ],
-      "packFormat": "L"
+      "packFormat": "u32"
     },
     {
       "kind": "ro",

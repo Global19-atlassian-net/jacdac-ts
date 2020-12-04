@@ -63,7 +63,7 @@
       ],
       "optional": true,
       "identifierName": "status_code",
-      "packFormat": "H`H",
+      "packFormat": "u16 u16",
       "derived": "_base"
     },
     {
@@ -96,7 +96,7 @@
           "storage": 1
         }
       ],
-      "packFormat": "H`B`B"
+      "packFormat": "u16 u8 u8"
     },
     {
       "kind": "command",

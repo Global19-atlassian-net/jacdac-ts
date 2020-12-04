@@ -40,7 +40,7 @@
       ],
       "optional": true,
       "identifierName": "status_code",
-      "packFormat": "H`H",
+      "packFormat": "u16 u16",
       "derived": "_base"
     },
     {
@@ -60,7 +60,7 @@
       ],
       "internal": true,
       "identifierName": "streaming_samples",
-      "packFormat": "B",
+      "packFormat": "u8",
       "derived": "_sensor"
     },
     {
@@ -82,7 +82,7 @@
         }
       ],
       "identifierName": "streaming_interval",
-      "packFormat": "L",
+      "packFormat": "u32",
       "derived": "_sensor"
     },
     {
@@ -103,7 +103,7 @@
       "internal": true,
       "optional": true,
       "identifierName": "streaming_preferred_interval",
-      "packFormat": "L",
+      "packFormat": "u32",
       "derived": "_sensor"
     },
     {
@@ -138,7 +138,7 @@
         }
       ],
       "identifierName": "reading",
-      "packFormat": "h`h`h"
+      "packFormat": "i16 i16 i16"
     },
     {
       "kind": "event",

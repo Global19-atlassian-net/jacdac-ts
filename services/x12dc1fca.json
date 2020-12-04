@@ -49,7 +49,7 @@
       ],
       "optional": true,
       "identifierName": "status_code",
-      "packFormat": "H`H",
+      "packFormat": "u16 u16",
       "derived": "_base"
     },
     {
@@ -67,7 +67,7 @@
           "defaultValue": 1
         }
       ],
-      "packFormat": "B"
+      "packFormat": "u8"
     },
     {
       "kind": "report",

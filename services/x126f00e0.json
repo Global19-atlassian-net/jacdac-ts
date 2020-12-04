@@ -49,7 +49,7 @@
       ],
       "optional": true,
       "identifierName": "status_code",
-      "packFormat": "H`H",
+      "packFormat": "u16 u16",
       "derived": "_base"
     },
     {
@@ -70,7 +70,7 @@
         }
       ],
       "identifierName": "intensity",
-      "packFormat": "B"
+      "packFormat": "u8"
     },
     {
       "kind": "ro",
@@ -88,7 +88,7 @@
           "isSimpleType": true
         }
       ],
-      "packFormat": "B"
+      "packFormat": "u8"
     },
     {
       "kind": "rw",
@@ -104,7 +104,7 @@
           "storage": 1
         }
       ],
-      "packFormat": "B"
+      "packFormat": "u8"
     },
     {
       "kind": "rw",
@@ -122,7 +122,7 @@
           "defaultValue": 15
         }
       ],
-      "packFormat": "H"
+      "packFormat": "u16"
     },
     {
       "kind": "rw",
@@ -141,7 +141,7 @@
         }
       ],
       "identifierName": "max_power",
-      "packFormat": "H"
+      "packFormat": "u16"
     },
     {
       "kind": "command",

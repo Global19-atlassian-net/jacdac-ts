@@ -40,7 +40,7 @@
       ],
       "optional": true,
       "identifierName": "status_code",
-      "packFormat": "H`H",
+      "packFormat": "u16 u16",
       "derived": "_base"
     },
     {
@@ -60,7 +60,7 @@
       ],
       "internal": true,
       "identifierName": "streaming_samples",
-      "packFormat": "B",
+      "packFormat": "u8",
       "derived": "_sensor"
     },
     {
@@ -82,7 +82,7 @@
         }
       ],
       "identifierName": "streaming_interval",
-      "packFormat": "L",
+      "packFormat": "u32",
       "derived": "_sensor"
     },
     {
@@ -103,7 +103,7 @@
       "internal": true,
       "optional": true,
       "identifierName": "streaming_preferred_interval",
-      "packFormat": "L",
+      "packFormat": "u32",
       "derived": "_sensor"
     },
     {
@@ -124,7 +124,7 @@
         }
       ],
       "identifierName": "reading",
-      "packFormat": "L"
+      "packFormat": "u32"
     }
   ],
   "source": "# Humidity\n\n    identifier: 0x16c810b8\n    extends: _sensor\n\nA sensor measuring humidity of outside environment.\n\n## Registers\n\nDefault streaming interval is 1s.\n\n    ro humidity: u22.10 %RH {typical_max = 100} @ reading\n\nThe relative humidity in percentage of full water saturation.\n"

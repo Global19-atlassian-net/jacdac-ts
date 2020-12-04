@@ -38,7 +38,7 @@
       ],
       "optional": true,
       "identifierName": "status_code",
-      "packFormat": "H`H",
+      "packFormat": "u16 u16",
       "derived": "_base"
     },
     {
@@ -64,7 +64,7 @@
           "isSimpleType": true
         }
       ],
-      "packFormat": "H`H"
+      "packFormat": "u16 u16"
     }
   ],
   "source": "# CODAL Message Bus\n\n    identifier: 0x16ad7cd5\n    \nA service that allows passing events through the [CODAL Message Bus](https://lancaster-university.github.io/microbit-docs/ubit/messageBus/)\n* ``id`` is a unique identifier that identifies a component in the device. Use ``0`` to address all sources. The value of other identifiers is typically hardware dependent.\n* ``event`` is an identifier that determines the event type. Use ``0`` as a wildcard.\n\n## Commands\n\n    command send @ 0x80 {\n        id: u16\n        event: u16\n    }\n    \nSends a new event on the message bus.\n"
