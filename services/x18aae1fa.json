@@ -57,6 +57,7 @@
       ],
       "optional": true,
       "identifierName": "status_code",
+      "packFormat": "HH",
       "derived": "_base"
     },
     {
@@ -73,7 +74,8 @@
           "storage": 12
         }
       ],
-      "pipeType": "scan"
+      "pipeType": "scan",
+      "packFormat": "b12x"
     },
     {
       "kind": "pipe_report",
@@ -132,7 +134,8 @@
           "maxBytes": 33
         }
       ],
-      "pipeType": "scan"
+      "pipeType": "scan",
+      "packFormat": "LLbBb6xs"
     },
     {
       "kind": "command",
@@ -155,7 +158,8 @@
           "storage": 0,
           "isOptional": true
         }
-      ]
+      ],
+      "packFormat": "zz"
     },
     {
       "kind": "command",
@@ -177,7 +181,8 @@
           "type": "bool",
           "storage": 1
         }
-      ]
+      ],
+      "packFormat": "B"
     },
     {
       "kind": "event",

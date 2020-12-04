@@ -39,6 +39,7 @@
       ],
       "optional": true,
       "identifierName": "status_code",
+      "packFormat": "HH",
       "derived": "_base"
     },
     {
@@ -57,7 +58,8 @@
           "isSimpleType": true
         }
       ],
-      "identifierName": "intensity"
+      "identifierName": "intensity",
+      "packFormat": "H"
     },
     {
       "kind": "rw",
@@ -75,7 +77,8 @@
           "defaultValue": 100
         }
       ],
-      "identifierName": "max_power"
+      "identifierName": "max_power",
+      "packFormat": "H"
     },
     {
       "kind": "const",
@@ -91,7 +94,8 @@
           "storage": 1,
           "isSimpleType": true
         }
-      ]
+      ],
+      "packFormat": "B"
     },
     {
       "kind": "rw",
@@ -117,7 +121,8 @@
           "storage": 2,
           "isSimpleType": true
         }
-      ]
+      ],
+      "packFormat": "HH"
     },
     {
       "kind": "rw",
@@ -133,7 +138,8 @@
           "storage": 2,
           "isSimpleType": true
         }
-      ]
+      ],
+      "packFormat": "H"
     },
     {
       "kind": "rw",
@@ -150,7 +156,8 @@
           "isSimpleType": true,
           "defaultValue": 65535
         }
-      ]
+      ],
+      "packFormat": "H"
     }
   ],
   "source": "# PWM Light\n\n    identifier: 0x1fb57453\n    camel: PwmLight\n\nA controller for 1 or more LEDs connected in parallel.\n\n## Animation steps\n\nAnimations are described using pairs of intensity and duration.\nFor example, the following animation\n`(0, 10ms), (0.5, 5ms), (0.5, 10ms), (1, 5ms), (0, 7ms), (0, 0ms)`\nwill gradually rise the intensity `0 - 0.5` in 10ms,\nthen, it will keep it steady for at `0.5` for 5ms,\nthen it will rise it again `0.5 - 1` over 10ms,\ndrop `1 - 0` in 5ms,\nand keep it at 0 for 7ms more.\nAny entry with duration of 0ms is considered to be end-marker.\n\nTo get steady glow at `x`, use animation of `(x, 60000ms), (x, 0ms)` and keep `max_iterations` at `0xffff`.\n\n## Registers\n\n    rw brightness: u16 / @ intensity\n\nSet the luminosity of the strip. The value is used to scale `start_intensity` in `steps` register.\nAt `0` the power to the strip is completely shut down.\n\n    rw max_power = 100: u16 mA @ max_power\n\nLimit the power drawn by the light-strip (and controller).\n\n    const max_steps: u8 @ 0x180\n\nMaximum number of steps allowed in animation definition. This determines the size of the `steps` register.\n\n    rw steps @ 0x82 {\n        repeats:\n            start_intensity: u16 /\n            duration: u16 ms\n    }\n\nThe steps of current animation. Setting this also sets `current_iteration` to `0`.\nStep with `duration == 0` is treated as an end marker.\n\n    rw current_iteration: u16 @ 0x80\n\nCurrently excecuting iteration of animation. Can be set to `0` to restart current animation.\nIf `current_iteration > max_iterations`, then no animation is currently running.\n\n    rw max_iterations = 0xffff: u16 @ 0x81\n\nThe animation will be repeated `max_iterations + 1` times.\n"

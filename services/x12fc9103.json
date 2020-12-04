@@ -38,6 +38,7 @@
       ],
       "optional": true,
       "identifierName": "status_code",
+      "packFormat": "HH",
       "derived": "_base"
     },
     {
@@ -57,7 +58,8 @@
           "typicalMax": 2500
         }
       ],
-      "identifierName": "value"
+      "identifierName": "value",
+      "packFormat": "L"
     },
     {
       "kind": "rw",
@@ -73,7 +75,8 @@
           "storage": 1
         }
       ],
-      "identifierName": "intensity"
+      "identifierName": "intensity",
+      "packFormat": "B"
     }
   ],
   "source": "# Servo\n\n    identifier: 0x12fc9103\n\nServo is a small motor directed with a PWM signal.\nThis services fixes the servo period at 20ms, and the pulse can be regulated.\n\n## Registers\n\n    rw pulse: u32 us {typical_min = 500, typical_max = 2500} @ value\n\nSpecifies length of the pulse in microseconds. The period is always 20ms.\n\n    rw enabled: bool @ intensity\n\nTurn the power to the servo on/off."

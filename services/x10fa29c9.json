@@ -39,6 +39,7 @@
       ],
       "optional": true,
       "identifierName": "status_code",
+      "packFormat": "HH",
       "derived": "_base"
     },
     {
@@ -58,6 +59,7 @@
       ],
       "internal": true,
       "identifierName": "streaming_samples",
+      "packFormat": "B",
       "derived": "_sensor"
     },
     {
@@ -79,6 +81,7 @@
         }
       ],
       "identifierName": "streaming_interval",
+      "packFormat": "L",
       "derived": "_sensor"
     },
     {
@@ -99,6 +102,7 @@
       "internal": true,
       "optional": true,
       "identifierName": "streaming_preferred_interval",
+      "packFormat": "L",
       "derived": "_sensor"
     },
     {
@@ -116,7 +120,8 @@
           "isSimpleType": true
         }
       ],
-      "identifierName": "reading"
+      "identifierName": "reading",
+      "packFormat": "l"
     },
     {
       "kind": "const",
@@ -133,7 +138,8 @@
           "isSimpleType": true
         }
       ],
-      "optional": true
+      "optional": true,
+      "packFormat": "H"
     }
   ],
   "source": "# Rotary encoder\n\n    identifier: 0x10fa29c9\n    extends: _sensor\n    short: crank\n\nAn incremental rotary encoder - converts angular motion of a shaft to digital signal.\n\n## Registers\n\n    ro position: i32 # @ reading\n\nUpon device reset starts at `0` (regardless of the shaft position).\nIncreases by `1` for a clockwise \"click\", by `-1` for counter-clockwise.\n\n    const clicks_per_turn?: u16 # @ 0x180\n\nThis specifies by how much `position` changes when the crank does 360 degree turn. Typically 12 or 24."

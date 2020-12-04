@@ -38,6 +38,7 @@
       ],
       "optional": true,
       "identifierName": "status_code",
+      "packFormat": "HH",
       "derived": "_base"
     },
     {
@@ -53,7 +54,8 @@
           "type": "bool",
           "storage": 1
         }
-      ]
+      ],
+      "packFormat": "B"
     },
     {
       "kind": "command",
@@ -70,7 +72,8 @@
           "isSimpleType": true
         }
       ],
-      "hasReport": true
+      "hasReport": true,
+      "packFormat": "b8x"
     },
     {
       "kind": "report",
@@ -94,7 +97,8 @@
           "storage": 0
         }
       ],
-      "secondary": true
+      "secondary": true,
+      "packFormat": "b8xs"
     },
     {
       "kind": "command",
@@ -117,7 +121,8 @@
           "type": "string",
           "storage": 0
         }
-      ]
+      ],
+      "packFormat": "b8xs"
     },
     {
       "kind": "command",
@@ -140,7 +145,8 @@
           "storage": 12
         }
       ],
-      "pipeType": "list_stored_roles"
+      "pipeType": "list_stored_roles",
+      "packFormat": "b12x"
     },
     {
       "kind": "pipe_report",
@@ -164,7 +170,8 @@
           "storage": 0
         }
       ],
-      "pipeType": "list_stored_roles"
+      "pipeType": "list_stored_roles",
+      "packFormat": "b8xs"
     },
     {
       "kind": "command",
@@ -180,7 +187,8 @@
           "storage": 12
         }
       ],
-      "pipeType": "list_required_roles"
+      "pipeType": "list_required_roles",
+      "packFormat": "b12x"
     },
     {
       "kind": "pipe_report",
@@ -212,7 +220,8 @@
           "storage": 0
         }
       ],
-      "pipeType": "list_required_roles"
+      "pipeType": "list_required_roles",
+      "packFormat": "b8xLs"
     },
     {
       "kind": "event",

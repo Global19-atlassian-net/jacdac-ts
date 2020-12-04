@@ -48,6 +48,7 @@
       ],
       "optional": true,
       "identifierName": "status_code",
+      "packFormat": "HH",
       "derived": "_base"
     },
     {
@@ -65,7 +66,8 @@
         }
       ],
       "pipeType": "open",
-      "hasReport": true
+      "hasReport": true,
+      "packFormat": "b12x"
     },
     {
       "kind": "report",
@@ -82,7 +84,8 @@
         }
       ],
       "secondary": true,
-      "pipeType": "open"
+      "pipeType": "open",
+      "packFormat": "H"
     },
     {
       "kind": "meta_pipe_command",
@@ -106,7 +109,8 @@
           "storage": 0
         }
       ],
-      "pipeType": "open"
+      "pipeType": "open",
+      "packFormat": "Hs"
     },
     {
       "kind": "pipe_command",
@@ -123,7 +127,8 @@
           "isSimpleType": true
         }
       ],
-      "pipeType": "open"
+      "pipeType": "open",
+      "packFormat": "b"
     },
     {
       "kind": "pipe_report",
@@ -140,7 +145,8 @@
           "isSimpleType": true
         }
       ],
-      "pipeType": "open"
+      "pipeType": "open",
+      "packFormat": "b"
     },
     {
       "kind": "meta_pipe_report",
@@ -156,7 +162,8 @@
           "storage": -4
         }
       ],
-      "pipeType": "open"
+      "pipeType": "open",
+      "packFormat": "l"
     }
   ],
   "source": "# TCP\n\n    identifier: 0x1b43b70b\n\nData transfer over TCP/IP and TLS stream sockets.\n\n## Commands\n\n    command open @ 0x80 {\n        inbound: pipe\n    }\n    report {\n        outbound_port: pipe_port\n    }\n\nOpen pair of pipes between network peripheral and a controlling device. In/outbound refers to direction from/to internet.\n\n## Pipes\n\n    meta pipe command open_ssl @ 0x01 {\n        tcp_port: u16\n        hostname: string\n    }\n\nOpen an SSL connection to a given host:port pair. Can be issued only once on given pipe.\nAfter the connection is established, an empty data report is sent.\nConnection is closed by closing the pipe.\n\n    pipe command outdata {\n        data: bytes\n    }\n\nBytes to be sent directly over an established TCP or SSL connection.\n\n    pipe report indata {\n        data: bytes\n    }\n\nBytes read directly from directly over an established TCP or SSL connection.\n\n    enum TcpError : i32 {\n        InvalidCommand = 1\n        InvalidCommandPayload = 2\n    }\n    meta pipe report error @ 0x00 {\n        error: TcpError\n    }\n\nReported when an error is encountered. Negative error codes come directly from the SSL implementation.\n"

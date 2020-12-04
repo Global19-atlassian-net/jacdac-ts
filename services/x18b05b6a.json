@@ -63,6 +63,7 @@
       ],
       "optional": true,
       "identifierName": "status_code",
+      "packFormat": "HH",
       "derived": "_base"
     },
     {
@@ -94,7 +95,8 @@
           "type": "Action",
           "storage": 1
         }
-      ]
+      ],
+      "packFormat": "HBB"
     },
     {
       "kind": "command",

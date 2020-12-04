@@ -40,6 +40,7 @@
       ],
       "optional": true,
       "identifierName": "status_code",
+      "packFormat": "HH",
       "derived": "_base"
     },
     {
@@ -59,6 +60,7 @@
       ],
       "internal": true,
       "identifierName": "streaming_samples",
+      "packFormat": "B",
       "derived": "_sensor"
     },
     {
@@ -80,6 +82,7 @@
         }
       ],
       "identifierName": "streaming_interval",
+      "packFormat": "L",
       "derived": "_sensor"
     },
     {
@@ -100,6 +103,7 @@
       "internal": true,
       "optional": true,
       "identifierName": "streaming_preferred_interval",
+      "packFormat": "L",
       "derived": "_sensor"
     },
     {
@@ -117,7 +121,8 @@
           "storage": 4
         }
       ],
-      "identifierName": "reading"
+      "identifierName": "reading",
+      "packFormat": "L"
     }
   ],
   "source": "# Temperature\n\n    identifier: 0x1421bac7\n    extends: _sensor\n\nA thermometer measuring outside environment.\n\n## Registers\n\nDefault streaming interval is 1s.\n\n    ro temperature: u22.10 C @ reading\n\nThe temperature.\n"

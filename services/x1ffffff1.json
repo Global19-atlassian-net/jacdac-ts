@@ -75,7 +75,8 @@
           "storage": 4,
           "isSimpleType": true
         }
-      ]
+      ],
+      "packFormat": "LL"
     },
     {
       "kind": "command",
@@ -107,7 +108,8 @@
           "storage": 4,
           "isSimpleType": true
         }
-      ]
+      ],
+      "packFormat": "L"
     },
     {
       "kind": "rw",
@@ -123,7 +125,8 @@
           "storage": -4,
           "isSimpleType": true
         }
-      ]
+      ],
+      "packFormat": "l"
     },
     {
       "kind": "rw",
@@ -142,7 +145,8 @@
           "typicalMax": 500,
           "typicalMin": 0
         }
-      ]
+      ],
+      "packFormat": "H"
     },
     {
       "kind": "rw",
@@ -158,7 +162,8 @@
           "storage": 1,
           "isSimpleType": true
         }
-      ]
+      ],
+      "packFormat": "B"
     },
     {
       "kind": "rw",
@@ -175,7 +180,8 @@
           "isSimpleType": true,
           "defaultValue": 100
         }
-      ]
+      ],
+      "packFormat": "L"
     },
     {
       "kind": "ro",
@@ -191,7 +197,8 @@
           "storage": -4,
           "isSimpleType": true
         }
-      ]
+      ],
+      "packFormat": "l"
     },
     {
       "kind": "rw",
@@ -207,7 +214,8 @@
           "storage": -4,
           "isSimpleType": true
         }
-      ]
+      ],
+      "packFormat": "l"
     },
     {
       "kind": "rw",
@@ -223,7 +231,8 @@
           "storage": -4,
           "isSimpleType": true
         }
-      ]
+      ],
+      "packFormat": "l"
     },
     {
       "kind": "ro",
@@ -247,7 +256,8 @@
           "storage": 2,
           "isSimpleType": true
         }
-      ]
+      ],
+      "packFormat": "HH"
     },
     {
       "kind": "const",
@@ -263,7 +273,8 @@
           "storage": 4,
           "isSimpleType": true
         }
-      ]
+      ],
+      "packFormat": "L"
     },
     {
       "kind": "event",

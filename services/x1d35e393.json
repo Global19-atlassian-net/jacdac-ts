@@ -38,6 +38,7 @@
       ],
       "optional": true,
       "identifierName": "status_code",
+      "packFormat": "HH",
       "derived": "_base"
     },
     {
@@ -54,7 +55,8 @@
           "storage": 0,
           "isSimpleType": true
         }
-      ]
+      ],
+      "packFormat": "b"
     },
     {
       "kind": "rw",
@@ -69,7 +71,8 @@
           "type": "bool",
           "storage": 1
         }
-      ]
+      ],
+      "packFormat": "B"
     },
     {
       "kind": "rw",
@@ -85,7 +88,8 @@
           "storage": 1,
           "isSimpleType": true
         }
-      ]
+      ],
+      "packFormat": "B"
     },
     {
       "kind": "const",
@@ -101,7 +105,8 @@
           "storage": 2,
           "isSimpleType": true
         }
-      ]
+      ],
+      "packFormat": "H"
     },
     {
       "kind": "const",
@@ -117,7 +122,8 @@
           "storage": 2,
           "isSimpleType": true
         }
-      ]
+      ],
+      "packFormat": "H"
     },
     {
       "kind": "command",

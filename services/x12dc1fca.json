@@ -49,6 +49,7 @@
       ],
       "optional": true,
       "identifierName": "status_code",
+      "packFormat": "HH",
       "derived": "_base"
     },
     {
@@ -65,7 +66,8 @@
           "storage": 1,
           "defaultValue": 1
         }
-      ]
+      ],
+      "packFormat": "B"
     },
     {
       "kind": "report",
@@ -80,7 +82,8 @@
           "type": "string",
           "storage": 0
         }
-      ]
+      ],
+      "packFormat": "s"
     },
     {
       "kind": "report",
@@ -95,7 +98,8 @@
           "type": "string",
           "storage": 0
         }
-      ]
+      ],
+      "packFormat": "s"
     },
     {
       "kind": "report",
@@ -110,7 +114,8 @@
           "type": "string",
           "storage": 0
         }
-      ]
+      ],
+      "packFormat": "s"
     },
     {
       "kind": "report",
@@ -125,7 +130,8 @@
           "type": "string",
           "storage": 0
         }
-      ]
+      ],
+      "packFormat": "s"
     }
   ],
   "source": "# Logger\n\n    identifier: 0x12dc1fca\n\nA service which can report messages to the bus.\n\n## Registers\n\n    enum Priority : u8 {\n        Debug = 0,\n        Log = 1,\n        Warning = 2,\n        Error = 3\n    }\n    rw min_priority = 1: Priority @ 0x80\n\nMessages with level lower than this won't be emitted. The default setting may vary.\nLoggers should revert this to their default setting if the register has not been\nupdated in 3000ms, and also keep the lowest setting they have seen in the last 1500ms.\nThus, clients should write this register every 1000ms and ignore messages which are\ntoo verbose for them.\n\n## Commands\n\n    report debug @ 0x80 {\n        message: string\n    }\n    report log @ 0x81 {\n        message: string\n    }\n    report warn @ 0x82 {\n        message: string\n    }\n    report error @ 0x83 {\n        message: string\n    }\n\nReport a message.\n"

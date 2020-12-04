@@ -39,6 +39,7 @@
       ],
       "optional": true,
       "identifierName": "status_code",
+      "packFormat": "HH",
       "derived": "_base"
     },
     {
@@ -58,6 +59,7 @@
       ],
       "internal": true,
       "identifierName": "streaming_samples",
+      "packFormat": "B",
       "derived": "_sensor"
     },
     {
@@ -79,6 +81,7 @@
         }
       ],
       "identifierName": "streaming_interval",
+      "packFormat": "L",
       "derived": "_sensor"
     },
     {
@@ -99,6 +102,7 @@
       "internal": true,
       "optional": true,
       "identifierName": "streaming_preferred_interval",
+      "packFormat": "L",
       "derived": "_sensor"
     },
     {
@@ -117,7 +121,8 @@
           "isSimpleType": true
         }
       ],
-      "identifierName": "reading"
+      "identifierName": "reading",
+      "packFormat": "H"
     }
   ],
   "source": "# Slider\n\n    identifier: 0x1f274746\n    extends: _sensor\n\nA slider potentiometer.\n\n## Registers\n\n    ro position: u16 / @ reading\n\nThe relative position of the slider between `0x0000` and `0xffff`.\n"
