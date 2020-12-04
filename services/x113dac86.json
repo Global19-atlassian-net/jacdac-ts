@@ -38,7 +38,7 @@
       ],
       "optional": true,
       "identifierName": "status_code",
-      "packFormat": "HH",
+      "packFormat": "H`H",
       "derived": "_base"
     },
     {
@@ -64,7 +64,7 @@
         }
       ],
       "pipeType": "sample",
-      "packFormat": "b12xL"
+      "packFormat": "b12x`L"
     },
     {
       "kind": "rw",

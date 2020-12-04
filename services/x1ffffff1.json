@@ -76,7 +76,7 @@
           "isSimpleType": true
         }
       ],
-      "packFormat": "LL"
+      "packFormat": "L`L"
     },
     {
       "kind": "command",
@@ -257,7 +257,7 @@
           "isSimpleType": true
         }
       ],
-      "packFormat": "HH"
+      "packFormat": "H`H"
     },
     {
       "kind": "const",

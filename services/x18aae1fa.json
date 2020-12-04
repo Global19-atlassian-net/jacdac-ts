@@ -57,7 +57,7 @@
       ],
       "optional": true,
       "identifierName": "status_code",
-      "packFormat": "HH",
+      "packFormat": "H`H",
       "derived": "_base"
     },
     {
@@ -135,7 +135,7 @@
         }
       ],
       "pipeType": "scan",
-      "packFormat": "LLbBb6xs"
+      "packFormat": "L`L`b`B`b6x`s"
     },
     {
       "kind": "command",
@@ -159,7 +159,7 @@
           "isOptional": true
         }
       ],
-      "packFormat": "zz"
+      "packFormat": "z`z"
     },
     {
       "kind": "command",

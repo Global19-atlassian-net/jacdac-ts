@@ -38,7 +38,7 @@
       ],
       "optional": true,
       "identifierName": "status_code",
-      "packFormat": "HH",
+      "packFormat": "H`H",
       "derived": "_base"
     },
     {
@@ -98,7 +98,7 @@
         }
       ],
       "secondary": true,
-      "packFormat": "b8xs"
+      "packFormat": "b8x`s"
     },
     {
       "kind": "command",
@@ -122,7 +122,7 @@
           "storage": 0
         }
       ],
-      "packFormat": "b8xs"
+      "packFormat": "b8x`s"
     },
     {
       "kind": "command",
@@ -171,7 +171,7 @@
         }
       ],
       "pipeType": "list_stored_roles",
-      "packFormat": "b8xs"
+      "packFormat": "b8x`s"
     },
     {
       "kind": "command",
@@ -221,7 +221,7 @@
         }
       ],
       "pipeType": "list_required_roles",
-      "packFormat": "b8xLs"
+      "packFormat": "b8x`L`s"
     },
     {
       "kind": "event",

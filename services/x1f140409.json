@@ -40,7 +40,7 @@
       ],
       "optional": true,
       "identifierName": "status_code",
-      "packFormat": "HH",
+      "packFormat": "H`H",
       "derived": "_base"
     },
     {
@@ -138,7 +138,7 @@
         }
       ],
       "identifierName": "reading",
-      "packFormat": "hhh"
+      "packFormat": "h`h`h"
     },
     {
       "kind": "event",

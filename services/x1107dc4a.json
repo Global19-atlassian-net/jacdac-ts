@@ -39,7 +39,7 @@
       ],
       "optional": true,
       "identifierName": "status_code",
-      "packFormat": "HH",
+      "packFormat": "H`H",
       "derived": "_base"
     },
     {
@@ -82,7 +82,7 @@
         }
       ],
       "secondary": true,
-      "packFormat": "zb"
+      "packFormat": "z`b"
     },
     {
       "kind": "command",
@@ -106,7 +106,7 @@
           "isSimpleType": true
         }
       ],
-      "packFormat": "zb"
+      "packFormat": "z`b"
     },
     {
       "kind": "command",
@@ -198,7 +198,7 @@
         }
       ],
       "pipeType": "list",
-      "packFormat": "zb"
+      "packFormat": "z`b"
     },
     {
       "kind": "command",

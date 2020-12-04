@@ -39,7 +39,7 @@
       ],
       "optional": true,
       "identifierName": "status_code",
-      "packFormat": "HH",
+      "packFormat": "H`H",
       "derived": "_base"
     },
     {
@@ -122,7 +122,7 @@
           "isSimpleType": true
         }
       ],
-      "packFormat": "HH"
+      "packFormat": "H`H"
     },
     {
       "kind": "rw",
