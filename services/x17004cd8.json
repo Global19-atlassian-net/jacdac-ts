@@ -22,7 +22,6 @@
         {
           "name": "code",
           "unit": "",
-          "isFloat": false,
           "type": "u16",
           "storage": 2,
           "isSimpleType": true
@@ -30,7 +29,6 @@
         {
           "name": "vendor_code",
           "unit": "",
-          "isFloat": false,
           "type": "u16",
           "storage": 2,
           "isSimpleType": true
@@ -51,7 +49,6 @@
           "name": "_",
           "unit": "/",
           "shift": 15,
-          "isFloat": false,
           "type": "i16",
           "storage": -2,
           "isSimpleType": true
@@ -69,7 +66,6 @@
         {
           "name": "_",
           "unit": "",
-          "isFloat": false,
           "type": "bool",
           "storage": 1
         }

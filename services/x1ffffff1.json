@@ -62,7 +62,6 @@
         {
           "name": "event_id",
           "unit": "",
-          "isFloat": false,
           "type": "u32",
           "storage": 4,
           "isSimpleType": true
@@ -70,7 +69,6 @@
         {
           "name": "event_argument",
           "unit": "",
-          "isFloat": false,
           "type": "u32",
           "storage": 4,
           "isSimpleType": true
@@ -103,7 +101,6 @@
         {
           "name": "_",
           "unit": "",
-          "isFloat": false,
           "type": "u32",
           "storage": 4,
           "isSimpleType": true
@@ -120,7 +117,6 @@
         {
           "name": "_",
           "unit": "",
-          "isFloat": false,
           "type": "i32",
           "storage": -4,
           "isSimpleType": true
@@ -137,7 +133,6 @@
         {
           "name": "_",
           "unit": "mA",
-          "isFloat": false,
           "type": "u16",
           "storage": 2,
           "isSimpleType": true,
@@ -157,7 +152,6 @@
         {
           "name": "_",
           "unit": "",
-          "isFloat": false,
           "type": "u8",
           "storage": 1,
           "isSimpleType": true
@@ -174,7 +168,6 @@
         {
           "name": "_",
           "unit": "ms",
-          "isFloat": false,
           "type": "u32",
           "storage": 4,
           "isSimpleType": true,
@@ -192,7 +185,6 @@
         {
           "name": "_",
           "unit": "",
-          "isFloat": false,
           "type": "i32",
           "storage": -4,
           "isSimpleType": true
@@ -209,7 +201,6 @@
         {
           "name": "_",
           "unit": "",
-          "isFloat": false,
           "type": "i32",
           "storage": -4,
           "isSimpleType": true
@@ -226,7 +217,6 @@
         {
           "name": "_",
           "unit": "",
-          "isFloat": false,
           "type": "i32",
           "storage": -4,
           "isSimpleType": true
@@ -243,7 +233,6 @@
         {
           "name": "code",
           "unit": "",
-          "isFloat": false,
           "type": "u16",
           "storage": 2,
           "isSimpleType": true
@@ -251,7 +240,6 @@
         {
           "name": "vendor_code",
           "unit": "",
-          "isFloat": false,
           "type": "u16",
           "storage": 2,
           "isSimpleType": true
@@ -268,7 +256,6 @@
         {
           "name": "_",
           "unit": "ms",
-          "isFloat": false,
           "type": "u32",
           "storage": 4,
           "isSimpleType": true

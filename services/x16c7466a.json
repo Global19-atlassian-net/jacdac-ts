@@ -24,7 +24,6 @@
         {
           "name": "code",
           "unit": "",
-          "isFloat": false,
           "type": "u16",
           "storage": 2,
           "isSimpleType": true
@@ -32,7 +31,6 @@
         {
           "name": "vendor_code",
           "unit": "",
-          "isFloat": false,
           "type": "u16",
           "storage": 2,
           "isSimpleType": true
@@ -52,7 +50,6 @@
         {
           "name": "_",
           "unit": "",
-          "isFloat": false,
           "type": "bool",
           "storage": 1
         }
@@ -68,7 +65,6 @@
         {
           "name": "_",
           "unit": "",
-          "isFloat": false,
           "type": "bool",
           "storage": 1
         }
@@ -84,7 +80,6 @@
         {
           "name": "_",
           "unit": "",
-          "isFloat": false,
           "type": "u32",
           "storage": 4,
           "isSimpleType": true
@@ -101,7 +96,6 @@
         {
           "name": "_",
           "unit": "",
-          "isFloat": false,
           "type": "u32",
           "storage": 4,
           "isSimpleType": true
@@ -118,7 +112,6 @@
         {
           "name": "_",
           "unit": "",
-          "isFloat": false,
           "type": "i32",
           "storage": -4,
           "isSimpleType": true
@@ -135,7 +128,6 @@
         {
           "name": "_",
           "unit": "",
-          "isFloat": false,
           "type": "i32",
           "storage": -4,
           "isSimpleType": true
@@ -152,7 +144,6 @@
         {
           "name": "_",
           "unit": "",
-          "isFloat": false,
           "type": "string",
           "storage": 0
         }
@@ -168,7 +159,6 @@
         {
           "name": "_",
           "unit": "",
-          "isFloat": false,
           "type": "string",
           "storage": 0
         }
@@ -184,7 +174,6 @@
         {
           "name": "_",
           "unit": "",
-          "isFloat": false,
           "type": "bytes",
           "storage": 0,
           "isSimpleType": true
@@ -201,7 +190,6 @@
         {
           "name": "_",
           "unit": "",
-          "isFloat": false,
           "type": "bytes",
           "storage": 0,
           "isSimpleType": true
@@ -218,7 +206,6 @@
         {
           "name": "bool",
           "unit": "",
-          "isFloat": false,
           "type": "bool",
           "storage": 1
         }
@@ -234,7 +221,6 @@
         {
           "name": "u32",
           "unit": "",
-          "isFloat": false,
           "type": "u32",
           "storage": 4,
           "isSimpleType": true
@@ -251,7 +237,6 @@
         {
           "name": "i32",
           "unit": "",
-          "isFloat": false,
           "type": "i32",
           "storage": -4,
           "isSimpleType": true
@@ -268,7 +253,6 @@
         {
           "name": "bool",
           "unit": "",
-          "isFloat": false,
           "type": "bool",
           "storage": 1
         }
@@ -284,7 +268,6 @@
         {
           "name": "u32",
           "unit": "",
-          "isFloat": false,
           "type": "u32",
           "storage": 4,
           "isSimpleType": true
@@ -301,7 +284,6 @@
         {
           "name": "i32",
           "unit": "",
-          "isFloat": false,
           "type": "i32",
           "storage": -4,
           "isSimpleType": true

@@ -40,7 +40,6 @@
         {
           "name": "code",
           "unit": "",
-          "isFloat": false,
           "type": "u16",
           "storage": 2,
           "isSimpleType": true
@@ -48,7 +47,6 @@
         {
           "name": "vendor_code",
           "unit": "",
-          "isFloat": false,
           "type": "u16",
           "storage": 2,
           "isSimpleType": true
@@ -68,7 +66,6 @@
         {
           "name": "_",
           "unit": "",
-          "isFloat": false,
           "type": "u8",
           "storage": 1,
           "isSimpleType": true
@@ -88,7 +85,6 @@
         {
           "name": "_",
           "unit": "ms",
-          "isFloat": false,
           "type": "u32",
           "storage": 4,
           "isSimpleType": true,
@@ -110,7 +106,6 @@
         {
           "name": "_",
           "unit": "ms",
-          "isFloat": false,
           "type": "u32",
           "storage": 4,
           "isSimpleType": true
@@ -140,7 +135,6 @@
         {
           "name": "flags",
           "unit": "",
-          "isFloat": false,
           "type": "u8",
           "storage": 1,
           "isSimpleType": true
@@ -148,7 +142,6 @@
         {
           "name": "num_players",
           "unit": "",
-          "isFloat": false,
           "type": "u8",
           "storage": 1,
           "isSimpleType": true,
@@ -158,14 +151,13 @@
         {
           "name": "button_present",
           "unit": "",
-          "isFloat": false,
           "type": "Button",
           "storage": 2,
           "startRepeats": true
         }
       ],
       "secondary": true,
-      "packFormat": "u8 u8 u16"
+      "packFormat": "u8 u8 r: u16"
     },
     {
       "kind": "ro",
@@ -176,7 +168,6 @@
         {
           "name": "button",
           "unit": "",
-          "isFloat": false,
           "type": "Button",
           "storage": 2,
           "startRepeats": true
@@ -184,7 +175,6 @@
         {
           "name": "player_index",
           "unit": "",
-          "isFloat": false,
           "type": "u8",
           "storage": 1,
           "isSimpleType": true
@@ -193,14 +183,13 @@
           "name": "pressure",
           "unit": "/",
           "shift": 8,
-          "isFloat": false,
           "type": "u8",
           "storage": 1,
           "isSimpleType": true
         }
       ],
       "identifierName": "reading",
-      "packFormat": "u16 u8 u8"
+      "packFormat": "r: u16 u8 u8"
     },
     {
       "kind": "event",
@@ -211,14 +200,12 @@
         {
           "name": "button",
           "unit": "",
-          "isFloat": false,
           "type": "Button",
           "storage": 2
         },
         {
           "name": "player_index",
           "unit": "",
-          "isFloat": false,
           "type": "u16",
           "storage": 2,
           "isSimpleType": true
@@ -235,14 +222,12 @@
         {
           "name": "button",
           "unit": "",
-          "isFloat": false,
           "type": "Button",
           "storage": 2
         },
         {
           "name": "player_index",
           "unit": "",
-          "isFloat": false,
           "type": "u16",
           "storage": 2,
           "isSimpleType": true

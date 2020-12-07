@@ -24,7 +24,6 @@
         {
           "name": "code",
           "unit": "",
-          "isFloat": false,
           "type": "u16",
           "storage": 2,
           "isSimpleType": true
@@ -32,7 +31,6 @@
         {
           "name": "vendor_code",
           "unit": "",
-          "isFloat": false,
           "type": "u16",
           "storage": 2,
           "isSimpleType": true
@@ -52,7 +50,6 @@
         {
           "name": "_",
           "unit": "",
-          "isFloat": false,
           "type": "u8",
           "storage": 1,
           "isSimpleType": true
@@ -72,7 +69,6 @@
         {
           "name": "_",
           "unit": "ms",
-          "isFloat": false,
           "type": "u32",
           "storage": 4,
           "isSimpleType": true,
@@ -94,7 +90,6 @@
         {
           "name": "_",
           "unit": "ms",
-          "isFloat": false,
           "type": "u32",
           "storage": 4,
           "isSimpleType": true
@@ -116,13 +111,12 @@
           "name": "_",
           "unit": "C",
           "shift": 10,
-          "isFloat": false,
           "type": "u22.10",
           "storage": 4
         }
       ],
       "identifierName": "reading",
-      "packFormat": "u32"
+      "packFormat": "u22.10"
     }
   ],
   "source": "# Temperature\n\n    identifier: 0x1421bac7\n    extends: _sensor\n\nA thermometer measuring outside environment.\n\n## Registers\n\nDefault streaming interval is 1s.\n\n    ro temperature: u22.10 C @ reading\n\nThe temperature.\n"

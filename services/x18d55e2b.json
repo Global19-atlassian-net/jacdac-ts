@@ -24,7 +24,6 @@
         {
           "name": "code",
           "unit": "",
-          "isFloat": false,
           "type": "u16",
           "storage": 2,
           "isSimpleType": true
@@ -32,7 +31,6 @@
         {
           "name": "vendor_code",
           "unit": "",
-          "isFloat": false,
           "type": "u16",
           "storage": 2,
           "isSimpleType": true
@@ -52,7 +50,6 @@
         {
           "name": "_",
           "unit": "",
-          "isFloat": false,
           "type": "u8",
           "storage": 1,
           "isSimpleType": true
@@ -72,7 +69,6 @@
         {
           "name": "_",
           "unit": "ms",
-          "isFloat": false,
           "type": "u32",
           "storage": 4,
           "isSimpleType": true,
@@ -94,7 +90,6 @@
         {
           "name": "_",
           "unit": "ms",
-          "isFloat": false,
           "type": "u32",
           "storage": 4,
           "isSimpleType": true
@@ -115,7 +110,6 @@
         {
           "name": "capacitance",
           "unit": "",
-          "isFloat": false,
           "type": "i32",
           "storage": -4,
           "isSimpleType": true,
@@ -123,7 +117,7 @@
         }
       ],
       "identifierName": "reading",
-      "packFormat": "i32"
+      "packFormat": "r: i32"
     },
     {
       "kind": "event",
@@ -134,7 +128,6 @@
         {
           "name": "channel",
           "unit": "",
-          "isFloat": false,
           "type": "u32",
           "storage": 4,
           "isSimpleType": true
@@ -151,7 +144,6 @@
         {
           "name": "channel",
           "unit": "",
-          "isFloat": false,
           "type": "u32",
           "storage": 4,
           "isSimpleType": true
@@ -168,7 +160,6 @@
         {
           "name": "channel",
           "unit": "",
-          "isFloat": false,
           "type": "u32",
           "storage": 4,
           "isSimpleType": true
@@ -185,7 +176,6 @@
         {
           "name": "channel",
           "unit": "",
-          "isFloat": false,
           "type": "u32",
           "storage": 4,
           "isSimpleType": true

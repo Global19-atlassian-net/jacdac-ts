@@ -43,7 +43,6 @@
         {
           "name": "code",
           "unit": "",
-          "isFloat": false,
           "type": "u16",
           "storage": 2,
           "isSimpleType": true
@@ -51,7 +50,6 @@
         {
           "name": "vendor_code",
           "unit": "",
-          "isFloat": false,
           "type": "u16",
           "storage": 2,
           "isSimpleType": true
@@ -71,14 +69,12 @@
         {
           "name": "buttons",
           "unit": "",
-          "isFloat": false,
           "type": "Button",
           "storage": 2
         },
         {
           "name": "event",
           "unit": "",
-          "isFloat": false,
           "type": "ButtonEvent",
           "storage": 1
         }
@@ -94,7 +90,6 @@
         {
           "name": "dx",
           "unit": "#",
-          "isFloat": false,
           "type": "i16",
           "storage": -2,
           "isSimpleType": true
@@ -102,7 +97,6 @@
         {
           "name": "dy",
           "unit": "#",
-          "isFloat": false,
           "type": "i16",
           "storage": -2,
           "isSimpleType": true
@@ -110,7 +104,6 @@
         {
           "name": "time",
           "unit": "ms",
-          "isFloat": false,
           "type": "u16",
           "storage": 2,
           "isSimpleType": true
@@ -127,7 +120,6 @@
         {
           "name": "dy",
           "unit": "#",
-          "isFloat": false,
           "type": "i16",
           "storage": -2,
           "isSimpleType": true
@@ -135,7 +127,6 @@
         {
           "name": "time",
           "unit": "ms",
-          "isFloat": false,
           "type": "u16",
           "storage": 2,
           "isSimpleType": true

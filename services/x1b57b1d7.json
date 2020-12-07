@@ -22,7 +22,6 @@
         {
           "name": "code",
           "unit": "",
-          "isFloat": false,
           "type": "u16",
           "storage": 2,
           "isSimpleType": true
@@ -30,7 +29,6 @@
         {
           "name": "vendor_code",
           "unit": "",
-          "isFloat": false,
           "type": "u16",
           "storage": 2,
           "isSimpleType": true
@@ -51,7 +49,6 @@
           "name": "_",
           "unit": "/",
           "shift": 8,
-          "isFloat": false,
           "type": "u8",
           "storage": 1,
           "isSimpleType": true,
@@ -70,7 +67,6 @@
         {
           "name": "period",
           "unit": "us",
-          "isFloat": false,
           "type": "u16",
           "storage": 2,
           "isSimpleType": true
@@ -78,7 +74,6 @@
         {
           "name": "duty",
           "unit": "us",
-          "isFloat": false,
           "type": "u16",
           "storage": 2,
           "isSimpleType": true
@@ -86,7 +81,6 @@
         {
           "name": "duration",
           "unit": "ms",
-          "isFloat": false,
           "type": "u16",
           "storage": 2,
           "isSimpleType": true

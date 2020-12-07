@@ -32,7 +32,6 @@
         {
           "name": "code",
           "unit": "",
-          "isFloat": false,
           "type": "u16",
           "storage": 2,
           "isSimpleType": true
@@ -40,7 +39,6 @@
         {
           "name": "vendor_code",
           "unit": "",
-          "isFloat": false,
           "type": "u16",
           "storage": 2,
           "isSimpleType": true
@@ -60,7 +58,6 @@
         {
           "name": "model_size",
           "unit": "B",
-          "isFloat": false,
           "type": "u32",
           "storage": 4,
           "isSimpleType": true
@@ -78,7 +75,6 @@
         {
           "name": "model_port",
           "unit": "",
-          "isFloat": false,
           "type": "pipe_port",
           "storage": 2
         }
@@ -96,14 +92,13 @@
         {
           "name": "outputs",
           "unit": "",
-          "isFloat": false,
           "type": "pipe",
           "storage": 12
         }
       ],
       "pipeType": "predict",
       "hasReport": true,
-      "packFormat": "b12x"
+      "packFormat": "b[12]"
     },
     {
       "kind": "report",
@@ -114,7 +109,6 @@
         {
           "name": "inputs",
           "unit": "",
-          "isFloat": false,
           "type": "pipe_port",
           "storage": 2
         }
@@ -132,7 +126,6 @@
         {
           "name": "_",
           "unit": "",
-          "isFloat": false,
           "type": "u16",
           "storage": 2,
           "isSimpleType": true
@@ -156,7 +149,7 @@
         }
       ],
       "identifierName": "reading",
-      "packFormat": "u32"
+      "packFormat": "r: f32"
     },
     {
       "kind": "ro",
@@ -167,14 +160,13 @@
         {
           "name": "dimension",
           "unit": "",
-          "isFloat": false,
           "type": "u16",
           "storage": 2,
           "isSimpleType": true,
           "startRepeats": true
         }
       ],
-      "packFormat": "u16"
+      "packFormat": "r: u16"
     },
     {
       "kind": "ro",
@@ -185,14 +177,13 @@
         {
           "name": "dimension",
           "unit": "",
-          "isFloat": false,
           "type": "u16",
           "storage": 2,
           "isSimpleType": true,
           "startRepeats": true
         }
       ],
-      "packFormat": "u16"
+      "packFormat": "r: u16"
     },
     {
       "kind": "ro",
@@ -203,7 +194,6 @@
         {
           "name": "_",
           "unit": "us",
-          "isFloat": false,
           "type": "u32",
           "storage": 4,
           "isSimpleType": true
@@ -220,7 +210,6 @@
         {
           "name": "_",
           "unit": "B",
-          "isFloat": false,
           "type": "u32",
           "storage": 4,
           "isSimpleType": true
@@ -237,7 +226,6 @@
         {
           "name": "_",
           "unit": "B",
-          "isFloat": false,
           "type": "u32",
           "storage": 4,
           "isSimpleType": true
@@ -254,7 +242,6 @@
         {
           "name": "_",
           "unit": "",
-          "isFloat": false,
           "type": "string",
           "storage": 0
         }
@@ -270,7 +257,6 @@
         {
           "name": "_",
           "unit": "",
-          "isFloat": false,
           "type": "ModelFormat",
           "storage": 4
         }
@@ -286,7 +272,6 @@
         {
           "name": "_",
           "unit": "",
-          "isFloat": false,
           "type": "u32",
           "storage": 4,
           "isSimpleType": true
@@ -303,7 +288,6 @@
         {
           "name": "_",
           "unit": "",
-          "isFloat": false,
           "type": "bool",
           "storage": 1
         }

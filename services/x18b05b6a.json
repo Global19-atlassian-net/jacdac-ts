@@ -47,7 +47,6 @@
         {
           "name": "code",
           "unit": "",
-          "isFloat": false,
           "type": "u16",
           "storage": 2,
           "isSimpleType": true
@@ -55,7 +54,6 @@
         {
           "name": "vendor_code",
           "unit": "",
-          "isFloat": false,
           "type": "u16",
           "storage": 2,
           "isSimpleType": true
@@ -75,7 +73,6 @@
         {
           "name": "selector",
           "unit": "",
-          "isFloat": false,
           "type": "u16",
           "storage": 2,
           "isSimpleType": true,
@@ -84,19 +81,17 @@
         {
           "name": "modifiers",
           "unit": "",
-          "isFloat": false,
           "type": "Modifiers",
           "storage": 1
         },
         {
           "name": "action",
           "unit": "",
-          "isFloat": false,
           "type": "Action",
           "storage": 1
         }
       ],
-      "packFormat": "u16 u8 u8"
+      "packFormat": "r: u16 u8 u8"
     },
     {
       "kind": "command",

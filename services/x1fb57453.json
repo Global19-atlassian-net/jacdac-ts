@@ -23,7 +23,6 @@
         {
           "name": "code",
           "unit": "",
-          "isFloat": false,
           "type": "u16",
           "storage": 2,
           "isSimpleType": true
@@ -31,7 +30,6 @@
         {
           "name": "vendor_code",
           "unit": "",
-          "isFloat": false,
           "type": "u16",
           "storage": 2,
           "isSimpleType": true
@@ -52,7 +50,6 @@
           "name": "_",
           "unit": "/",
           "shift": 16,
-          "isFloat": false,
           "type": "u16",
           "storage": 2,
           "isSimpleType": true
@@ -70,7 +67,6 @@
         {
           "name": "_",
           "unit": "mA",
-          "isFloat": false,
           "type": "u16",
           "storage": 2,
           "isSimpleType": true,
@@ -89,7 +85,6 @@
         {
           "name": "_",
           "unit": "",
-          "isFloat": false,
           "type": "u8",
           "storage": 1,
           "isSimpleType": true
@@ -107,7 +102,6 @@
           "name": "start_intensity",
           "unit": "/",
           "shift": 16,
-          "isFloat": false,
           "type": "u16",
           "storage": 2,
           "isSimpleType": true,
@@ -116,13 +110,12 @@
         {
           "name": "duration",
           "unit": "ms",
-          "isFloat": false,
           "type": "u16",
           "storage": 2,
           "isSimpleType": true
         }
       ],
-      "packFormat": "u16 u16"
+      "packFormat": "r: u16 u16"
     },
     {
       "kind": "rw",
@@ -133,7 +126,6 @@
         {
           "name": "_",
           "unit": "",
-          "isFloat": false,
           "type": "u16",
           "storage": 2,
           "isSimpleType": true
@@ -150,7 +142,6 @@
         {
           "name": "_",
           "unit": "",
-          "isFloat": false,
           "type": "u16",
           "storage": 2,
           "isSimpleType": true,

@@ -41,7 +41,6 @@
         {
           "name": "code",
           "unit": "",
-          "isFloat": false,
           "type": "u16",
           "storage": 2,
           "isSimpleType": true
@@ -49,7 +48,6 @@
         {
           "name": "vendor_code",
           "unit": "",
-          "isFloat": false,
           "type": "u16",
           "storage": 2,
           "isSimpleType": true
@@ -69,13 +67,12 @@
         {
           "name": "results",
           "unit": "",
-          "isFloat": false,
           "type": "pipe",
           "storage": 12
         }
       ],
       "pipeType": "scan",
-      "packFormat": "b12x"
+      "packFormat": "b[12]"
     },
     {
       "kind": "pipe_report",
@@ -86,14 +83,12 @@
         {
           "name": "flags",
           "unit": "",
-          "isFloat": false,
           "type": "APFlags",
           "storage": 4
         },
         {
           "name": "reserved",
           "unit": "",
-          "isFloat": false,
           "type": "u32",
           "storage": 4,
           "isSimpleType": true
@@ -101,7 +96,6 @@
         {
           "name": "rssi",
           "unit": "",
-          "isFloat": false,
           "type": "i8",
           "storage": -1,
           "isSimpleType": true,
@@ -111,7 +105,6 @@
         {
           "name": "channel",
           "unit": "",
-          "isFloat": false,
           "type": "u8",
           "storage": 1,
           "isSimpleType": true,
@@ -121,21 +114,19 @@
         {
           "name": "bssid",
           "unit": "",
-          "isFloat": false,
           "type": "u8[6]",
           "storage": 6
         },
         {
           "name": "ssid",
           "unit": "",
-          "isFloat": false,
           "type": "string",
-          "storage": 0,
+          "storage": 33,
           "maxBytes": 33
         }
       ],
       "pipeType": "scan",
-      "packFormat": "u32 u32 i8 u8 b6x s"
+      "packFormat": "u32 u32 i8 u8 b[6] s[33]"
     },
     {
       "kind": "command",
@@ -146,14 +137,12 @@
         {
           "name": "ssid",
           "unit": "",
-          "isFloat": false,
           "type": "string0",
           "storage": 0
         },
         {
           "name": "password",
           "unit": "",
-          "isFloat": false,
           "type": "string0",
           "storage": 0,
           "isOptional": true
@@ -177,7 +166,6 @@
         {
           "name": "_",
           "unit": "",
-          "isFloat": false,
           "type": "bool",
           "storage": 1
         }

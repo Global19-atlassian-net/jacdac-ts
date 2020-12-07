@@ -31,7 +31,6 @@
         {
           "name": "code",
           "unit": "",
-          "isFloat": false,
           "type": "u16",
           "storage": 2,
           "isSimpleType": true
@@ -39,7 +38,6 @@
         {
           "name": "vendor_code",
           "unit": "",
-          "isFloat": false,
           "type": "u16",
           "storage": 2,
           "isSimpleType": true
@@ -68,7 +66,6 @@
         {
           "name": "restart_counter",
           "unit": "",
-          "isFloat": false,
           "type": "u8",
           "storage": 1,
           "isSimpleType": true
@@ -76,14 +73,12 @@
         {
           "name": "flags",
           "unit": "",
-          "isFloat": false,
           "type": "AnnounceFlags",
           "storage": 1
         },
         {
           "name": "reserved",
           "unit": "",
-          "isFloat": false,
           "type": "u16",
           "storage": 2,
           "isSimpleType": true
@@ -91,7 +86,6 @@
         {
           "name": "service_class",
           "unit": "",
-          "isFloat": false,
           "type": "u32",
           "storage": 4,
           "isSimpleType": true,
@@ -99,7 +93,7 @@
         }
       ],
       "secondary": true,
-      "packFormat": "u8 u8 u16 u32"
+      "packFormat": "u8 u8 u16 r: u32"
     },
     {
       "kind": "command",
@@ -131,7 +125,6 @@
         {
           "name": "_",
           "unit": "",
-          "isFloat": false,
           "type": "string",
           "storage": 0
         }
@@ -148,7 +141,6 @@
         {
           "name": "_",
           "unit": "",
-          "isFloat": false,
           "type": "u32",
           "storage": 4,
           "isSimpleType": true,
@@ -168,7 +160,6 @@
         {
           "name": "_",
           "unit": "",
-          "isFloat": false,
           "type": "u32",
           "storage": 4,
           "isSimpleType": true,
@@ -188,7 +179,6 @@
         {
           "name": "_",
           "unit": "",
-          "isFloat": false,
           "type": "string",
           "storage": 0
         }
@@ -205,7 +195,6 @@
         {
           "name": "_",
           "unit": "C",
-          "isFloat": false,
           "type": "i16",
           "storage": -2,
           "isSimpleType": true,
@@ -225,14 +214,13 @@
         {
           "name": "_",
           "unit": "us",
-          "isFloat": false,
           "type": "u64",
           "storage": 8,
           "isSimpleType": true
         }
       ],
       "optional": true,
-      "packFormat": "b8x"
+      "packFormat": "u64"
     },
     {
       "kind": "const",
@@ -243,7 +231,6 @@
         {
           "name": "_",
           "unit": "",
-          "isFloat": false,
           "type": "string",
           "storage": 0
         }
@@ -260,7 +247,6 @@
         {
           "name": "_",
           "unit": "",
-          "isFloat": false,
           "type": "string",
           "storage": 0
         }

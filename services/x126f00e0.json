@@ -33,7 +33,6 @@
         {
           "name": "code",
           "unit": "",
-          "isFloat": false,
           "type": "u16",
           "storage": 2,
           "isSimpleType": true
@@ -41,7 +40,6 @@
         {
           "name": "vendor_code",
           "unit": "",
-          "isFloat": false,
           "type": "u16",
           "storage": 2,
           "isSimpleType": true
@@ -62,7 +60,6 @@
           "name": "_",
           "unit": "/",
           "shift": 8,
-          "isFloat": false,
           "type": "u8",
           "storage": 1,
           "isSimpleType": true,
@@ -82,7 +79,6 @@
           "name": "_",
           "unit": "/",
           "shift": 8,
-          "isFloat": false,
           "type": "u8",
           "storage": 1,
           "isSimpleType": true
@@ -99,7 +95,6 @@
         {
           "name": "_",
           "unit": "",
-          "isFloat": false,
           "type": "LightType",
           "storage": 1
         }
@@ -115,7 +110,6 @@
         {
           "name": "_",
           "unit": "",
-          "isFloat": false,
           "type": "u16",
           "storage": 2,
           "isSimpleType": true,
@@ -133,7 +127,6 @@
         {
           "name": "_",
           "unit": "mA",
-          "isFloat": false,
           "type": "u16",
           "storage": 2,
           "isSimpleType": true,
@@ -152,7 +145,6 @@
         {
           "name": "program",
           "unit": "",
-          "isFloat": false,
           "type": "bytes",
           "storage": 0,
           "isSimpleType": true

@@ -34,7 +34,6 @@
         {
           "name": "code",
           "unit": "",
-          "isFloat": false,
           "type": "u16",
           "storage": 2,
           "isSimpleType": true
@@ -42,7 +41,6 @@
         {
           "name": "vendor_code",
           "unit": "",
-          "isFloat": false,
           "type": "u16",
           "storage": 2,
           "isSimpleType": true
@@ -71,7 +69,6 @@
         {
           "name": "service_class",
           "unit": "",
-          "isFloat": false,
           "type": "u32",
           "storage": 4,
           "isSimpleType": true
@@ -79,7 +76,6 @@
         {
           "name": "page_size",
           "unit": "B",
-          "isFloat": false,
           "type": "u32",
           "storage": 4,
           "isSimpleType": true
@@ -87,7 +83,6 @@
         {
           "name": "flashable_size",
           "unit": "B",
-          "isFloat": false,
           "type": "u32",
           "storage": 4,
           "isSimpleType": true
@@ -95,7 +90,6 @@
         {
           "name": "firmware_identifier",
           "unit": "",
-          "isFloat": false,
           "type": "u32",
           "storage": 4,
           "isSimpleType": true
@@ -113,7 +107,6 @@
         {
           "name": "session_id",
           "unit": "",
-          "isFloat": false,
           "type": "u32",
           "storage": 4,
           "isSimpleType": true
@@ -131,7 +124,6 @@
         {
           "name": "session_id",
           "unit": "",
-          "isFloat": false,
           "type": "u32",
           "storage": 4,
           "isSimpleType": true
@@ -149,7 +141,6 @@
         {
           "name": "page_address",
           "unit": "",
-          "isFloat": false,
           "type": "u32",
           "storage": 4,
           "isSimpleType": true
@@ -157,7 +148,6 @@
         {
           "name": "page_offset",
           "unit": "",
-          "isFloat": false,
           "type": "u16",
           "storage": 2,
           "isSimpleType": true
@@ -165,7 +155,6 @@
         {
           "name": "chunk_no",
           "unit": "",
-          "isFloat": false,
           "type": "u8",
           "storage": 1,
           "isSimpleType": true
@@ -173,7 +162,6 @@
         {
           "name": "chunk_max",
           "unit": "",
-          "isFloat": false,
           "type": "u8",
           "storage": 1,
           "isSimpleType": true
@@ -181,7 +169,6 @@
         {
           "name": "session_id",
           "unit": "",
-          "isFloat": false,
           "type": "u32",
           "storage": 4,
           "isSimpleType": true
@@ -189,7 +176,6 @@
         {
           "name": "reserved0",
           "unit": "",
-          "isFloat": false,
           "type": "u32",
           "storage": 4,
           "isSimpleType": true
@@ -197,7 +183,6 @@
         {
           "name": "reserved1",
           "unit": "",
-          "isFloat": false,
           "type": "u32",
           "storage": 4,
           "isSimpleType": true
@@ -205,7 +190,6 @@
         {
           "name": "reserved2",
           "unit": "",
-          "isFloat": false,
           "type": "u32",
           "storage": 4,
           "isSimpleType": true
@@ -213,7 +197,6 @@
         {
           "name": "reserved3",
           "unit": "",
-          "isFloat": false,
           "type": "u32",
           "storage": 4,
           "isSimpleType": true
@@ -221,15 +204,14 @@
         {
           "name": "page_data",
           "unit": "",
-          "isFloat": false,
           "type": "bytes",
-          "storage": 0,
+          "storage": 208,
           "isSimpleType": true,
           "maxBytes": 208
         }
       ],
       "hasReport": true,
-      "packFormat": "u32 u16 u8 u8 u32 u32 u32 u32 u32 b"
+      "packFormat": "u32 u16 u8 u8 u32 u32 u32 u32 u32 b[208]"
     },
     {
       "kind": "report",
@@ -240,7 +222,6 @@
         {
           "name": "session_id",
           "unit": "",
-          "isFloat": false,
           "type": "u32",
           "storage": 4,
           "isSimpleType": true
@@ -248,14 +229,12 @@
         {
           "name": "page_error",
           "unit": "",
-          "isFloat": false,
           "type": "Error",
           "storage": 4
         },
         {
           "name": "page_address",
           "unit": "",
-          "isFloat": false,
           "type": "u32",
           "storage": 4,
           "isSimpleType": true
