@@ -2,8 +2,8 @@
   "name": "Button",
   "status": "experimental",
   "shortId": "button",
-  "camelName": "Button",
-  "shortName": "Button",
+  "camelName": "button",
+  "shortName": "button",
   "extends": [
     "_base",
     "_sensor"

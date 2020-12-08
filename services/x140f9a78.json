@@ -2,8 +2,8 @@
   "name": "Model Runner",
   "status": "experimental",
   "shortId": "modelrunner",
-  "camelName": "ModelRunner",
-  "shortName": "ModelRunner",
+  "camelName": "modelRunner",
+  "shortName": "modelRunner",
   "extends": [
     "_base"
   ],

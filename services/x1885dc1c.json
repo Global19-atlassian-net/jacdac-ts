@@ -2,8 +2,8 @@
   "name": "Mouse",
   "status": "experimental",
   "shortId": "mouse",
-  "camelName": "Mouse",
-  "shortName": "Mouse",
+  "camelName": "mouse",
+  "shortName": "mouse",
   "extends": [
     "_base"
   ],

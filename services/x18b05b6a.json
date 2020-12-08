@@ -2,8 +2,8 @@
   "name": "Keyboard",
   "status": "experimental",
   "shortId": "keyboard",
-  "camelName": "Keyboard",
-  "shortName": "Keyboard",
+  "camelName": "keyboard",
+  "shortName": "keyboard",
   "extends": [
     "_base"
   ],

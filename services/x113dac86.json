@@ -2,8 +2,8 @@
   "name": "Microphone",
   "status": "experimental",
   "shortId": "microphone",
-  "camelName": "Microphone",
-  "shortName": "Microphone",
+  "camelName": "microphone",
+  "shortName": "microphone",
   "extends": [
     "_base"
   ],

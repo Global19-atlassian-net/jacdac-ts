@@ -2,8 +2,8 @@
   "name": "Humidity",
   "status": "experimental",
   "shortId": "humidity",
-  "camelName": "Humidity",
-  "shortName": "Humidity",
+  "camelName": "humidity",
+  "shortName": "humidity",
   "extends": [
     "_base",
     "_sensor"

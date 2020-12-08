@@ -2,8 +2,8 @@
   "name": "Sensor Aggregator",
   "status": "experimental",
   "shortId": "aggregator",
-  "camelName": "SensorAggregator",
-  "shortName": "SensorAggregator",
+  "camelName": "sensorAggregator",
+  "shortName": "sensorAggregator",
   "extends": [
     "_base"
   ],

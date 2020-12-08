@@ -2,7 +2,7 @@
   "name": "Rotary encoder",
   "status": "experimental",
   "shortId": "crank",
-  "camelName": "RotaryEncoder",
+  "camelName": "rotaryEncoder",
   "shortName": "crank",
   "extends": [
     "_base",

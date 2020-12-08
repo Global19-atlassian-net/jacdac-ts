@@ -2,8 +2,8 @@
   "name": "Power",
   "status": "experimental",
   "shortId": "power",
-  "camelName": "Power",
-  "shortName": "Power",
+  "camelName": "power",
+  "shortName": "power",
   "extends": [
     "_base"
   ],

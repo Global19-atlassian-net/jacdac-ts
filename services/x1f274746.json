@@ -2,8 +2,8 @@
   "name": "Slider",
   "status": "experimental",
   "shortId": "slider",
-  "camelName": "Slider",
-  "shortName": "Slider",
+  "camelName": "slider",
+  "shortName": "slider",
   "extends": [
     "_base",
     "_sensor"

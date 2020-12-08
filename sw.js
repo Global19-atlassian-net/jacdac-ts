@@ -33,11 +33,11 @@ self.__precacheManifest = [
     "url": "framework-ae509f636486a6b4cc07.js"
   },
   {
-    "url": "app-03f58a1d5f49aa3aba12.js"
+    "url": "app-7ac15e8b33f9d4523e57.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "cd45de9a4ee6d58da8deb19053b371a5"
+    "revision": "8efe7310905f2e60634d0c775a65a68d"
   },
   {
     "url": "static/webfonts/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"
@@ -57,7 +57,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "2bf22182eaa84b52669eeb1f87a5e987"
+    "revision": "f91b5a4197407351a0a220fce4b18304"
   },
   {
     "url": "polyfill-d1406b5b7f398e08db8e.js"
@@ -80,7 +80,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2214083594.json",
-    "revision": "4584ce7861f96a7ec23498421a3f1528"
+    "revision": "f4c59715b974cae07377e79e967b9edc"
   },
   {
     "url": "page-data/sq/d/2270080012.json",
@@ -92,7 +92,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2744294623.json",
-    "revision": "c4cf9430159acad3d5437cefbf406b0e"
+    "revision": "e90c70c132971ab144974336316dcc12"
   },
   {
     "url": "page-data/sq/d/3159585216.json",
@@ -214,15 +214,15 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/services/aggregator/page-data.json",
-    "revision": "b369fb76c0bd96c1075b57ecb3e46dd8"
+    "revision": "69bb0474f547e9bab5b163ca22211b91"
   },
   {
     "url": "page-data/services/bootloader/page-data.json",
-    "revision": "1be1d030523679131a50230949cc4306"
+    "revision": "4a577a68fd37b13b43bfe5e7c2bb1433"
   },
   {
     "url": "page-data/services/button/page-data.json",
-    "revision": "40122295c68835131544fab375c68945"
+    "revision": "d0b84639c4f95249582f75a585a74161"
   },
   {
     "url": "page-data/services/buzzer/page-data.json",
@@ -230,7 +230,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/services/codalmessagebus/page-data.json",
-    "revision": "bfbb0371fbcc679793f617616fdde7a9"
+    "revision": "082522267f7e15b40900fb2386f5aeae"
   },
   {
     "url": "page-data/services/control/page-data.json",
@@ -242,11 +242,11 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/services/gamepad/page-data.json",
-    "revision": "81c3949cd6ee2666d16fc2f6115380db"
+    "revision": "3f0bd5cb3425bf2d488bb04379d4e920"
   },
   {
     "url": "page-data/services/humidity/page-data.json",
-    "revision": "807e74b345002e5ebccbc5b0a4f24123"
+    "revision": "493eedb10f4bea84d0a0dac24f11e836"
   },
   {
     "url": "page-data/services/iothub/page-data.json",
@@ -254,47 +254,47 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/services/keyboard/page-data.json",
-    "revision": "db0e476e95e586280562dc9961a7003d"
+    "revision": "b065f4318223bb7abdddc0f98269f92f"
   },
   {
     "url": "page-data/services/ledmatrixcontroller/page-data.json",
-    "revision": "04deeea27f02989132777a7b979397e2"
+    "revision": "c14bc65bbb37d6c55b488175d8619861"
   },
   {
     "url": "page-data/services/ledmatrixdisplay/page-data.json",
-    "revision": "7bbcaf977ff5ca3bde98d91e7a060273"
+    "revision": "6cbe09dc2b41e9255b1e97a3ecdb62e5"
   },
   {
     "url": "page-data/services/light/page-data.json",
-    "revision": "f4efa475b949b7ace37ff11c948ddfa7"
+    "revision": "0324d0a8ef525b04318a0d508131d1a0"
   },
   {
     "url": "page-data/services/logger/page-data.json",
-    "revision": "86c1513b6ab9721c93cd3efa4afa83fd"
+    "revision": "d223478253943b7664fd78e61d65b88d"
   },
   {
     "url": "page-data/services/microphone/page-data.json",
-    "revision": "7c7d94cc50eaaa082d13f3747f4b7071"
+    "revision": "babc463f456b851b9b361f0b7e89d77a"
   },
   {
     "url": "page-data/services/modelrunner/page-data.json",
-    "revision": "1fa83280bfcb01407670825474062d4a"
+    "revision": "25de0b1227b6d32120c0bed8d4ced435"
   },
   {
     "url": "page-data/services/motor/page-data.json",
-    "revision": "2e0c0dc46222c91d32fb710a6d4e81e7"
+    "revision": "213507b679dba2b12a5e2180711ea503"
   },
   {
     "url": "page-data/services/mouse/page-data.json",
-    "revision": "ac02d5154021edcb91f6c9f9e337c21d"
+    "revision": "5897260c807f7ae3685f5d3c47516059"
   },
   {
     "url": "page-data/services/multitouch/page-data.json",
-    "revision": "181c050ec881aee47f4d630139eaf098"
+    "revision": "1a917d9b59af075d49900430c1ece249"
   },
   {
     "url": "page-data/services/power/page-data.json",
-    "revision": "7f854456caada9a40bdd4bff73adb927"
+    "revision": "43dc592776373393b274eec13349469b"
   },
   {
     "url": "page-data/services/prototest/page-data.json",
@@ -306,11 +306,11 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/services/rolemanager/page-data.json",
-    "revision": "e7c66378a44265187d258773b9a0bfd1"
+    "revision": "82c2ae15b0d56d1ec9f09fbb84d0d4f6"
   },
   {
     "url": "page-data/services/servo/page-data.json",
-    "revision": "d3a7c13bab535bfeb46ed2fd923365c8"
+    "revision": "da79397a0947d1693b5f643f5d624f81"
   },
   {
     "url": "page-data/services/settings/page-data.json",
@@ -318,15 +318,15 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/services/slider/page-data.json",
-    "revision": "69beecb9ce2fcfa61b46f38a7a23cb68"
+    "revision": "98d3a23e9ae90cdf6a02343a10ab2846"
   },
   {
     "url": "page-data/services/tcp/page-data.json",
-    "revision": "bfa92fb86bc8d2d8e31ae6a8c9c9e061"
+    "revision": "f4e4e15e46262125d383c58efcaa54ba"
   },
   {
     "url": "page-data/services/thermometer/page-data.json",
-    "revision": "b77993237773c0cb2c76424cb6d8f962"
+    "revision": "9bb2967dfd22f6483e7f906463065273"
   },
   {
     "url": "page-data/services/wifi/page-data.json",
@@ -524,7 +524,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/jacdac-ts/app-03f58a1d5f49aa3aba12.js`))) {
+  if (!resources || !(await caches.match(`/jacdac-ts/app-7ac15e8b33f9d4523e57.js`))) {
     return await fetch(event.request)
   }
 

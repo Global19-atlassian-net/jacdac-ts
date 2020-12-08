@@ -2,8 +2,8 @@
   "name": "Thermometer",
   "status": "experimental",
   "shortId": "thermometer",
-  "camelName": "Thermometer",
-  "shortName": "Thermometer",
+  "camelName": "thermometer",
+  "shortName": "thermometer",
   "extends": [
     "_base",
     "_sensor"

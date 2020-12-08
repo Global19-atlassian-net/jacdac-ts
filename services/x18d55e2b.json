@@ -2,8 +2,8 @@
   "name": "Multitouch",
   "status": "experimental",
   "shortId": "multitouch",
-  "camelName": "Multitouch",
-  "shortName": "Multitouch",
+  "camelName": "multitouch",
+  "shortName": "multitouch",
   "extends": [
     "_base",
     "_sensor"

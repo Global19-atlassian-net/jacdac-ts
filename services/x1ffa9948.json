@@ -2,8 +2,8 @@
   "name": "Bootloader",
   "status": "experimental",
   "shortId": "bootloader",
-  "camelName": "Bootloader",
-  "shortName": "Bootloader",
+  "camelName": "bootloader",
+  "shortName": "bootloader",
   "extends": [
     "_base"
   ],

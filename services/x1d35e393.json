@@ -2,8 +2,8 @@
   "name": "LED Matrix Controller",
   "status": "experimental",
   "shortId": "ledmatrixcontroller",
-  "camelName": "LEDMatrixController",
-  "shortName": "LEDMatrixController",
+  "camelName": "lEDMatrixController",
+  "shortName": "lEDMatrixController",
   "extends": [
     "_base"
   ],

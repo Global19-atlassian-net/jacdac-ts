@@ -2,8 +2,8 @@
   "name": "Light",
   "status": "experimental",
   "shortId": "light",
-  "camelName": "Light",
-  "shortName": "Light",
+  "camelName": "light",
+  "shortName": "light",
   "extends": [
     "_base"
   ],

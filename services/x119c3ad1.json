@@ -2,8 +2,8 @@
   "name": "Role Manager",
   "status": "experimental",
   "shortId": "rolemanager",
-  "camelName": "RoleManager",
-  "shortName": "RoleManager",
+  "camelName": "roleManager",
+  "shortName": "roleManager",
   "extends": [
     "_base"
   ],

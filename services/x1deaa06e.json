@@ -2,8 +2,8 @@
   "name": "Gamepad",
   "status": "experimental",
   "shortId": "gamepad",
-  "camelName": "Gamepad",
-  "shortName": "Gamepad",
+  "camelName": "gamepad",
+  "shortName": "gamepad",
   "extends": [
     "_base",
     "_sensor"

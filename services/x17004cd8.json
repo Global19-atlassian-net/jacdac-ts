@@ -2,8 +2,8 @@
   "name": "Motor",
   "status": "experimental",
   "shortId": "motor",
-  "camelName": "Motor",
-  "shortName": "Motor",
+  "camelName": "motor",
+  "shortName": "motor",
   "extends": [
     "_base"
   ],

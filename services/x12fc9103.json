@@ -2,8 +2,8 @@
   "name": "Servo",
   "status": "experimental",
   "shortId": "servo",
-  "camelName": "Servo",
-  "shortName": "Servo",
+  "camelName": "servo",
+  "shortName": "servo",
   "extends": [
     "_base"
   ],

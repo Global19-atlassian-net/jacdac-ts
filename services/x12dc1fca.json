@@ -2,8 +2,8 @@
   "name": "Logger",
   "status": "experimental",
   "shortId": "logger",
-  "camelName": "Logger",
-  "shortName": "Logger",
+  "camelName": "logger",
+  "shortName": "logger",
   "extends": [
     "_base"
   ],
