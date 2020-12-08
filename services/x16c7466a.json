@@ -18,7 +18,7 @@
     {
       "kind": "ro",
       "name": "status_code",
-      "identifier": 7,
+      "identifier": 259,
       "description": "Reports the current state or error status of the device. ``code`` is a standardized value from \nthe JACDAC error codes. ``vendor_code`` is any vendor specific error code describing the device\nstate. This report is typically not queried, when a device has an error, it will typically\nadd this report in frame along with the anounce packet.",
       "fields": [
         {
@@ -44,7 +44,7 @@
     {
       "kind": "rw",
       "name": "rw_bool",
-      "identifier": 385,
+      "identifier": 129,
       "description": "A read write bool register.",
       "fields": [
         {
@@ -59,7 +59,7 @@
     {
       "kind": "ro",
       "name": "ro_bool",
-      "identifier": 386,
+      "identifier": 385,
       "description": "A read only bool register. Mirrors rw_bool.",
       "fields": [
         {
@@ -74,7 +74,7 @@
     {
       "kind": "rw",
       "name": "rw_u32",
-      "identifier": 400,
+      "identifier": 130,
       "description": "A read write u32 register.",
       "fields": [
         {
@@ -90,7 +90,7 @@
     {
       "kind": "ro",
       "name": "ro_u32",
-      "identifier": 401,
+      "identifier": 386,
       "description": "A read only u32 register.. Mirrors rw_u32.",
       "fields": [
         {
@@ -106,7 +106,7 @@
     {
       "kind": "rw",
       "name": "rw_i32",
-      "identifier": 402,
+      "identifier": 131,
       "description": "A read write i32 register.",
       "fields": [
         {
@@ -122,7 +122,7 @@
     {
       "kind": "ro",
       "name": "ro_i32",
-      "identifier": 403,
+      "identifier": 387,
       "description": "A read only i32 register.. Mirrors rw_i32.",
       "fields": [
         {
@@ -138,7 +138,7 @@
     {
       "kind": "rw",
       "name": "rw_string",
-      "identifier": 416,
+      "identifier": 132,
       "description": "A read write string register.",
       "fields": [
         {
@@ -153,7 +153,7 @@
     {
       "kind": "ro",
       "name": "ro_string",
-      "identifier": 417,
+      "identifier": 388,
       "description": "A read only string register. Mirrors rw_string.",
       "fields": [
         {
@@ -168,7 +168,7 @@
     {
       "kind": "rw",
       "name": "rw_bytes",
-      "identifier": 432,
+      "identifier": 133,
       "description": "A read write string register.",
       "fields": [
         {
@@ -184,8 +184,8 @@
     {
       "kind": "ro",
       "name": "ro_bytes",
-      "identifier": 433,
-      "description": "A read only string register. Mirrors ro_bytes.\n\n\nA read only u8/u16/u32 register.",
+      "identifier": 389,
+      "description": "A read only string register. Mirrors ro_bytes.",
       "fields": [
         {
           "name": "_",
@@ -292,5 +292,5 @@
       "packFormat": "i32"
     }
   ],
-  "source": "# Protocol Test\n\n    identifier: 0x16c7466a\n    camel: protoTest\n\nThis is test service to validate the protocol packet transmissions.\n\n### Test procedure\n\nFor each ``rw`` registers, set a random value ``x``\n  * read ``rw`` and check value is equal to ``x``\n  * read ``ro`` and check value is equal to ``x``\n  * listen to ``e`` event and check that data is equal to ``x``\n  * call ``c`` command with new random value ``y``\n  * read ``rw`` and check value is equal to ``y``\n  * do all the above steps with acks\n  \n## Registers\n\nEvery ``rw`` register has a corresponding ``ro`` regisrer\nand a corresponding ``set_...`` command to also set the value.\n\n    rw rw_bool : bool @ 0x181\n\nA read write bool register.\n\n    ro ro_bool : bool @ 0x182\n\nA read only bool register. Mirrors rw_bool.\n\n    rw rw_u32 : u32 @ 0x190\n\nA read write u32 register.\n\n    ro ro_u32 : u32 @ 0x191\n\nA read only u32 register.. Mirrors rw_u32.\n\n    rw rw_i32 : i32 @ 0x192\n\nA read write i32 register.\n\n    ro ro_i32 : i32 @ 0x193\n\nA read only i32 register.. Mirrors rw_i32.\n\n    rw rw_string : string @ 0x1a0\n\nA read write string register.\n\n    ro ro_string : string @ 0x1a1\n\nA read only string register. Mirrors rw_string.\n\n    rw rw_bytes : bytes @ 0x1b0\n\nA read write string register.\n\n    ro ro_bytes : bytes @ 0x1b1\n\nA read only string register. Mirrors ro_bytes.\n\n\nA read only u8/u16/u32 register.\n\n## Events\n\n    event e_bool @ 0x180 { \n        bool: bool \n    }\n\nAn event raised when rw_bool is modified\n\n    event e_u32 @ 0x190 { \n        u32: u32 \n    }\n\nAn event raised when rw_u32 is modified\n\n    event e_i32 @ 0x192 { \n        i32: i32 \n    }\n\nAn event raised when rw_i32 is modified\n\n## Commands\n\n    command c_bool @ 0x80 {\n        bool: bool\n    }\n\nA command to set rw_bool. Returns the value.\n\n    command c_u32 @ 0x81 {\n        u32: u32\n    }\n\nA command to set rw_u32. Returns the value.\n\n    command c_i32 @ 0x82 {\n        i32: i32\n    }\n\nA command to set rw_i32. Returns the value.\n"
+  "source": "# Protocol Test\n\n    identifier: 0x16c7466a\n    camel: protoTest\n\nThis is test service to validate the protocol packet transmissions.\n\n### Test procedure\n\nFor each ``rw`` registers, set a random value ``x``\n  * read ``rw`` and check value is equal to ``x``\n  * read ``ro`` and check value is equal to ``x``\n  * listen to ``e`` event and check that data is equal to ``x``\n  * call ``c`` command with new random value ``y``\n  * read ``rw`` and check value is equal to ``y``\n  * do all the above steps with acks\n  \n## Registers\n\nEvery ``rw`` register has a corresponding ``ro`` regisrer\nand a corresponding ``set_...`` command to also set the value.\n\n    rw rw_bool : bool @ 0x081\n\nA read write bool register.\n\n    ro ro_bool : bool @ 0x181\n\nA read only bool register. Mirrors rw_bool.\n\n    rw rw_u32 : u32 @ 0x082\n\nA read write u32 register.\n\n    ro ro_u32 : u32 @ 0x182\n\nA read only u32 register.. Mirrors rw_u32.\n\n    rw rw_i32 : i32 @ 0x083\n\nA read write i32 register.\n\n    ro ro_i32 : i32 @ 0x183\n\nA read only i32 register.. Mirrors rw_i32.\n\n    rw rw_string : string @ 0x084\n\nA read write string register.\n\n    ro ro_string : string @ 0x184\n\nA read only string register. Mirrors rw_string.\n\n    rw rw_bytes : bytes @ 0x085\n\nA read write string register.\n\n    ro ro_bytes : bytes @ 0x185\n\nA read only string register. Mirrors ro_bytes.\n\n## Events\n\n    event e_bool @ 0x180 { \n        bool: bool \n    }\n\nAn event raised when rw_bool is modified\n\n    event e_u32 @ 0x190 { \n        u32: u32 \n    }\n\nAn event raised when rw_u32 is modified\n\n    event e_i32 @ 0x192 { \n        i32: i32 \n    }\n\nAn event raised when rw_i32 is modified\n\n## Commands\n\n    command c_bool @ 0x80 {\n        bool: bool\n    }\n\nA command to set rw_bool. Returns the value.\n\n    command c_u32 @ 0x81 {\n        u32: u32\n    }\n\nA command to set rw_u32. Returns the value.\n\n    command c_i32 @ 0x82 {\n        i32: i32\n    }\n\nA command to set rw_i32. Returns the value.\n"
 }
