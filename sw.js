@@ -33,11 +33,11 @@ self.__precacheManifest = [
     "url": "framework-ae509f636486a6b4cc07.js"
   },
   {
-    "url": "app-c9da14a61e9f98b9d40b.js"
+    "url": "app-03f58a1d5f49aa3aba12.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "ae440e83fdfcf113f9c5f14a3adf1b50"
+    "revision": "cd45de9a4ee6d58da8deb19053b371a5"
   },
   {
     "url": "static/webfonts/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"
@@ -57,7 +57,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "ea5a90872381aa1f57511322857b33e4"
+    "revision": "2bf22182eaa84b52669eeb1f87a5e987"
   },
   {
     "url": "polyfill-d1406b5b7f398e08db8e.js"
@@ -80,7 +80,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2214083594.json",
-    "revision": "6581071d293843ae7ed19fa562945696"
+    "revision": "4584ce7861f96a7ec23498421a3f1528"
   },
   {
     "url": "page-data/sq/d/2270080012.json",
@@ -92,7 +92,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2744294623.json",
-    "revision": "339761a982f261bd8c748f2b55b9029d"
+    "revision": "c4cf9430159acad3d5437cefbf406b0e"
   },
   {
     "url": "page-data/sq/d/3159585216.json",
@@ -325,8 +325,8 @@ self.__precacheManifest = [
     "revision": "bfa92fb86bc8d2d8e31ae6a8c9c9e061"
   },
   {
-    "url": "page-data/services/temperature/page-data.json",
-    "revision": "3cf86e10159ff6033bc6865c0f0a76f2"
+    "url": "page-data/services/thermometer/page-data.json",
+    "revision": "b77993237773c0cb2c76424cb6d8f962"
   },
   {
     "url": "page-data/services/wifi/page-data.json",
@@ -524,7 +524,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/jacdac-ts/app-c9da14a61e9f98b9d40b.js`))) {
+  if (!resources || !(await caches.match(`/jacdac-ts/app-03f58a1d5f49aa3aba12.js`))) {
     return await fetch(event.request)
   }
 

@@ -1721,7 +1721,7 @@
   {
     "@type": "Interface",
     "@id": "dtmi:jacdac:services:x1421bac7;1",
-    "displayName": "Temperature",
+    "displayName": "Thermometer",
     "description": "A thermometer measuring outside environment.",
     "contents": [
       {
