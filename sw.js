@@ -27,17 +27,17 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-a8a9eb932aaa5cf6f9ce.js"
+    "url": "webpack-runtime-56ec2067147c76e2be75.js"
   },
   {
     "url": "framework-ae509f636486a6b4cc07.js"
   },
   {
-    "url": "app-efd4b829e7c99e81eca5.js"
+    "url": "app-63558d104aeb49228a03.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "6b4773f2f26cda461e11ee19535db116"
+    "revision": "b7e67b1cadae6f8b868e877cf6e1ce05"
   },
   {
     "url": "static/webfonts/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"
@@ -57,7 +57,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "31bfc9acdec139f920b6a2ce7d4f4075"
+    "revision": "6fb22497fd095000612e7ae98bde058a"
   },
   {
     "url": "polyfill-d1406b5b7f398e08db8e.js"
@@ -69,7 +69,7 @@ self.__precacheManifest = [
     "url": "styles-e9d24b1846c7d6eb9685.js"
   },
   {
-    "url": "e33785ec54be6e7204bdd1d3d777ce1f937b69a6-d82f68ef0233795f74e7.js"
+    "url": "e33785ec54be6e7204bdd1d3d777ce1f937b69a6-bf79f5c51361cc657791.js"
   },
   {
     "url": "component---src-pages-404-mdx-1058db2afbe64e5c3852.js"
@@ -80,7 +80,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2214083594.json",
-    "revision": "f4c59715b974cae07377e79e967b9edc"
+    "revision": "5dfd1971eb7364a878f7367244c160f5"
   },
   {
     "url": "page-data/sq/d/2270080012.json",
@@ -92,7 +92,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2744294623.json",
-    "revision": "ba2c291d73919440e52527faf691d6f0"
+    "revision": "2903d587e406630f7d456702fae7af69"
   },
   {
     "url": "page-data/sq/d/3159585216.json",
@@ -100,7 +100,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/413816803.json",
-    "revision": "73f2ff87c85b82d213eba32f9de729ba"
+    "revision": "775dd4a361fe5f2979c987059acfe4c8"
   },
   {
     "url": "page-data/sq/d/63159454.json",
@@ -132,7 +132,7 @@ self.__precacheManifest = [
     "revision": "4d16b9ced73aa2359df73019aa8f4aa8"
   },
   {
-    "url": "component---src-pages-github-mdx-b12415d104ffb4c52900.js"
+    "url": "component---src-pages-github-mdx-f9114919dde7cd6beb8e.js"
   },
   {
     "url": "page-data/github/page-data.json",
@@ -234,11 +234,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/services/control/page-data.json",
-    "revision": "1d5d4b08250508a41129db4969ed362a"
-  },
-  {
-    "url": "page-data/services/crank/page-data.json",
-    "revision": "29833893a1ea96e14ac22f5f25f650c0"
+    "revision": "788713bae541cb01d565a8819e659fcd"
   },
   {
     "url": "page-data/services/gamepad/page-data.json",
@@ -258,7 +254,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/services/ledmatrixcontroller/page-data.json",
-    "revision": "c14bc65bbb37d6c55b488175d8619861"
+    "revision": "e4778e47eb0639df8dc753b578b58af6"
   },
   {
     "url": "page-data/services/ledmatrixdisplay/page-data.json",
@@ -307,6 +303,10 @@ self.__precacheManifest = [
   {
     "url": "page-data/services/rolemanager/page-data.json",
     "revision": "82c2ae15b0d56d1ec9f09fbb84d0d4f6"
+  },
+  {
+    "url": "page-data/services/rotary-encoder/page-data.json",
+    "revision": "0696c3187679cd21797ce9b4bfee6e6d"
   },
   {
     "url": "page-data/services/servo/page-data.json",
@@ -524,7 +524,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/jacdac-ts/app-efd4b829e7c99e81eca5.js`))) {
+  if (!resources || !(await caches.match(`/jacdac-ts/app-63558d104aeb49228a03.js`))) {
     return await fetch(event.request)
   }
 

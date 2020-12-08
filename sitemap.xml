@@ -31,8 +31,6 @@
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/codalmessagebus/test/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/control/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/control/test/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/crank/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/crank/test/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/gamepad/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/gamepad/test/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/humidity/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -67,6 +65,8 @@
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/pwmlight/test/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/rolemanager/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/rolemanager/test/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/rotary-encoder/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/rotary-encoder/test/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/servo/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/servo/test/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/settings/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
