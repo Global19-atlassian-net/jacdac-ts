@@ -27,17 +27,17 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-870cfd3a13cfdde67fe1.js"
+    "url": "webpack-runtime-a8a9eb932aaa5cf6f9ce.js"
   },
   {
     "url": "framework-ae509f636486a6b4cc07.js"
   },
   {
-    "url": "app-ba90170a4cd170a8fb54.js"
+    "url": "app-c9da14a61e9f98b9d40b.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "460d7d990b4111f0cc5c826dca98b18f"
+    "revision": "ae440e83fdfcf113f9c5f14a3adf1b50"
   },
   {
     "url": "static/webfonts/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"
@@ -57,7 +57,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "3221b8e2a38f529dc1a53f0dfb3c93b1"
+    "revision": "ea5a90872381aa1f57511322857b33e4"
   },
   {
     "url": "polyfill-d1406b5b7f398e08db8e.js"
@@ -69,7 +69,7 @@ self.__precacheManifest = [
     "url": "styles-e9d24b1846c7d6eb9685.js"
   },
   {
-    "url": "e33785ec54be6e7204bdd1d3d777ce1f937b69a6-6432ab1bc61f6076336d.js"
+    "url": "e33785ec54be6e7204bdd1d3d777ce1f937b69a6-d82f68ef0233795f74e7.js"
   },
   {
     "url": "component---src-pages-404-mdx-1058db2afbe64e5c3852.js"
@@ -80,7 +80,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2214083594.json",
-    "revision": "d577a345f8fca4403efee3583d86dbb4"
+    "revision": "6581071d293843ae7ed19fa562945696"
   },
   {
     "url": "page-data/sq/d/2270080012.json",
@@ -92,7 +92,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2744294623.json",
-    "revision": "b1abbb1352c39c0c173583ce2d3e7e48"
+    "revision": "339761a982f261bd8c748f2b55b9029d"
   },
   {
     "url": "page-data/sq/d/3159585216.json",
@@ -314,7 +314,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/services/settings/page-data.json",
-    "revision": "6adc657d1949400ecffb4f6bd522cab7"
+    "revision": "f31965815af086179406c38a94f5f05c"
   },
   {
     "url": "page-data/services/slider/page-data.json",
@@ -524,7 +524,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/jacdac-ts/app-ba90170a4cd170a8fb54.js`))) {
+  if (!resources || !(await caches.match(`/jacdac-ts/app-c9da14a61e9f98b9d40b.js`))) {
     return await fetch(event.request)
   }
 
