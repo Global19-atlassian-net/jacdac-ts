@@ -1483,6 +1483,23 @@
         "@id": "dtmi:jacdac:x16c7466a:event:ei32;1",
         "description": "An event raised when rw_i32 is modified",
         "schema": "integer"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "e_string",
+        "@id": "dtmi:jacdac:x16c7466a:event:estring;1",
+        "description": "An event raised when rw_string is modified",
+        "schema": "string"
+      },
+      {
+        "@type": [
+          "Telemetry",
+          "Event"
+        ],
+        "name": "e_bytes",
+        "@id": "dtmi:jacdac:x16c7466a:event:ebytes;1",
+        "description": "An event raised when rw_bytes is modified",
+        "schema": "dtmi:jacdac:x16c7466a:event;1"
       }
     ],
     "extends": [
