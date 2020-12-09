@@ -14,8 +14,8 @@
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/_system/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/_system/test/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/_base/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/_sensor/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/_base/test/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/_sensor/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/_sensor/test/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/accelerometer/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/accelerometer/test/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -24,8 +24,8 @@
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/bootloader/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/bootloader/test/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/button/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/buzzer/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/button/test/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/buzzer/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/buzzer/test/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/codalmessagebus/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/codalmessagebus/test/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -101,8 +101,8 @@
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/devices/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/dtmi/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/github/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/services/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/tools/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/traces/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://microsoft.github.io/jacdac-ts/jacdac-ts/clients/web/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
