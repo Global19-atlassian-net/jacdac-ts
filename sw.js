@@ -27,17 +27,17 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-161770c86c0791c54f5f.js"
+    "url": "webpack-runtime-074025069c29c44027ca.js"
   },
   {
-    "url": "framework-ae509f636486a6b4cc07.js"
+    "url": "framework-42603c295472826cbd1a.js"
   },
   {
-    "url": "app-1358c48628dae226d272.js"
+    "url": "app-d6e5c7698c94b56301ac.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "a243cdd15531865eb491edf878a48fc5"
+    "revision": "4140c08cf0e9f316c15e5fee4fc335b7"
   },
   {
     "url": "static/webfonts/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"
@@ -57,10 +57,10 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "02c470b68d3476594f795ab1a0cd2058"
+    "revision": "0ed913d2b04d43e71e09d72d02f43d26"
   },
   {
-    "url": "polyfill-d1406b5b7f398e08db8e.js"
+    "url": "polyfill-b8ffb8c925ebf417ba76.js"
   },
   {
     "url": "styles.1bcf0d809ee48396e628.css"
@@ -69,7 +69,7 @@ self.__precacheManifest = [
     "url": "styles-e9d24b1846c7d6eb9685.js"
   },
   {
-    "url": "e33785ec54be6e7204bdd1d3d777ce1f937b69a6-099a6bec704acb12b0fc.js"
+    "url": "5082b79a259755403bf9026003177d1a86e08c08-099a6bec704acb12b0fc.js"
   },
   {
     "url": "component---src-pages-404-mdx-1058db2afbe64e5c3852.js"
@@ -80,7 +80,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2214083594.json",
-    "revision": "0936683c2098c669ad3a63020b218ab1"
+    "revision": "a93934465c01860d9a9a31e07fd172fc"
   },
   {
     "url": "page-data/sq/d/2270080012.json",
@@ -92,7 +92,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2744294623.json",
-    "revision": "8e63886b0765c135ed87930f5b5e4d58"
+    "revision": "4c3b72cfde7672bb9443bc4f76dc0794"
   },
   {
     "url": "page-data/sq/d/3159585216.json",
@@ -160,14 +160,14 @@ self.__precacheManifest = [
     "revision": "52a87321a4c66709786ff93f64a5beba"
   },
   {
-    "url": "component---src-pages-tools-mdx-6f3dda6bb0b2a8c2840e.js"
+    "url": "component---src-pages-tools-mdx-e4cf8ae7ead865a3cf2d.js"
   },
   {
     "url": "page-data/tools/page-data.json",
     "revision": "45eeac4fa29132d0ef24419b38be985a"
   },
   {
-    "url": "component---src-pages-traces-mdx-68302266c92ce308da35.js"
+    "url": "component---src-pages-traces-mdx-c159a67d06ed6219aedd.js"
   },
   {
     "url": "page-data/traces/page-data.json",
@@ -198,7 +198,7 @@ self.__precacheManifest = [
     "revision": "8b18077fd15893fff51199534484cd0a"
   },
   {
-    "url": "component---src-templates-service-mdx-183523f2a4625571fe99.js"
+    "url": "component---src-templates-service-mdx-88910d5cb554c1b9ee59.js"
   },
   {
     "url": "page-data/services/_base/page-data.json",
@@ -379,56 +379,63 @@ self.__precacheManifest = [
     "revision": "312c3ecfca56255b9067d034380928cd"
   },
   {
-    "url": "component---src-pages-tools-model-uploader-mdx-e5d233797311d15e17fd.js"
+    "url": "component---src-pages-tools-makecode-sim-mdx-e3e023d0a6fd3c41d06e.js"
+  },
+  {
+    "url": "page-data/tools/makecode-sim/page-data.json",
+    "revision": "fcf53d91fde9644451f3a6f53bb4dad3"
+  },
+  {
+    "url": "component---src-pages-tools-model-uploader-mdx-fe2ea63c45eb39c2c3df.js"
   },
   {
     "url": "page-data/tools/model-uploader/page-data.json",
     "revision": "930148ed2d8dcf5c605cf00def46e4cc"
   },
   {
-    "url": "component---src-pages-tools-packet-inspector-mdx-131dd767a9cd5a4dcb93.js"
+    "url": "component---src-pages-tools-packet-inspector-mdx-b56acf7af2c7c2179dc0.js"
   },
   {
     "url": "page-data/tools/packet-inspector/page-data.json",
     "revision": "c0fca0b4752772f0997c647159a71051"
   },
   {
-    "url": "component---src-pages-tools-player-mdx-2747f1e1f84de4005c5f.js"
+    "url": "component---src-pages-tools-player-mdx-587c5f053c01794891b2.js"
   },
   {
     "url": "page-data/tools/player/page-data.json",
     "revision": "b143b3245e2a0bac973323c207be1e77"
   },
   {
-    "url": "component---src-pages-tools-prototest-mdx-96fa5d2506cf476c6b3f.js"
+    "url": "component---src-pages-tools-prototest-mdx-8f513e26010e843734cb.js"
   },
   {
     "url": "page-data/tools/prototest/page-data.json",
     "revision": "c90d308fc766532ff56b09a1c1a7053b"
   },
   {
-    "url": "component---src-pages-tools-role-manager-mdx-994febc05adfa3609c68.js"
+    "url": "component---src-pages-tools-role-manager-mdx-71541e24617c05e5e197.js"
   },
   {
     "url": "page-data/tools/role-manager/page-data.json",
     "revision": "78567749eefd3cf7a91ebfb583f99272"
   },
   {
-    "url": "component---src-pages-tools-service-editor-mdx-69042fbdbad9f930c4f3.js"
+    "url": "component---src-pages-tools-service-editor-mdx-8480a2dad007ee7fd186.js"
   },
   {
     "url": "page-data/tools/service-editor/page-data.json",
     "revision": "94f948cf0fa7517a3508b36fe7fa2f39"
   },
   {
-    "url": "component---src-pages-tools-settings-manager-mdx-d4ffb3d8449bb5b37c51.js"
+    "url": "component---src-pages-tools-settings-manager-mdx-870bac7ef3f9c42d3ee7.js"
   },
   {
     "url": "page-data/tools/settings-manager/page-data.json",
     "revision": "484e7adeab32cdf5bffb8202cc387e1a"
   },
   {
-    "url": "component---src-pages-tools-updater-mdx-19cb9b9fab0aee3c1654.js"
+    "url": "component---src-pages-tools-updater-mdx-1bf502c96807c5903982.js"
   },
   {
     "url": "page-data/tools/updater/page-data.json",
@@ -528,7 +535,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/jacdac-ts/app-1358c48628dae226d272.js`))) {
+  if (!resources || !(await caches.match(`/jacdac-ts/app-d6e5c7698c94b56301ac.js`))) {
     return await fetch(event.request)
   }
 
