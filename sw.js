@@ -27,7 +27,7 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-c8822be5cad2a4015e2b.js"
+    "url": "webpack-runtime-bafd2b0a26b21444fb06.js"
   },
   {
     "url": "framework-1ffecd2421b8acab27d5.js"
@@ -37,7 +37,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "254020d3f6e34d940029d8d2834681bb"
+    "revision": "330bd5e8c313f5d081f1ae774b1744c2"
   },
   {
     "url": "static/webfonts/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"
@@ -57,7 +57,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "f525c743e32e3aa681416a7874798e53"
+    "revision": "dc1d293f52738fda09fc4c8cb27e7e7e"
   },
   {
     "url": "polyfill-9c511dcb99c47e8c7270.js"
@@ -69,7 +69,7 @@ self.__precacheManifest = [
     "url": "styles-7d4153d260c0197f0043.js"
   },
   {
-    "url": "bc603352673be90d612e6d125a13a5d96061ca46-272f478c08818fb651a5.js"
+    "url": "bc603352673be90d612e6d125a13a5d96061ca46-c6b9fd6986bd2f5316aa.js"
   },
   {
     "url": "e33785ec54be6e7204bdd1d3d777ce1f937b69a6-c6bd5a9d2a74c355ee09.js"
@@ -83,7 +83,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2214083594.json",
-    "revision": "226d54c8921e9fed65fe9c88fe11abce"
+    "revision": "0af85c3f8f510422fbfedaf903e51be2"
   },
   {
     "url": "page-data/sq/d/2270080012.json",
@@ -95,7 +95,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2744294623.json",
-    "revision": "f3dd7f0e153a89a689cc8de795746ea6"
+    "revision": "678fa717632468a6fa13a476349a8932"
   },
   {
     "url": "page-data/sq/d/3159585216.json",
@@ -103,7 +103,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/413816803.json",
-    "revision": "07bf80dd934ab54137ebc4afd6102f82"
+    "revision": "0cb20b0569b9c3b9396730f25b65b117"
   },
   {
     "url": "page-data/sq/d/63159454.json",
@@ -382,7 +382,7 @@ self.__precacheManifest = [
     "revision": "312c3ecfca56255b9067d034380928cd"
   },
   {
-    "url": "component---src-pages-tools-makecode-sim-tsx-b76989a6d1a8c7276e6f.js"
+    "url": "component---src-pages-tools-makecode-sim-tsx-c0b9bdcf5ee3e8df5c36.js"
   },
   {
     "url": "page-data/tools/makecode-sim/page-data.json",
