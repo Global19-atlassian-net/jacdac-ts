@@ -1,7 +1,7 @@
 {
   "@type": "Interface",
   "@id": "dtmi:jacdac:services:x1fb57453;1",
-  "displayName": "PWM Light",
+  "displayName": "Mono Light",
   "description": "A controller for 1 or more LEDs connected in parallel.",
   "contents": [
     {
