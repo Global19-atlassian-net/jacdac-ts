@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[34],{"F/ij":function(e,a,n){"use strict";n.r(a),n.d(a,"default",(function(){return u}));var t=n("q1tI"),r=n.n(t),c=n("viY9"),i=n("q4d2"),d=n("L1J+"),o=n("0FeW");function u(){var e=Object(c.a)({palette:{primary:{main:"#2e7d32"},secondary:{main:"#ffc400"}}}),a=Object(i.a)(e);return r.a.createElement(d.a,{theme:a},r.a.createElement(o.a,{dashboard:!0}))}}}]);
-//# sourceMappingURL=component---src-pages-tools-makecode-sim-tsx-c0b9bdcf5ee3e8df5c36.js.map
