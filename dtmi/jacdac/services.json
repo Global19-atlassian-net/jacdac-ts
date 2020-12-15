@@ -1008,6 +1008,11 @@
             "name": "error",
             "displayName": "Error",
             "enumValue": 3
+          },
+          {
+            "name": "silent",
+            "displayName": "Silent",
+            "enumValue": 4
           }
         ]
       }
