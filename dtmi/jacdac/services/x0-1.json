@@ -15,7 +15,7 @@
       "@type": "Property",
       "name": "firmware_identifier",
       "@id": "dtmi:jacdac:x0:const:firmwareidentifier;1",
-      "description": "A numeric code for the string above; used to identify firmware images and devices.",
+      "description": "A numeric code for the string above; used to identify firmware images and modules.",
       "schema": "integer"
     },
     {
