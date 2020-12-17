@@ -2,7 +2,7 @@
   "@type": "Interface",
   "@id": "dtmi:jacdac:services:x1ffa9948;1",
   "displayName": "Bootloader",
-  "description": "Allows flashing (reprogramming) modules over JACDAC.",
+  "description": "Allows flashing (reprogramming) devices over JACDAC.",
   "contents": [],
   "extends": [
     "dtmi:jacdac:services:x1ffffff3;1"

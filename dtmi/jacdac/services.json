@@ -296,7 +296,7 @@
     "@type": "Interface",
     "@id": "dtmi:jacdac:services:x1ffa9948;1",
     "displayName": "Bootloader",
-    "description": "Allows flashing (reprogramming) modules over JACDAC.",
+    "description": "Allows flashing (reprogramming) devices over JACDAC.",
     "contents": [],
     "extends": [
       "dtmi:jacdac:services:x1ffffff3;1"
@@ -457,7 +457,7 @@
         "@type": "Property",
         "name": "firmware_identifier",
         "@id": "dtmi:jacdac:x0:const:firmwareidentifier;1",
-        "description": "A numeric code for the string above; used to identify firmware images and modules.",
+        "description": "A numeric code for the string above; used to identify firmware images and devices.",
         "schema": "integer"
       },
       {
@@ -1583,7 +1583,7 @@
     "@type": "Interface",
     "@id": "dtmi:jacdac:services:x119c3ad1;1",
     "displayName": "Role Manager",
-    "description": "Assign roles to modules on the JACDAC bus.",
+    "description": "Assign roles to devices on the JACDAC bus.",
     "contents": [
       {
         "@type": "Telemetry",
