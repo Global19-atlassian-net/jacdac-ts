@@ -1615,6 +1615,33 @@
         "@id": "dtmi:jacdac:x16c7466a:event:ebytes;1",
         "description": "An event raised when rw_bytes is modified",
         "schema": "dtmi:jacdac:x16c7466a:event;1"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "e_i8_u8_u16_i32",
+        "@id": "dtmi:jacdac:x16c7466a:event:ei8u8u16i32;1",
+        "description": "An event raised when rw_i8_u8_u16_i32 is modified",
+        "schema": {
+          "@type": "Object",
+          "fields": [
+            {
+              "name": "i8",
+              "schema": "integer"
+            },
+            {
+              "name": "u8",
+              "schema": "integer"
+            },
+            {
+              "name": "u16",
+              "schema": "integer"
+            },
+            {
+              "name": "i32",
+              "schema": "integer"
+            }
+          ]
+        }
       }
     ],
     "extends": [
