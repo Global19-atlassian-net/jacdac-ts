@@ -1524,6 +1524,61 @@
         "schema": "string"
       },
       {
+        "@type": "Property",
+        "name": "rw_i8_u8_u16_i32",
+        "@id": "dtmi:jacdac:x16c7466a:rw:rwi8u8u16i32;1",
+        "description": "A read write i8, u8, u16, i32 register.",
+        "schema": {
+          "@type": "Object",
+          "fields": [
+            {
+              "name": "i8",
+              "schema": "integer"
+            },
+            {
+              "name": "u8",
+              "schema": "integer"
+            },
+            {
+              "name": "u16",
+              "schema": "integer"
+            },
+            {
+              "name": "i32",
+              "schema": "integer"
+            }
+          ]
+        },
+        "writable": true
+      },
+      {
+        "@type": "Telemetry",
+        "name": "ro_i8_u8_u16_i32",
+        "@id": "dtmi:jacdac:x16c7466a:ro:roi8u8u16i32;1",
+        "description": "A read only i8, u8, u16, i32 register.. Mirrors rw_i8_u8_u16_i32.",
+        "schema": {
+          "@type": "Object",
+          "fields": [
+            {
+              "name": "i8",
+              "schema": "integer"
+            },
+            {
+              "name": "u8",
+              "schema": "integer"
+            },
+            {
+              "name": "u16",
+              "schema": "integer"
+            },
+            {
+              "name": "i32",
+              "schema": "integer"
+            }
+          ]
+        }
+      },
+      {
         "@type": "Telemetry",
         "name": "e_bool",
         "@id": "dtmi:jacdac:x16c7466a:event:ebool;1",
