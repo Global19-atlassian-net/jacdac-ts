@@ -27,7 +27,7 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-6dbb54c63d2a0aec4b2f.js"
+    "url": "webpack-runtime-d09724611cc4cabdd414.js"
   },
   {
     "url": "framework-c0737ccc66b07dd5378f.js"
@@ -37,7 +37,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "68a06495ab13508bf8273c9d6c2bb565"
+    "revision": "e3194405d63c018361e9b00de506178a"
   },
   {
     "url": "static/webfonts/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"
@@ -57,7 +57,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "52d1774833006fb9fad0a2e0663084ec"
+    "revision": "1565588432cd6fae8d3850a531e6dd07"
   },
   {
     "url": "polyfill-23dd966d65fa9b9c6150.js"
@@ -69,7 +69,7 @@ self.__precacheManifest = [
     "url": "styles-7d4153d260c0197f0043.js"
   },
   {
-    "url": "bc603352673be90d612e6d125a13a5d96061ca46-df09a5a74851981f707c.js"
+    "url": "bc603352673be90d612e6d125a13a5d96061ca46-f1d271cb4f67ac9a6ec4.js"
   },
   {
     "url": "e33785ec54be6e7204bdd1d3d777ce1f937b69a6-29c9f503129dab21843b.js"
@@ -83,7 +83,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2214083594.json",
-    "revision": "792ba7d0ffa31583e265b4c7da980c30"
+    "revision": "68491d98cc98f067c829abba3c573526"
   },
   {
     "url": "page-data/sq/d/2270080012.json",
@@ -95,7 +95,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2744294623.json",
-    "revision": "537b3ed591cb02d12c8de1811482b599"
+    "revision": "33d6053ee272dc4785f108f64e856ce1"
   },
   {
     "url": "page-data/sq/d/3159585216.json",
@@ -103,7 +103,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/413816803.json",
-    "revision": "369961737caa980575f8d2d8097a7cc3"
+    "revision": "2f884a6934a003f11f3d6e9eaf2fdcd5"
   },
   {
     "url": "page-data/sq/d/63159454.json",
@@ -382,7 +382,7 @@ self.__precacheManifest = [
     "revision": "312c3ecfca56255b9067d034380928cd"
   },
   {
-    "url": "component---src-pages-tools-makecode-editor-extension-tsx-d3c47a9fa01e95c9a507.js"
+    "url": "component---src-pages-tools-makecode-editor-extension-tsx-1dc3d715491934f9622c.js"
   },
   {
     "url": "page-data/tools/makecode-editor-extension/page-data.json",
