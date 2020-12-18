@@ -27,17 +27,17 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-c4d0008a540af6dfda86.js"
+    "url": "webpack-runtime-c37e39c585c7768dc7c5.js"
   },
   {
     "url": "framework-c0737ccc66b07dd5378f.js"
   },
   {
-    "url": "app-1f1f454b76222bdef10a.js"
+    "url": "app-1aa5c745b0bf49a30a61.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "7c4e11d75b3f67202f8f16ddff030c88"
+    "revision": "0373c7cf6c07b9fc9616f662dea767a7"
   },
   {
     "url": "static/webfonts/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"
@@ -57,7 +57,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "ec71cbdfc683e1291f2704059a2d2a15"
+    "revision": "a0dfb318f40510f82a9c39af74b8b225"
   },
   {
     "url": "polyfill-23dd966d65fa9b9c6150.js"
@@ -69,10 +69,10 @@ self.__precacheManifest = [
     "url": "styles-7d4153d260c0197f0043.js"
   },
   {
-    "url": "bc603352673be90d612e6d125a13a5d96061ca46-3fad992c0866834564bf.js"
+    "url": "bc603352673be90d612e6d125a13a5d96061ca46-fb63567c8587b6aee827.js"
   },
   {
-    "url": "e33785ec54be6e7204bdd1d3d777ce1f937b69a6-d63c16a678d8238c0b8d.js"
+    "url": "e33785ec54be6e7204bdd1d3d777ce1f937b69a6-40abc5c069cd28409ce9.js"
   },
   {
     "url": "component---src-pages-404-mdx-20961d756cc4912ba7e2.js"
@@ -83,7 +83,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2214083594.json",
-    "revision": "4b9d7d40443eed5fe5d32c9566ffcfcb"
+    "revision": "784de6ffa357536eb4e40775afcc0ae5"
   },
   {
     "url": "page-data/sq/d/2270080012.json",
@@ -95,7 +95,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2744294623.json",
-    "revision": "1058eab43490f36a2d7685ce07f55d0d"
+    "revision": "4eda6ce3f71c2e64a73e4224f8793c9c"
   },
   {
     "url": "page-data/sq/d/3159585216.json",
@@ -382,7 +382,7 @@ self.__precacheManifest = [
     "revision": "312c3ecfca56255b9067d034380928cd"
   },
   {
-    "url": "component---src-pages-tools-makecode-editor-extension-tsx-d1dfe0e06825ac69c3ac.js"
+    "url": "component---src-pages-tools-makecode-editor-extension-tsx-4a2ae30b9d5e4f37dd9d.js"
   },
   {
     "url": "page-data/tools/makecode-editor-extension/page-data.json",
@@ -545,7 +545,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/jacdac-ts/app-1f1f454b76222bdef10a.js`))) {
+  if (!resources || !(await caches.match(`/jacdac-ts/app-1aa5c745b0bf49a30a61.js`))) {
     return await fetch(event.request)
   }
 
