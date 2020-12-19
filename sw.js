@@ -27,7 +27,7 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-9f4b47699ea31451529c.js"
+    "url": "webpack-runtime-e30b566df02d15973964.js"
   },
   {
     "url": "framework-b127a1f811ef6126842d.js"
@@ -37,7 +37,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "367059a0dc7dafc738c0d3be3b51b158"
+    "revision": "656dc4fb04bc905370864f54a383aa0c"
   },
   {
     "url": "static/webfonts/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"
@@ -57,7 +57,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "8e237c15eed9a69de5882886fda2cc4e"
+    "revision": "bfdf6376865ef621dfaa24d44516cf08"
   },
   {
     "url": "polyfill-7124bc996e9df7372b4b.js"
@@ -389,7 +389,7 @@ self.__precacheManifest = [
     "revision": "e885527c451bd0f2811d8db1b2baf2d7"
   },
   {
-    "url": "component---src-pages-tools-makecode-editor-extension-tsx-f9263ef97d87c3e89692.js"
+    "url": "component---src-pages-tools-makecode-editor-extension-tsx-1b0f9103dce105feeaef.js"
   },
   {
     "url": "page-data/tools/makecode-editor-extension/page-data.json",
