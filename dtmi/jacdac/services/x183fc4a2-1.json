@@ -1,0 +1,20 @@
+{
+  "@type": "Interface",
+  "@id": "dtmi:jacdac:services:x183fc4a2;1",
+  "displayName": "Vibration motor",
+  "description": "Control a vibration motor.",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "speed",
+      "@id": "dtmi:jacdac:x183fc4a2:rw:speed;1",
+      "description": "Rotation speed of the motor.\nIf only one rotation speed is supported, then `0` shell be off, and any other number on.",
+      "schema": "integer",
+      "writable": true
+    }
+  ],
+  "extends": [
+    "dtmi:jacdac:services:x1ffffff3;1"
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}
