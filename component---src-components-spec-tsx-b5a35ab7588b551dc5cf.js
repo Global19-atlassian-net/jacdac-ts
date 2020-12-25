@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{NtH7:function(n,e,t){"use strict";t.r(e),t.d(e,"default",(function(){return d}));var r=t("q1tI"),a=t.n(r),u=t("A2+M"),c=t("9Dj+");function d(n){var e=n.data.mdx;return a.a.createElement(c.f,null,a.a.createElement(u.MDXRenderer,null,e.body))}}}]);
-//# sourceMappingURL=component---src-components-spec-tsx-b5a35ab7588b551dc5cf.js.map
