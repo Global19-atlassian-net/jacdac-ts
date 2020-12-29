@@ -27,7 +27,7 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-61f348e38eede2d18fb8.js"
+    "url": "webpack-runtime-751f4fbc81ce74cf7860.js"
   },
   {
     "url": "styles.1bcf0d809ee48396e628.css"
@@ -39,11 +39,11 @@ self.__precacheManifest = [
     "url": "framework-1ffecd2421b8acab27d5.js"
   },
   {
-    "url": "app-0f56cad6a71718bb5c11.js"
+    "url": "app-b42535cf888c81874da0.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "20d776f5505723e745723c0ee21434e9"
+    "revision": "8ddd21828e544998f8f707e14c106fe8"
   },
   {
     "url": "static/webfonts/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"
@@ -75,7 +75,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2744294623.json",
-    "revision": "8d79cc6add77c98e9fcb8b850209a056"
+    "revision": "083e9e65e1caf00cd83333972153be35"
   },
   {
     "url": "page-data/sq/d/3159585216.json",
@@ -83,7 +83,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/413816803.json",
-    "revision": "bf28d98fe48af335889eb001cdcd17ea"
+    "revision": "758c3deb2232a89fc08819cd2de5d4fe"
   },
   {
     "url": "page-data/sq/d/63159454.json",
@@ -91,7 +91,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "c1bf5095988aa3a14a329947b1fa65b9"
+    "revision": "bd2b942b20da2ecf1626707caf511f14"
   },
   {
     "url": "polyfill-48c090f9325a898a672e.js"
@@ -338,35 +338,35 @@ self.__precacheManifest = [
     "revision": "fa356981a6ee30f102194e9fd062f3b5"
   },
   {
-    "url": "component---src-pages-tools-azure-device-twin-designer-mdx-4b8246e1ffcec51d0d11.js"
+    "url": "component---src-pages-tools-azure-device-twin-designer-mdx-67deda9e1ec3207b1b2f.js"
   },
   {
     "url": "page-data/tools/azure-device-twin-designer/page-data.json",
     "revision": "31b793b39a1528a8c48024a68b91416c"
   },
   {
-    "url": "component---src-pages-tools-azure-iot-hub-mdx-6c68589c1ba82f5871b4.js"
+    "url": "component---src-pages-tools-azure-iot-hub-mdx-775a7c4053908286ebb0.js"
   },
   {
     "url": "page-data/tools/azure-iot-hub/page-data.json",
     "revision": "2bd1339ffd8dd4418f67b6bbed5cf2a7"
   },
   {
-    "url": "component---src-pages-tools-collector-mdx-3000f6d55e125690e45f.js"
+    "url": "component---src-pages-tools-collector-mdx-9ef8152e9a57a209789a.js"
   },
   {
     "url": "page-data/tools/collector/page-data.json",
     "revision": "972d98acca6c73ae288f8691b7400eb6"
   },
   {
-    "url": "component---src-pages-tools-device-designer-mdx-ce1c3524a35cc4a084cb.js"
+    "url": "component---src-pages-tools-device-designer-mdx-49e179893483a289d407.js"
   },
   {
     "url": "page-data/tools/device-designer/page-data.json",
     "revision": "6ff9fcffb16bd33be51a8b4cda844524"
   },
   {
-    "url": "component---src-pages-tools-edge-impulse-mdx-ca10c5027b227c6f1962.js"
+    "url": "component---src-pages-tools-edge-impulse-mdx-8a6ada09c164554d3862.js"
   },
   {
     "url": "page-data/tools/edge-impulse/page-data.json",
@@ -380,7 +380,7 @@ self.__precacheManifest = [
     "revision": "78e8d1954b7714a23ee882f0fa0a79b2"
   },
   {
-    "url": "component---src-pages-tools-light-command-encoder-mdx-29244d675b752911bb34.js"
+    "url": "component---src-pages-tools-light-command-encoder-mdx-a23687fb1b17b7538a6f.js"
   },
   {
     "url": "page-data/tools/light-command-encoder/page-data.json",
@@ -394,28 +394,28 @@ self.__precacheManifest = [
     "revision": "3aac65afe8c9fec18ccc34864a8f2039"
   },
   {
-    "url": "component---src-pages-tools-makecode-editor-extension-tsx-366ba6e7add5af0ef4e7.js"
+    "url": "component---src-pages-tools-makecode-editor-extension-tsx-ed16c89fb22e353f1730.js"
   },
   {
     "url": "page-data/tools/makecode-editor-extension/page-data.json",
     "revision": "3e7cfa36f41949215f87be22ed2167d4"
   },
   {
-    "url": "component---src-pages-tools-makecode-sim-tsx-0f9c7026a95851d7daed.js"
+    "url": "component---src-pages-tools-makecode-sim-tsx-64821abc244183e2ab0d.js"
   },
   {
     "url": "page-data/tools/makecode-sim/page-data.json",
     "revision": "87ea488413fb0b257e8d1959835f01f5"
   },
   {
-    "url": "component---src-pages-tools-model-uploader-mdx-a492ce892a4981473788.js"
+    "url": "component---src-pages-tools-model-uploader-mdx-98f206ed7d10e0ceb8f6.js"
   },
   {
     "url": "page-data/tools/model-uploader/page-data.json",
     "revision": "e191865620da5962b72dba3bf31d587d"
   },
   {
-    "url": "component---src-pages-tools-packet-inspector-mdx-326e3b8938a2796d73c5.js"
+    "url": "component---src-pages-tools-packet-inspector-mdx-2566f7b06d3b3be3494d.js"
   },
   {
     "url": "page-data/tools/packet-inspector/page-data.json",
@@ -429,35 +429,35 @@ self.__precacheManifest = [
     "revision": "e10f9c0367a32fea3070b628dafd8d80"
   },
   {
-    "url": "component---src-pages-tools-prototest-mdx-ed8136426d3ac684d9dd.js"
+    "url": "component---src-pages-tools-prototest-mdx-95621e3bbbf2c431ecef.js"
   },
   {
     "url": "page-data/tools/prototest/page-data.json",
     "revision": "30fcf463a7302b11d835d8661a819759"
   },
   {
-    "url": "component---src-pages-tools-role-manager-mdx-658990e82fffdeda82b6.js"
+    "url": "component---src-pages-tools-role-manager-mdx-3955a2d2e8313d47a742.js"
   },
   {
     "url": "page-data/tools/role-manager/page-data.json",
     "revision": "ed7a773a99c2175eedfd824d5267b275"
   },
   {
-    "url": "component---src-pages-tools-service-editor-mdx-cfd4c721da464cfc4cac.js"
+    "url": "component---src-pages-tools-service-editor-mdx-270f3107938687de3b65.js"
   },
   {
     "url": "page-data/tools/service-editor/page-data.json",
     "revision": "6b3bc36acb849b191b503691aacc759b"
   },
   {
-    "url": "component---src-pages-tools-settings-manager-mdx-411b769858bf9948a359.js"
+    "url": "component---src-pages-tools-settings-manager-mdx-8f38ed4a4a73be12b5fa.js"
   },
   {
     "url": "page-data/tools/settings-manager/page-data.json",
     "revision": "e8a0f54c2af652160ea7a82d8c437276"
   },
   {
-    "url": "component---src-pages-tools-updater-mdx-8ad613dd7b827982a55f.js"
+    "url": "component---src-pages-tools-updater-mdx-70fe9eae2c1d9059915b.js"
   },
   {
     "url": "page-data/tools/updater/page-data.json",
@@ -557,7 +557,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/jacdac-ts/app-0f56cad6a71718bb5c11.js`))) {
+  if (!resources || !(await caches.match(`/jacdac-ts/app-b42535cf888c81874da0.js`))) {
     return await fetch(event.request)
   }
 
