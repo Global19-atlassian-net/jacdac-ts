@@ -120,6 +120,5 @@
       "identifierName": "reading",
       "packFormat": "u22.10"
     }
-  ],
-  "source": "# Humidity\n\n    identifier: 0x16c810b8\n    extends: _sensor\n\nA sensor measuring humidity of outside environment.\n\n## Registers\n\nDefault streaming interval is 1s.\n\n    ro humidity: u22.10 %RH {typical_max = 100} @ reading\n\nThe relative humidity in percentage of full water saturation.\n"
+  ]
 }

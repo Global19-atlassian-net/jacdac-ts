@@ -57,6 +57,5 @@
       "identifierName": "intensity",
       "packFormat": "u8"
     }
-  ],
-  "source": "# Vibration motor\n\n    identifier: 0x183fc4a2\n\nControl a vibration motor.\n\n## Registers\n\n    rw speed: u8 / @ intensity\n\nRotation speed of the motor.\nIf only one rotation speed is supported, then `0` shell be off, and any other number on.\n"
+  ]
 }

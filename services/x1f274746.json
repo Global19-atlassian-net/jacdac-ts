@@ -118,6 +118,5 @@
       "identifierName": "reading",
       "packFormat": "u16"
     }
-  ],
-  "source": "# Slider\n\n    identifier: 0x1f274746\n    extends: _sensor\n\nA slider potentiometer.\n\n## Registers\n\n    ro position: u16 / @ reading\n\nThe relative position of the slider between `0x0000` and `0xffff`.\n"
+  ]
 }

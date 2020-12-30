@@ -117,6 +117,5 @@
       "identifierName": "reading",
       "packFormat": "b"
     }
-  ],
-  "source": "# LED Matrix Display\n\n    identifier: 0x110d154b\n    extends: _sensor\n    camel: ledMatrixDisplay\n\nA sensor that streams the state of a rectangular LED matrix.\nTo control the state of the screen, use [LED Matrix Controller](/services/led-matrix-controller) instead.\n\n\n## Registers\n\n    ro leds : bytes @ reading\n    \nStreams the state of the screen where pixel on/off state is \nstored as a bit, column by column. The column should be byte aligned.\n"
+  ]
 }
