@@ -49,6 +49,7 @@ import { FirmwareBlob, scanFirmwares } from "./flashing";
 import { JDService } from "./service";
 import { isConstRegister, isReading, isSensor } from "./spec";
 import { LoggerPriority, LoggerReg, SensorReg, SRV_LOGGER } from "../../jacdac-spec/dist/specconstants";
+import { JDDeviceHost } from "./host";
 
 export interface IDeviceNameSettings {
     resolve(device: JDDevice): string;
@@ -108,6 +109,7 @@ export class JDBus extends JDNode {
     private _disconnectPromise: Promise<void>;
 
     private _devices: JDDevice[] = [];
+    private _selfDeviceHost: JDDeviceHost;
     private _startTime: number;
     private _gcInterval: any;
     private _announceInterval: any;
@@ -571,10 +573,7 @@ export class JDBus extends JDNode {
         } else if (pkt.isCommand) {
             if (pkt.deviceIdentifier == this.selfDeviceId) {
                 if (pkt.requiresAck) {
-                    const ack = Packet.onlyHeader(pkt.crc)
-                    ack.serviceIndex = JD_SERVICE_INDEX_CRC_ACK
-                    ack.deviceIdentifier = this.selfDeviceId
-                    ack.sendReportAsync(this.selfDevice)
+                    this.selfDeviceHost?.sendAck(this, pkt);
                 }
             }
             pkt.device.processPacket(pkt);
@@ -605,6 +604,12 @@ export class JDBus extends JDNode {
         return this.options.deviceId
     }
 
+    get selfDeviceHost() {
+        if (!this._selfDeviceHost && this.options.deviceId)
+            this._selfDeviceHost = new JDDeviceHost(this.options.deviceId);
+        return this._selfDeviceHost;
+    }
+
     get selfDevice() {
         return this.device(this.selfDeviceId)
     }
@@ -613,15 +618,7 @@ export class JDBus extends JDNode {
         if (!this._announcing)
             return;
         this._announcing = true;
-        let restartCounter = 0
-        this.on(SELF_ANNOUNCE, () => {
-            // we do not support any services (at least yet)
-            if (restartCounter < 0xf) restartCounter++
-            const pkt = Packet.jdpacked<[number]>(CMD_ADVERTISEMENT_DATA, "u32", [restartCounter | 0x100])
-            pkt.serviceIndex = JD_SERVICE_INDEX_CTRL
-            pkt.deviceIdentifier = this.selfDeviceId
-            pkt.sendReportAsync(this.selfDevice)
-        })
+        this.on(SELF_ANNOUNCE, () => this.selfDeviceHost?.sendAnnounce(this))
     }
 
     /**
