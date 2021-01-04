@@ -19,6 +19,10 @@ export class JDDeviceHost extends JDClient {
             this._services.push(host)
     }
 
+    processPacket(pkt: Packet) {
+        
+    }
+
     async sendAck(bus: JDBus, pkt: Packet) {
         const ack = Packet.onlyHeader(pkt.crc)
         ack.serviceIndex = JD_SERVICE_INDEX_CRC_ACK;
