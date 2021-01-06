@@ -27,7 +27,7 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-7a74eed00196a2f4f857.js"
+    "url": "webpack-runtime-60050ac92fd20a4661ca.js"
   },
   {
     "url": "styles.055aae7c0f4d1e183835.css"
@@ -39,11 +39,11 @@ self.__precacheManifest = [
     "url": "framework-1ffecd2421b8acab27d5.js"
   },
   {
-    "url": "app-20177d2a694d59aedb5e.js"
+    "url": "app-8734eec527c486683416.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "23d56a6afd6855ba6e86d43f85c470ec"
+    "revision": "d83f845d7b03ddc481654cb63b06d60d"
   },
   {
     "url": "static/webfonts/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"
@@ -91,7 +91,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "19876a9c34c3abc8d6c290bdb73729ee"
+    "revision": "5b32dbbb964d4a606f9eb22b2d068f88"
   },
   {
     "url": "polyfill-48c090f9325a898a672e.js"
@@ -401,7 +401,7 @@ self.__precacheManifest = [
     "revision": "e885527c451bd0f2811d8db1b2baf2d7"
   },
   {
-    "url": "component---src-pages-tools-makecode-editor-extension-tsx-3f774f6fb3acc93acc8b.js"
+    "url": "component---src-pages-tools-makecode-editor-extension-tsx-1f0ee98effd73fd55efa.js"
   },
   {
     "url": "page-data/tools/makecode-editor-extension/page-data.json",
@@ -564,7 +564,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/jacdac-ts/app-20177d2a694d59aedb5e.js`))) {
+  if (!resources || !(await caches.match(`/jacdac-ts/app-8734eec527c486683416.js`))) {
     return await fetch(event.request)
   }
 
