@@ -182,6 +182,23 @@
       "packFormat": "u32 b"
     },
     {
+      "kind": "rw",
+      "name": "reset_in",
+      "identifier": 128,
+      "description": "When set to value other than `0`, it asks the device to reset after specified number of microseconds.\nThis is typically used to implement watchdog functionality, where a brain device sets `reset_in` to\nsay 1.6s every 0.5s.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "us",
+          "type": "u32",
+          "storage": 4,
+          "isSimpleType": true
+        }
+      ],
+      "optional": true,
+      "packFormat": "u32"
+    },
+    {
       "kind": "const",
       "name": "device_description",
       "identifier": 384,
