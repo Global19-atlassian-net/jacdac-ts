@@ -1462,14 +1462,6 @@
         "unit": "millisecond",
         "schema": "integer",
         "writable": true
-      },
-      {
-        "@type": "Property",
-        "name": "priority_offset",
-        "@id": "dtmi:jacdac:x1fa4c95a:rw:priorityoffset;1",
-        "description": "This value is added to `priority` of `active` reports, thus modifying amount of load-sharing\nbetween different supplies.\nThe `priority` is clamped to `u32` range when included in `active` reports.",
-        "schema": "integer",
-        "writable": true
       }
     ],
     "extends": [
