@@ -137,6 +137,22 @@
       "packFormat": "u16"
     },
     {
+      "kind": "const",
+      "name": "max_pixels",
+      "identifier": 385,
+      "description": "The maximum supported number of pixels.\nAll writes to `num_pixels` are clamped to `max_pixels`.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "",
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true
+        }
+      ],
+      "packFormat": "u16"
+    },
+    {
       "kind": "command",
       "name": "run",
       "identifier": 129,

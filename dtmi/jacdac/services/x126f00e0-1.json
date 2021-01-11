@@ -46,6 +46,13 @@
       "unit": "milliampere",
       "schema": "integer",
       "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "max_pixels",
+      "@id": "dtmi:jacdac:x126f00e0:const:maxpixels;1",
+      "description": "The maximum supported number of pixels.\nAll writes to `num_pixels` are clamped to `max_pixels`.",
+      "schema": "integer"
     }
   ],
   "extends": [
