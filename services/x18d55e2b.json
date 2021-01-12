@@ -19,7 +19,7 @@
       "kind": "ro",
       "name": "status_code",
       "identifier": 259,
-      "description": "Reports the current state or error status of the device. ``code`` is a standardized value from \nthe JACDAC error codes. ``vendor_code`` is any vendor specific error code describing the device\nstate. This report is typically not queried, when a device has an error, it will typically\nadd this report in frame along with the anounce packet.",
+      "description": "Reports the current state or error status of the device. ``code`` is a standardized value from \nthe JACDAC error codes. ``vendor_code`` is any vendor specific error code describing the device\nstate. This report is typically not queried, when a device has an error, it will typically\nadd this report in frame along with the announce packet.",
       "fields": [
         {
           "name": "code",
@@ -133,6 +133,7 @@
           "isSimpleType": true
         }
       ],
+      "identifierName": "active",
       "packFormat": "u32"
     },
     {
@@ -149,12 +150,13 @@
           "isSimpleType": true
         }
       ],
+      "identifierName": "inactive",
       "packFormat": "u32"
     },
     {
       "kind": "event",
       "name": "tap",
-      "identifier": 3,
+      "identifier": 128,
       "description": "Emitted when an input is briefly touched. TODO Not implemented.",
       "fields": [
         {
@@ -170,7 +172,7 @@
     {
       "kind": "event",
       "name": "long_press",
-      "identifier": 4,
+      "identifier": 129,
       "description": "Emitted when an input is touched for longer than 500ms. TODO Not implemented.",
       "fields": [
         {
@@ -186,14 +188,14 @@
     {
       "kind": "event",
       "name": "swipe_pos",
-      "identifier": 16,
+      "identifier": 144,
       "description": "Emitted when input channels are successively touched in order of increasing channel numbers.",
       "fields": []
     },
     {
       "kind": "event",
       "name": "swipe_neg",
-      "identifier": 17,
+      "identifier": 145,
       "description": "Emitted when input channels are successively touched in order of decreasing channel numbers.",
       "fields": []
     }

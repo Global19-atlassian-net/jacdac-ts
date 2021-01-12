@@ -18,7 +18,7 @@
       "kind": "ro",
       "name": "status_code",
       "identifier": 259,
-      "description": "Reports the current state or error status of the device. ``code`` is a standardized value from \nthe JACDAC error codes. ``vendor_code`` is any vendor specific error code describing the device\nstate. This report is typically not queried, when a device has an error, it will typically\nadd this report in frame along with the anounce packet.",
+      "description": "Reports the current state or error status of the device. ``code`` is a standardized value from \nthe JACDAC error codes. ``vendor_code`` is any vendor specific error code describing the device\nstate. This report is typically not queried, when a device has an error, it will typically\nadd this report in frame along with the announce packet.",
       "fields": [
         {
           "name": "code",
@@ -121,26 +121,28 @@
       "name": "down",
       "identifier": 1,
       "description": "Emitted when button goes from inactive (`pressed == 0`) to active.",
-      "fields": []
+      "fields": [],
+      "identifierName": "active"
     },
     {
       "kind": "event",
       "name": "up",
       "identifier": 2,
       "description": "Emitted when button goes from active (`pressed == 1`) to inactive.",
-      "fields": []
+      "fields": [],
+      "identifierName": "inactive"
     },
     {
       "kind": "event",
       "name": "click",
-      "identifier": 3,
+      "identifier": 128,
       "description": "Emitted together with `up` when the press time was not longer than 500ms.",
       "fields": []
     },
     {
       "kind": "event",
       "name": "long_click",
-      "identifier": 4,
+      "identifier": 129,
       "description": "Emitted together with `up` when the press time was more than 500ms.",
       "fields": []
     }

@@ -9,7 +9,7 @@
     "short": "This file describes common register and command codes.\nThese are defined in ranges separate from the per-service ones.\nNo service actually derives from this file, but services can include packets\ndefined here.\nTheir code is listed as say `@ intensity` and not `@ 0x01` (the spectool enforces that).",
     "commands": "Command codes are subdivided as follows:\n* Commands `0x000-0x07f` - common to all services\n* Commands `0x080-0xeff` - defined per-service\n* Commands `0xf00-0xfff` - reserved for implementation\n\nCommands follow.",
     "registers": "Register codes are subdivided as follows:\n* Registers `0x001-0x07f` - r/w common to all services\n* Registers `0x080-0x0ff` - r/w defined per-service\n* Registers `0x100-0x17f` - r/o common to all services\n* Registers `0x180-0x1ff` - r/o defined per-service\n* Registers `0x200-0xeff` - custom, defined per-service\n* Registers `0xf00-0xfff` - reserved for implementation, should not be seen on the wire\n\nThe types listed are typical. Check spec for particular service for exact type,\nand a service-specific name for a register (eg. `value` could be `pulse_length`).\nAll registers default to `0` unless otherwise indicated.",
-    "events": "Events codes are subdivided as follows:\n* Events `0x000-0x07f` - common to all services\n* Events `0x080-0xeff` - defined per-service\n* Events `0xf00-0xfff` - reserved for implementation"
+    "events": "Events codes are 8-bit and are subdivided as follows:\n* Events `0x00-0x7f` - common to all services\n* Events `0x80-0xff` - defined per-service"
   },
   "classIdentifier": 536870897,
   "enums": {},
@@ -228,7 +228,7 @@
       "kind": "ro",
       "name": "status_code",
       "identifier": 259,
-      "description": "Reports the current state or error status of the device. ``code`` is a standardized value from \nthe JACDAC error codes. ``vendor_code`` is any vendor specific error code describing the device\nstate. This report is typically not queried, when a device has an error, it will typically\nadd this report in frame along with the anounce packet.",
+      "description": "Reports the current state or error status of the device. ``code`` is a standardized value from \nthe JACDAC error codes. ``vendor_code`` is any vendor specific error code describing the device\nstate. This report is typically not queried, when a device has an error, it will typically\nadd this report in frame along with the announce packet.",
       "fields": [
         {
           "name": "code",
@@ -265,9 +265,23 @@
     },
     {
       "kind": "event",
-      "name": "change",
+      "name": "active",
+      "identifier": 1,
+      "description": "Notifies that the service has been activated (eg. button pressed, network connected, etc.)",
+      "fields": []
+    },
+    {
+      "kind": "event",
+      "name": "inactive",
       "identifier": 2,
-      "description": "Emit notifying that the internal state of the service changed.",
+      "description": "Notifies that the service has been dis-activated.",
+      "fields": []
+    },
+    {
+      "kind": "event",
+      "name": "change",
+      "identifier": 3,
+      "description": "Notifies that the internal state of the service changed.",
       "fields": []
     }
   ]
