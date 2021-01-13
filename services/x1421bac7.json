@@ -122,12 +122,12 @@
           "name": "_",
           "unit": "°C",
           "shift": 10,
-          "type": "u22.10",
-          "storage": 4
+          "type": "i22.10",
+          "storage": -4
         }
       ],
       "identifierName": "reading",
-      "packFormat": "u22.10"
+      "packFormat": "i22.10"
     },
     {
       "kind": "const",
@@ -139,12 +139,12 @@
           "name": "_",
           "unit": "°C",
           "shift": 10,
-          "type": "u22.10",
-          "storage": 4
+          "type": "i22.10",
+          "storage": -4
         }
       ],
       "identifierName": "min_reading",
-      "packFormat": "u22.10"
+      "packFormat": "i22.10"
     },
     {
       "kind": "const",
@@ -156,12 +156,12 @@
           "name": "_",
           "unit": "°C",
           "shift": 10,
-          "type": "u22.10",
-          "storage": 4
+          "type": "i22.10",
+          "storage": -4
         }
       ],
       "identifierName": "max_reading",
-      "packFormat": "u22.10"
+      "packFormat": "i22.10"
     },
     {
       "kind": "ro",
