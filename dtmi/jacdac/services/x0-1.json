@@ -45,14 +45,10 @@
       "schema": "string"
     },
     {
-      "@type": [
-        "Telemetry",
-        "Temperature"
-      ],
+      "@type": "Telemetry",
       "name": "mcu_temperature",
       "@id": "dtmi:jacdac:x0:ro:mcutemperature;1",
       "description": "MCU temperature in degrees Celsius (approximate).",
-      "unit": "degreeCelsius",
       "schema": "integer"
     },
     {

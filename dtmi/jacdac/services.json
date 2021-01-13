@@ -487,14 +487,10 @@
         "schema": "string"
       },
       {
-        "@type": [
-          "Telemetry",
-          "Temperature"
-        ],
+        "@type": "Telemetry",
         "name": "mcu_temperature",
         "@id": "dtmi:jacdac:x0:ro:mcutemperature;1",
         "description": "MCU temperature in degrees Celsius (approximate).",
-        "unit": "degreeCelsius",
         "schema": "integer"
       },
       {
@@ -1856,14 +1852,10 @@
     "description": "A thermometer measuring outside environment.",
     "contents": [
       {
-        "@type": [
-          "Telemetry",
-          "Temperature"
-        ],
+        "@type": "Telemetry",
         "name": "temperature",
         "@id": "dtmi:jacdac:x1421bac7:ro:temperature;1",
         "description": "The temperature.",
-        "unit": "degreeCelsius",
         "schema": "float"
       }
     ],

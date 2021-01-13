@@ -276,7 +276,7 @@
       "fields": [
         {
           "name": "_",
-          "unit": "C",
+          "unit": "°C",
           "type": "i16",
           "storage": -2,
           "isSimpleType": true,

@@ -109,7 +109,7 @@
       "fields": [
         {
           "name": "_",
-          "unit": "C",
+          "unit": "°C",
           "shift": 10,
           "type": "u22.10",
           "storage": 4

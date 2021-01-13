@@ -5,14 +5,10 @@
   "description": "A thermometer measuring outside environment.",
   "contents": [
     {
-      "@type": [
-        "Telemetry",
-        "Temperature"
-      ],
+      "@type": "Telemetry",
       "name": "temperature",
       "@id": "dtmi:jacdac:x1421bac7:ro:temperature;1",
       "description": "The temperature.",
-      "unit": "degreeCelsius",
       "schema": "float"
     }
   ],
