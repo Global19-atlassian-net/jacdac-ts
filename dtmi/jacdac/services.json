@@ -1949,6 +1949,11 @@
             "name": "heatProbe",
             "displayName": "HeatProbe",
             "enumValue": 4
+          },
+          {
+            "name": "thermocouple",
+            "displayName": "Thermocouple",
+            "enumValue": 5
           }
         ]
       }

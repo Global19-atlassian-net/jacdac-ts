@@ -21,7 +21,8 @@
         "Outdoor": 1,
         "Indoor": 2,
         "Body": 3,
-        "HeatProbe": 4
+        "HeatProbe": 4,
+        "Thermocouple": 5
       }
     }
   },
