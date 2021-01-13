@@ -193,6 +193,54 @@
       "packFormat": "i32"
     },
     {
+      "kind": "const",
+      "name": "min_reading",
+      "identifier": 260,
+      "description": "The lowest value that can be reported by the sensor.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "",
+          "type": "i32",
+          "storage": -4,
+          "isSimpleType": true
+        }
+      ],
+      "packFormat": "i32"
+    },
+    {
+      "kind": "const",
+      "name": "max_reading",
+      "identifier": 261,
+      "description": "The highest value that can be reported by the sensor.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "",
+          "type": "i32",
+          "storage": -4,
+          "isSimpleType": true
+        }
+      ],
+      "packFormat": "i32"
+    },
+    {
+      "kind": "ro",
+      "name": "reading_error",
+      "identifier": 262,
+      "description": "The real value of whatever is measured is between `reading - reading_error` and `reading + reading_error`.\nThis register is often, but not always `const`.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "",
+          "type": "i32",
+          "storage": -4,
+          "isSimpleType": true
+        }
+      ],
+      "packFormat": "i32"
+    },
+    {
       "kind": "rw",
       "name": "low_threshold",
       "identifier": 5,
@@ -256,6 +304,22 @@
         {
           "name": "_",
           "unit": "ms",
+          "type": "u32",
+          "storage": 4,
+          "isSimpleType": true
+        }
+      ],
+      "packFormat": "u32"
+    },
+    {
+      "kind": "const",
+      "name": "variant",
+      "identifier": 263,
+      "description": "The hardware variant of the service.\nFor services which support this, there's an enum defining the meaning.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "",
           "type": "u32",
           "storage": 4,
           "isSimpleType": true

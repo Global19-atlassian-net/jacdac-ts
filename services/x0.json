@@ -335,38 +335,6 @@
       ],
       "optional": true,
       "packFormat": "s"
-    },
-    {
-      "kind": "rw",
-      "name": "status_light",
-      "identifier": 129,
-      "description": "Specifies a status light animation sequence on a colored or monochrome LED. ?``color`` is a palette color? and ``duration``.",
-      "fields": [
-        {
-          "name": "hue",
-          "unit": "",
-          "type": "u8",
-          "storage": 1,
-          "isSimpleType": true,
-          "startRepeats": true
-        },
-        {
-          "name": "brightness",
-          "unit": "",
-          "type": "u8",
-          "storage": 1,
-          "isSimpleType": true
-        },
-        {
-          "name": "duration",
-          "unit": "ms",
-          "type": "u16",
-          "storage": 2,
-          "isSimpleType": true
-        }
-      ],
-      "optional": true,
-      "packFormat": "r: u8 u8 u16"
     }
   ]
 }

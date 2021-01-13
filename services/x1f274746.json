@@ -9,10 +9,19 @@
     "_sensor"
   ],
   "notes": {
-    "short": "A slider potentiometer."
+    "short": "A slider or rotary potentiometer."
   },
   "classIdentifier": 522667846,
-  "enums": {},
+  "enums": {
+    "Variant": {
+      "name": "Variant",
+      "storage": 4,
+      "members": {
+        "Slider": 1,
+        "Rotary": 2
+      }
+    }
+  },
   "packets": [
     {
       "kind": "ro",
@@ -117,6 +126,22 @@
       ],
       "identifierName": "reading",
       "packFormat": "u16"
+    },
+    {
+      "kind": "const",
+      "name": "variant",
+      "identifier": 263,
+      "description": "Specifies the physical layout of the potentiometer.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "",
+          "type": "Variant",
+          "storage": 4
+        }
+      ],
+      "identifierName": "variant",
+      "packFormat": "u32"
     }
   ]
 }

@@ -13,7 +13,18 @@
     "registers": "Default streaming interval is 1s."
   },
   "classIdentifier": 337754823,
-  "enums": {},
+  "enums": {
+    "Variant": {
+      "name": "Variant",
+      "storage": 4,
+      "members": {
+        "Outdoor": 1,
+        "Indoor": 2,
+        "Body": 3,
+        "HeatProbe": 4
+      }
+    }
+  },
   "packets": [
     {
       "kind": "ro",
@@ -117,6 +128,73 @@
       ],
       "identifierName": "reading",
       "packFormat": "u22.10"
+    },
+    {
+      "kind": "const",
+      "name": "min_temperature",
+      "identifier": 260,
+      "description": "Lowest temperature that can be reported.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "°C",
+          "shift": 10,
+          "type": "u22.10",
+          "storage": 4
+        }
+      ],
+      "identifierName": "min_reading",
+      "packFormat": "u22.10"
+    },
+    {
+      "kind": "const",
+      "name": "max_temperature",
+      "identifier": 261,
+      "description": "Highest temperature that can be reported.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "°C",
+          "shift": 10,
+          "type": "u22.10",
+          "storage": 4
+        }
+      ],
+      "identifierName": "max_reading",
+      "packFormat": "u22.10"
+    },
+    {
+      "kind": "ro",
+      "name": "temperature_error",
+      "identifier": 262,
+      "description": "The real temperature is between `temperature - temperature_error` and `temperature + temperature_error`.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "°C",
+          "shift": 10,
+          "type": "u22.10",
+          "storage": 4
+        }
+      ],
+      "identifierName": "reading_error",
+      "packFormat": "u22.10"
+    },
+    {
+      "kind": "const",
+      "name": "variant",
+      "identifier": 263,
+      "description": "Specifies the type of thermometer.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "",
+          "type": "Variant",
+          "storage": 4
+        }
+      ],
+      "identifierName": "variant",
+      "packFormat": "u32"
     }
   ]
 }
