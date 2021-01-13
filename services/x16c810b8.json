@@ -119,6 +119,23 @@
       ],
       "identifierName": "reading",
       "packFormat": "u22.10"
+    },
+    {
+      "kind": "ro",
+      "name": "humidity_error",
+      "identifier": 262,
+      "description": "The real humidity is between `humidity - humidity_error` and `humidity + humidity_error`.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "%RH",
+          "shift": 10,
+          "type": "u22.10",
+          "storage": 4
+        }
+      ],
+      "identifierName": "reading_error",
+      "packFormat": "u22.10"
     }
   ]
 }

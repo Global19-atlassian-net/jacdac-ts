@@ -1,7 +1,7 @@
 {
   "@type": "Interface",
   "@id": "dtmi:jacdac:services:x1f274746;1",
-  "displayName": "Slider",
+  "displayName": "Potentiometer",
   "description": "A slider or rotary potentiometer.",
   "contents": [
     {

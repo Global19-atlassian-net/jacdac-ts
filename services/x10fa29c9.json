@@ -1,7 +1,7 @@
 {
   "name": "Rotary encoder",
   "status": "experimental",
-  "shortId": "rotary-encoder",
+  "shortId": "rotaryencoder",
   "camelName": "rotaryEncoder",
   "shortName": "rotaryEncoder",
   "extends": [

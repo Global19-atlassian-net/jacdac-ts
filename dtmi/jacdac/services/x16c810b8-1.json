@@ -10,6 +10,13 @@
       "@id": "dtmi:jacdac:x16c810b8:ro:humidity;1",
       "description": "The relative humidity in percentage of full water saturation.",
       "schema": "float"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "humidity_error",
+      "@id": "dtmi:jacdac:x16c810b8:ro:humidityerror;1",
+      "description": "The real humidity is between `humidity - humidity_error` and `humidity + humidity_error`.",
+      "schema": "float"
     }
   ],
   "extends": [

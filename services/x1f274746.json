@@ -1,9 +1,9 @@
 {
-  "name": "Slider",
+  "name": "Potentiometer",
   "status": "experimental",
-  "shortId": "slider",
-  "camelName": "slider",
-  "shortName": "slider",
+  "shortId": "potentiometer",
+  "camelName": "potentiometer",
+  "shortName": "potentiometer",
   "extends": [
     "_base",
     "_sensor"

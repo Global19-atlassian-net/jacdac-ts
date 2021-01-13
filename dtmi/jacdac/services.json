@@ -670,6 +670,13 @@
         "@id": "dtmi:jacdac:x16c810b8:ro:humidity;1",
         "description": "The relative humidity in percentage of full water saturation.",
         "schema": "float"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "humidity_error",
+        "@id": "dtmi:jacdac:x16c810b8:ro:humidityerror;1",
+        "description": "The real humidity is between `humidity - humidity_error` and `humidity + humidity_error`.",
+        "schema": "float"
       }
     ],
     "extends": [
@@ -1375,6 +1382,52 @@
   },
   {
     "@type": "Interface",
+    "@id": "dtmi:jacdac:services:x1f274746;1",
+    "displayName": "Potentiometer",
+    "description": "A slider or rotary potentiometer.",
+    "contents": [
+      {
+        "@type": "Telemetry",
+        "name": "position",
+        "@id": "dtmi:jacdac:x1f274746:ro:position;1",
+        "description": "The relative position of the slider between `0x0000` and `0xffff`.",
+        "schema": "integer"
+      },
+      {
+        "@type": "Property",
+        "name": "variant",
+        "@id": "dtmi:jacdac:x1f274746:const:variant;1",
+        "description": "Specifies the physical layout of the potentiometer.",
+        "schema": "dtmi:jacdac:x1f274746:variant;1"
+      }
+    ],
+    "extends": [
+      "dtmi:jacdac:services:x1ffffff3;1",
+      "dtmi:jacdac:services:x1ffffff2;1"
+    ],
+    "schemas": [
+      {
+        "@type": "Enum",
+        "@id": "dtmi:jacdac:x1f274746:variant;1",
+        "valueSchema": "integer",
+        "enumValues": [
+          {
+            "name": "slider",
+            "displayName": "Slider",
+            "enumValue": 1
+          },
+          {
+            "name": "rotary",
+            "displayName": "Rotary",
+            "enumValue": 2
+          }
+        ]
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@type": "Interface",
     "@id": "dtmi:jacdac:services:x1fa4c95a;1",
     "displayName": "Power",
     "description": "A power-provider service.",
@@ -1792,52 +1845,6 @@
     "contents": [],
     "extends": [
       "dtmi:jacdac:services:x1ffffff3;1"
-    ],
-    "@context": "dtmi:dtdl:context;2"
-  },
-  {
-    "@type": "Interface",
-    "@id": "dtmi:jacdac:services:x1f274746;1",
-    "displayName": "Slider",
-    "description": "A slider or rotary potentiometer.",
-    "contents": [
-      {
-        "@type": "Telemetry",
-        "name": "position",
-        "@id": "dtmi:jacdac:x1f274746:ro:position;1",
-        "description": "The relative position of the slider between `0x0000` and `0xffff`.",
-        "schema": "integer"
-      },
-      {
-        "@type": "Property",
-        "name": "variant",
-        "@id": "dtmi:jacdac:x1f274746:const:variant;1",
-        "description": "Specifies the physical layout of the potentiometer.",
-        "schema": "dtmi:jacdac:x1f274746:variant;1"
-      }
-    ],
-    "extends": [
-      "dtmi:jacdac:services:x1ffffff3;1",
-      "dtmi:jacdac:services:x1ffffff2;1"
-    ],
-    "schemas": [
-      {
-        "@type": "Enum",
-        "@id": "dtmi:jacdac:x1f274746:variant;1",
-        "valueSchema": "integer",
-        "enumValues": [
-          {
-            "name": "slider",
-            "displayName": "Slider",
-            "enumValue": 1
-          },
-          {
-            "name": "rotary",
-            "displayName": "Rotary",
-            "enumValue": 2
-          }
-        ]
-      }
     ],
     "@context": "dtmi:dtdl:context;2"
   },
