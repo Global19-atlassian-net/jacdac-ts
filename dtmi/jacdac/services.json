@@ -1007,9 +1007,14 @@
             "enumValue": 2
           },
           {
-            "name": "square",
-            "displayName": "Square",
+            "name": "stick",
+            "displayName": "Stick",
             "enumValue": 3
+          },
+          {
+            "name": "jewel",
+            "displayName": "Jewel",
+            "enumValue": 4
           }
         ]
       }
