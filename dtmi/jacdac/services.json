@@ -956,6 +956,13 @@
         "@id": "dtmi:jacdac:x126f00e0:const:maxpixels;1",
         "description": "The maximum supported number of pixels.\nAll writes to `num_pixels` are clamped to `max_pixels`.",
         "schema": "integer"
+      },
+      {
+        "@type": "Property",
+        "name": "variant",
+        "@id": "dtmi:jacdac:x126f00e0:const:variant;1",
+        "description": "Specifies the shape of the light strip.",
+        "schema": "dtmi:jacdac:x126f00e0:variant;1"
       }
     ],
     "extends": [
@@ -981,6 +988,28 @@
             "name": "sK9822",
             "displayName": "SK9822",
             "enumValue": 17
+          }
+        ]
+      },
+      {
+        "@type": "Enum",
+        "@id": "dtmi:jacdac:x126f00e0:variant;1",
+        "valueSchema": "integer",
+        "enumValues": [
+          {
+            "name": "strip",
+            "displayName": "Strip",
+            "enumValue": 1
+          },
+          {
+            "name": "ring",
+            "displayName": "Ring",
+            "enumValue": 2
+          },
+          {
+            "name": "square",
+            "displayName": "Square",
+            "enumValue": 3
           }
         ]
       }
