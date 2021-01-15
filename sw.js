@@ -39,11 +39,11 @@ self.__precacheManifest = [
     "url": "styles-1f929bd2c14ebc1f1547.js"
   },
   {
-    "url": "app-353ce19f19ca211b590b.js"
+    "url": "app-042b78db45e0fdfd9c9a.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "65521b0aa56d960737eeded4a0001492"
+    "revision": "42d992cb2fbd88fe42e5bd7c4e20b9a5"
   },
   {
     "url": "static/webfonts/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"
@@ -63,7 +63,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2214083594.json",
-    "revision": "f7ee202d7f3c5c97afc18694fc3c6daa"
+    "revision": "7e61ac63b3279b27e923bacdd866e4ae"
   },
   {
     "url": "page-data/sq/d/2270080012.json",
@@ -75,7 +75,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2744294623.json",
-    "revision": "6713d9fc1629c1a13eac665f14a2a4fe"
+    "revision": "3d8e1b37e5aaf81f288656a45fc02629"
   },
   {
     "url": "page-data/sq/d/3159585216.json",
@@ -91,7 +91,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "489402fcb2768e2a157517e81b3c82f3"
+    "revision": "e0831be415e1d56ebc6d482405c90d43"
   },
   {
     "url": "polyfill-4e6785d81c52ad56bf16.js"
@@ -356,7 +356,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/tools/azure-iot-hub/page-data.json",
-    "revision": "fdbcc3e317efdc95fb1eb244c409d897"
+    "revision": "2bd1339ffd8dd4418f67b6bbed5cf2a7"
   },
   {
     "url": "component---src-pages-tools-collector-mdx-fbae3717469a591c5b49.js"
@@ -557,7 +557,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/jacdac-ts/app-353ce19f19ca211b590b.js`))) {
+  if (!resources || !(await caches.match(`/jacdac-ts/app-042b78db45e0fdfd9c9a.js`))) {
     return await fetch(event.request)
   }
 
