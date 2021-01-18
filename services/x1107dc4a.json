@@ -193,6 +193,14 @@
       "identifier": 133,
       "description": "Clears all keys.",
       "fields": []
+    },
+    {
+      "kind": "event",
+      "name": "change",
+      "identifier": 3,
+      "description": "Notifies that some setting have been modified.",
+      "fields": [],
+      "identifierName": "change"
     }
   ]
 }
