@@ -505,7 +505,7 @@
       "kind": "command",
       "name": "c_report_pipe",
       "identifier": 135,
-      "description": "A command to read the rw_bytes, byte per byte, as a pipe.",
+      "description": "A command to read the content of rw_bytes, byte per byte, as a pipe.",
       "fields": [
         {
           "name": "p_bytes",
@@ -521,18 +521,18 @@
       "kind": "pipe_report",
       "name": "p_bytes",
       "identifier": 0,
-      "description": "A command to read the rw_bytes, byte per byte, as a pipe.",
+      "description": "A command to read the content of rw_bytes, byte per byte, as a pipe.",
       "fields": [
         {
-          "name": "bytes",
+          "name": "byte",
           "unit": "",
-          "type": "bytes",
-          "storage": 0,
+          "type": "u8",
+          "storage": 1,
           "isSimpleType": true
         }
       ],
       "pipeType": "c_report_pipe",
-      "packFormat": "b"
+      "packFormat": "u8"
     }
   ]
 }
