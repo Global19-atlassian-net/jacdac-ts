@@ -39,11 +39,11 @@ self.__precacheManifest = [
     "url": "styles-4d1902e7bd39726e0535.js"
   },
   {
-    "url": "app-dd3c5bc36c1f1d7dd267.js"
+    "url": "app-97494a46820d84bb4a58.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "4e373dba53118553c68e13a62ed696fe"
+    "revision": "45f9e6c3c41f7493c4898195e37292a9"
   },
   {
     "url": "static/webfonts/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"
@@ -91,7 +91,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "006ebcc46cbc51871dfd21fde038376b"
+    "revision": "150928f43b3e79ea93a774d74900a12c"
   },
   {
     "url": "polyfill-860c3442a8635066b9ae.js"
@@ -568,7 +568,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/jacdac-ts/app-dd3c5bc36c1f1d7dd267.js`))) {
+  if (!resources || !(await caches.match(`/jacdac-ts/app-97494a46820d84bb4a58.js`))) {
     return await fetch(event.request)
   }
 
