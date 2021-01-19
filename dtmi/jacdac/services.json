@@ -1884,18 +1884,14 @@
     "@type": "Interface",
     "@id": "dtmi:jacdac:services:x12fc9103;1",
     "displayName": "Servo",
-    "description": "Servo is a small motor directed with a PWM signal.\nThis services fixes the servo period at 20ms, and the pulse can be regulated.",
+    "description": "Servo is a small motor with arm that can be pointing at a specific direction.",
     "contents": [
       {
-        "@type": [
-          "Property",
-          "TimeSpan"
-        ],
-        "name": "pulse",
-        "@id": "dtmi:jacdac:x12fc9103:rw:pulse;1",
-        "description": "Specifies length of the pulse in microseconds. The period is always 20ms.",
-        "unit": "microsecond",
-        "schema": "integer",
+        "@type": "Property",
+        "name": "angle",
+        "@id": "dtmi:jacdac:x12fc9103:rw:angle;1",
+        "description": "Specifies the angle of the arm.",
+        "schema": "float",
         "writable": true
       },
       {
@@ -1905,10 +1901,72 @@
         "description": "Turn the power to the servo on/off.",
         "schema": "boolean",
         "writable": true
+      },
+      {
+        "@type": "Property",
+        "name": "offset",
+        "@id": "dtmi:jacdac:x12fc9103:rw:offset;1",
+        "description": "Correction applied to the angle to account for the servo arm drift.",
+        "schema": "float",
+        "writable": true
+      },
+      {
+        "@type": "Property",
+        "name": "min_angle",
+        "@id": "dtmi:jacdac:x12fc9103:const:minangle;1",
+        "description": "Lowest angle that can be set.",
+        "schema": "float"
+      },
+      {
+        "@type": "Property",
+        "name": "max_angle",
+        "@id": "dtmi:jacdac:x12fc9103:const:maxangle;1",
+        "description": "Highest angle that can be set.",
+        "schema": "float"
+      },
+      {
+        "@type": "Property",
+        "name": "variant",
+        "@id": "dtmi:jacdac:x12fc9103:const:variant;1",
+        "description": "Specifies the type of servo motor.\n* Positional Rotation Servos: Positional servos can rotate the shaft in about half of the circle,\nwith features to avoid over-rotating. Most servo have a range of 180° but some allow 270° or 360°.\n* Linear Servos: linear servos are also like a positional servo, but with additional gears to the adjust the output from circular to back-and-forth.",
+        "schema": "dtmi:jacdac:x12fc9103:variant;1"
+      },
+      {
+        "@type": "Property",
+        "name": "stall_torque",
+        "@id": "dtmi:jacdac:x12fc9103:const:stalltorque;1",
+        "description": "The servo motor will stop rotating when it is trying to move a ``stall_torque`` weight at a radial distance of ``1.0`` cm.",
+        "schema": "float"
+      },
+      {
+        "@type": "Property",
+        "name": "response_speed",
+        "@id": "dtmi:jacdac:x12fc9103:const:responsespeed;1",
+        "description": "Time to move 60°.",
+        "schema": "float"
       }
     ],
     "extends": [
       "dtmi:jacdac:services:x1ffffff3;1"
+    ],
+    "schemas": [
+      {
+        "@type": "Enum",
+        "@id": "dtmi:jacdac:x12fc9103:variant;1",
+        "valueSchema": "integer",
+        "enumValues": [
+          {
+            "name": "positionalRotation",
+            "displayName": "PositionalRotation",
+            "enumValue": 1
+          },
+          {
+            "name": "linear",
+            "displayName": "Linear",
+            "enumValue": 2
+          }
+        ]
+      }
     ],
     "@context": "dtmi:dtdl:context;2"
   },
