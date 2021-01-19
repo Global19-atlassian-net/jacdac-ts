@@ -43,7 +43,7 @@
       "kind": "rw",
       "name": "duty",
       "identifier": 2,
-      "description": "PWM duty cycle of the motor. Use negative/positive values to run the motor forwards and backwards.\nPositive is recommended to be clockwise rotation and negative counterclockwise.",
+      "description": "PWM duty cycle of the motor. Use negative/positive values to run the motor forwards and backwards.\nPositive is recommended to be clockwise rotation and negative counterclockwise. A duty of ``0`` \nwhile ``enabled`` acts as brake.",
       "fields": [
         {
           "name": "_",
@@ -72,6 +72,40 @@
       ],
       "identifierName": "intensity",
       "packFormat": "u8"
+    },
+    {
+      "kind": "const",
+      "name": "load_torque",
+      "identifier": 384,
+      "description": "Torque required to produce the rated power of an electrical motor at load speed.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "kg/cm",
+          "shift": 16,
+          "type": "u16.16",
+          "storage": 4
+        }
+      ],
+      "optional": true,
+      "packFormat": "u16.16"
+    },
+    {
+      "kind": "const",
+      "name": "load_speed",
+      "identifier": 385,
+      "description": "Revolutions per minute of the motor under full load.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "rpm",
+          "shift": 16,
+          "type": "u16.16",
+          "storage": 4
+        }
+      ],
+      "optional": true,
+      "packFormat": "u16.16"
     }
   ]
 }
