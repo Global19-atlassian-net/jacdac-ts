@@ -2,7 +2,7 @@
   "@type": "Interface",
   "@id": "dtmi:jacdac:services:x1473a263;1",
   "displayName": "Button",
-  "description": "A simple push-button.\n\nNote: this service will stream readings while the button is pressed and shortly after it's released, even\nwhen `stream_samples == 0`. TODO remove this?",
+  "description": "A push-button.",
   "contents": [
     {
       "@type": "Telemetry",

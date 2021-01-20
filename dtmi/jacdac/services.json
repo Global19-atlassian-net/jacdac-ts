@@ -368,7 +368,7 @@
     "@type": "Interface",
     "@id": "dtmi:jacdac:services:x1473a263;1",
     "displayName": "Button",
-    "description": "A simple push-button.\n\nNote: this service will stream readings while the button is pressed and shortly after it's released, even\nwhen `stream_samples == 0`. TODO remove this?",
+    "description": "A push-button.",
     "contents": [
       {
         "@type": "Telemetry",
@@ -559,6 +559,88 @@
             "name": "supportsACK",
             "displayName": "SupportsACK",
             "enumValue": 1
+          }
+        ]
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@type": "Interface",
+    "@id": "dtmi:jacdac:services:x141a6b8a;1",
+    "displayName": "Distance",
+    "description": "A sensor that determines the distance of an object without any physical contact involved.",
+    "contents": [
+      {
+        "@type": [
+          "Telemetry",
+          "Length"
+        ],
+        "name": "distance",
+        "@id": "dtmi:jacdac:x141a6b8a:ro:distance;1",
+        "description": "Current distance from the object",
+        "unit": "metre",
+        "schema": "float"
+      },
+      {
+        "@type": [
+          "Property",
+          "Length"
+        ],
+        "name": "min_range",
+        "@id": "dtmi:jacdac:x141a6b8a:const:minrange;1",
+        "description": "Minimum measurable distance",
+        "unit": "metre",
+        "schema": "float"
+      },
+      {
+        "@type": [
+          "Property",
+          "Length"
+        ],
+        "name": "max_range",
+        "@id": "dtmi:jacdac:x141a6b8a:const:maxrange;1",
+        "description": "Maximum measurable distance",
+        "unit": "metre",
+        "schema": "float"
+      },
+      {
+        "@type": "Property",
+        "name": "variant",
+        "@id": "dtmi:jacdac:x141a6b8a:const:variant;1",
+        "description": "Determines the type of sensor used.",
+        "schema": "dtmi:jacdac:x141a6b8a:variant;1"
+      }
+    ],
+    "extends": [
+      "dtmi:jacdac:services:x1ffffff3;1",
+      "dtmi:jacdac:services:x1ffffff2;1"
+    ],
+    "schemas": [
+      {
+        "@type": "Enum",
+        "@id": "dtmi:jacdac:x141a6b8a:variant;1",
+        "valueSchema": "integer",
+        "enumValues": [
+          {
+            "name": "ultrasonic",
+            "displayName": "Ultrasonic",
+            "enumValue": 1
+          },
+          {
+            "name": "infrared",
+            "displayName": "Infrared",
+            "enumValue": 2
+          },
+          {
+            "name": "liDAR",
+            "displayName": "LiDAR",
+            "enumValue": 3
+          },
+          {
+            "name": "timeOfFlight",
+            "displayName": "TimeOfFlight",
+            "enumValue": 4
           }
         ]
       }
@@ -1998,6 +2080,113 @@
           {
             "name": "count",
             "schema": "integer"
+          }
+        ]
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@type": "Interface",
+    "@id": "dtmi:jacdac:services:x1ad29402;1",
+    "displayName": "Switch",
+    "description": "A switch.",
+    "contents": [
+      {
+        "@type": "Telemetry",
+        "name": "active",
+        "@id": "dtmi:jacdac:x1ad29402:ro:active;1",
+        "description": "Indicates whether the switch is currently active (on).",
+        "schema": "boolean"
+      },
+      {
+        "@type": "Property",
+        "name": "variant",
+        "@id": "dtmi:jacdac:x1ad29402:const:variant;1",
+        "description": "Describes the type of switch used.",
+        "schema": "dtmi:jacdac:x1ad29402:variant;1"
+      },
+      {
+        "@type": [
+          "Property",
+          "TimeSpan"
+        ],
+        "name": "auto_off_delay",
+        "@id": "dtmi:jacdac:x1ad29402:const:autooffdelay;1",
+        "description": "Specifies the delay without activity to automatically turn off after turning on.",
+        "unit": "second",
+        "schema": "float"
+      },
+      {
+        "@type": [
+          "Telemetry",
+          "Event"
+        ],
+        "name": "on",
+        "@id": "dtmi:jacdac:x1ad29402:event:on;1",
+        "description": "Emitted when button goes from ``off`` to ``on``.",
+        "schema": "dtmi:jacdac:x1ad29402:event;1"
+      },
+      {
+        "@type": [
+          "Telemetry",
+          "Event"
+        ],
+        "name": "off",
+        "@id": "dtmi:jacdac:x1ad29402:event:off;1",
+        "description": "Emitted when button goes from ``on`` to ``off``.",
+        "schema": "dtmi:jacdac:x1ad29402:event;1"
+      }
+    ],
+    "extends": [
+      "dtmi:jacdac:services:x1ffffff3;1",
+      "dtmi:jacdac:services:x1ffffff2;1"
+    ],
+    "schemas": [
+      {
+        "@id": "dtmi:jacdac:x1ad29402:event;1",
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "count",
+            "schema": "integer"
+          }
+        ]
+      },
+      {
+        "@type": "Enum",
+        "@id": "dtmi:jacdac:x1ad29402:variant;1",
+        "valueSchema": "integer",
+        "enumValues": [
+          {
+            "name": "slide",
+            "displayName": "Slide",
+            "enumValue": 1
+          },
+          {
+            "name": "tilt",
+            "displayName": "Tilt",
+            "enumValue": 2
+          },
+          {
+            "name": "pushButton",
+            "displayName": "PushButton",
+            "enumValue": 3
+          },
+          {
+            "name": "tactile",
+            "displayName": "Tactile",
+            "enumValue": 4
+          },
+          {
+            "name": "toggle",
+            "displayName": "Toggle",
+            "enumValue": 5
+          },
+          {
+            "name": "light",
+            "displayName": "Light",
+            "enumValue": 6
           }
         ]
       }
