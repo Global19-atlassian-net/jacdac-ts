@@ -163,6 +163,23 @@
       "packFormat": "u16"
     },
     {
+      "kind": "rw",
+      "name": "num_repeats",
+      "identifier": 130,
+      "description": "How many times to repeat the program passed in `run` command.\nShould be set before the `run` command.\nSetting to `0` means to repeat forever.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "",
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true,
+          "defaultValue": 1
+        }
+      ],
+      "packFormat": "u16"
+    },
+    {
       "kind": "const",
       "name": "variant",
       "identifier": 263,

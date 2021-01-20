@@ -2,7 +2,7 @@
   "@type": "Interface",
   "@id": "dtmi:jacdac:services:x1473a263;1",
   "displayName": "Button",
-  "description": "A push-button.",
+  "description": "A push-button, which returns to inactive position when not operated anymore.",
   "contents": [
     {
       "@type": "Telemetry",

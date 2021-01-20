@@ -2,7 +2,7 @@
   "@type": "Interface",
   "@id": "dtmi:jacdac:services:x1ad29402;1",
   "displayName": "Switch",
-  "description": "A switch.",
+  "description": "A switch, which keeps its position.",
   "contents": [
     {
       "@type": "Telemetry",
@@ -25,7 +25,7 @@
       ],
       "name": "auto_off_delay",
       "@id": "dtmi:jacdac:x1ad29402:const:autooffdelay;1",
-      "description": "Specifies the delay without activity to automatically turn off after turning on.",
+      "description": "Specifies the delay without activity to automatically turn off after turning on.\nFor example, some light switches in staircases have such a capability.",
       "unit": "second",
       "schema": "float"
     },
@@ -96,8 +96,8 @@
           "enumValue": 5
         },
         {
-          "name": "light",
-          "displayName": "Light",
+          "name": "proximity",
+          "displayName": "Proximity",
           "enumValue": 6
         }
       ]

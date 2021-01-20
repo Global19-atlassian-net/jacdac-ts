@@ -368,7 +368,7 @@
     "@type": "Interface",
     "@id": "dtmi:jacdac:services:x1473a263;1",
     "displayName": "Button",
-    "description": "A push-button.",
+    "description": "A push-button, which returns to inactive position when not operated anymore.",
     "contents": [
       {
         "@type": "Telemetry",
@@ -638,8 +638,8 @@
             "enumValue": 3
           },
           {
-            "name": "timeOfFlight",
-            "displayName": "TimeOfFlight",
+            "name": "laser",
+            "displayName": "Laser",
             "enumValue": 4
           }
         ]
@@ -1065,6 +1065,14 @@
         "@id": "dtmi:jacdac:x126f00e0:const:maxpixels;1",
         "description": "The maximum supported number of pixels.\nAll writes to `num_pixels` are clamped to `max_pixels`.",
         "schema": "integer"
+      },
+      {
+        "@type": "Property",
+        "name": "num_repeats",
+        "@id": "dtmi:jacdac:x126f00e0:rw:numrepeats;1",
+        "description": "How many times to repeat the program passed in `run` command.\nShould be set before the `run` command.\nSetting to `0` means to repeat forever.",
+        "schema": "integer",
+        "writable": true
       },
       {
         "@type": "Property",
@@ -2090,7 +2098,7 @@
     "@type": "Interface",
     "@id": "dtmi:jacdac:services:x1ad29402;1",
     "displayName": "Switch",
-    "description": "A switch.",
+    "description": "A switch, which keeps its position.",
     "contents": [
       {
         "@type": "Telemetry",
@@ -2113,7 +2121,7 @@
         ],
         "name": "auto_off_delay",
         "@id": "dtmi:jacdac:x1ad29402:const:autooffdelay;1",
-        "description": "Specifies the delay without activity to automatically turn off after turning on.",
+        "description": "Specifies the delay without activity to automatically turn off after turning on.\nFor example, some light switches in staircases have such a capability.",
         "unit": "second",
         "schema": "float"
       },
@@ -2184,8 +2192,8 @@
             "enumValue": 5
           },
           {
-            "name": "light",
-            "displayName": "Light",
+            "name": "proximity",
+            "displayName": "Proximity",
             "enumValue": 6
           }
         ]

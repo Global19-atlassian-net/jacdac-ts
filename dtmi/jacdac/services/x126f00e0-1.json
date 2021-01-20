@@ -56,6 +56,14 @@
     },
     {
       "@type": "Property",
+      "name": "num_repeats",
+      "@id": "dtmi:jacdac:x126f00e0:rw:numrepeats;1",
+      "description": "How many times to repeat the program passed in `run` command.\nShould be set before the `run` command.\nSetting to `0` means to repeat forever.",
+      "schema": "integer",
+      "writable": true
+    },
+    {
+      "@type": "Property",
       "name": "variant",
       "@id": "dtmi:jacdac:x126f00e0:const:variant;1",
       "description": "Specifies the shape of the light strip.",

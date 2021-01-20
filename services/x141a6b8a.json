@@ -20,7 +20,7 @@
         "Ultrasonic": 1,
         "Infrared": 2,
         "LiDAR": 3,
-        "TimeOfFlight": 4
+        "Laser": 4
       }
     }
   },
@@ -120,15 +120,15 @@
         {
           "name": "_",
           "unit": "m",
-          "shift": 10,
-          "type": "u6.10",
-          "storage": 2,
+          "shift": 16,
+          "type": "u16.16",
+          "storage": 4,
           "typicalMin": 0.02,
           "typicalMax": 4
         }
       ],
       "identifierName": "reading",
-      "packFormat": "u6.10"
+      "packFormat": "u16.16"
     },
     {
       "kind": "const",
@@ -139,14 +139,14 @@
         {
           "name": "_",
           "unit": "m",
-          "shift": 10,
-          "type": "u6.10",
-          "storage": 2
+          "shift": 16,
+          "type": "u16.16",
+          "storage": 4
         }
       ],
       "optional": true,
       "identifierName": "min_reading",
-      "packFormat": "u6.10"
+      "packFormat": "u16.16"
     },
     {
       "kind": "const",
@@ -157,14 +157,14 @@
         {
           "name": "_",
           "unit": "m",
-          "shift": 10,
-          "type": "u6.10",
-          "storage": 2
+          "shift": 16,
+          "type": "u16.16",
+          "storage": 4
         }
       ],
       "optional": true,
       "identifierName": "max_reading",
-      "packFormat": "u6.10"
+      "packFormat": "u16.16"
     },
     {
       "kind": "const",

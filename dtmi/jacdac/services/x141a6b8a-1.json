@@ -71,8 +71,8 @@
           "enumValue": 3
         },
         {
-          "name": "timeOfFlight",
-          "displayName": "TimeOfFlight",
+          "name": "laser",
+          "displayName": "Laser",
           "enumValue": 4
         }
       ]

@@ -9,7 +9,7 @@
     "_sensor"
   ],
   "notes": {
-    "short": "A switch."
+    "short": "A switch, which keeps its position."
   },
   "classIdentifier": 450008066,
   "enums": {
@@ -22,7 +22,7 @@
         "PushButton": 3,
         "Tactile": 4,
         "Toggle": 5,
-        "Light": 6
+        "Proximity": 6
       }
     }
   },
@@ -150,7 +150,7 @@
       "kind": "const",
       "name": "auto_off_delay",
       "identifier": 384,
-      "description": "Specifies the delay without activity to automatically turn off after turning on.",
+      "description": "Specifies the delay without activity to automatically turn off after turning on.\nFor example, some light switches in staircases have such a capability.",
       "fields": [
         {
           "name": "_",
