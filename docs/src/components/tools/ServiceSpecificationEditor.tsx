@@ -10,6 +10,9 @@ import { useDebounce } from 'use-debounce';
 import PaperBox from '../ui/PaperBox'
 import Alert from '../ui/Alert';
 import GithubPullRequestButton from '../GithubPullRequestButton';
+import Editor from 'react-simple-code-editor';
+import { highlight, languages } from 'prismjs';
+import 'prismjs/components/prism-markdown';
 
 const useStyles = makeStyles((theme: Theme) => createStyles({
     root: {
@@ -19,8 +22,6 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     },
     segment: {
         marginBottom: theme.spacing(2)
-    },
-    editor: {
     },
     pre: {
         margin: "0",
@@ -39,7 +40,8 @@ export default function ServiceSpecificationEditor() {
 
 TODO: describe your service
 
-        extends: _sensor
+    identifier: 
+    extends: _sensor
 
 ## Registers
 
@@ -64,22 +66,22 @@ TODO describe this register
         type: 'error'
     }))
     const drawerOpen = drawerType != DrawerType.None
-    const handleSourceChange = (ev: React.ChangeEvent<HTMLTextAreaElement>) => {
-        setSource(ev.target.value)
+    const handleSourceChange = (source: string) => {
+        setSource(source)
     }
+    const handleHighlight = (source: string) => highlight(source, languages.markdown)
     const servicePath = json && `services/${json.shortId || `0x${json.classIdentifier.toString(16)}`}.md`
     return (
         <Grid spacing={2} className={classes.root} container>
             <Grid key="editor" item xs={12} md={drawerOpen ? 12 : 7}>
                 <PaperBox>
                     {source !== undefined &&
-                        <TextField
-                            fullWidth={true}
-                            className={classes.editor}
-                            onChange={handleSourceChange}
-                            defaultValue={source}
-                            multiline={true}
-                            rows={42}
+                        <Editor
+                            tabSize={4}
+                            value={source}
+                            onValueChange={handleSourceChange}
+                            highlight={handleHighlight}
+                            padding={10}
                         />}
                 </PaperBox>
             </Grid>
