@@ -5,6 +5,13 @@
   "description": "A sensor that streams the state of a rectangular LED matrix.\nTo control the state of the screen, use [LED Matrix Controller](/services/led-matrix-controller) instead.",
   "contents": [
     {
+      "@type": "Telemetry",
+      "name": "brightness",
+      "@id": "dtmi:jacdac:x110d154b:ro:brightness;1",
+      "description": "Reads the general brightness of the LEDs. ``0`` when the screen is off.",
+      "schema": "integer"
+    },
+    {
       "@type": "Property",
       "name": "rows",
       "@id": "dtmi:jacdac:x110d154b:const:rows;1",

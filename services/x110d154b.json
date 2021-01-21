@@ -118,9 +118,25 @@
       "packFormat": "b"
     },
     {
+      "kind": "ro",
+      "name": "brightness",
+      "identifier": 384,
+      "description": "Reads the general brightness of the LEDs. ``0`` when the screen is off.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "",
+          "type": "u8",
+          "storage": 1,
+          "isSimpleType": true
+        }
+      ],
+      "packFormat": "u8"
+    },
+    {
       "kind": "const",
       "name": "rows",
-      "identifier": 131,
+      "identifier": 385,
       "description": "Number of rows on the screen",
       "fields": [
         {
@@ -136,7 +152,7 @@
     {
       "kind": "const",
       "name": "columns",
-      "identifier": 132,
+      "identifier": 386,
       "description": "Number of columns on the screen",
       "fields": [
         {

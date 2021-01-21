@@ -76,7 +76,7 @@
     {
       "kind": "const",
       "name": "rows",
-      "identifier": 131,
+      "identifier": 385,
       "description": "Number of rows on the screen",
       "fields": [
         {
@@ -92,7 +92,7 @@
     {
       "kind": "const",
       "name": "columns",
-      "identifier": 132,
+      "identifier": 386,
       "description": "Number of columns on the screen",
       "fields": [
         {
