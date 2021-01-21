@@ -119,7 +119,7 @@
     },
     {
       "kind": "const",
-      "name": "precipitation_precipitation",
+      "name": "precipitation_precision",
       "identifier": 264,
       "description": "Typically the amount of rain needed for tipping the bucket.",
       "fields": [

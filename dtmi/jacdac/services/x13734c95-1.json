@@ -13,8 +13,8 @@
     },
     {
       "@type": "Property",
-      "name": "precipitation_precipitation",
-      "@id": "dtmi:jacdac:x13734c95:const:precipitationprecipitation;1",
+      "name": "precipitation_precision",
+      "@id": "dtmi:jacdac:x13734c95:const:precipitationprecision;1",
       "description": "Typically the amount of rain needed for tipping the bucket.",
       "schema": "float"
     }
