@@ -39,11 +39,11 @@ self.__precacheManifest = [
     "url": "styles-4d1902e7bd39726e0535.js"
   },
   {
-    "url": "app-74867cdab5d5dc25af62.js"
+    "url": "app-7ba458b8ca513e2e88fe.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "5720720faa8085ef1917eaf2e846a050"
+    "revision": "3f5f1cf6de3d64585880f8be06b0e30e"
   },
   {
     "url": "static/webfonts/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"
@@ -63,7 +63,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2214083594.json",
-    "revision": "4a8d42511be852fef26f0f192cc247e9"
+    "revision": "7d60832468d9cca856d554961f4c188e"
   },
   {
     "url": "page-data/sq/d/2270080012.json",
@@ -75,7 +75,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2744294623.json",
-    "revision": "9bf936baf201d60464bc7b2080d8d61b"
+    "revision": "22aceafa84065dc9d8ab9db42d1161c3"
   },
   {
     "url": "page-data/sq/d/3159585216.json",
@@ -91,7 +91,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "93d918f56af8939c925c7ab6ca2dd9ea"
+    "revision": "5e9446c1b4d41af5bc5f98497043a85c"
   },
   {
     "url": "polyfill-860c3442a8635066b9ae.js"
@@ -323,6 +323,10 @@ self.__precacheManifest = [
   {
     "url": "page-data/services/prototest/page-data.json",
     "revision": "84961ec1927e902f7befb5b366dd8709"
+  },
+  {
+    "url": "page-data/services/raingauge/page-data.json",
+    "revision": "0320a730398f98f088a8e6b3319781e7"
   },
   {
     "url": "page-data/services/relay/page-data.json",
@@ -588,7 +592,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/jacdac-ts/app-74867cdab5d5dc25af62.js`))) {
+  if (!resources || !(await caches.match(`/jacdac-ts/app-7ba458b8ca513e2e88fe.js`))) {
     return await fetch(event.request)
   }
 

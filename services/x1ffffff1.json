@@ -233,12 +233,28 @@
         {
           "name": "_",
           "unit": "",
-          "type": "i32",
-          "storage": -4,
+          "type": "u32",
+          "storage": 4,
           "isSimpleType": true
         }
       ],
-      "packFormat": "i32"
+      "packFormat": "u32"
+    },
+    {
+      "kind": "const",
+      "name": "reading_resolution",
+      "identifier": 264,
+      "description": "Smallest, yet distinguishable change in reading.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "",
+          "type": "u32",
+          "storage": 4,
+          "isSimpleType": true
+        }
+      ],
+      "packFormat": "u32"
     },
     {
       "kind": "rw",
