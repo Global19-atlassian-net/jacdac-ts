@@ -458,6 +458,91 @@
   },
   {
     "@type": "Interface",
+    "@id": "dtmi:jacdac:services:x1f37c56a;1",
+    "displayName": "Character Screen",
+    "description": "A screen that displays characters.",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "message",
+        "@id": "dtmi:jacdac:x1f37c56a:rw:message;1",
+        "description": "Text to show. Use `\\n` to break lines.",
+        "schema": "string",
+        "writable": true
+      },
+      {
+        "@type": "Property",
+        "name": "variant",
+        "@id": "dtmi:jacdac:x1f37c56a:const:variant;1",
+        "description": "Describes the type of character LED screen.",
+        "schema": "dtmi:jacdac:x1f37c56a:variant;1"
+      },
+      {
+        "@type": "Property",
+        "name": "text_direction",
+        "@id": "dtmi:jacdac:x1f37c56a:rw:textdirection;1",
+        "description": "Specifies the RTL or LTR direction of the text.",
+        "schema": "dtmi:jacdac:x1f37c56a:textdirection;1",
+        "writable": true
+      },
+      {
+        "@type": "Property",
+        "name": "rows",
+        "@id": "dtmi:jacdac:x1f37c56a:const:rows;1",
+        "description": "Gets the number of rows.",
+        "schema": "integer"
+      },
+      {
+        "@type": "Property",
+        "name": "columns",
+        "@id": "dtmi:jacdac:x1f37c56a:const:columns;1",
+        "description": "Gets the number of columns.",
+        "schema": "integer"
+      }
+    ],
+    "extends": [
+      "dtmi:jacdac:services:x1ffffff3;1"
+    ],
+    "schemas": [
+      {
+        "@type": "Enum",
+        "@id": "dtmi:jacdac:x1f37c56a:variant;1",
+        "valueSchema": "integer",
+        "enumValues": [
+          {
+            "name": "lCD",
+            "displayName": "LCD",
+            "enumValue": 1
+          },
+          {
+            "name": "oLED",
+            "displayName": "OLED",
+            "enumValue": 2
+          }
+        ]
+      },
+      {
+        "@type": "Enum",
+        "@id": "dtmi:jacdac:x1f37c56a:textdirection;1",
+        "valueSchema": "integer",
+        "enumValues": [
+          {
+            "name": "leftToRight",
+            "displayName": "LeftToRight",
+            "enumValue": 1
+          },
+          {
+            "name": "rightToLeft",
+            "displayName": "RightToLeft",
+            "enumValue": 2
+          }
+        ]
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@type": "Interface",
     "@id": "dtmi:jacdac:services:x16ad7cd5;1",
     "displayName": "CODAL Message Bus",
     "description": "A service that allows passing events through the [CODAL Message Bus](https://lancaster-university.github.io/microbit-docs/ubit/messageBus/)\n* ``id`` is a unique identifier that identifies a component in the device. Use ``0`` to address all sources. The value of other identifiers is typically hardware dependent.\n* ``event`` is an identifier that determines the event type. Use ``0`` as a wildcard.",
@@ -1904,6 +1989,98 @@
   },
   {
     "@type": "Interface",
+    "@id": "dtmi:jacdac:services:x183fe656;1",
+    "displayName": "Relay",
+    "description": "A switching relay.",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "conducting",
+        "@id": "dtmi:jacdac:x183fe656:rw:conducting;1",
+        "description": "Indicates whether the relay is currently on (closed).",
+        "schema": "boolean",
+        "writable": true
+      },
+      {
+        "@type": "Property",
+        "name": "variant",
+        "@id": "dtmi:jacdac:x183fe656:const:variant;1",
+        "description": "Describes the type of relay used.",
+        "schema": "dtmi:jacdac:x183fe656:variant;1"
+      },
+      {
+        "@type": [
+          "Telemetry",
+          "Event"
+        ],
+        "name": "on",
+        "@id": "dtmi:jacdac:x183fe656:event:on;1",
+        "description": "Emitted when relay goes from ``off`` to ``on`` state.",
+        "schema": "dtmi:jacdac:x183fe656:event;1"
+      },
+      {
+        "@type": [
+          "Telemetry",
+          "Event"
+        ],
+        "name": "off",
+        "@id": "dtmi:jacdac:x183fe656:event:off;1",
+        "description": "Emitted when relay goes from ``on`` to ``off`` state.",
+        "schema": "dtmi:jacdac:x183fe656:event;1"
+      },
+      {
+        "@type": [
+          "Property",
+          "Current"
+        ],
+        "name": "max_switching_current",
+        "@id": "dtmi:jacdac:x183fe656:const:maxswitchingcurrent;1",
+        "description": "Maximum switching current for a resistive load.",
+        "unit": "ampere",
+        "schema": "integer"
+      }
+    ],
+    "extends": [
+      "dtmi:jacdac:services:x1ffffff3;1"
+    ],
+    "schemas": [
+      {
+        "@id": "dtmi:jacdac:x183fe656:event;1",
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "count",
+            "schema": "integer"
+          }
+        ]
+      },
+      {
+        "@type": "Enum",
+        "@id": "dtmi:jacdac:x183fe656:variant;1",
+        "valueSchema": "integer",
+        "enumValues": [
+          {
+            "name": "electromechanical",
+            "displayName": "Electromechanical",
+            "enumValue": 1
+          },
+          {
+            "name": "solidState",
+            "displayName": "SolidState",
+            "enumValue": 2
+          },
+          {
+            "name": "reed",
+            "displayName": "Reed",
+            "enumValue": 3
+          }
+        ]
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@type": "Interface",
     "@id": "dtmi:jacdac:services:x119c3ad1;1",
     "displayName": "Role Manager",
     "description": "Assign roles to devices on the JACDAC bus.",
@@ -2132,7 +2309,7 @@
         ],
         "name": "on",
         "@id": "dtmi:jacdac:x1ad29402:event:on;1",
-        "description": "Emitted when button goes from ``off`` to ``on``.",
+        "description": "Emitted when switch goes from ``off`` to ``on``.",
         "schema": "dtmi:jacdac:x1ad29402:event;1"
       },
       {
@@ -2142,7 +2319,7 @@
         ],
         "name": "off",
         "@id": "dtmi:jacdac:x1ad29402:event:off;1",
-        "description": "Emitted when button goes from ``on`` to ``off``.",
+        "description": "Emitted when switch goes from ``on`` to ``off``.",
         "schema": "dtmi:jacdac:x1ad29402:event;1"
       }
     ],

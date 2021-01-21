@@ -36,7 +36,7 @@
       ],
       "name": "on",
       "@id": "dtmi:jacdac:x1ad29402:event:on;1",
-      "description": "Emitted when button goes from ``off`` to ``on``.",
+      "description": "Emitted when switch goes from ``off`` to ``on``.",
       "schema": "dtmi:jacdac:x1ad29402:event;1"
     },
     {
@@ -46,7 +46,7 @@
       ],
       "name": "off",
       "@id": "dtmi:jacdac:x1ad29402:event:off;1",
-      "description": "Emitted when button goes from ``on`` to ``off``.",
+      "description": "Emitted when switch goes from ``on`` to ``off``.",
       "schema": "dtmi:jacdac:x1ad29402:event;1"
     }
   ],

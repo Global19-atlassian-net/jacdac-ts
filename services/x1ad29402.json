@@ -167,7 +167,7 @@
       "kind": "event",
       "name": "on",
       "identifier": 1,
-      "description": "Emitted when button goes from ``off`` to ``on``.",
+      "description": "Emitted when switch goes from ``off`` to ``on``.",
       "fields": [],
       "identifierName": "active"
     },
@@ -175,7 +175,7 @@
       "kind": "event",
       "name": "off",
       "identifier": 2,
-      "description": "Emitted when button goes from ``on`` to ``off``.",
+      "description": "Emitted when switch goes from ``on`` to ``off``.",
       "fields": [],
       "identifierName": "inactive"
     }

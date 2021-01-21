@@ -1,0 +1,119 @@
+{
+  "name": "Relay",
+  "status": "experimental",
+  "shortId": "relay",
+  "camelName": "relay",
+  "shortName": "relay",
+  "extends": [
+    "_base"
+  ],
+  "notes": {
+    "short": "A switching relay."
+  },
+  "classIdentifier": 406840918,
+  "enums": {
+    "Variant": {
+      "name": "Variant",
+      "storage": 4,
+      "members": {
+        "Electromechanical": 1,
+        "SolidState": 2,
+        "Reed": 3
+      }
+    }
+  },
+  "packets": [
+    {
+      "kind": "ro",
+      "name": "status_code",
+      "identifier": 259,
+      "description": "Reports the current state or error status of the device. ``code`` is a standardized value from \nthe JACDAC error codes. ``vendor_code`` is any vendor specific error code describing the device\nstate. This report is typically not queried, when a device has an error, it will typically\nadd this report in frame along with the announce packet.",
+      "fields": [
+        {
+          "name": "code",
+          "unit": "",
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true
+        },
+        {
+          "name": "vendor_code",
+          "unit": "",
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true
+        }
+      ],
+      "optional": true,
+      "identifierName": "status_code",
+      "packFormat": "u16 u16",
+      "derived": "_base"
+    },
+    {
+      "kind": "rw",
+      "name": "conducting",
+      "identifier": 1,
+      "description": "Indicates whether the relay is currently on (closed).",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "",
+          "type": "bool",
+          "storage": 1
+        }
+      ],
+      "identifierName": "intensity",
+      "packFormat": "u8"
+    },
+    {
+      "kind": "const",
+      "name": "variant",
+      "identifier": 263,
+      "description": "Describes the type of relay used.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "",
+          "type": "Variant",
+          "storage": 4
+        }
+      ],
+      "optional": true,
+      "identifierName": "variant",
+      "packFormat": "u32"
+    },
+    {
+      "kind": "event",
+      "name": "on",
+      "identifier": 1,
+      "description": "Emitted when relay goes from ``off`` to ``on`` state.",
+      "fields": [],
+      "identifierName": "active"
+    },
+    {
+      "kind": "event",
+      "name": "off",
+      "identifier": 2,
+      "description": "Emitted when relay goes from ``on`` to ``off`` state.",
+      "fields": [],
+      "identifierName": "inactive"
+    },
+    {
+      "kind": "const",
+      "name": "max_switching_current",
+      "identifier": 384,
+      "description": "Maximum switching current for a resistive load.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "A",
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true
+        }
+      ],
+      "optional": true,
+      "packFormat": "u16"
+    }
+  ]
+}
