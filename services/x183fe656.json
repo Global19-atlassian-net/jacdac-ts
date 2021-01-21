@@ -51,9 +51,9 @@
     },
     {
       "kind": "rw",
-      "name": "conducting",
+      "name": "closed",
       "identifier": 1,
-      "description": "Indicates whether the relay is currently on (closed).",
+      "description": "Indicates whether the relay circuit is currently on (closed) or off (closed).",
       "fields": [
         {
           "name": "_",

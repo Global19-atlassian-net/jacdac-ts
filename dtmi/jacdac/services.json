@@ -1995,9 +1995,9 @@
     "contents": [
       {
         "@type": "Property",
-        "name": "conducting",
-        "@id": "dtmi:jacdac:x183fe656:rw:conducting;1",
-        "description": "Indicates whether the relay is currently on (closed).",
+        "name": "closed",
+        "@id": "dtmi:jacdac:x183fe656:rw:closed;1",
+        "description": "Indicates whether the relay circuit is currently on (closed) or off (closed).",
         "schema": "boolean",
         "writable": true
       },
