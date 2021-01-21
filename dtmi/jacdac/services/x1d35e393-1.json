@@ -6,17 +6,9 @@
   "contents": [
     {
       "@type": "Property",
-      "name": "enabled",
-      "@id": "dtmi:jacdac:x1d35e393:rw:enabled;1",
-      "description": "Disables or enables the whole screen.",
-      "schema": "boolean",
-      "writable": true
-    },
-    {
-      "@type": "Property",
       "name": "brightness",
       "@id": "dtmi:jacdac:x1d35e393:rw:brightness;1",
-      "description": "Sets the general brightness of the LEDs.",
+      "description": "Sets the general brightness of the LEDs. ``0`` turns off the screen.",
       "schema": "integer",
       "writable": true
     },

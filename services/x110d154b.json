@@ -116,6 +116,38 @@
       ],
       "identifierName": "reading",
       "packFormat": "b"
+    },
+    {
+      "kind": "const",
+      "name": "rows",
+      "identifier": 131,
+      "description": "Number of rows on the screen",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "#",
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true
+        }
+      ],
+      "packFormat": "u16"
+    },
+    {
+      "kind": "const",
+      "name": "columns",
+      "identifier": 132,
+      "description": "Number of columns on the screen",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "#",
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true
+        }
+      ],
+      "packFormat": "u16"
     }
   ]
 }

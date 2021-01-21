@@ -42,7 +42,7 @@
     {
       "kind": "rw",
       "name": "leds",
-      "identifier": 128,
+      "identifier": 2,
       "description": "Read or writes the state of the screen where pixel on/off state is \nstored as a bit, column by column. The column should be byte aligned.",
       "fields": [
         {
@@ -53,28 +53,14 @@
           "isSimpleType": true
         }
       ],
+      "identifierName": "value",
       "packFormat": "b"
     },
     {
       "kind": "rw",
-      "name": "enabled",
-      "identifier": 129,
-      "description": "Disables or enables the whole screen.",
-      "fields": [
-        {
-          "name": "_",
-          "unit": "",
-          "type": "bool",
-          "storage": 1
-        }
-      ],
-      "packFormat": "u8"
-    },
-    {
-      "kind": "rw",
       "name": "brightness",
-      "identifier": 130,
-      "description": "Sets the general brightness of the LEDs.",
+      "identifier": 1,
+      "description": "Sets the general brightness of the LEDs. ``0`` turns off the screen.",
       "fields": [
         {
           "name": "_",
@@ -84,6 +70,7 @@
           "isSimpleType": true
         }
       ],
+      "identifierName": "intensity",
       "packFormat": "u8"
     },
     {

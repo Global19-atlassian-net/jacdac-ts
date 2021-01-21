@@ -3,7 +3,22 @@
   "@id": "dtmi:jacdac:services:x110d154b;1",
   "displayName": "LED Matrix Display",
   "description": "A sensor that streams the state of a rectangular LED matrix.\nTo control the state of the screen, use [LED Matrix Controller](/services/led-matrix-controller) instead.",
-  "contents": [],
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "rows",
+      "@id": "dtmi:jacdac:x110d154b:const:rows;1",
+      "description": "Number of rows on the screen",
+      "schema": "integer"
+    },
+    {
+      "@type": "Property",
+      "name": "columns",
+      "@id": "dtmi:jacdac:x110d154b:const:columns;1",
+      "description": "Number of columns on the screen",
+      "schema": "integer"
+    }
+  ],
   "extends": [
     "dtmi:jacdac:services:x1ffffff3;1",
     "dtmi:jacdac:services:x1ffffff2;1"

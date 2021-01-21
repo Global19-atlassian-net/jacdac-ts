@@ -1049,17 +1049,9 @@
     "contents": [
       {
         "@type": "Property",
-        "name": "enabled",
-        "@id": "dtmi:jacdac:x1d35e393:rw:enabled;1",
-        "description": "Disables or enables the whole screen.",
-        "schema": "boolean",
-        "writable": true
-      },
-      {
-        "@type": "Property",
         "name": "brightness",
         "@id": "dtmi:jacdac:x1d35e393:rw:brightness;1",
-        "description": "Sets the general brightness of the LEDs.",
+        "description": "Sets the general brightness of the LEDs. ``0`` turns off the screen.",
         "schema": "integer",
         "writable": true
       },
@@ -1088,7 +1080,22 @@
     "@id": "dtmi:jacdac:services:x110d154b;1",
     "displayName": "LED Matrix Display",
     "description": "A sensor that streams the state of a rectangular LED matrix.\nTo control the state of the screen, use [LED Matrix Controller](/services/led-matrix-controller) instead.",
-    "contents": [],
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "rows",
+        "@id": "dtmi:jacdac:x110d154b:const:rows;1",
+        "description": "Number of rows on the screen",
+        "schema": "integer"
+      },
+      {
+        "@type": "Property",
+        "name": "columns",
+        "@id": "dtmi:jacdac:x110d154b:const:columns;1",
+        "description": "Number of columns on the screen",
+        "schema": "integer"
+      }
+    ],
     "extends": [
       "dtmi:jacdac:services:x1ffffff3;1",
       "dtmi:jacdac:services:x1ffffff2;1"
