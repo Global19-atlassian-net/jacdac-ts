@@ -1,0 +1,193 @@
+{
+  "name": "Equivalent CO²",
+  "status": "experimental",
+  "shortId": "eco2",
+  "camelName": "eCO2",
+  "shortName": "eCO2",
+  "extends": [
+    "_base",
+    "_sensor"
+  ],
+  "notes": {
+    "short": "Measures equivalent CO² levels."
+  },
+  "classIdentifier": 379362758,
+  "enums": {},
+  "packets": [
+    {
+      "kind": "ro",
+      "name": "status_code",
+      "identifier": 259,
+      "description": "Reports the current state or error status of the device. ``code`` is a standardized value from \nthe JACDAC error codes. ``vendor_code`` is any vendor specific error code describing the device\nstate. This report is typically not queried, when a device has an error, it will typically\nadd this report in frame along with the announce packet.",
+      "fields": [
+        {
+          "name": "code",
+          "unit": "",
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true
+        },
+        {
+          "name": "vendor_code",
+          "unit": "",
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true
+        }
+      ],
+      "optional": true,
+      "identifierName": "status_code",
+      "packFormat": "u16 u16",
+      "derived": "_base"
+    },
+    {
+      "kind": "rw",
+      "name": "streaming_samples",
+      "identifier": 3,
+      "description": "Asks device to stream a given number of samples\n(clients will typically write `255` to this register every second or so, while streaming is required).",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "",
+          "type": "u8",
+          "storage": 1,
+          "isSimpleType": true
+        }
+      ],
+      "internal": true,
+      "identifierName": "streaming_samples",
+      "packFormat": "u8",
+      "derived": "_sensor"
+    },
+    {
+      "kind": "rw",
+      "name": "streaming_interval",
+      "identifier": 4,
+      "description": "Period between packets of data when streaming in milliseconds.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "ms",
+          "type": "u32",
+          "storage": 4,
+          "isSimpleType": true,
+          "defaultValue": 100,
+          "typicalMin": 1,
+          "typicalMax": 60000
+        }
+      ],
+      "identifierName": "streaming_interval",
+      "packFormat": "u32",
+      "derived": "_sensor"
+    },
+    {
+      "kind": "const",
+      "name": "streaming_preferred_interval",
+      "identifier": 258,
+      "description": "Preferred default streaming interval for sensor in milliseconds.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "ms",
+          "type": "u32",
+          "storage": 4,
+          "isSimpleType": true
+        }
+      ],
+      "internal": true,
+      "optional": true,
+      "identifierName": "streaming_preferred_interval",
+      "packFormat": "u32",
+      "derived": "_sensor"
+    },
+    {
+      "kind": "ro",
+      "name": "e_CO2",
+      "identifier": 257,
+      "description": "Equivalent CO² (eCO²) readings.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "ppm",
+          "shift": 10,
+          "type": "u22.10",
+          "storage": 4,
+          "typicalMin": 400,
+          "typicalMax": 8192
+        }
+      ],
+      "identifierName": "reading",
+      "packFormat": "u22.10"
+    },
+    {
+      "kind": "ro",
+      "name": "e_CO2_error",
+      "identifier": 262,
+      "description": "Error on the reading value.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "ppm",
+          "shift": 10,
+          "type": "u22.10",
+          "storage": 4
+        }
+      ],
+      "identifierName": "reading_error",
+      "packFormat": "u22.10"
+    },
+    {
+      "kind": "const",
+      "name": "min_e_CO2",
+      "identifier": 260,
+      "description": "Minimum measurable value",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "ppm",
+          "shift": 10,
+          "type": "u22.10",
+          "storage": 4
+        }
+      ],
+      "optional": true,
+      "identifierName": "min_reading",
+      "packFormat": "u22.10"
+    },
+    {
+      "kind": "const",
+      "name": "max_e_CO2",
+      "identifier": 261,
+      "description": "Minimum measurable value",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "ppm",
+          "shift": 10,
+          "type": "u22.10",
+          "storage": 4
+        }
+      ],
+      "optional": true,
+      "identifierName": "max_reading",
+      "packFormat": "u22.10"
+    },
+    {
+      "kind": "const",
+      "name": "conditioning_period",
+      "identifier": 384,
+      "description": "Time required to achieve good sensor stability before measuring after long idle period.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "s",
+          "type": "u32",
+          "storage": 4,
+          "isSimpleType": true
+        }
+      ],
+      "optional": true,
+      "packFormat": "u32"
+    }
+  ]
+}

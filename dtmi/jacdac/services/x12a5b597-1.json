@@ -1,0 +1,52 @@
+{
+  "@type": "Interface",
+  "@id": "dtmi:jacdac:services:x12a5b597;1",
+  "displayName": "Volatile organic compound",
+  "description": "Measures equivalent VOC levels.",
+  "contents": [
+    {
+      "@type": "Telemetry",
+      "name": "VOC",
+      "@id": "dtmi:jacdac:x12a5b597:ro:voc;1",
+      "description": "Total volatile organic compound readings.",
+      "schema": "float"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "VOC_error",
+      "@id": "dtmi:jacdac:x12a5b597:ro:vocerror;1",
+      "description": "Error on the reading data",
+      "schema": "float"
+    },
+    {
+      "@type": "Property",
+      "name": "min_TVOC",
+      "@id": "dtmi:jacdac:x12a5b597:const:mintvoc;1",
+      "description": "Minimum measurable value",
+      "schema": "float"
+    },
+    {
+      "@type": "Property",
+      "name": "max_TVOC",
+      "@id": "dtmi:jacdac:x12a5b597:const:maxtvoc;1",
+      "description": "Minimum measurable value",
+      "schema": "float"
+    },
+    {
+      "@type": [
+        "Property",
+        "TimeSpan"
+      ],
+      "name": "conditioning_period",
+      "@id": "dtmi:jacdac:x12a5b597:const:conditioningperiod;1",
+      "description": "Time required to achieve good sensor stability before measuring after long idle period.",
+      "unit": "second",
+      "schema": "integer"
+    }
+  ],
+  "extends": [
+    "dtmi:jacdac:services:x1ffffff3;1",
+    "dtmi:jacdac:services:x1ffffff2;1"
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

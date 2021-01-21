@@ -1,8 +1,8 @@
 {
   "@type": "Interface",
   "@id": "dtmi:jacdac:services:x126f00e0;1",
-  "displayName": "Light",
-  "description": "A controller for strips of RGB LEDs.",
+  "displayName": "LED Pixel",
+  "description": "A controller for strips of individually controlled RGB LEDs.",
   "contents": [
     {
       "@type": "Property",

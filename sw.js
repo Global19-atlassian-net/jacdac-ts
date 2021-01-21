@@ -39,11 +39,11 @@ self.__precacheManifest = [
     "url": "styles-4d1902e7bd39726e0535.js"
   },
   {
-    "url": "app-48e0045644185d408553.js"
+    "url": "app-4b598a51a7cef094a14c.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "f9fa4886036d323fe096eb6905241b40"
+    "revision": "c09a2ccba9242829449d77f517cc2d42"
   },
   {
     "url": "static/webfonts/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"
@@ -63,7 +63,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2214083594.json",
-    "revision": "7d60832468d9cca856d554961f4c188e"
+    "revision": "fc35cdf4064666b0386dcb6667601d1b"
   },
   {
     "url": "page-data/sq/d/2270080012.json",
@@ -75,7 +75,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2744294623.json",
-    "revision": "22aceafa84065dc9d8ab9db42d1161c3"
+    "revision": "3a123eb05f2c732b457b8a2a8b9d26f7"
   },
   {
     "url": "page-data/sq/d/3159585216.json",
@@ -91,7 +91,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "91043c4a4ea3b6aac7a79411a45e3478"
+    "revision": "102830738d486efb01a8b7f3df32f6b7"
   },
   {
     "url": "polyfill-860c3442a8635066b9ae.js"
@@ -225,6 +225,10 @@ self.__precacheManifest = [
     "revision": "ebbd70789f152f2b7919b60f14d79a34"
   },
   {
+    "url": "page-data/services/arcadegamepad/page-data.json",
+    "revision": "58495fa8596a7a7479330cb7113df144"
+  },
+  {
     "url": "page-data/services/barometer/page-data.json",
     "revision": "0451395a76956324ae949362027f5081"
   },
@@ -257,8 +261,8 @@ self.__precacheManifest = [
     "revision": "16ae5871e46b07498653ee75391b98a3"
   },
   {
-    "url": "page-data/services/gamepad/page-data.json",
-    "revision": "2064d0c9987ab7e86dcb8bfe722ae50b"
+    "url": "page-data/services/eco2/page-data.json",
+    "revision": "72dc0bc542324af6659c193e7e6e3e4b"
   },
   {
     "url": "page-data/services/humidity/page-data.json",
@@ -281,12 +285,20 @@ self.__precacheManifest = [
     "revision": "c8b3c01acbded83757767385770410cd"
   },
   {
-    "url": "page-data/services/light/page-data.json",
-    "revision": "487d6c9346cefeb33c689bc7ba533e19"
+    "url": "page-data/services/ledpixel/page-data.json",
+    "revision": "3f14501728a2253e6931d84e98ef6927"
+  },
+  {
+    "url": "page-data/services/lightlevel/page-data.json",
+    "revision": "1bd960758fda82e9f0d1d357bc2dc2cb"
   },
   {
     "url": "page-data/services/logger/page-data.json",
     "revision": "6cf90807da40d4f2b06a58bdb152a499"
+  },
+  {
+    "url": "page-data/services/matrixkeypad/page-data.json",
+    "revision": "314c583d981aa3660a9cb8a718dffac1"
   },
   {
     "url": "page-data/services/microphone/page-data.json",
@@ -369,8 +381,20 @@ self.__precacheManifest = [
     "revision": "3afd62f357db0bbe53a62d1bb6c6275b"
   },
   {
+    "url": "page-data/services/voc/page-data.json",
+    "revision": "1595145f6516783cc77df51bb3291c13"
+  },
+  {
     "url": "page-data/services/wifi/page-data.json",
     "revision": "fa356981a6ee30f102194e9fd062f3b5"
+  },
+  {
+    "url": "page-data/services/winddirection/page-data.json",
+    "revision": "f11058f3fa93dc37d311a9b7b31a68c7"
+  },
+  {
+    "url": "page-data/services/windspeed/page-data.json",
+    "revision": "2b1aba2949ceb24f37cb390f0e267aab"
   },
   {
     "url": "component---src-pages-tools-azure-device-twin-designer-mdx-6c9fedd2e1adbc891978.js"
@@ -592,7 +616,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/jacdac-ts/app-48e0045644185d408553.js`))) {
+  if (!resources || !(await caches.match(`/jacdac-ts/app-4b598a51a7cef094a14c.js`))) {
     return await fetch(event.request)
   }
 

@@ -1,46 +1,22 @@
 {
   "@type": "Interface",
   "@id": "dtmi:jacdac:services:x1deaa06e;1",
-  "displayName": "Gamepad",
-  "description": "A gamepad with direction and action buttons for 1 or more players.",
+  "displayName": "Arcade Gamepad",
+  "description": "A gamepad with direction and action buttons for one players.",
   "contents": [
     {
       "@type": "Telemetry",
       "name": "down",
       "@id": "dtmi:jacdac:x1deaa06e:event:down;1",
       "description": "Emitted when button goes from inactive to active.",
-      "schema": {
-        "@type": "Object",
-        "fields": [
-          {
-            "name": "button",
-            "schema": "dtmi:jacdac:x1deaa06e:button;1"
-          },
-          {
-            "name": "player_index",
-            "schema": "integer"
-          }
-        ]
-      }
+      "schema": "dtmi:jacdac:x1deaa06e:button;1"
     },
     {
       "@type": "Telemetry",
       "name": "up",
       "@id": "dtmi:jacdac:x1deaa06e:event:up;1",
       "description": "Emitted when button goes from active to inactive.",
-      "schema": {
-        "@type": "Object",
-        "fields": [
-          {
-            "name": "button",
-            "schema": "dtmi:jacdac:x1deaa06e:button;1"
-          },
-          {
-            "name": "player_index",
-            "schema": "integer"
-          }
-        ]
-      }
+      "schema": "dtmi:jacdac:x1deaa06e:button;1"
     }
   ],
   "extends": [

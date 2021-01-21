@@ -294,6 +294,102 @@
   },
   {
     "@type": "Interface",
+    "@id": "dtmi:jacdac:services:x1deaa06e;1",
+    "displayName": "Arcade Gamepad",
+    "description": "A gamepad with direction and action buttons for one players.",
+    "contents": [
+      {
+        "@type": "Telemetry",
+        "name": "down",
+        "@id": "dtmi:jacdac:x1deaa06e:event:down;1",
+        "description": "Emitted when button goes from inactive to active.",
+        "schema": "dtmi:jacdac:x1deaa06e:button;1"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "up",
+        "@id": "dtmi:jacdac:x1deaa06e:event:up;1",
+        "description": "Emitted when button goes from active to inactive.",
+        "schema": "dtmi:jacdac:x1deaa06e:button;1"
+      }
+    ],
+    "extends": [
+      "dtmi:jacdac:services:x1ffffff3;1",
+      "dtmi:jacdac:services:x1ffffff2;1"
+    ],
+    "schemas": [
+      {
+        "@id": "dtmi:jacdac:x1deaa06e:event;1",
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "count",
+            "schema": "integer"
+          }
+        ]
+      },
+      {
+        "@type": "Enum",
+        "@id": "dtmi:jacdac:x1deaa06e:button;1",
+        "valueSchema": "integer",
+        "enumValues": [
+          {
+            "name": "left",
+            "displayName": "Left",
+            "enumValue": 1
+          },
+          {
+            "name": "up",
+            "displayName": "Up",
+            "enumValue": 2
+          },
+          {
+            "name": "right",
+            "displayName": "Right",
+            "enumValue": 3
+          },
+          {
+            "name": "down",
+            "displayName": "Down",
+            "enumValue": 4
+          },
+          {
+            "name": "a",
+            "displayName": "A",
+            "enumValue": 5
+          },
+          {
+            "name": "b",
+            "displayName": "B",
+            "enumValue": 6
+          },
+          {
+            "name": "menu",
+            "displayName": "Menu",
+            "enumValue": 7
+          },
+          {
+            "name": "menuAlt",
+            "displayName": "MenuAlt",
+            "enumValue": 8
+          },
+          {
+            "name": "reset",
+            "displayName": "Reset",
+            "enumValue": 9
+          },
+          {
+            "name": "exit",
+            "displayName": "Exit",
+            "enumValue": 10
+          }
+        ]
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@type": "Interface",
     "@id": "dtmi:jacdac:services:x1e117cea;1",
     "displayName": "Barometer",
     "description": "A sensor measuring air pressure of outside environment.",
@@ -734,121 +830,53 @@
   },
   {
     "@type": "Interface",
-    "@id": "dtmi:jacdac:services:x1deaa06e;1",
-    "displayName": "Gamepad",
-    "description": "A gamepad with direction and action buttons for 1 or more players.",
+    "@id": "dtmi:jacdac:services:x169c9dc6;1",
+    "displayName": "Equivalent CO²",
+    "description": "Measures equivalent CO² levels.",
     "contents": [
       {
         "@type": "Telemetry",
-        "name": "down",
-        "@id": "dtmi:jacdac:x1deaa06e:event:down;1",
-        "description": "Emitted when button goes from inactive to active.",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            {
-              "name": "button",
-              "schema": "dtmi:jacdac:x1deaa06e:button;1"
-            },
-            {
-              "name": "player_index",
-              "schema": "integer"
-            }
-          ]
-        }
+        "name": "e_CO2",
+        "@id": "dtmi:jacdac:x169c9dc6:ro:eco2;1",
+        "description": "Equivalent CO² (eCO²) readings.",
+        "schema": "float"
       },
       {
         "@type": "Telemetry",
-        "name": "up",
-        "@id": "dtmi:jacdac:x1deaa06e:event:up;1",
-        "description": "Emitted when button goes from active to inactive.",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            {
-              "name": "button",
-              "schema": "dtmi:jacdac:x1deaa06e:button;1"
-            },
-            {
-              "name": "player_index",
-              "schema": "integer"
-            }
-          ]
-        }
+        "name": "e_CO2_error",
+        "@id": "dtmi:jacdac:x169c9dc6:ro:eco2error;1",
+        "description": "Error on the reading value.",
+        "schema": "float"
+      },
+      {
+        "@type": "Property",
+        "name": "min_e_CO2",
+        "@id": "dtmi:jacdac:x169c9dc6:const:mineco2;1",
+        "description": "Minimum measurable value",
+        "schema": "float"
+      },
+      {
+        "@type": "Property",
+        "name": "max_e_CO2",
+        "@id": "dtmi:jacdac:x169c9dc6:const:maxeco2;1",
+        "description": "Minimum measurable value",
+        "schema": "float"
+      },
+      {
+        "@type": [
+          "Property",
+          "TimeSpan"
+        ],
+        "name": "conditioning_period",
+        "@id": "dtmi:jacdac:x169c9dc6:const:conditioningperiod;1",
+        "description": "Time required to achieve good sensor stability before measuring after long idle period.",
+        "unit": "second",
+        "schema": "integer"
       }
     ],
     "extends": [
       "dtmi:jacdac:services:x1ffffff3;1",
       "dtmi:jacdac:services:x1ffffff2;1"
-    ],
-    "schemas": [
-      {
-        "@id": "dtmi:jacdac:x1deaa06e:event;1",
-        "@type": "Object",
-        "fields": [
-          {
-            "name": "count",
-            "schema": "integer"
-          }
-        ]
-      },
-      {
-        "@type": "Enum",
-        "@id": "dtmi:jacdac:x1deaa06e:button;1",
-        "valueSchema": "integer",
-        "enumValues": [
-          {
-            "name": "left",
-            "displayName": "Left",
-            "enumValue": 1
-          },
-          {
-            "name": "up",
-            "displayName": "Up",
-            "enumValue": 2
-          },
-          {
-            "name": "right",
-            "displayName": "Right",
-            "enumValue": 3
-          },
-          {
-            "name": "down",
-            "displayName": "Down",
-            "enumValue": 4
-          },
-          {
-            "name": "a",
-            "displayName": "A",
-            "enumValue": 5
-          },
-          {
-            "name": "b",
-            "displayName": "B",
-            "enumValue": 6
-          },
-          {
-            "name": "menu",
-            "displayName": "Menu",
-            "enumValue": 7
-          },
-          {
-            "name": "menuAlt",
-            "displayName": "MenuAlt",
-            "enumValue": 8
-          },
-          {
-            "name": "reset",
-            "displayName": "Reset",
-            "enumValue": 9
-          },
-          {
-            "name": "exit",
-            "displayName": "Exit",
-            "enumValue": 10
-          }
-        ]
-      }
     ],
     "@context": "dtmi:dtdl:context;2"
   },
@@ -1112,8 +1140,8 @@
   {
     "@type": "Interface",
     "@id": "dtmi:jacdac:services:x126f00e0;1",
-    "displayName": "Light",
-    "description": "A controller for strips of RGB LEDs.",
+    "displayName": "LED Pixel",
+    "description": "A controller for strips of individually controlled RGB LEDs.",
     "contents": [
       {
         "@type": "Property",
@@ -1239,6 +1267,57 @@
   },
   {
     "@type": "Interface",
+    "@id": "dtmi:jacdac:services:x17dc9a1c;1",
+    "displayName": "Light level",
+    "description": "A sensor that measures luminosity level.",
+    "contents": [
+      {
+        "@type": "Telemetry",
+        "name": "light_level",
+        "@id": "dtmi:jacdac:x17dc9a1c:ro:lightlevel;1",
+        "description": "Detect light level",
+        "schema": "integer"
+      },
+      {
+        "@type": "Property",
+        "name": "variant",
+        "@id": "dtmi:jacdac:x17dc9a1c:const:variant;1",
+        "description": "The type of physical sensor.",
+        "schema": "dtmi:jacdac:x17dc9a1c:variant;1"
+      }
+    ],
+    "extends": [
+      "dtmi:jacdac:services:x1ffffff3;1",
+      "dtmi:jacdac:services:x1ffffff2;1"
+    ],
+    "schemas": [
+      {
+        "@type": "Enum",
+        "@id": "dtmi:jacdac:x17dc9a1c:variant;1",
+        "valueSchema": "integer",
+        "enumValues": [
+          {
+            "name": "photoResistor",
+            "displayName": "PhotoResistor",
+            "enumValue": 1
+          },
+          {
+            "name": "lEDMatrix",
+            "displayName": "LEDMatrix",
+            "enumValue": 2
+          },
+          {
+            "name": "ambient",
+            "displayName": "Ambient",
+            "enumValue": 3
+          }
+        ]
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@type": "Interface",
     "@id": "dtmi:jacdac:services:x12dc1fca;1",
     "displayName": "Logger",
     "description": "A service which can report messages to the bus.",
@@ -1285,6 +1364,73 @@
             "name": "silent",
             "displayName": "Silent",
             "enumValue": 4
+          }
+        ]
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@type": "Interface",
+    "@id": "dtmi:jacdac:services:x13062dc8;1",
+    "displayName": "Matrix Keypad",
+    "description": "A matrix of buttons connected as a keypad",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "rows",
+        "@id": "dtmi:jacdac:x13062dc8:const:rows;1",
+        "description": "Number of rows in the matrix",
+        "schema": "integer"
+      },
+      {
+        "@type": "Property",
+        "name": "columns",
+        "@id": "dtmi:jacdac:x13062dc8:const:columns;1",
+        "description": "Number of columns in the matrix",
+        "schema": "integer"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "down",
+        "@id": "dtmi:jacdac:x13062dc8:event:down;1",
+        "description": "Emitted when a key, at the given index, goes from inactive (`pressed == 0`) to active.",
+        "schema": "integer"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "up",
+        "@id": "dtmi:jacdac:x13062dc8:event:up;1",
+        "description": "Emitted when a key, at the given index, goes from active (`pressed == 1`) to inactive.",
+        "schema": "integer"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "click",
+        "@id": "dtmi:jacdac:x13062dc8:event:click;1",
+        "description": "Emitted together with `up` when the press time was not longer than 500ms.",
+        "schema": "integer"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "long_click",
+        "@id": "dtmi:jacdac:x13062dc8:event:longclick;1",
+        "description": "Emitted together with `up` when the press time was more than 500ms.",
+        "schema": "integer"
+      }
+    ],
+    "extends": [
+      "dtmi:jacdac:services:x1ffffff3;1",
+      "dtmi:jacdac:services:x1ffffff2;1"
+    ],
+    "schemas": [
+      {
+        "@id": "dtmi:jacdac:x13062dc8:event;1",
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "count",
+            "schema": "integer"
           }
         ]
       }
@@ -2589,6 +2735,58 @@
   },
   {
     "@type": "Interface",
+    "@id": "dtmi:jacdac:services:x12a5b597;1",
+    "displayName": "Volatile organic compound",
+    "description": "Measures equivalent VOC levels.",
+    "contents": [
+      {
+        "@type": "Telemetry",
+        "name": "VOC",
+        "@id": "dtmi:jacdac:x12a5b597:ro:voc;1",
+        "description": "Total volatile organic compound readings.",
+        "schema": "float"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "VOC_error",
+        "@id": "dtmi:jacdac:x12a5b597:ro:vocerror;1",
+        "description": "Error on the reading data",
+        "schema": "float"
+      },
+      {
+        "@type": "Property",
+        "name": "min_TVOC",
+        "@id": "dtmi:jacdac:x12a5b597:const:mintvoc;1",
+        "description": "Minimum measurable value",
+        "schema": "float"
+      },
+      {
+        "@type": "Property",
+        "name": "max_TVOC",
+        "@id": "dtmi:jacdac:x12a5b597:const:maxtvoc;1",
+        "description": "Minimum measurable value",
+        "schema": "float"
+      },
+      {
+        "@type": [
+          "Property",
+          "TimeSpan"
+        ],
+        "name": "conditioning_period",
+        "@id": "dtmi:jacdac:x12a5b597:const:conditioningperiod;1",
+        "description": "Time required to achieve good sensor stability before measuring after long idle period.",
+        "unit": "second",
+        "schema": "integer"
+      }
+    ],
+    "extends": [
+      "dtmi:jacdac:services:x1ffffff3;1",
+      "dtmi:jacdac:services:x1ffffff2;1"
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@type": "Interface",
     "@id": "dtmi:jacdac:services:x18aae1fa;1",
     "displayName": "WIFI",
     "description": "Discovery and connection to WiFi networks. Separate TCP service is used for data transfer.",
@@ -2697,6 +2895,74 @@
           }
         ]
       }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@type": "Interface",
+    "@id": "dtmi:jacdac:services:x186be92b;1",
+    "displayName": "Wind direction",
+    "description": "A sensor that measures wind direction.",
+    "contents": [
+      {
+        "@type": "Telemetry",
+        "name": "wind_direction",
+        "@id": "dtmi:jacdac:x186be92b:ro:winddirection;1",
+        "description": "The direction of the wind.",
+        "schema": "integer"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "wind_direction_error",
+        "@id": "dtmi:jacdac:x186be92b:ro:winddirectionerror;1",
+        "description": "Error on the wind direction reading",
+        "schema": "integer"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "wind_direction_offset",
+        "@id": "dtmi:jacdac:x186be92b:ro:winddirectionoffset;1",
+        "description": "Offset added to direction to account for sensor calibration.",
+        "schema": "integer"
+      }
+    ],
+    "extends": [
+      "dtmi:jacdac:services:x1ffffff3;1",
+      "dtmi:jacdac:services:x1ffffff2;1"
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@type": "Interface",
+    "@id": "dtmi:jacdac:services:x1b591bbf;1",
+    "displayName": "Wind speed",
+    "description": "A sensor that measures wind speed.",
+    "contents": [
+      {
+        "@type": "Telemetry",
+        "name": "wind_speed",
+        "@id": "dtmi:jacdac:x1b591bbf:ro:windspeed;1",
+        "description": "The velocity of the wind.",
+        "schema": "float"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "wind_speed_error",
+        "@id": "dtmi:jacdac:x1b591bbf:ro:windspeederror;1",
+        "description": "Error on the reading",
+        "schema": "float"
+      },
+      {
+        "@type": "Property",
+        "name": "max_wind_speed",
+        "@id": "dtmi:jacdac:x1b591bbf:const:maxwindspeed;1",
+        "description": "Maximum speed that can be measured by the sensor.",
+        "schema": "float"
+      }
+    ],
+    "extends": [
+      "dtmi:jacdac:services:x1ffffff3;1",
+      "dtmi:jacdac:services:x1ffffff2;1"
     ],
     "@context": "dtmi:dtdl:context;2"
   }

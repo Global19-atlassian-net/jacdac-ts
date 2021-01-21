@@ -1,21 +1,21 @@
 {
-  "name": "Gamepad",
+  "name": "Arcade Gamepad",
   "status": "experimental",
-  "shortId": "gamepad",
-  "camelName": "gamepad",
-  "shortName": "gamepad",
+  "shortId": "arcadegamepad",
+  "camelName": "arcadeGamepad",
+  "shortName": "arcadeGamepad",
   "extends": [
     "_base",
     "_sensor"
   ],
   "notes": {
-    "short": "A gamepad with direction and action buttons for 1 or more players."
+    "short": "A gamepad with direction and action buttons for one players."
   },
   "classIdentifier": 501915758,
   "enums": {
     "Button": {
       "name": "Button",
-      "storage": 2,
+      "storage": 1,
       "members": {
         "Left": 1,
         "Up": 2,
@@ -118,48 +118,6 @@
       "derived": "_sensor"
     },
     {
-      "kind": "command",
-      "name": "announce",
-      "identifier": 0,
-      "description": "Indicates number of players supported and which buttons are present on the controller.",
-      "fields": [],
-      "identifierName": "announce",
-      "hasReport": true
-    },
-    {
-      "kind": "report",
-      "name": "announce",
-      "identifier": 0,
-      "description": "Indicates number of players supported and which buttons are present on the controller.",
-      "fields": [
-        {
-          "name": "flags",
-          "unit": "",
-          "type": "u8",
-          "storage": 1,
-          "isSimpleType": true
-        },
-        {
-          "name": "num_players",
-          "unit": "",
-          "type": "u8",
-          "storage": 1,
-          "isSimpleType": true,
-          "typicalMax": 4,
-          "typicalMin": 0
-        },
-        {
-          "name": "button_present",
-          "unit": "",
-          "type": "Button",
-          "storage": 2,
-          "startRepeats": true
-        }
-      ],
-      "secondary": true,
-      "packFormat": "u8 u8 r: u16"
-    },
-    {
       "kind": "ro",
       "name": "buttons",
       "identifier": 257,
@@ -169,15 +127,8 @@
           "name": "button",
           "unit": "",
           "type": "Button",
-          "storage": 2,
-          "startRepeats": true
-        },
-        {
-          "name": "player_index",
-          "unit": "",
-          "type": "u8",
           "storage": 1,
-          "isSimpleType": true
+          "startRepeats": true
         },
         {
           "name": "pressure",
@@ -189,7 +140,23 @@
         }
       ],
       "identifierName": "reading",
-      "packFormat": "r: u16 u8 u8"
+      "packFormat": "r: u8 u8"
+    },
+    {
+      "kind": "const",
+      "name": "available_buttons",
+      "identifier": 384,
+      "description": "Indicates number of players supported and which buttons are present on the controller.",
+      "fields": [
+        {
+          "name": "button",
+          "unit": "",
+          "type": "Button",
+          "storage": 1,
+          "startRepeats": true
+        }
+      ],
+      "packFormat": "r: u8"
     },
     {
       "kind": "event",
@@ -201,18 +168,11 @@
           "name": "button",
           "unit": "",
           "type": "Button",
-          "storage": 2
-        },
-        {
-          "name": "player_index",
-          "unit": "",
-          "type": "u16",
-          "storage": 2,
-          "isSimpleType": true
+          "storage": 1
         }
       ],
       "identifierName": "active",
-      "packFormat": "u16 u16"
+      "packFormat": "u8"
     },
     {
       "kind": "event",
@@ -224,18 +184,11 @@
           "name": "button",
           "unit": "",
           "type": "Button",
-          "storage": 2
-        },
-        {
-          "name": "player_index",
-          "unit": "",
-          "type": "u16",
-          "storage": 2,
-          "isSimpleType": true
+          "storage": 1
         }
       ],
       "identifierName": "inactive",
-      "packFormat": "u16 u16"
+      "packFormat": "u8"
     }
   ]
 }
