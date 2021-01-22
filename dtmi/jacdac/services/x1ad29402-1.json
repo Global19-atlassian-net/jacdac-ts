@@ -99,6 +99,11 @@
           "name": "proximity",
           "displayName": "Proximity",
           "enumValue": 6
+        },
+        {
+          "name": "magnetic",
+          "displayName": "Magnetic",
+          "enumValue": 7
         }
       ]
     }
