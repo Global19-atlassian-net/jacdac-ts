@@ -2827,14 +2827,21 @@
     "@type": "Interface",
     "@id": "dtmi:jacdac:services:x183fc4a2;1",
     "displayName": "Vibration motor",
-    "description": "Control a vibration motor.",
+    "description": "A vibration motor.",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Telemetry",
         "name": "speed",
-        "@id": "dtmi:jacdac:x183fc4a2:rw:speed;1",
-        "description": "Rotation speed of the motor.\nIf only one rotation speed is supported, then `0` shell be off, and any other number on.",
-        "schema": "integer",
+        "@id": "dtmi:jacdac:x183fc4a2:ro:speed;1",
+        "description": "Rotation speed of the motor. If only one rotation speed is supported,\nthen `0` shell be off, and any other number on. \nUse the ``vibrate`` command to control the register.",
+        "schema": "integer"
+      },
+      {
+        "@type": "Property",
+        "name": "enabled",
+        "@id": "dtmi:jacdac:x183fc4a2:rw:enabled;1",
+        "description": "Determines if the vibration motor responds to vibrate commands.",
+        "schema": "boolean",
         "writable": true
       }
     ],

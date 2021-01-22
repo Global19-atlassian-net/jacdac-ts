@@ -8,7 +8,7 @@
     "_base"
   ],
   "notes": {
-    "short": "Control a vibration motor."
+    "short": "A vibration motor."
   },
   "classIdentifier": 406832290,
   "enums": {},
@@ -40,10 +40,10 @@
       "derived": "_base"
     },
     {
-      "kind": "rw",
+      "kind": "ro",
       "name": "speed",
-      "identifier": 1,
-      "description": "Rotation speed of the motor.\nIf only one rotation speed is supported, then `0` shell be off, and any other number on.",
+      "identifier": 257,
+      "description": "Rotation speed of the motor. If only one rotation speed is supported,\nthen `0` shell be off, and any other number on. \nUse the ``vibrate`` command to control the register.",
       "fields": [
         {
           "name": "_",
@@ -54,8 +54,49 @@
           "isSimpleType": true
         }
       ],
+      "identifierName": "reading",
+      "packFormat": "u8"
+    },
+    {
+      "kind": "rw",
+      "name": "enabled",
+      "identifier": 1,
+      "description": "Determines if the vibration motor responds to vibrate commands.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "",
+          "type": "bool",
+          "storage": 1
+        }
+      ],
       "identifierName": "intensity",
       "packFormat": "u8"
+    },
+    {
+      "kind": "command",
+      "name": "vibrate",
+      "identifier": 128,
+      "description": "Starts a sequence of vibration and pauses.",
+      "fields": [
+        {
+          "name": "duration",
+          "unit": "8ms",
+          "type": "u8",
+          "storage": 1,
+          "isSimpleType": true,
+          "startRepeats": true
+        },
+        {
+          "name": "speed",
+          "unit": "/",
+          "shift": 8,
+          "type": "u8",
+          "storage": 1,
+          "isSimpleType": true
+        }
+      ],
+      "packFormat": "r: u8 u8"
     }
   ]
 }
