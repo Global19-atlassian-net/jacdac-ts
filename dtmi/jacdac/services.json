@@ -369,8 +369,8 @@
             "enumValue": 7
           },
           {
-            "name": "menuAlt",
-            "displayName": "MenuAlt",
+            "name": "select",
+            "displayName": "Select",
             "enumValue": 8
           },
           {
