@@ -159,13 +159,13 @@
         {
           "name": "label",
           "unit": "",
-          "type": "string",
+          "type": "string0",
           "storage": 0,
           "startRepeats": true
         }
       ],
       "optional": true,
-      "packFormat": "r: s"
+      "packFormat": "r: z"
     },
     {
       "kind": "event",

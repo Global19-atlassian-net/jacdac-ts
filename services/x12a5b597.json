@@ -139,7 +139,7 @@
     },
     {
       "kind": "const",
-      "name": "min_TVOC",
+      "name": "min_VOC",
       "identifier": 260,
       "description": "Minimum measurable value",
       "fields": [
@@ -157,7 +157,7 @@
     },
     {
       "kind": "const",
-      "name": "max_TVOC",
+      "name": "max_VOC",
       "identifier": 261,
       "description": "Minimum measurable value",
       "fields": [

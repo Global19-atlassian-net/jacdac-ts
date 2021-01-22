@@ -20,15 +20,15 @@
     },
     {
       "@type": "Property",
-      "name": "min_TVOC",
-      "@id": "dtmi:jacdac:x12a5b597:const:mintvoc;1",
+      "name": "min_VOC",
+      "@id": "dtmi:jacdac:x12a5b597:const:minvoc;1",
       "description": "Minimum measurable value",
       "schema": "float"
     },
     {
       "@type": "Property",
-      "name": "max_TVOC",
-      "@id": "dtmi:jacdac:x12a5b597:const:maxtvoc;1",
+      "name": "max_VOC",
+      "@id": "dtmi:jacdac:x12a5b597:const:maxvoc;1",
       "description": "Minimum measurable value",
       "schema": "float"
     },

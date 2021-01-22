@@ -2,7 +2,7 @@
   "@type": "Interface",
   "@id": "dtmi:jacdac:services:x1deaa06e;1",
   "displayName": "Arcade Gamepad",
-  "description": "A gamepad with direction and action buttons for one players.",
+  "description": "A gamepad with direction and action buttons for one player.",
   "contents": [
     {
       "@type": "Telemetry",
