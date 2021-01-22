@@ -27,7 +27,7 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-04eb8bc6952319147adf.js"
+    "url": "webpack-runtime-a7afc9fda043c01a4e0b.js"
   },
   {
     "url": "framework-1ffecd2421b8acab27d5.js"
@@ -39,11 +39,11 @@ self.__precacheManifest = [
     "url": "styles-4d1902e7bd39726e0535.js"
   },
   {
-    "url": "app-24cbfea4e2c22ab882ed.js"
+    "url": "app-c993a042067817a885c6.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "8882386a19a4a296335cc442888036ee"
+    "revision": "0f5369db1f2773b47031559f76e55274"
   },
   {
     "url": "static/webfonts/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"
@@ -63,7 +63,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2214083594.json",
-    "revision": "fc35cdf4064666b0386dcb6667601d1b"
+    "revision": "c7a2b270f3b0d8ba3fb1df899591f93f"
   },
   {
     "url": "page-data/sq/d/2270080012.json",
@@ -75,7 +75,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2744294623.json",
-    "revision": "11a2bc7cd8588da14f5298965cf0ad76"
+    "revision": "9d237fd1f71c0160656bd7f91bf894a1"
   },
   {
     "url": "page-data/sq/d/3159585216.json",
@@ -91,7 +91,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "c9e0851a8eacb8123459515fa654468f"
+    "revision": "7c849e789028bc1a440647b38f6dffb1"
   },
   {
     "url": "polyfill-860c3442a8635066b9ae.js"
@@ -202,7 +202,7 @@ self.__precacheManifest = [
     "revision": "9da7d1b5de7887495e07a0c5c4b84bc1"
   },
   {
-    "url": "component---src-templates-service-mdx-a099d2f0140375c11000.js"
+    "url": "component---src-templates-service-mdx-7a9fd7ae7b80a20f9f55.js"
   },
   {
     "url": "page-data/services/_base/page-data.json",
@@ -499,7 +499,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/tools/service-editor/page-data.json",
-    "revision": "94f948cf0fa7517a3508b36fe7fa2f39"
+    "revision": "6b3bc36acb849b191b503691aacc759b"
   },
   {
     "url": "component---src-pages-tools-settings-manager-mdx-1e18c5e11041a5a6b999.js"
@@ -616,7 +616,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/jacdac-ts/app-24cbfea4e2c22ab882ed.js`))) {
+  if (!resources || !(await caches.match(`/jacdac-ts/app-c993a042067817a885c6.js`))) {
     return await fetch(event.request)
   }
 
