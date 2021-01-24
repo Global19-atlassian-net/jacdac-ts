@@ -1,9 +1,9 @@
 {
-  "name": "Line",
+  "name": "Reflector light",
   "status": "experimental",
-  "shortId": "line",
-  "camelName": "line",
-  "shortName": "line",
+  "shortId": "reflectedlight",
+  "camelName": "reflectorLight",
+  "shortName": "reflectorLight",
   "extends": [
     "_base",
     "_sensor"
