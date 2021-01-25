@@ -2771,6 +2771,11 @@
             "name": "magnetic",
             "displayName": "Magnetic",
             "enumValue": 7
+          },
+          {
+            "name": "footPedal",
+            "displayName": "FootPedal",
+            "enumValue": 8
           }
         ]
       }

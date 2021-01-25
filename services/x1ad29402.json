@@ -23,7 +23,8 @@
         "Tactile": 4,
         "Toggle": 5,
         "Proximity": 6,
-        "Magnetic": 7
+        "Magnetic": 7,
+        "FootPedal": 8
       }
     }
   },
