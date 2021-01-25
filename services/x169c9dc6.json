@@ -12,7 +12,16 @@
     "short": "Measures equivalent CO² levels."
   },
   "classIdentifier": 379362758,
-  "enums": {},
+  "enums": {
+    "Variant": {
+      "name": "Variant",
+      "storage": 1,
+      "members": {
+        "VOC": 1,
+        "NDIR": 2
+      }
+    }
+  },
   "packets": [
     {
       "kind": "ro",
@@ -188,6 +197,23 @@
       ],
       "optional": true,
       "packFormat": "u32"
+    },
+    {
+      "kind": "const",
+      "name": "variant",
+      "identifier": 263,
+      "description": "Type of physical sensor and capabilities.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "",
+          "type": "Variant",
+          "storage": 1
+        }
+      ],
+      "optional": true,
+      "identifierName": "variant",
+      "packFormat": "u8"
     }
   ]
 }
