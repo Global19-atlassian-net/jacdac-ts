@@ -75,7 +75,7 @@
       "kind": "rw",
       "name": "volume",
       "identifier": 129,
-      "description": "Default volume for utterances",
+      "description": "Default volume for utterances.",
       "fields": [
         {
           "name": "_",

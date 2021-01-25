@@ -2691,7 +2691,7 @@
         "@type": "Property",
         "name": "volume",
         "@id": "dtmi:jacdac:x1204d995:rw:volume;1",
-        "description": "Default volume for utterances",
+        "description": "Default volume for utterances.",
         "schema": "integer",
         "writable": true
       },
