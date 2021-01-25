@@ -1,15 +1,15 @@
 {
-  "name": "Volatile organic compound",
+  "name": "Total Volatile organic compound",
   "status": "experimental",
-  "shortId": "voc",
-  "camelName": "voc",
-  "shortName": "voc",
+  "shortId": "tvoc",
+  "camelName": "TVOC",
+  "shortName": "TVOC",
   "extends": [
     "_base",
     "_sensor"
   ],
   "notes": {
-    "short": "Measures equivalent VOC levels."
+    "short": "Measures equivalent Total Volatile Organic Compound levels."
   },
   "classIdentifier": 312849815,
   "enums": {},
@@ -102,18 +102,19 @@
     },
     {
       "kind": "ro",
-      "name": "VOC",
+      "name": "TVOC",
       "identifier": 257,
-      "description": "Total volatile organic compound readings.",
+      "description": "Total volatile organic compound readings in parts per billion.",
       "fields": [
         {
           "name": "_",
-          "unit": "ppm",
+          "unit": "ppb",
           "shift": 10,
           "type": "u22.10",
           "storage": 4,
-          "typicalMin": 0,
-          "typicalMax": 1187
+          "absoluteMin": 0,
+          "typicalMax": 1187,
+          "typicalMin": 0
         }
       ],
       "identifierName": "reading",
@@ -121,13 +122,13 @@
     },
     {
       "kind": "ro",
-      "name": "VOC_error",
+      "name": "TVOC_error",
       "identifier": 262,
       "description": "Error on the reading data",
       "fields": [
         {
           "name": "_",
-          "unit": "ppm",
+          "unit": "ppb",
           "shift": 10,
           "type": "u22.10",
           "storage": 4
@@ -139,13 +140,13 @@
     },
     {
       "kind": "const",
-      "name": "min_VOC",
+      "name": "min_TVOC",
       "identifier": 260,
       "description": "Minimum measurable value",
       "fields": [
         {
           "name": "_",
-          "unit": "ppm",
+          "unit": "ppb",
           "shift": 10,
           "type": "u22.10",
           "storage": 4
@@ -157,13 +158,13 @@
     },
     {
       "kind": "const",
-      "name": "max_VOC",
+      "name": "max_TVOC",
       "identifier": 261,
       "description": "Minimum measurable value",
       "fields": [
         {
           "name": "_",
-          "unit": "ppm",
+          "unit": "ppb",
           "shift": 10,
           "type": "u22.10",
           "storage": 4

@@ -1,34 +1,34 @@
 {
   "@type": "Interface",
   "@id": "dtmi:jacdac:services:x12a5b597;1",
-  "displayName": "Volatile organic compound",
-  "description": "Measures equivalent VOC levels.",
+  "displayName": "Total Volatile organic compound",
+  "description": "Measures equivalent Total Volatile Organic Compound levels.",
   "contents": [
     {
       "@type": "Telemetry",
-      "name": "VOC",
-      "@id": "dtmi:jacdac:x12a5b597:ro:voc;1",
-      "description": "Total volatile organic compound readings.",
+      "name": "TVOC",
+      "@id": "dtmi:jacdac:x12a5b597:ro:tvoc;1",
+      "description": "Total volatile organic compound readings in parts per billion.",
       "schema": "float"
     },
     {
       "@type": "Telemetry",
-      "name": "VOC_error",
-      "@id": "dtmi:jacdac:x12a5b597:ro:vocerror;1",
+      "name": "TVOC_error",
+      "@id": "dtmi:jacdac:x12a5b597:ro:tvocerror;1",
       "description": "Error on the reading data",
       "schema": "float"
     },
     {
       "@type": "Property",
-      "name": "min_VOC",
-      "@id": "dtmi:jacdac:x12a5b597:const:minvoc;1",
+      "name": "min_TVOC",
+      "@id": "dtmi:jacdac:x12a5b597:const:mintvoc;1",
       "description": "Minimum measurable value",
       "schema": "float"
     },
     {
       "@type": "Property",
-      "name": "max_VOC",
-      "@id": "dtmi:jacdac:x12a5b597:const:maxvoc;1",
+      "name": "max_TVOC",
+      "@id": "dtmi:jacdac:x12a5b597:const:maxtvoc;1",
       "description": "Minimum measurable value",
       "schema": "float"
     },
