@@ -1,0 +1,52 @@
+{
+  "@type": "Interface",
+  "@id": "dtmi:jacdac:services:x1204d995;1",
+  "displayName": "Speech synthesis",
+  "description": "A speech synthesizer",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "enabled",
+      "@id": "dtmi:jacdac:x1204d995:rw:enabled;1",
+      "description": "Determines if the speech engine is in a non-paused state.",
+      "schema": "boolean",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "lang",
+      "@id": "dtmi:jacdac:x1204d995:rw:lang;1",
+      "description": "Default language used for utterances.",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "volume",
+      "@id": "dtmi:jacdac:x1204d995:rw:volume;1",
+      "description": "Default volume for utterances",
+      "schema": "integer",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "pitch",
+      "@id": "dtmi:jacdac:x1204d995:rw:pitch;1",
+      "description": "Default pitch for utterances",
+      "schema": "float",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "rate",
+      "@id": "dtmi:jacdac:x1204d995:rw:rate;1",
+      "description": "Default rate for utterances",
+      "schema": "float",
+      "writable": true
+    }
+  ],
+  "extends": [
+    "dtmi:jacdac:services:x1ffffff3;1"
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}
