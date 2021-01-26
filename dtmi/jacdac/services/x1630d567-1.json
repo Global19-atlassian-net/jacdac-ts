@@ -1,0 +1,36 @@
+{
+  "@type": "Interface",
+  "@id": "dtmi:jacdac:services:x1630d567;1",
+  "displayName": "Color",
+  "description": "Senses RGB colors",
+  "contents": [
+    {
+      "@type": "Telemetry",
+      "name": "color",
+      "@id": "dtmi:jacdac:x1630d567:ro:color;1",
+      "description": "Detected color in the RGB color space.",
+      "schema": {
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "red",
+            "schema": "integer"
+          },
+          {
+            "name": "green",
+            "schema": "integer"
+          },
+          {
+            "name": "blue",
+            "schema": "integer"
+          }
+        ]
+      }
+    }
+  ],
+  "extends": [
+    "dtmi:jacdac:services:x1ffffff3;1",
+    "dtmi:jacdac:services:x1ffffff2;1"
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

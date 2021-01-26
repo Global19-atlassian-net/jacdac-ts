@@ -39,11 +39,11 @@ self.__precacheManifest = [
     "url": "styles-4d1902e7bd39726e0535.js"
   },
   {
-    "url": "app-2a1d82b7d4b93aa3dd32.js"
+    "url": "app-78cfda4a43fad1000a7d.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "7c20cd145e0bc3803a3da0ae564e8f29"
+    "revision": "f21cf590993d39737be4602cd6bbaa68"
   },
   {
     "url": "static/webfonts/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"
@@ -63,7 +63,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2214083594.json",
-    "revision": "a818353c4eb5efe0fc0200256dfbcfcf"
+    "revision": "d0e9fed171d69e4efd247950e92339fb"
   },
   {
     "url": "page-data/sq/d/2270080012.json",
@@ -75,7 +75,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2744294623.json",
-    "revision": "b70cd9183679a9a0268fbf2bec9209fa"
+    "revision": "72ad367451440dc861804d7847a00c0a"
   },
   {
     "url": "page-data/sq/d/3159585216.json",
@@ -91,7 +91,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "6a365594be6f7036d707414c652c8199"
+    "revision": "14d9476938e7cf15d77a2871fd870156"
   },
   {
     "url": "polyfill-860c3442a8635066b9ae.js"
@@ -253,6 +253,10 @@ self.__precacheManifest = [
     "revision": "272301a550b206539520eb0959546bc9"
   },
   {
+    "url": "page-data/services/color/page-data.json",
+    "revision": "f4fb14c6a19d4ce8f1b8dfff8b0a769c"
+  },
+  {
     "url": "page-data/services/control/page-data.json",
     "revision": "68b9697418893413af968c7bf7e1e386"
   },
@@ -269,8 +273,16 @@ self.__precacheManifest = [
     "revision": "26001fb267490e8a9962537eba880f79"
   },
   {
+    "url": "page-data/services/illuminance/page-data.json",
+    "revision": "e558e8afbc40ad958ab3a2b5dbcd81a1"
+  },
+  {
     "url": "page-data/services/iothub/page-data.json",
     "revision": "626e2921cb99903df6c9df18fede8ab7"
+  },
+  {
+    "url": "page-data/services/joystick/page-data.json",
+    "revision": "6c212299385e37eeaa21066bd58349cc"
   },
   {
     "url": "page-data/services/keyboard/page-data.json",
@@ -371,6 +383,10 @@ self.__precacheManifest = [
   {
     "url": "page-data/services/soilmoisture/page-data.json",
     "revision": "41c2fa69593f85a02897b8c29c660dbf"
+  },
+  {
+    "url": "page-data/services/soundlevel/page-data.json",
+    "revision": "96e96d9dcf5f110b4315675ec63e613b"
   },
   {
     "url": "page-data/services/speechsynthesis/page-data.json",
@@ -636,7 +652,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/jacdac-ts/app-2a1d82b7d4b93aa3dd32.js`))) {
+  if (!resources || !(await caches.match(`/jacdac-ts/app-78cfda4a43fad1000a7d.js`))) {
     return await fetch(event.request)
   }
 

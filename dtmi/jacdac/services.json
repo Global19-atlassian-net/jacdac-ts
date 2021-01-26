@@ -650,6 +650,42 @@
   },
   {
     "@type": "Interface",
+    "@id": "dtmi:jacdac:services:x1630d567;1",
+    "displayName": "Color",
+    "description": "Senses RGB colors",
+    "contents": [
+      {
+        "@type": "Telemetry",
+        "name": "color",
+        "@id": "dtmi:jacdac:x1630d567:ro:color;1",
+        "description": "Detected color in the RGB color space.",
+        "schema": {
+          "@type": "Object",
+          "fields": [
+            {
+              "name": "red",
+              "schema": "integer"
+            },
+            {
+              "name": "green",
+              "schema": "integer"
+            },
+            {
+              "name": "blue",
+              "schema": "integer"
+            }
+          ]
+        }
+      }
+    ],
+    "extends": [
+      "dtmi:jacdac:services:x1ffffff3;1",
+      "dtmi:jacdac:services:x1ffffff2;1"
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@type": "Interface",
     "@id": "dtmi:jacdac:services:x0;1",
     "displayName": "Control",
     "description": "Control service is always service index `0`.\nIt handles actions common to all services on a device.",
@@ -935,6 +971,33 @@
   },
   {
     "@type": "Interface",
+    "@id": "dtmi:jacdac:services:x1e6ecaf2;1",
+    "displayName": "Illuminance",
+    "description": "Measures light in Lux",
+    "contents": [
+      {
+        "@type": "Telemetry",
+        "name": "light",
+        "@id": "dtmi:jacdac:x1e6ecaf2:ro:light;1",
+        "description": "The amount of illuminance, as lumens per square metre.",
+        "schema": "float"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "light_error",
+        "@id": "dtmi:jacdac:x1e6ecaf2:ro:lighterror;1",
+        "description": "Error on the reported sensor value.",
+        "schema": "float"
+      }
+    ],
+    "extends": [
+      "dtmi:jacdac:services:x1ffffff3;1",
+      "dtmi:jacdac:services:x1ffffff2;1"
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@type": "Interface",
     "@id": "dtmi:jacdac:services:x19ed364c;1",
     "displayName": "Azure IoT Hub",
     "description": "Send messages, receive commands, and work with device twins in Azure IoT Hub.",
@@ -1007,6 +1070,69 @@
           {
             "name": "count",
             "schema": "integer"
+          }
+        ]
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@type": "Interface",
+    "@id": "dtmi:jacdac:services:x1acb1890;1",
+    "displayName": "Joystick",
+    "description": "A two axis directional joystick",
+    "contents": [
+      {
+        "@type": "Telemetry",
+        "name": "direction",
+        "@id": "dtmi:jacdac:x1acb1890:ro:direction;1",
+        "description": "The direction of the joystick measure in two direction.\nIf joystick is digital, then each direction will read as either `-0x8000`, `0x0`, or `0x7fff`.",
+        "schema": {
+          "@type": "Object",
+          "fields": [
+            {
+              "name": "x",
+              "schema": "integer"
+            },
+            {
+              "name": "y",
+              "schema": "integer"
+            }
+          ]
+        }
+      },
+      {
+        "@type": "Property",
+        "name": "variant",
+        "@id": "dtmi:jacdac:x1acb1890:const:variant;1",
+        "description": "The type of physical joystick.",
+        "schema": "dtmi:jacdac:x1acb1890:variant;1"
+      }
+    ],
+    "extends": [
+      "dtmi:jacdac:services:x1ffffff3;1",
+      "dtmi:jacdac:services:x1ffffff2;1"
+    ],
+    "schemas": [
+      {
+        "@type": "Enum",
+        "@id": "dtmi:jacdac:x1acb1890:variant;1",
+        "valueSchema": "integer",
+        "enumValues": [
+          {
+            "name": "thumb",
+            "displayName": "Thumb",
+            "enumValue": 1
+          },
+          {
+            "name": "arcadeBall",
+            "displayName": "ArcadeBall",
+            "enumValue": 2
+          },
+          {
+            "name": "arcadeStick",
+            "displayName": "ArcadeStick",
+            "enumValue": 3
           }
         ]
       }
@@ -2659,6 +2785,74 @@
             "name": "capacitive",
             "displayName": "Capacitive",
             "enumValue": 2
+          }
+        ]
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@type": "Interface",
+    "@id": "dtmi:jacdac:services:x14ad1a5d;1",
+    "displayName": "Sound level",
+    "description": "A sound level detector sensor, gives a relative indication of the sound level.",
+    "contents": [
+      {
+        "@type": "Telemetry",
+        "name": "sound_level",
+        "@id": "dtmi:jacdac:x14ad1a5d:ro:soundlevel;1",
+        "description": "The sound level detected by the microphone",
+        "schema": "integer"
+      },
+      {
+        "@type": "Property",
+        "name": "loud_threshold",
+        "@id": "dtmi:jacdac:x14ad1a5d:rw:loudthreshold;1",
+        "description": "The sound level to trigger a loud event.",
+        "schema": "integer",
+        "writable": true
+      },
+      {
+        "@type": "Property",
+        "name": "quiet_threshold",
+        "@id": "dtmi:jacdac:x14ad1a5d:rw:quietthreshold;1",
+        "description": "The sound level to trigger a quite event.",
+        "schema": "integer",
+        "writable": true
+      },
+      {
+        "@type": [
+          "Telemetry",
+          "Event"
+        ],
+        "name": "loud",
+        "@id": "dtmi:jacdac:x14ad1a5d:event:loud;1",
+        "description": "Raised when a loud sound is detected",
+        "schema": "dtmi:jacdac:x14ad1a5d:event;1"
+      },
+      {
+        "@type": [
+          "Telemetry",
+          "Event"
+        ],
+        "name": "quiet",
+        "@id": "dtmi:jacdac:x14ad1a5d:event:quiet;1",
+        "description": "Raised when a period of quietness is detected",
+        "schema": "dtmi:jacdac:x14ad1a5d:event;1"
+      }
+    ],
+    "extends": [
+      "dtmi:jacdac:services:x1ffffff3;1",
+      "dtmi:jacdac:services:x1ffffff2;1"
+    ],
+    "schemas": [
+      {
+        "@id": "dtmi:jacdac:x14ad1a5d:event;1",
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "count",
+            "schema": "integer"
           }
         ]
       }
