@@ -2458,11 +2458,42 @@
         "@id": "dtmi:jacdac:x1a8b1a28:const:precision;1",
         "description": "Error on the clock, in parts per million of seconds.",
         "schema": "float"
+      },
+      {
+        "@type": "Property",
+        "name": "variant",
+        "@id": "dtmi:jacdac:x1a8b1a28:const:variant;1",
+        "description": "The type of physical clock used by the sensor.",
+        "schema": "dtmi:jacdac:x1a8b1a28:variant;1"
       }
     ],
     "extends": [
       "dtmi:jacdac:services:x1ffffff3;1",
       "dtmi:jacdac:services:x1ffffff2;1"
+    ],
+    "schemas": [
+      {
+        "@type": "Enum",
+        "@id": "dtmi:jacdac:x1a8b1a28:variant;1",
+        "valueSchema": "integer",
+        "enumValues": [
+          {
+            "name": "computer",
+            "displayName": "Computer",
+            "enumValue": 1
+          },
+          {
+            "name": "crystal",
+            "displayName": "Crystal",
+            "enumValue": 2
+          },
+          {
+            "name": "cuckoo",
+            "displayName": "Cuckoo",
+            "enumValue": 3
+          }
+        ]
+      }
     ],
     "@context": "dtmi:dtdl:context;2"
   },
