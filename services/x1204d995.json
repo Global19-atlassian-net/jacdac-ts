@@ -102,6 +102,7 @@
           "shift": 16,
           "type": "u16.16",
           "storage": 4,
+          "defaultValue": 1,
           "absoluteMax": 2,
           "absoluteMin": 0
         }
