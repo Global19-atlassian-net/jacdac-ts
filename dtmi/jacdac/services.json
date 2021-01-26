@@ -1107,6 +1107,13 @@
         "@id": "dtmi:jacdac:x1acb1890:const:variant;1",
         "description": "The type of physical joystick.",
         "schema": "dtmi:jacdac:x1acb1890:variant;1"
+      },
+      {
+        "@type": "Property",
+        "name": "digital",
+        "@id": "dtmi:jacdac:x1acb1890:const:digital;1",
+        "description": "Indicates if the joystick is digital, typically made of switches.",
+        "schema": "boolean"
       }
     ],
     "extends": [

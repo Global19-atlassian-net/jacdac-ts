@@ -152,6 +152,22 @@
       "optional": true,
       "identifierName": "variant",
       "packFormat": "u8"
+    },
+    {
+      "kind": "const",
+      "name": "digital",
+      "identifier": 384,
+      "description": "Indicates if the joystick is digital, typically made of switches.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "",
+          "type": "bool",
+          "storage": 1
+        }
+      ],
+      "optional": true,
+      "packFormat": "u8"
     }
   ]
 }
