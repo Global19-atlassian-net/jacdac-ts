@@ -1,0 +1,74 @@
+{
+  "@type": "Interface",
+  "@id": "dtmi:jacdac:services:x1a8b1a28;1",
+  "displayName": "Real time clock",
+  "description": "Real time clock to support collecting data with precise time stamps.",
+  "contents": [
+    {
+      "@type": "Telemetry",
+      "name": "now",
+      "@id": "dtmi:jacdac:x1a8b1a28:ro:now;1",
+      "description": "Current time in 24h representation. \n* ``echo`` is the Unix epoch, seconds since ``1/1/1970``\n* ``date`` is day of the month, starting at ``1``\n* ``day`` is day of the week, starting at ``1`` as monday\nDefault streaming period is 1 second.",
+      "schema": {
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "epoch",
+            "schema": "integer"
+          },
+          {
+            "name": "year",
+            "schema": "integer"
+          },
+          {
+            "name": "month",
+            "schema": "integer"
+          },
+          {
+            "name": "date",
+            "schema": "integer"
+          },
+          {
+            "name": "day",
+            "schema": "integer"
+          },
+          {
+            "name": "hour",
+            "schema": "integer"
+          },
+          {
+            "name": "min",
+            "schema": "integer"
+          },
+          {
+            "name": "sec",
+            "schema": "integer"
+          }
+        ]
+      }
+    },
+    {
+      "@type": [
+        "Telemetry",
+        "TimeSpan"
+      ],
+      "name": "error",
+      "@id": "dtmi:jacdac:x1a8b1a28:ro:error;1",
+      "description": "Time drift since the last call to the ``set_time`` command.",
+      "unit": "second",
+      "schema": "float"
+    },
+    {
+      "@type": "Property",
+      "name": "precision",
+      "@id": "dtmi:jacdac:x1a8b1a28:const:precision;1",
+      "description": "Error on the clock, in parts per million of seconds.",
+      "schema": "float"
+    }
+  ],
+  "extends": [
+    "dtmi:jacdac:services:x1ffffff3;1",
+    "dtmi:jacdac:services:x1ffffff2;1"
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}
