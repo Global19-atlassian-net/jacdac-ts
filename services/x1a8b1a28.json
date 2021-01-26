@@ -112,17 +112,10 @@
     },
     {
       "kind": "ro",
-      "name": "now",
+      "name": "local_time",
       "identifier": 257,
-      "description": "Current time in 24h representation. \n* ``echo`` is the Unix epoch, seconds since ``1/1/1970``\n* ``date`` is day of the month, starting at ``1``\n* ``day`` is day of the week, starting at ``1`` as monday\nDefault streaming period is 1 second.",
+      "description": "Current time in 24h representation. \n* ``day_of_month`` is day of the month, starting at ``1``\n* ``day_of_week`` is day of the week, starting at ``1`` as monday\nDefault streaming period is 1 second.",
       "fields": [
-        {
-          "name": "epoch",
-          "unit": "",
-          "type": "u32",
-          "storage": 4,
-          "isSimpleType": true
-        },
         {
           "name": "year",
           "unit": "",
@@ -140,7 +133,7 @@
           "absoluteMax": 12
         },
         {
-          "name": "date",
+          "name": "day_of_month",
           "unit": "",
           "type": "u8",
           "storage": 1,
@@ -149,7 +142,7 @@
           "absoluteMax": 31
         },
         {
-          "name": "day",
+          "name": "day_of_week",
           "unit": "",
           "type": "u8",
           "storage": 1,
@@ -182,11 +175,11 @@
           "storage": 1,
           "isSimpleType": true,
           "absoluteMin": 0,
-          "absoluteMax": 59
+          "absoluteMax": 60
         }
       ],
       "identifierName": "reading",
-      "packFormat": "u32 u16 u8 u8 u8 u8 u8 u8"
+      "packFormat": "u16 u8 u8 u8 u8 u8 u8"
     },
     {
       "kind": "ro",
@@ -246,13 +239,6 @@
       "description": "Sets the current time and resets the error.",
       "fields": [
         {
-          "name": "epoch",
-          "unit": "",
-          "type": "u32",
-          "storage": 4,
-          "isSimpleType": true
-        },
-        {
           "name": "year",
           "unit": "",
           "type": "u16",
@@ -269,7 +255,7 @@
           "absoluteMax": 12
         },
         {
-          "name": "date",
+          "name": "day_of_month",
           "unit": "",
           "type": "u8",
           "storage": 1,
@@ -278,7 +264,7 @@
           "absoluteMax": 31
         },
         {
-          "name": "day",
+          "name": "day_of_week",
           "unit": "",
           "type": "u8",
           "storage": 1,
@@ -311,10 +297,10 @@
           "storage": 1,
           "isSimpleType": true,
           "absoluteMin": 0,
-          "absoluteMax": 59
+          "absoluteMax": 60
         }
       ],
-      "packFormat": "u32 u16 u8 u8 u8 u8 u8 u8"
+      "packFormat": "u16 u8 u8 u8 u8 u8 u8"
     }
   ]
 }
