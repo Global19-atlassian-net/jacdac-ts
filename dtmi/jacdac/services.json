@@ -2877,7 +2877,7 @@
         "@type": "Property",
         "name": "lang",
         "@id": "dtmi:jacdac:x1204d995:rw:lang;1",
-        "description": "Default language used for utterances.",
+        "description": "Language used for utterances as defined in https://www.ietf.org/rfc/bcp/bcp47.txt.",
         "schema": "string",
         "writable": true
       },
@@ -2885,7 +2885,7 @@
         "@type": "Property",
         "name": "volume",
         "@id": "dtmi:jacdac:x1204d995:rw:volume;1",
-        "description": "Default volume for utterances.",
+        "description": "Volume for utterances.",
         "schema": "integer",
         "writable": true
       },
@@ -2893,7 +2893,7 @@
         "@type": "Property",
         "name": "pitch",
         "@id": "dtmi:jacdac:x1204d995:rw:pitch;1",
-        "description": "Default pitch for utterances",
+        "description": "Pitch for utterances",
         "schema": "float",
         "writable": true
       },
@@ -2901,7 +2901,7 @@
         "@type": "Property",
         "name": "rate",
         "@id": "dtmi:jacdac:x1204d995:rw:rate;1",
-        "description": "Default rate for utterances",
+        "description": "Rate for utterances",
         "schema": "float",
         "writable": true
       }
