@@ -1,0 +1,35 @@
+{
+  "@type": "Interface",
+  "@id": "dtmi:jacdac:services:x196158f7;1",
+  "displayName": "7-segment display",
+  "description": "A classic 7-segment display, with 4 dots and column.",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "brightness",
+      "@id": "dtmi:jacdac:x196158f7:rw:brightness;1",
+      "description": "Controls the brightness of the LEDs. ``0`` means off.",
+      "schema": "integer",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "double_dots",
+      "@id": "dtmi:jacdac:x196158f7:rw:doubledots;1",
+      "description": "Turn on or off the column leds in of the segment. If the column leds is not supported, the value remains false.",
+      "schema": "boolean",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "digit_count",
+      "@id": "dtmi:jacdac:x196158f7:const:digitcount;1",
+      "description": "The number of digits available on the display.",
+      "schema": "integer"
+    }
+  ],
+  "extends": [
+    "dtmi:jacdac:services:x1ffffff3;1"
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

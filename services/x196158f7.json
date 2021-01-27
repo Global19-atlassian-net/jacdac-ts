@@ -1,0 +1,111 @@
+{
+  "name": "7-segment display",
+  "status": "experimental",
+  "shortId": "sevensegmentdisplay",
+  "camelName": "sevenSegmentDisplay",
+  "shortName": "sevenSegmentDisplay",
+  "extends": [
+    "_base"
+  ],
+  "notes": {
+    "short": "A classic 7-segment display, with 4 dots and column."
+  },
+  "classIdentifier": 425810167,
+  "enums": {},
+  "packets": [
+    {
+      "kind": "ro",
+      "name": "status_code",
+      "identifier": 259,
+      "description": "Reports the current state or error status of the device. ``code`` is a standardized value from \nthe JACDAC error codes. ``vendor_code`` is any vendor specific error code describing the device\nstate. This report is typically not queried, when a device has an error, it will typically\nadd this report in frame along with the announce packet.",
+      "fields": [
+        {
+          "name": "code",
+          "unit": "",
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true
+        },
+        {
+          "name": "vendor_code",
+          "unit": "",
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true
+        }
+      ],
+      "optional": true,
+      "identifierName": "status_code",
+      "packFormat": "u16 u16",
+      "derived": "_base"
+    },
+    {
+      "kind": "rw",
+      "name": "digits",
+      "identifier": 2,
+      "description": "Each byte encodes the display status of a digit using a ``GFEDCBA`` encoding. \nIf incoming ``digits`` data is smaller than available, the remaining digits will be cleared. Thus, sending an empty ``digits`` payload clears the screen.\n\n```text\n - A -\n |   |\n G   B\n |   |\n - F -\n |   |   -\n E   C  |DP|\n - D -   -\n```",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "",
+          "type": "bytes",
+          "storage": 0,
+          "isSimpleType": true
+        }
+      ],
+      "identifierName": "value",
+      "packFormat": "b"
+    },
+    {
+      "kind": "rw",
+      "name": "brightness",
+      "identifier": 1,
+      "description": "Controls the brightness of the LEDs. ``0`` means off.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "",
+          "type": "u8",
+          "storage": 1,
+          "isSimpleType": true
+        }
+      ],
+      "identifierName": "intensity",
+      "packFormat": "u8"
+    },
+    {
+      "kind": "rw",
+      "name": "double_dots",
+      "identifier": 128,
+      "description": "Turn on or off the column leds in of the segment. If the column leds is not supported, the value remains false.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "",
+          "type": "bool",
+          "storage": 1
+        }
+      ],
+      "optional": true,
+      "packFormat": "u8"
+    },
+    {
+      "kind": "const",
+      "name": "digit_count",
+      "identifier": 128,
+      "description": "The number of digits available on the display.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "",
+          "type": "u8",
+          "storage": 1,
+          "isSimpleType": true,
+          "defaultValue": 4
+        }
+      ],
+      "optional": true,
+      "packFormat": "u8"
+    }
+  ]
+}

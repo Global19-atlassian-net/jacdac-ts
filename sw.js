@@ -39,11 +39,11 @@ self.__precacheManifest = [
     "url": "styles-4d1902e7bd39726e0535.js"
   },
   {
-    "url": "app-800b667274f0e9ab4761.js"
+    "url": "app-7f1d2fe21947b76eead0.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "854f15266a9e9752549a8d030ca7750b"
+    "revision": "91266d69196ac4586be11292396fad19"
   },
   {
     "url": "static/webfonts/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"
@@ -63,7 +63,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2214083594.json",
-    "revision": "84ba168080c9ff0e889a89b3ef138670"
+    "revision": "15325eea04a7adce0ecd779e73c3b33d"
   },
   {
     "url": "page-data/sq/d/2270080012.json",
@@ -75,7 +75,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2744294623.json",
-    "revision": "8af060067ef511b071c430449577e01b"
+    "revision": "2b220d2cb6c65aaaaf9f9b1153212185"
   },
   {
     "url": "page-data/sq/d/3159585216.json",
@@ -91,7 +91,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "dc3837635095b2cca762554c5e994372"
+    "revision": "bea38675467e8b660da6a13d6dd50aa8"
   },
   {
     "url": "polyfill-860c3442a8635066b9ae.js"
@@ -385,6 +385,10 @@ self.__precacheManifest = [
     "revision": "6fdcd11ee3f3602b74082d404d3ab38b"
   },
   {
+    "url": "page-data/services/sevensegmentdisplay/page-data.json",
+    "revision": "1db256ea41f627dc75d41089f5c4c707"
+  },
+  {
     "url": "page-data/services/soilmoisture/page-data.json",
     "revision": "41c2fa69593f85a02897b8c29c660dbf"
   },
@@ -656,7 +660,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/jacdac-ts/app-800b667274f0e9ab4761.js`))) {
+  if (!resources || !(await caches.match(`/jacdac-ts/app-7f1d2fe21947b76eead0.js`))) {
     return await fetch(event.request)
   }
 
