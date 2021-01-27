@@ -1775,7 +1775,7 @@
   {
     "@type": "Interface",
     "@id": "dtmi:jacdac:services:x1179a749;1",
-    "displayName": "Motion sensor",
+    "displayName": "Motion",
     "description": "A sensor, typically PIR, that detects object motion within a certain range",
     "contents": [
       {
@@ -2496,7 +2496,7 @@
   {
     "@type": "Interface",
     "@id": "dtmi:jacdac:services:x126c4cb2;1",
-    "displayName": "Reflector light",
+    "displayName": "Reflected light",
     "description": "A sensor that detects light and dark surfaces, commonly used for line following robots.",
     "contents": [
       {

@@ -2,8 +2,8 @@
   "name": "UV index",
   "status": "experimental",
   "shortId": "uvindex",
-  "camelName": "uVIndex",
-  "shortName": "uVIndex",
+  "camelName": "UVIndex",
+  "shortName": "UVIndex",
   "extends": [
     "_base",
     "_sensor"

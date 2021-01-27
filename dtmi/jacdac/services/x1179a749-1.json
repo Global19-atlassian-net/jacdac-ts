@@ -1,7 +1,7 @@
 {
   "@type": "Interface",
   "@id": "dtmi:jacdac:services:x1179a749;1",
-  "displayName": "Motion sensor",
+  "displayName": "Motion",
   "description": "A sensor, typically PIR, that detects object motion within a certain range",
   "contents": [
     {

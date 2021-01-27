@@ -39,11 +39,11 @@ self.__precacheManifest = [
     "url": "styles-4d1902e7bd39726e0535.js"
   },
   {
-    "url": "app-508a3f9dbf8f0fadc274.js"
+    "url": "app-8b9d5a4529f91978a6c6.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "f96a998736e8fc4aa753245c08188574"
+    "revision": "0e42698a5ff5ea42ea382ee4bf9cc51e"
   },
   {
     "url": "static/webfonts/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"
@@ -63,7 +63,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2214083594.json",
-    "revision": "83d5bc62887d0b4d5a3f8a3141ea90f3"
+    "revision": "18bc768b6448bfa1627d909083fcdc24"
   },
   {
     "url": "page-data/sq/d/2270080012.json",
@@ -75,7 +75,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2744294623.json",
-    "revision": "964b81246bffa9ca130b99de6c951ad6"
+    "revision": "e67273b8e848ca2eafa7d8060b792f34"
   },
   {
     "url": "page-data/sq/d/3159585216.json",
@@ -91,7 +91,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "dad3780d93c547db893bf7eb9c717125"
+    "revision": "c9c19d44dc84cf6a19d3005107845414"
   },
   {
     "url": "polyfill-860c3442a8635066b9ae.js"
@@ -325,8 +325,8 @@ self.__precacheManifest = [
     "revision": "e5281fa9d7fb486c8cc4ce5fbb464df7"
   },
   {
-    "url": "page-data/services/motionsensor/page-data.json",
-    "revision": "3294489f554ccf045d02de12b942efee"
+    "url": "page-data/services/motion/page-data.json",
+    "revision": "dd4b200edb41d7f24e6ac723866698dc"
   },
   {
     "url": "page-data/services/motor/page-data.json",
@@ -362,7 +362,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/services/reflectedlight/page-data.json",
-    "revision": "02507ec057a3e3637f2786d52fedfcf9"
+    "revision": "9cce41922b9ea9e5749b4b105ad2b864"
   },
   {
     "url": "page-data/services/relay/page-data.json",
@@ -418,7 +418,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/services/uvindex/page-data.json",
-    "revision": "66680681f3ae021bb6b9af99cfde5447"
+    "revision": "64de490d89f4636d7aa26a517dab7333"
   },
   {
     "url": "page-data/services/vibration/page-data.json",
@@ -656,7 +656,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/jacdac-ts/app-508a3f9dbf8f0fadc274.js`))) {
+  if (!resources || !(await caches.match(`/jacdac-ts/app-8b9d5a4529f91978a6c6.js`))) {
     return await fetch(event.request)
   }
 

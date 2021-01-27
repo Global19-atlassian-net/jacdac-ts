@@ -1,7 +1,7 @@
 {
   "@type": "Interface",
   "@id": "dtmi:jacdac:services:x126c4cb2;1",
-  "displayName": "Reflector light",
+  "displayName": "Reflected light",
   "description": "A sensor that detects light and dark surfaces, commonly used for line following robots.",
   "contents": [
     {

@@ -1,9 +1,9 @@
 {
-  "name": "Motion sensor",
+  "name": "Motion",
   "status": "experimental",
-  "shortId": "motionsensor",
-  "camelName": "motionSensor",
-  "shortName": "motionSensor",
+  "shortId": "motion",
+  "camelName": "motion",
+  "shortName": "motion",
   "extends": [
     "_base",
     "_sensor"
