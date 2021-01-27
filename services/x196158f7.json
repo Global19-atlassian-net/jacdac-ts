@@ -64,14 +64,15 @@
       "fields": [
         {
           "name": "_",
-          "unit": "",
-          "type": "u8",
-          "storage": 1,
+          "unit": "/",
+          "shift": 16,
+          "type": "u16",
+          "storage": 2,
           "isSimpleType": true
         }
       ],
       "identifierName": "intensity",
-      "packFormat": "u8"
+      "packFormat": "u16"
     },
     {
       "kind": "rw",
