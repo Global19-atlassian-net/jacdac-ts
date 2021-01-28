@@ -33,17 +33,17 @@ self.__precacheManifest = [
     "url": "framework-1ffecd2421b8acab27d5.js"
   },
   {
-    "url": "styles.ed4b6929f95027a7578d.css"
+    "url": "styles.2503a1f94f5fa7450d17.css"
   },
   {
     "url": "styles-4d1902e7bd39726e0535.js"
   },
   {
-    "url": "app-4369bd9d0af5e616e2e2.js"
+    "url": "app-b5e3e134276c74abc1f2.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "ee4616a603a058d560257c4169c1bf86"
+    "revision": "eed77613cc30fb5ee1264e99d3e943e4"
   },
   {
     "url": "static/webfonts/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"
@@ -63,7 +63,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2214083594.json",
-    "revision": "103c6adf4bfff45f1400a747537d78bc"
+    "revision": "15325eea04a7adce0ecd779e73c3b33d"
   },
   {
     "url": "page-data/sq/d/2270080012.json",
@@ -75,7 +75,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2744294623.json",
-    "revision": "d918c0c05186c1d7ba8037472b0df690"
+    "revision": "791973227d8c2d4ddc127dda0de5bf31"
   },
   {
     "url": "page-data/sq/d/3159585216.json",
@@ -83,7 +83,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/413816803.json",
-    "revision": "f061dfc53ae24bee83192adc29890f6c"
+    "revision": "a4c3421f3b16eb4bc0d6c8195ee9e7a3"
   },
   {
     "url": "page-data/sq/d/63159454.json",
@@ -91,7 +91,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "b46d2fcd6d1b753e1ef387771b0589e2"
+    "revision": "0e36f316294c1575d9ed16af25821d49"
   },
   {
     "url": "polyfill-860c3442a8635066b9ae.js"
@@ -660,7 +660,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/jacdac-ts/app-4369bd9d0af5e616e2e2.js`))) {
+  if (!resources || !(await caches.match(`/jacdac-ts/app-b5e3e134276c74abc1f2.js`))) {
     return await fetch(event.request)
   }
 
