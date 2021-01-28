@@ -149,7 +149,9 @@
           "unit": "bpm",
           "shift": 16,
           "type": "u16.16",
-          "storage": 4
+          "storage": 4,
+          "typicalMin": 30,
+          "typicalMax": 200
         }
       ],
       "identifierName": "reading",
