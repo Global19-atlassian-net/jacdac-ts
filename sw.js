@@ -39,11 +39,11 @@ self.__precacheManifest = [
     "url": "styles-4d1902e7bd39726e0535.js"
   },
   {
-    "url": "app-246a7a580428b7ea9170.js"
+    "url": "app-1a2246d8c3934aa1c5ea.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "884f5108e822fe0588e8c5396d8e98a3"
+    "revision": "93fbc3c9cc23a0947ca1b33a3102d32d"
   },
   {
     "url": "static/webfonts/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"
@@ -91,7 +91,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "0a3cd80ef1dce0caada0bb490adc2bfd"
+    "revision": "978360a469325bcdb8c9225e97e9c6cd"
   },
   {
     "url": "polyfill-860c3442a8635066b9ae.js"
@@ -501,7 +501,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/tools/makecode-sim/page-data.json",
-    "revision": "9462efccb4bb4e6014089530acb8967f"
+    "revision": "a1d778395f76551022fba9a553460057"
   },
   {
     "url": "component---src-pages-tools-model-uploader-mdx-f52e8482aa463eacb7e3.js"
@@ -660,7 +660,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/jacdac-ts/app-246a7a580428b7ea9170.js`))) {
+  if (!resources || !(await caches.match(`/jacdac-ts/app-1a2246d8c3934aa1c5ea.js`))) {
     return await fetch(event.request)
   }
 
