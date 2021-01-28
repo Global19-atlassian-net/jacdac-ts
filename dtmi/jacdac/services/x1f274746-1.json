@@ -8,8 +8,8 @@
       "@type": "Telemetry",
       "name": "position",
       "@id": "dtmi:jacdac:x1f274746:ro:position;1",
-      "description": "The relative position of the slider between `0x0000` and `0xffff`.",
-      "schema": "integer"
+      "description": "The relative position of the slider between `0` and `1`.",
+      "schema": "float"
     },
     {
       "@type": "Property",
@@ -24,6 +24,16 @@
     "dtmi:jacdac:services:x1ffffff2;1"
   ],
   "schemas": [
+    {
+      "@id": "dtmi:jacdac:x1f274746:event;1",
+      "@type": "Object",
+      "fields": [
+        {
+          "name": "count",
+          "schema": "integer"
+        }
+      ]
+    },
     {
       "@type": "Enum",
       "@id": "dtmi:jacdac:x1f274746:variant;1",

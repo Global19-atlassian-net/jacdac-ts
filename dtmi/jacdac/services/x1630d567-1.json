@@ -14,15 +14,15 @@
         "fields": [
           {
             "name": "red",
-            "schema": "integer"
+            "schema": "float"
           },
           {
             "name": "green",
-            "schema": "integer"
+            "schema": "float"
           },
           {
             "name": "blue",
-            "schema": "integer"
+            "schema": "float"
           }
         ]
       }
@@ -31,6 +31,18 @@
   "extends": [
     "dtmi:jacdac:services:x1ffffff3;1",
     "dtmi:jacdac:services:x1ffffff2;1"
+  ],
+  "schemas": [
+    {
+      "@id": "dtmi:jacdac:x1630d567:event;1",
+      "@type": "Object",
+      "fields": [
+        {
+          "name": "count",
+          "schema": "integer"
+        }
+      ]
+    }
   ],
   "@context": "dtmi:dtdl:context;2"
 }

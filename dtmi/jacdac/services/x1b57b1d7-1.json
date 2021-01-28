@@ -9,12 +9,24 @@
       "name": "volume",
       "@id": "dtmi:jacdac:x1b57b1d7:rw:volume;1",
       "description": "The volume (duty cycle) of the buzzer.",
-      "schema": "integer",
+      "schema": "float",
       "writable": true
     }
   ],
   "extends": [
     "dtmi:jacdac:services:x1ffffff3;1"
+  ],
+  "schemas": [
+    {
+      "@id": "dtmi:jacdac:x1b57b1d7:event;1",
+      "@type": "Object",
+      "fields": [
+        {
+          "name": "count",
+          "schema": "integer"
+        }
+      ]
+    }
   ],
   "@context": "dtmi:dtdl:context;2"
 }

@@ -9,7 +9,7 @@
       "name": "moisture",
       "@id": "dtmi:jacdac:x1d4aa3b3:ro:moisture;1",
       "description": "Indicates the wetness of the soil, from ``dry`` to ``wet``.",
-      "schema": "integer"
+      "schema": "float"
     },
     {
       "@type": "Property",
@@ -24,6 +24,16 @@
     "dtmi:jacdac:services:x1ffffff2;1"
   ],
   "schemas": [
+    {
+      "@id": "dtmi:jacdac:x1d4aa3b3:event;1",
+      "@type": "Object",
+      "fields": [
+        {
+          "name": "count",
+          "schema": "integer"
+        }
+      ]
+    },
     {
       "@type": "Enum",
       "@id": "dtmi:jacdac:x1d4aa3b3:variant;1",

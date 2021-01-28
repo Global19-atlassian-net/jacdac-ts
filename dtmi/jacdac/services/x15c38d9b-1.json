@@ -32,5 +32,17 @@
   "extends": [
     "dtmi:jacdac:services:x1ffffff3;1"
   ],
+  "schemas": [
+    {
+      "@id": "dtmi:jacdac:x15c38d9b:event;1",
+      "@type": "Object",
+      "fields": [
+        {
+          "name": "count",
+          "schema": "integer"
+        }
+      ]
+    }
+  ],
   "@context": "dtmi:dtdl:context;2"
 }

@@ -9,7 +9,7 @@
       "name": "brightness",
       "@id": "dtmi:jacdac:x196158f7:rw:brightness;1",
       "description": "Controls the brightness of the LEDs. ``0`` means off.",
-      "schema": "integer",
+      "schema": "float",
       "writable": true
     },
     {
@@ -37,6 +37,18 @@
   ],
   "extends": [
     "dtmi:jacdac:services:x1ffffff3;1"
+  ],
+  "schemas": [
+    {
+      "@id": "dtmi:jacdac:x196158f7:event;1",
+      "@type": "Object",
+      "fields": [
+        {
+          "name": "count",
+          "schema": "integer"
+        }
+      ]
+    }
   ],
   "@context": "dtmi:dtdl:context;2"
 }

@@ -58,7 +58,7 @@
       "name": "battery_charge",
       "@id": "dtmi:jacdac:x1fa4c95a:ro:batterycharge;1",
       "description": "Fraction of charge in the battery.",
-      "schema": "integer"
+      "schema": "float"
     },
     {
       "@type": "Property",
@@ -102,6 +102,18 @@
   ],
   "extends": [
     "dtmi:jacdac:services:x1ffffff3;1"
+  ],
+  "schemas": [
+    {
+      "@id": "dtmi:jacdac:x1fa4c95a:event;1",
+      "@type": "Object",
+      "fields": [
+        {
+          "name": "count",
+          "schema": "integer"
+        }
+      ]
+    }
   ],
   "@context": "dtmi:dtdl:context;2"
 }

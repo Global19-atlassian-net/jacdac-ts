@@ -25,7 +25,7 @@
       "name": "volume",
       "@id": "dtmi:jacdac:x1204d995:rw:volume;1",
       "description": "Volume for utterances.",
-      "schema": "integer",
+      "schema": "float",
       "writable": true
     },
     {
@@ -47,6 +47,18 @@
   ],
   "extends": [
     "dtmi:jacdac:services:x1ffffff3;1"
+  ],
+  "schemas": [
+    {
+      "@id": "dtmi:jacdac:x1204d995:event;1",
+      "@type": "Object",
+      "fields": [
+        {
+          "name": "count",
+          "schema": "integer"
+        }
+      ]
+    }
   ],
   "@context": "dtmi:dtdl:context;2"
 }

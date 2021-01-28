@@ -75,6 +75,16 @@
   ],
   "schemas": [
     {
+      "@id": "dtmi:jacdac:x1a8b1a28:event;1",
+      "@type": "Object",
+      "fields": [
+        {
+          "name": "count",
+          "schema": "integer"
+        }
+      ]
+    },
+    {
       "@type": "Enum",
       "@id": "dtmi:jacdac:x1a8b1a28:variant;1",
       "valueSchema": "integer",

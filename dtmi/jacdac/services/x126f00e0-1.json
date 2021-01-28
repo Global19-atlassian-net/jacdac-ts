@@ -9,7 +9,7 @@
       "name": "brightness",
       "@id": "dtmi:jacdac:x126f00e0:rw:brightness;1",
       "description": "Set the luminosity of the strip.\nAt `0` the power to the strip is completely shut down.",
-      "schema": "integer",
+      "schema": "float",
       "writable": true
     },
     {
@@ -17,7 +17,7 @@
       "name": "actual_brightness",
       "@id": "dtmi:jacdac:x126f00e0:ro:actualbrightness;1",
       "description": "This is the luminosity actually applied to the strip.\nMay be lower than `brightness` if power-limited by the `max_power` register.\nIt will rise slowly (few seconds) back to `brightness` is limits are no longer required.",
-      "schema": "integer"
+      "schema": "float"
     },
     {
       "@type": "Property",
@@ -74,6 +74,16 @@
     "dtmi:jacdac:services:x1ffffff3;1"
   ],
   "schemas": [
+    {
+      "@id": "dtmi:jacdac:x126f00e0:event;1",
+      "@type": "Object",
+      "fields": [
+        {
+          "name": "count",
+          "schema": "integer"
+        }
+      ]
+    },
     {
       "@type": "Enum",
       "@id": "dtmi:jacdac:x126f00e0:lighttype;1",

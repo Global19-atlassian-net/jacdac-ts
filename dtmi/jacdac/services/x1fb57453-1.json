@@ -9,7 +9,7 @@
       "name": "brightness",
       "@id": "dtmi:jacdac:x1fb57453:rw:brightness;1",
       "description": "Set the luminosity of the strip. The value is used to scale `start_intensity` in `steps` register.\nAt `0` the power to the strip is completely shut down.",
-      "schema": "integer",
+      "schema": "float",
       "writable": true
     },
     {
@@ -50,6 +50,18 @@
   ],
   "extends": [
     "dtmi:jacdac:services:x1ffffff3;1"
+  ],
+  "schemas": [
+    {
+      "@id": "dtmi:jacdac:x1fb57453:event;1",
+      "@type": "Object",
+      "fields": [
+        {
+          "name": "count",
+          "schema": "integer"
+        }
+      ]
+    }
   ],
   "@context": "dtmi:dtdl:context;2"
 }

@@ -9,7 +9,7 @@
       "name": "speed",
       "@id": "dtmi:jacdac:x183fc4a2:ro:speed;1",
       "description": "Rotation speed of the motor. If only one rotation speed is supported,\nthen `0` shell be off, and any other number on. \nUse the ``vibrate`` command to control the register.",
-      "schema": "integer"
+      "schema": "float"
     },
     {
       "@type": "Property",
@@ -22,6 +22,18 @@
   ],
   "extends": [
     "dtmi:jacdac:services:x1ffffff3;1"
+  ],
+  "schemas": [
+    {
+      "@id": "dtmi:jacdac:x183fc4a2:event;1",
+      "@type": "Object",
+      "fields": [
+        {
+          "name": "count",
+          "schema": "integer"
+        }
+      ]
+    }
   ],
   "@context": "dtmi:dtdl:context;2"
 }

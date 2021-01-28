@@ -23,5 +23,17 @@
     "dtmi:jacdac:services:x1ffffff3;1",
     "dtmi:jacdac:services:x1ffffff2;1"
   ],
+  "schemas": [
+    {
+      "@id": "dtmi:jacdac:x13734c95:event;1",
+      "@type": "Object",
+      "fields": [
+        {
+          "name": "count",
+          "schema": "integer"
+        }
+      ]
+    }
+  ],
   "@context": "dtmi:dtdl:context;2"
 }

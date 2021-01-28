@@ -9,7 +9,7 @@
       "name": "light_level",
       "@id": "dtmi:jacdac:x17dc9a1c:ro:lightlevel;1",
       "description": "Detect light level",
-      "schema": "integer"
+      "schema": "float"
     },
     {
       "@type": "Property",
@@ -24,6 +24,16 @@
     "dtmi:jacdac:services:x1ffffff2;1"
   ],
   "schemas": [
+    {
+      "@id": "dtmi:jacdac:x17dc9a1c:event;1",
+      "@type": "Object",
+      "fields": [
+        {
+          "name": "count",
+          "schema": "integer"
+        }
+      ]
+    },
     {
       "@type": "Enum",
       "@id": "dtmi:jacdac:x17dc9a1c:variant;1",

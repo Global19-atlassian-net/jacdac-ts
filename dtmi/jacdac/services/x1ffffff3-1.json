@@ -8,7 +8,7 @@
       "@type": "Telemetry",
       "name": "status_code",
       "@id": "dtmi:jacdac:x1ffffff3:ro:statuscode;1",
-      "description": "Reports the current state or error status of the device. ``code`` is a standardized value from \nthe JACDAC error codes. ``vendor_code`` is any vendor specific error code describing the device\nstate. This report is typically not queried, when a device has an error, it will typically\nadd this report in frame along with the announce packet.",
+      "description": "Reports the current state or error status of the device. ``code`` is a standardized value from \nthe JACDAC status/error codes. ``vendor_code`` is any vendor specific error code describing the device\nstate. This report is typically not queried, when a device has an error, it will typically\nadd this report in frame along with the announce packet.",
       "schema": {
         "@type": "Object",
         "fields": [
@@ -22,6 +22,37 @@
           }
         ]
       }
+    },
+    {
+      "@type": "Telemetry",
+      "name": "status_code_changed",
+      "@id": "dtmi:jacdac:x1ffffff3:event:statuscodechanged;1",
+      "description": "Notifies that the status code of the service changed.",
+      "schema": {
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "code",
+            "schema": "integer"
+          },
+          {
+            "name": "vendor_code",
+            "schema": "integer"
+          }
+        ]
+      }
+    }
+  ],
+  "schemas": [
+    {
+      "@id": "dtmi:jacdac:x1ffffff3:event;1",
+      "@type": "Object",
+      "fields": [
+        {
+          "name": "count",
+          "schema": "integer"
+        }
+      ]
     }
   ],
   "@context": "dtmi:dtdl:context;2"

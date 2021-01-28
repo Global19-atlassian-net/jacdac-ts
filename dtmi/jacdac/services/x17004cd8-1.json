@@ -9,7 +9,7 @@
       "name": "duty",
       "@id": "dtmi:jacdac:x17004cd8:rw:duty;1",
       "description": "PWM duty cycle of the motor. Use negative/positive values to run the motor forwards and backwards.\nPositive is recommended to be clockwise rotation and negative counterclockwise. A duty of ``0`` \nwhile ``enabled`` acts as brake.",
-      "schema": "integer",
+      "schema": "float",
       "writable": true
     },
     {
@@ -37,6 +37,18 @@
   ],
   "extends": [
     "dtmi:jacdac:services:x1ffffff3;1"
+  ],
+  "schemas": [
+    {
+      "@id": "dtmi:jacdac:x17004cd8:event;1",
+      "@type": "Object",
+      "fields": [
+        {
+          "name": "count",
+          "schema": "integer"
+        }
+      ]
+    }
   ],
   "@context": "dtmi:dtdl:context;2"
 }

@@ -9,6 +9,16 @@
   ],
   "schemas": [
     {
+      "@id": "dtmi:jacdac:x1ffa9948:event;1",
+      "@type": "Object",
+      "fields": [
+        {
+          "name": "count",
+          "schema": "integer"
+        }
+      ]
+    },
+    {
       "@type": "Enum",
       "@id": "dtmi:jacdac:x1ffa9948:error;1",
       "valueSchema": "integer",

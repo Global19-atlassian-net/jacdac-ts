@@ -9,7 +9,7 @@
       "name": "brightness",
       "@id": "dtmi:jacdac:x126c4cb2:ro:brightness;1",
       "description": "Reports the reflected brightness. It may be a digital value or, for some sensor, analog value.",
-      "schema": "integer"
+      "schema": "float"
     },
     {
       "@type": "Property",

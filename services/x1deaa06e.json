@@ -35,7 +35,7 @@
       "kind": "ro",
       "name": "status_code",
       "identifier": 259,
-      "description": "Reports the current state or error status of the device. ``code`` is a standardized value from \nthe JACDAC error codes. ``vendor_code`` is any vendor specific error code describing the device\nstate. This report is typically not queried, when a device has an error, it will typically\nadd this report in frame along with the announce packet.",
+      "description": "Reports the current state or error status of the device. ``code`` is a standardized value from \nthe JACDAC status/error codes. ``vendor_code`` is any vendor specific error code describing the device\nstate. This report is typically not queried, when a device has an error, it will typically\nadd this report in frame along with the announce packet.",
       "fields": [
         {
           "name": "code",
@@ -54,6 +54,32 @@
       ],
       "optional": true,
       "identifierName": "status_code",
+      "packFormat": "u16 u16",
+      "derived": "_base"
+    },
+    {
+      "kind": "event",
+      "name": "status_code_changed",
+      "identifier": 4,
+      "description": "Notifies that the status code of the service changed.",
+      "fields": [
+        {
+          "name": "code",
+          "unit": "",
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true
+        },
+        {
+          "name": "vendor_code",
+          "unit": "",
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true
+        }
+      ],
+      "optional": true,
+      "identifierName": "status_code_changed",
       "packFormat": "u16 u16",
       "derived": "_base"
     },
@@ -134,13 +160,12 @@
           "name": "pressure",
           "unit": "/",
           "shift": 8,
-          "type": "u8",
-          "storage": 1,
-          "isSimpleType": true
+          "type": "u0.8",
+          "storage": 1
         }
       ],
       "identifierName": "reading",
-      "packFormat": "r: u8 u8"
+      "packFormat": "r: u8 u0.8"
     },
     {
       "kind": "const",

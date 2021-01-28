@@ -14,11 +14,11 @@
         "fields": [
           {
             "name": "x",
-            "schema": "integer"
+            "schema": "float"
           },
           {
             "name": "y",
-            "schema": "integer"
+            "schema": "float"
           }
         ]
       }
@@ -43,6 +43,16 @@
     "dtmi:jacdac:services:x1ffffff2;1"
   ],
   "schemas": [
+    {
+      "@id": "dtmi:jacdac:x1acb1890:event;1",
+      "@type": "Object",
+      "fields": [
+        {
+          "name": "count",
+          "schema": "integer"
+        }
+      ]
+    },
     {
       "@type": "Enum",
       "@id": "dtmi:jacdac:x1acb1890:variant;1",

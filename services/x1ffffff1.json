@@ -12,7 +12,20 @@
     "events": "Events codes are 8-bit and are subdivided as follows:\n* Events `0x00-0x7f` - common to all services\n* Events `0x80-0xff` - defined per-service"
   },
   "classIdentifier": 536870897,
-  "enums": {},
+  "enums": {
+    "StatusCodes": {
+      "name": "StatusCodes",
+      "storage": 2,
+      "members": {
+        "Ready": 0,
+        "Initializing": 1,
+        "Calibrating": 2,
+        "Sleeping": 3,
+        "WaitingForInput": 4,
+        "CalibrationNeeded": 100
+      }
+    }
+  },
   "packets": [
     {
       "kind": "command",
@@ -289,29 +302,6 @@
       "packFormat": "i32"
     },
     {
-      "kind": "ro",
-      "name": "status_code",
-      "identifier": 259,
-      "description": "Reports the current state or error status of the device. ``code`` is a standardized value from \nthe JACDAC error codes. ``vendor_code`` is any vendor specific error code describing the device\nstate. This report is typically not queried, when a device has an error, it will typically\nadd this report in frame along with the announce packet.",
-      "fields": [
-        {
-          "name": "code",
-          "unit": "",
-          "type": "u16",
-          "storage": 2,
-          "isSimpleType": true
-        },
-        {
-          "name": "vendor_code",
-          "unit": "",
-          "type": "u16",
-          "storage": 2,
-          "isSimpleType": true
-        }
-      ],
-      "packFormat": "u16 u16"
-    },
-    {
       "kind": "const",
       "name": "streaming_preferred_interval",
       "identifier": 258,
@@ -344,6 +334,29 @@
       "packFormat": "u32"
     },
     {
+      "kind": "ro",
+      "name": "status_code",
+      "identifier": 259,
+      "description": "Reports the current state or error status of the device. ``code`` is a standardized value from \nthe JACDAC status/error codes. ``vendor_code`` is any vendor specific error code describing the device\nstate. This report is typically not queried, when a device has an error, it will typically\nadd this report in frame along with the announce packet.",
+      "fields": [
+        {
+          "name": "code",
+          "unit": "",
+          "type": "StatusCodes",
+          "storage": 2
+        },
+        {
+          "name": "vendor_code",
+          "unit": "",
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true
+        }
+      ],
+      "optional": true,
+      "packFormat": "u16 u16"
+    },
+    {
       "kind": "event",
       "name": "active",
       "identifier": 1,
@@ -361,8 +374,31 @@
       "kind": "event",
       "name": "change",
       "identifier": 3,
-      "description": "Notifies that the internal state of the service changed.",
+      "description": "Notifies that the some state of the service changed.",
       "fields": []
+    },
+    {
+      "kind": "event",
+      "name": "status_code_changed",
+      "identifier": 4,
+      "description": "Notifies that the status code of the service changed.",
+      "fields": [
+        {
+          "name": "code",
+          "unit": "",
+          "type": "StatusCodes",
+          "storage": 2
+        },
+        {
+          "name": "vendor_code",
+          "unit": "",
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true
+        }
+      ],
+      "optional": true,
+      "packFormat": "u16 u16"
     }
   ]
 }
