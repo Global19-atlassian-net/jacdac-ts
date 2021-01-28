@@ -8,7 +8,7 @@
     "_base"
   ],
   "notes": {
-    "short": "A classic 7-segment display, with 4 dots and column."
+    "short": "A 7-segment numeric display, with one or more digits."
   },
   "classIdentifier": 425810167,
   "enums": {},
@@ -43,7 +43,7 @@
       "kind": "rw",
       "name": "digits",
       "identifier": 2,
-      "description": "Each byte encodes the display status of a digit using a ``GFEDCBA`` encoding. \nIf incoming ``digits`` data is smaller than available, the remaining digits will be cleared. Thus, sending an empty ``digits`` payload clears the screen.\n\n```text\n - A -\n |   |\n G   B\n |   |\n - F -\n |   |   -\n E   C  |DP|\n - D -   -\n```",
+      "description": "Each byte encodes the display status of a digit using, \nwhere bit 0 encodes segment `A`, bit 1 encodes segments `B`, ..., bit 6 encodes segments `G`, and bit 7 encodes the decimal point (if present).\nIf incoming ``digits`` data is smaller than `digit_count`, the remaining digits will be cleared.\nThus, sending an empty ``digits`` payload clears the screen.\n\n```text\n - A -\n G   B\n |   |\n - F -\n |   |   -\n E   C  |DP|\n - D -   -\n```",
       "fields": [
         {
           "name": "_",
@@ -78,7 +78,7 @@
       "kind": "rw",
       "name": "double_dots",
       "identifier": 128,
-      "description": "Turn on or off the column leds in of the segment. If the column leds is not supported, the value remains false.",
+      "description": "Turn on or off the column LEDs (separating minutes from hours, etc.) in of the segment.\nIf the column LEDs is not supported, the value remains false.",
       "fields": [
         {
           "name": "_",
@@ -93,7 +93,7 @@
     {
       "kind": "const",
       "name": "digit_count",
-      "identifier": 128,
+      "identifier": 384,
       "description": "The number of digits available on the display.",
       "fields": [
         {
@@ -101,11 +101,24 @@
           "unit": "",
           "type": "u8",
           "storage": 1,
-          "isSimpleType": true,
-          "defaultValue": 4
+          "isSimpleType": true
         }
       ],
-      "optional": true,
+      "packFormat": "u8"
+    },
+    {
+      "kind": "const",
+      "name": "decimal_point",
+      "identifier": 385,
+      "description": "True if decimal points are available (on all digits).",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "",
+          "type": "bool",
+          "storage": 1
+        }
+      ],
       "packFormat": "u8"
     }
   ]
