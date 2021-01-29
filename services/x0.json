@@ -311,6 +311,7 @@
         }
       ],
       "optional": true,
+      "preferredInterval": 60000,
       "packFormat": "i16"
     },
     {
@@ -328,6 +329,7 @@
         }
       ],
       "optional": true,
+      "preferredInterval": 60000,
       "packFormat": "u64"
     },
     {
