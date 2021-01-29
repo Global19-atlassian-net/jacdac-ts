@@ -39,11 +39,11 @@ self.__precacheManifest = [
     "url": "styles-4d1902e7bd39726e0535.js"
   },
   {
-    "url": "app-e52abec9d851a818a64f.js"
+    "url": "app-4dd9c15e262abdfb1ec2.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "25fe996307b7316a321ecc730ae96e35"
+    "revision": "e661da8498bb995e43e8fc5068ffc971"
   },
   {
     "url": "static/webfonts/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"
@@ -75,7 +75,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2744294623.json",
-    "revision": "939c65ebd8449a22d9b55dd9de8d937d"
+    "revision": "45abb77a9dce2b68bac927d824e2f250"
   },
   {
     "url": "page-data/sq/d/3159585216.json",
@@ -91,7 +91,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "ed0fd06b7d2ece3bfc34459b661daa4e"
+    "revision": "ea525eb47294964a6598836ff57b9961"
   },
   {
     "url": "polyfill-860c3442a8635066b9ae.js"
@@ -298,7 +298,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/services/led/page-data.json",
-    "revision": "cd4e99dbfddec9bf9c4e638e9f1b51db"
+    "revision": "aa80808493b1de4aaa991c233647fd0c"
   },
   {
     "url": "page-data/services/ledmatrixcontroller/page-data.json",
@@ -668,7 +668,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/jacdac-ts/app-e52abec9d851a818a64f.js`))) {
+  if (!resources || !(await caches.match(`/jacdac-ts/app-4dd9c15e262abdfb1ec2.js`))) {
     return await fetch(event.request)
   }
 

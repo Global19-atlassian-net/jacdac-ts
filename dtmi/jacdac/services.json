@@ -1503,14 +1503,14 @@
   },
   {
     "@type": "Interface",
-    "@id": "dtmi:jacdac:services:x1fb57453;1",
+    "@id": "dtmi:jacdac:services:x1e3048f8;1",
     "displayName": "LED",
-    "description": "A controller for 1 or more LEDs connected in parallel.",
+    "description": "A controller for 1 or more monochrome or RGB LEDs connected in parallel.",
     "contents": [
       {
         "@type": "Property",
         "name": "brightness",
-        "@id": "dtmi:jacdac:x1fb57453:rw:brightness;1",
+        "@id": "dtmi:jacdac:x1e3048f8:rw:brightness;1",
         "description": "Set the luminosity of the strip. The value is used to scale `start_intensity` in `steps` register.\nAt `0` the power to the strip is completely shut down.",
         "schema": "float",
         "writable": true
@@ -1521,7 +1521,7 @@
           "Current"
         ],
         "name": "max_power",
-        "@id": "dtmi:jacdac:x1fb57453:rw:maxpower;1",
+        "@id": "dtmi:jacdac:x1e3048f8:rw:maxpower;1",
         "description": "Limit the power drawn by the light-strip (and controller).",
         "unit": "milliampere",
         "schema": "integer",
@@ -1529,26 +1529,31 @@
       },
       {
         "@type": "Property",
-        "name": "max_steps",
-        "@id": "dtmi:jacdac:x1fb57453:const:maxsteps;1",
-        "description": "Maximum number of steps allowed in animation definition. This determines the size of the `steps` register.",
+        "name": "led_count",
+        "@id": "dtmi:jacdac:x1e3048f8:const:ledcount;1",
+        "description": "If known, specifies the number of LEDs in parallel on this device.",
         "schema": "integer"
       },
       {
         "@type": "Property",
-        "name": "current_iteration",
-        "@id": "dtmi:jacdac:x1fb57453:rw:currentiteration;1",
-        "description": "Currently excecuting iteration of animation. Can be set to `0` to restart current animation.\nIf `current_iteration > max_iterations`, then no animation is currently running.",
-        "schema": "integer",
-        "writable": true
+        "name": "wave_length",
+        "@id": "dtmi:jacdac:x1e3048f8:const:wavelength;1",
+        "description": "If monochrome LED, specifies the wave length of the LED.",
+        "schema": "integer"
       },
       {
         "@type": "Property",
-        "name": "max_iterations",
-        "@id": "dtmi:jacdac:x1fb57453:rw:maxiterations;1",
-        "description": "The animation will be repeated `max_iterations + 1` times.",
-        "schema": "integer",
-        "writable": true
+        "name": "luminous_intensity",
+        "@id": "dtmi:jacdac:x1e3048f8:const:luminousintensity;1",
+        "description": "The luminous intensity of the LED, in micro candella.",
+        "schema": "integer"
+      },
+      {
+        "@type": "Property",
+        "name": "variant",
+        "@id": "dtmi:jacdac:x1e3048f8:const:variant;1",
+        "description": "The physical type of LED.",
+        "schema": "dtmi:jacdac:x1e3048f8:variant;1"
       }
     ],
     "extends": [
@@ -1556,12 +1561,34 @@
     ],
     "schemas": [
       {
-        "@id": "dtmi:jacdac:x1fb57453:event;1",
+        "@id": "dtmi:jacdac:x1e3048f8:event;1",
         "@type": "Object",
         "fields": [
           {
             "name": "count",
             "schema": "integer"
+          }
+        ]
+      },
+      {
+        "@type": "Enum",
+        "@id": "dtmi:jacdac:x1e3048f8:variant;1",
+        "valueSchema": "integer",
+        "enumValues": [
+          {
+            "name": "throughHole",
+            "displayName": "ThroughHole",
+            "enumValue": 1
+          },
+          {
+            "name": "sMD",
+            "displayName": "SMD",
+            "enumValue": 2
+          },
+          {
+            "name": "power",
+            "displayName": "Power",
+            "enumValue": 3
           }
         ]
       }
