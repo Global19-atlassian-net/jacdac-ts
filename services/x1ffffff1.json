@@ -241,7 +241,7 @@
       "kind": "ro",
       "name": "reading_error",
       "identifier": 262,
-      "description": "The real value of whatever is measured is between `reading - reading_error` and `reading + reading_error`.\nThis register is often, but not always `const`.",
+      "description": "The real value of whatever is measured is between `reading - reading_error` and `reading + reading_error`. It should be computed from the internal state of the sensor. This register is often, but not always `const`. If the register value is modified,\nsend a report in the same frame of the ``reading`` report.",
       "fields": [
         {
           "name": "_",

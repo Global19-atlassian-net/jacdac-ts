@@ -154,6 +154,7 @@
         }
       ],
       "identifierName": "reading",
+      "preferredInterval": 1000,
       "packFormat": "i22.10"
     },
     {

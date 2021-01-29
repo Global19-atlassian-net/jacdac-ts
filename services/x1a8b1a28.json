@@ -205,6 +205,7 @@
         }
       ],
       "identifierName": "reading",
+      "preferredInterval": 1000,
       "packFormat": "u16 u8 u8 u8 u8 u8 u8"
     },
     {
