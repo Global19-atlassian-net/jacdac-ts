@@ -18,7 +18,8 @@
       "members": {
         "ThroughHole": 1,
         "SMD": 2,
-        "Power": 3
+        "Power": 3,
+        "Bead": 4
       }
     }
   },
@@ -79,7 +80,7 @@
       "kind": "rw",
       "name": "brightness",
       "identifier": 1,
-      "description": "Set the luminosity of the strip. The value is used to scale `start_intensity` in `steps` register.\nAt `0` the power to the strip is completely shut down.",
+      "description": "Set the luminosity of the strip. The value is used to scale `value` in `steps` register.\nAt `0` the power to the strip is completely shut down.",
       "fields": [
         {
           "name": "_",
@@ -96,7 +97,7 @@
       "kind": "rw",
       "name": "steps",
       "identifier": 130,
-      "description": "Animations are described using pairs of brightness value and duration, similarly to the `status_light` register in the control service. They repeat infinitely until another animation\nis specified.",
+      "description": "Animations are described using pairs of color description and duration, \nsimilarly to the `status_light` register in the control service.\nThey repeat indefinitely until another animation is specified.\nFor monochrome LEDs, the hue and saturation are ignored.\nA specification `(red, 80ms), (blue, 40ms), (blue, 0ms), (yellow, 80ms)`\nmeans to start with red, cross-fade to blue over 80ms, stay blue for 40ms,\nchange to yellow, and cross-fade back to red in 80ms.",
       "fields": [
         {
           "name": "hue",
@@ -189,7 +190,7 @@
       "kind": "const",
       "name": "luminous_intensity",
       "identifier": 133,
-      "description": "The luminous intensity of the LED, in micro candella.",
+      "description": "The luminous intensity of the LED, at full value, in micro candella.",
       "fields": [
         {
           "name": "_",

@@ -39,11 +39,11 @@ self.__precacheManifest = [
     "url": "styles-4d1902e7bd39726e0535.js"
   },
   {
-    "url": "app-6e59c40a7b82ba333c46.js"
+    "url": "app-ba193e699d93cbe2587e.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "1615d92fa49053ac3918c9d30ddb6a1f"
+    "revision": "1950d0a386db98592cfda6d43638ccef"
   },
   {
     "url": "static/webfonts/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"
@@ -63,7 +63,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2214083594.json",
-    "revision": "1501e9dbddef851f4fc2f1b91bec1b92"
+    "revision": "b4968da1acea9deaade928574df256ef"
   },
   {
     "url": "page-data/sq/d/2270080012.json",
@@ -75,7 +75,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2744294623.json",
-    "revision": "69462a45658b09bfa9ecccdd7df90746"
+    "revision": "ec4cd0767af2a47e8c74c6aec13a81df"
   },
   {
     "url": "page-data/sq/d/3159585216.json",
@@ -91,7 +91,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "de56f0d908ebce89d986c46efc374a5b"
+    "revision": "a36df3dc432bbfecb0c6e7bbc3168c59"
   },
   {
     "url": "polyfill-860c3442a8635066b9ae.js"
@@ -253,10 +253,6 @@ self.__precacheManifest = [
     "revision": "167dc4985bcb86c102652f7444912f2f"
   },
   {
-    "url": "page-data/services/codalmessagebus/page-data.json",
-    "revision": "272301a550b206539520eb0959546bc9"
-  },
-  {
     "url": "page-data/services/color/page-data.json",
     "revision": "f4fb14c6a19d4ce8f1b8dfff8b0a769c"
   },
@@ -277,6 +273,14 @@ self.__precacheManifest = [
     "revision": "a417a9aaf31a990f980db1278415b867"
   },
   {
+    "url": "page-data/services/hidkeyboard/page-data.json",
+    "revision": "535cda83a8f5170142cc0a0cf6e04041"
+  },
+  {
+    "url": "page-data/services/hidmouse/page-data.json",
+    "revision": "820d7494d0fb2cc078414750629f3ba6"
+  },
+  {
     "url": "page-data/services/humidity/page-data.json",
     "revision": "26001fb267490e8a9962537eba880f79"
   },
@@ -291,10 +295,6 @@ self.__precacheManifest = [
   {
     "url": "page-data/services/joystick/page-data.json",
     "revision": "6c212299385e37eeaa21066bd58349cc"
-  },
-  {
-    "url": "page-data/services/keyboard/page-data.json",
-    "revision": "311ae700f06aee9a7123f878c9292599"
   },
   {
     "url": "page-data/services/led/page-data.json",
@@ -339,10 +339,6 @@ self.__precacheManifest = [
   {
     "url": "page-data/services/motor/page-data.json",
     "revision": "2f50804a90074cf1770b9325cb511da5"
-  },
-  {
-    "url": "page-data/services/mouse/page-data.json",
-    "revision": "8c53acc3634ef481f1891ed5217c3521"
   },
   {
     "url": "page-data/services/multitouch/page-data.json",
@@ -403,6 +399,10 @@ self.__precacheManifest = [
   {
     "url": "page-data/services/soundlevel/page-data.json",
     "revision": "96e96d9dcf5f110b4315675ec63e613b"
+  },
+  {
+    "url": "page-data/services/soundplayer/page-data.json",
+    "revision": "cf52914a20216a5e090f9fa623cab2ed"
   },
   {
     "url": "page-data/services/speechsynthesis/page-data.json",
@@ -668,7 +668,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/jacdac-ts/app-6e59c40a7b82ba333c46.js`))) {
+  if (!resources || !(await caches.match(`/jacdac-ts/app-ba193e699d93cbe2587e.js`))) {
     return await fetch(event.request)
   }
 

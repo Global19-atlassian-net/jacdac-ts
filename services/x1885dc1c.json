@@ -1,14 +1,14 @@
 {
-  "name": "Mouse",
+  "name": "HID Mouse",
   "status": "experimental",
-  "shortId": "mouse",
-  "camelName": "mouse",
-  "shortName": "mouse",
+  "shortId": "hidmouse",
+  "camelName": "hidMouse",
+  "shortName": "hidMouse",
   "extends": [
     "_base"
   ],
   "notes": {
-    "short": "Control a device that acts as a mouse."
+    "short": "Control a HID mouse."
   },
   "classIdentifier": 411425820,
   "enums": {

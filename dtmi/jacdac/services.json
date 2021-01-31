@@ -736,29 +736,6 @@
   },
   {
     "@type": "Interface",
-    "@id": "dtmi:jacdac:services:x16ad7cd5;1",
-    "displayName": "CODAL Message Bus",
-    "description": "A service that allows passing events through the [CODAL Message Bus](https://lancaster-university.github.io/microbit-docs/ubit/messageBus/)\n* ``id`` is a unique identifier that identifies a component in the device. Use ``0`` to address all sources. The value of other identifiers is typically hardware dependent.\n* ``event`` is an identifier that determines the event type. Use ``0`` as a wildcard.",
-    "contents": [],
-    "extends": [
-      "dtmi:jacdac:services:x1ffffff3;1"
-    ],
-    "schemas": [
-      {
-        "@id": "dtmi:jacdac:x16ad7cd5:event;1",
-        "@type": "Object",
-        "fields": [
-          {
-            "name": "count",
-            "schema": "integer"
-          }
-        ]
-      }
-    ],
-    "@context": "dtmi:dtdl:context;2"
-  },
-  {
-    "@type": "Interface",
     "@id": "dtmi:jacdac:services:x1630d567;1",
     "displayName": "Color",
     "description": "Senses RGB colors",
@@ -1173,6 +1150,170 @@
   },
   {
     "@type": "Interface",
+    "@id": "dtmi:jacdac:services:x18b05b6a;1",
+    "displayName": "HID Keyboard",
+    "description": "Control a HID keyboard.\n\nThe codes for the key (selectors) is defined in the [HID Keyboard\nspecification](https://usb.org/sites/default/files/hut1_21.pdf), chapter 10 Keyboard/Keypad Page, page 81.\n\nThe device keeps tracks of the key state and is able to clear it all with the clear command.",
+    "contents": [],
+    "extends": [
+      "dtmi:jacdac:services:x1ffffff3;1"
+    ],
+    "schemas": [
+      {
+        "@id": "dtmi:jacdac:x18b05b6a:event;1",
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "count",
+            "schema": "integer"
+          }
+        ]
+      },
+      {
+        "@type": "Enum",
+        "@id": "dtmi:jacdac:x18b05b6a:modifiers;1",
+        "valueSchema": "integer",
+        "enumValues": [
+          {
+            "name": "leftControl",
+            "displayName": "LeftControl",
+            "enumValue": 224
+          },
+          {
+            "name": "leftShift",
+            "displayName": "LeftShift",
+            "enumValue": 225
+          },
+          {
+            "name": "leftAlt",
+            "displayName": "LeftAlt",
+            "enumValue": 226
+          },
+          {
+            "name": "leftGUID",
+            "displayName": "LeftGUID",
+            "enumValue": 227
+          },
+          {
+            "name": "rightControl",
+            "displayName": "RightControl",
+            "enumValue": 228
+          },
+          {
+            "name": "rightShift",
+            "displayName": "RightShift",
+            "enumValue": 229
+          },
+          {
+            "name": "rightAlt",
+            "displayName": "RightAlt",
+            "enumValue": 230
+          },
+          {
+            "name": "rightGUID",
+            "displayName": "RightGUID",
+            "enumValue": 231
+          }
+        ]
+      },
+      {
+        "@type": "Enum",
+        "@id": "dtmi:jacdac:x18b05b6a:action;1",
+        "valueSchema": "integer",
+        "enumValues": [
+          {
+            "name": "press",
+            "displayName": "Press",
+            "enumValue": 0
+          },
+          {
+            "name": "up",
+            "displayName": "Up",
+            "enumValue": 1
+          },
+          {
+            "name": "down",
+            "displayName": "Down",
+            "enumValue": 2
+          }
+        ]
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@type": "Interface",
+    "@id": "dtmi:jacdac:services:x1885dc1c;1",
+    "displayName": "HID Mouse",
+    "description": "Control a HID mouse.",
+    "contents": [],
+    "extends": [
+      "dtmi:jacdac:services:x1ffffff3;1"
+    ],
+    "schemas": [
+      {
+        "@id": "dtmi:jacdac:x1885dc1c:event;1",
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "count",
+            "schema": "integer"
+          }
+        ]
+      },
+      {
+        "@type": "Enum",
+        "@id": "dtmi:jacdac:x1885dc1c:button;1",
+        "valueSchema": "integer",
+        "enumValues": [
+          {
+            "name": "right",
+            "displayName": "Right",
+            "enumValue": 1
+          },
+          {
+            "name": "middle",
+            "displayName": "Middle",
+            "enumValue": 4
+          },
+          {
+            "name": "left",
+            "displayName": "Left",
+            "enumValue": 2
+          }
+        ]
+      },
+      {
+        "@type": "Enum",
+        "@id": "dtmi:jacdac:x1885dc1c:buttonevent;1",
+        "valueSchema": "integer",
+        "enumValues": [
+          {
+            "name": "up",
+            "displayName": "Up",
+            "enumValue": 1
+          },
+          {
+            "name": "down",
+            "displayName": "Down",
+            "enumValue": 2
+          },
+          {
+            "name": "click",
+            "displayName": "Click",
+            "enumValue": 3
+          },
+          {
+            "name": "doubleClick",
+            "displayName": "DoubleClick",
+            "enumValue": 4
+          }
+        ]
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@type": "Interface",
     "@id": "dtmi:jacdac:services:x16c810b8;1",
     "displayName": "Humidity",
     "description": "A sensor measuring humidity of outside environment.",
@@ -1411,98 +1552,6 @@
   },
   {
     "@type": "Interface",
-    "@id": "dtmi:jacdac:services:x18b05b6a;1",
-    "displayName": "Keyboard",
-    "description": "A keyboard that can send keystrokes.\n\nThe codes for the key (selectors) is defined in the [HID Keyboard\nspecification](https://usb.org/sites/default/files/hut1_21.pdf), chapter 10 Keyboard/Keypad Page, page 81.\n\nThe device keeps tracks of the key state and is able to clear it all with the clear command.",
-    "contents": [],
-    "extends": [
-      "dtmi:jacdac:services:x1ffffff3;1"
-    ],
-    "schemas": [
-      {
-        "@id": "dtmi:jacdac:x18b05b6a:event;1",
-        "@type": "Object",
-        "fields": [
-          {
-            "name": "count",
-            "schema": "integer"
-          }
-        ]
-      },
-      {
-        "@type": "Enum",
-        "@id": "dtmi:jacdac:x18b05b6a:modifiers;1",
-        "valueSchema": "integer",
-        "enumValues": [
-          {
-            "name": "leftControl",
-            "displayName": "LeftControl",
-            "enumValue": 224
-          },
-          {
-            "name": "leftShift",
-            "displayName": "LeftShift",
-            "enumValue": 225
-          },
-          {
-            "name": "leftAlt",
-            "displayName": "LeftAlt",
-            "enumValue": 226
-          },
-          {
-            "name": "leftGUID",
-            "displayName": "LeftGUID",
-            "enumValue": 227
-          },
-          {
-            "name": "rightControl",
-            "displayName": "RightControl",
-            "enumValue": 228
-          },
-          {
-            "name": "rightShift",
-            "displayName": "RightShift",
-            "enumValue": 229
-          },
-          {
-            "name": "rightAlt",
-            "displayName": "RightAlt",
-            "enumValue": 230
-          },
-          {
-            "name": "rightGUID",
-            "displayName": "RightGUID",
-            "enumValue": 231
-          }
-        ]
-      },
-      {
-        "@type": "Enum",
-        "@id": "dtmi:jacdac:x18b05b6a:action;1",
-        "valueSchema": "integer",
-        "enumValues": [
-          {
-            "name": "press",
-            "displayName": "Press",
-            "enumValue": 0
-          },
-          {
-            "name": "up",
-            "displayName": "Up",
-            "enumValue": 1
-          },
-          {
-            "name": "down",
-            "displayName": "Down",
-            "enumValue": 2
-          }
-        ]
-      }
-    ],
-    "@context": "dtmi:dtdl:context;2"
-  },
-  {
-    "@type": "Interface",
     "@id": "dtmi:jacdac:services:x1e3048f8;1",
     "displayName": "LED",
     "description": "A controller for 1 or more monochrome or RGB LEDs connected in parallel.",
@@ -1511,7 +1560,7 @@
         "@type": "Property",
         "name": "brightness",
         "@id": "dtmi:jacdac:x1e3048f8:rw:brightness;1",
-        "description": "Set the luminosity of the strip. The value is used to scale `start_intensity` in `steps` register.\nAt `0` the power to the strip is completely shut down.",
+        "description": "Set the luminosity of the strip. The value is used to scale `value` in `steps` register.\nAt `0` the power to the strip is completely shut down.",
         "schema": "float",
         "writable": true
       },
@@ -1545,7 +1594,7 @@
         "@type": "Property",
         "name": "luminous_intensity",
         "@id": "dtmi:jacdac:x1e3048f8:const:luminousintensity;1",
-        "description": "The luminous intensity of the LED, in micro candella.",
+        "description": "The luminous intensity of the LED, at full value, in micro candella.",
         "schema": "integer"
       },
       {
@@ -1589,6 +1638,11 @@
             "name": "power",
             "displayName": "Power",
             "enumValue": 3
+          },
+          {
+            "name": "bead",
+            "displayName": "Bead",
+            "enumValue": 4
           }
         ]
       }
@@ -2277,78 +2331,6 @@
           {
             "name": "count",
             "schema": "integer"
-          }
-        ]
-      }
-    ],
-    "@context": "dtmi:dtdl:context;2"
-  },
-  {
-    "@type": "Interface",
-    "@id": "dtmi:jacdac:services:x1885dc1c;1",
-    "displayName": "Mouse",
-    "description": "Control a device that acts as a mouse.",
-    "contents": [],
-    "extends": [
-      "dtmi:jacdac:services:x1ffffff3;1"
-    ],
-    "schemas": [
-      {
-        "@id": "dtmi:jacdac:x1885dc1c:event;1",
-        "@type": "Object",
-        "fields": [
-          {
-            "name": "count",
-            "schema": "integer"
-          }
-        ]
-      },
-      {
-        "@type": "Enum",
-        "@id": "dtmi:jacdac:x1885dc1c:button;1",
-        "valueSchema": "integer",
-        "enumValues": [
-          {
-            "name": "right",
-            "displayName": "Right",
-            "enumValue": 1
-          },
-          {
-            "name": "middle",
-            "displayName": "Middle",
-            "enumValue": 4
-          },
-          {
-            "name": "left",
-            "displayName": "Left",
-            "enumValue": 2
-          }
-        ]
-      },
-      {
-        "@type": "Enum",
-        "@id": "dtmi:jacdac:x1885dc1c:buttonevent;1",
-        "valueSchema": "integer",
-        "enumValues": [
-          {
-            "name": "up",
-            "displayName": "Up",
-            "enumValue": 1
-          },
-          {
-            "name": "down",
-            "displayName": "Down",
-            "enumValue": 2
-          },
-          {
-            "name": "click",
-            "displayName": "Click",
-            "enumValue": 3
-          },
-          {
-            "name": "doubleClick",
-            "displayName": "DoubleClick",
-            "enumValue": 4
           }
         ]
       }
@@ -3506,6 +3488,38 @@
     "schemas": [
       {
         "@id": "dtmi:jacdac:x14ad1a5d:event;1",
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "count",
+            "schema": "integer"
+          }
+        ]
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@type": "Interface",
+    "@id": "dtmi:jacdac:services:x1403d338;1",
+    "displayName": "Sound player",
+    "description": "A device that can play various sounds stored locally. This service is typically paired with a ``storage`` service for storing sounds.",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "volume",
+        "@id": "dtmi:jacdac:x1403d338:rw:volume;1",
+        "description": "Global volume of the output. ``0`` means completely off. This volume is mixed with each play volumes.",
+        "schema": "float",
+        "writable": true
+      }
+    ],
+    "extends": [
+      "dtmi:jacdac:services:x1ffffff3;1"
+    ],
+    "schemas": [
+      {
+        "@id": "dtmi:jacdac:x1403d338:event;1",
         "@type": "Object",
         "fields": [
           {

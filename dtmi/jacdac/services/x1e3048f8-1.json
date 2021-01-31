@@ -8,7 +8,7 @@
       "@type": "Property",
       "name": "brightness",
       "@id": "dtmi:jacdac:x1e3048f8:rw:brightness;1",
-      "description": "Set the luminosity of the strip. The value is used to scale `start_intensity` in `steps` register.\nAt `0` the power to the strip is completely shut down.",
+      "description": "Set the luminosity of the strip. The value is used to scale `value` in `steps` register.\nAt `0` the power to the strip is completely shut down.",
       "schema": "float",
       "writable": true
     },
@@ -42,7 +42,7 @@
       "@type": "Property",
       "name": "luminous_intensity",
       "@id": "dtmi:jacdac:x1e3048f8:const:luminousintensity;1",
-      "description": "The luminous intensity of the LED, in micro candella.",
+      "description": "The luminous intensity of the LED, at full value, in micro candella.",
       "schema": "integer"
     },
     {
@@ -86,6 +86,11 @@
           "name": "power",
           "displayName": "Power",
           "enumValue": 3
+        },
+        {
+          "name": "bead",
+          "displayName": "Bead",
+          "enumValue": 4
         }
       ]
     }
