@@ -151,14 +151,14 @@
       "fields": [
         {
           "name": "_",
-          "unit": "",
-          "type": "u16",
-          "storage": 2,
-          "isSimpleType": true
+          "unit": "/",
+          "shift": 16,
+          "type": "u0.16",
+          "storage": 2
         }
       ],
       "identifierName": "low_threshold",
-      "packFormat": "u16"
+      "packFormat": "u0.16"
     },
     {
       "kind": "rw",
@@ -168,30 +168,30 @@
       "fields": [
         {
           "name": "_",
-          "unit": "",
-          "type": "u16",
-          "storage": 2,
-          "isSimpleType": true
+          "unit": "/",
+          "shift": 16,
+          "type": "u0.16",
+          "storage": 2
         }
       ],
       "identifierName": "high_threshold",
-      "packFormat": "u16"
+      "packFormat": "u0.16"
     },
     {
       "kind": "event",
       "name": "loud",
-      "identifier": 1,
+      "identifier": 6,
       "description": "Raised when a loud sound is detected",
       "fields": [],
-      "identifierName": "active"
+      "identifierName": "high"
     },
     {
       "kind": "event",
       "name": "quiet",
-      "identifier": 2,
+      "identifier": 5,
       "description": "Raised when a period of quietness is detected",
       "fields": [],
-      "identifierName": "inactive"
+      "identifierName": "low"
     }
   ]
 }

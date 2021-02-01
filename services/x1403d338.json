@@ -106,7 +106,7 @@
     },
     {
       "kind": "command",
-      "name": "sounds",
+      "name": "list_sounds",
       "identifier": 129,
       "description": "Returns the list of sounds available to play.",
       "fields": [
@@ -117,12 +117,12 @@
           "storage": 12
         }
       ],
-      "pipeType": "sounds",
+      "pipeType": "list_sounds",
       "packFormat": "b[12]"
     },
     {
       "kind": "pipe_report",
-      "name": "sounds_pipe",
+      "name": "list_sounds_pipe",
       "identifier": 0,
       "description": "Returns the list of sounds available to play.",
       "fields": [
@@ -140,7 +140,7 @@
           "storage": 0
         }
       ],
-      "pipeType": "sounds",
+      "pipeType": "list_sounds",
       "packFormat": "u32 s"
     }
   ]
