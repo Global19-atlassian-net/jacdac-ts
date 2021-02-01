@@ -169,6 +169,56 @@
       "optional": true,
       "identifierName": "variant",
       "packFormat": "u32"
+    },
+    {
+      "kind": "rw",
+      "name": "low_threshold",
+      "identifier": 5,
+      "description": "Threshold when reading data gets low and triggers a ``low``.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "/",
+          "shift": 16,
+          "type": "u0.16",
+          "storage": 2
+        }
+      ],
+      "identifierName": "low_threshold",
+      "packFormat": "u0.16"
+    },
+    {
+      "kind": "rw",
+      "name": "high_threshold",
+      "identifier": 6,
+      "description": "Thresholds when reading data gets high and triggers a ``high`` event.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "/",
+          "shift": 16,
+          "type": "u0.16",
+          "storage": 2
+        }
+      ],
+      "identifierName": "high_threshold",
+      "packFormat": "u0.16"
+    },
+    {
+      "kind": "event",
+      "name": "low",
+      "identifier": 5,
+      "description": "Notifies that the low threshold has been crossed",
+      "fields": [],
+      "identifierName": "low"
+    },
+    {
+      "kind": "event",
+      "name": "high",
+      "identifier": 6,
+      "description": "Notifies that the high threshold has been crossed",
+      "fields": [],
+      "identifierName": "high"
     }
   ]
 }
