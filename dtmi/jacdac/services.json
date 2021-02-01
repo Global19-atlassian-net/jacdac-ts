@@ -3394,6 +3394,42 @@
         "@id": "dtmi:jacdac:x1d4aa3b3:const:variant;1",
         "description": "Describe the type of physical sensor.",
         "schema": "dtmi:jacdac:x1d4aa3b3:variant;1"
+      },
+      {
+        "@type": "Property",
+        "name": "dry_threshold",
+        "@id": "dtmi:jacdac:x1d4aa3b3:rw:drythreshold;1",
+        "description": "Threshold when reading data gets low and triggers a ``dry`` event.",
+        "schema": "float",
+        "writable": true
+      },
+      {
+        "@type": "Property",
+        "name": "wet_threshold",
+        "@id": "dtmi:jacdac:x1d4aa3b3:rw:wetthreshold;1",
+        "description": "Thresholds when reading data gets high and triggers a ``wet`` event.",
+        "schema": "float",
+        "writable": true
+      },
+      {
+        "@type": [
+          "Telemetry",
+          "Event"
+        ],
+        "name": "dry",
+        "@id": "dtmi:jacdac:x1d4aa3b3:event:dry;1",
+        "description": "Notifies that the dry threshold has been crossed",
+        "schema": "dtmi:jacdac:x1d4aa3b3:event;1"
+      },
+      {
+        "@type": [
+          "Telemetry",
+          "Event"
+        ],
+        "name": "wet",
+        "@id": "dtmi:jacdac:x1d4aa3b3:event:wet;1",
+        "description": "Notifies that the wet threshold has been crossed",
+        "schema": "dtmi:jacdac:x1d4aa3b3:event;1"
       }
     ],
     "extends": [
