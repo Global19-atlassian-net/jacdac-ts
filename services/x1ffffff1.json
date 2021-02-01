@@ -13,6 +13,15 @@
   },
   "classIdentifier": 536870897,
   "enums": {
+    "ReadingThreshold": {
+      "name": "ReadingThreshold",
+      "storage": 1,
+      "members": {
+        "Neutral": 1,
+        "Low": 2,
+        "High": 3
+      }
+    },
     "StatusCodes": {
       "name": "StatusCodes",
       "storage": 2,
@@ -411,6 +420,13 @@
       "name": "high",
       "identifier": 6,
       "description": "Notifies that the high threshold has been crossed",
+      "fields": []
+    },
+    {
+      "kind": "event",
+      "name": "neutral",
+      "identifier": 7,
+      "description": "Notifies that the threshold is back between ``low`` and ``high``.",
       "fields": []
     }
   ]
