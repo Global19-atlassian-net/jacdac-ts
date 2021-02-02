@@ -17,42 +17,6 @@
       "@id": "dtmi:jacdac:x147b62ed:const:variant;1",
       "description": "The type of physical sensor.",
       "schema": "dtmi:jacdac:x147b62ed:variant;1"
-    },
-    {
-      "@type": "Property",
-      "name": "low_threshold",
-      "@id": "dtmi:jacdac:x147b62ed:rw:lowthreshold;1",
-      "description": "Threshold when reading data gets low and triggers a ``low``.",
-      "schema": "float",
-      "writable": true
-    },
-    {
-      "@type": "Property",
-      "name": "high_threshold",
-      "@id": "dtmi:jacdac:x147b62ed:rw:highthreshold;1",
-      "description": "Thresholds when reading data gets high and triggers a ``high`` event.",
-      "schema": "float",
-      "writable": true
-    },
-    {
-      "@type": [
-        "Telemetry",
-        "Event"
-      ],
-      "name": "low",
-      "@id": "dtmi:jacdac:x147b62ed:event:low;1",
-      "description": "Notifies that the low threshold has been crossed",
-      "schema": "dtmi:jacdac:x147b62ed:event;1"
-    },
-    {
-      "@type": [
-        "Telemetry",
-        "Event"
-      ],
-      "name": "high",
-      "@id": "dtmi:jacdac:x147b62ed:event:high;1",
-      "description": "Notifies that the high threshold has been crossed",
-      "schema": "dtmi:jacdac:x147b62ed:event;1"
     }
   ],
   "extends": [
