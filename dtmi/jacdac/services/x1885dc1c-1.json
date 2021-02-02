@@ -2,7 +2,7 @@
   "@type": "Interface",
   "@id": "dtmi:jacdac:services:x1885dc1c;1",
   "displayName": "HID Mouse",
-  "description": "Control a HID mouse.",
+  "description": "Control a HID mouse. This service cannot be simulated.",
   "contents": [],
   "extends": [
     "dtmi:jacdac:services:x1ffffff3;1"
