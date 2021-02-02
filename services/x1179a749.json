@@ -10,7 +10,7 @@
   ],
   "notes": {
     "short": "A sensor, typically PIR, that detects object motion within a certain range",
-    "events": "event movement @ 0x80 { }\n\nA movement was detected."
+    "events": "event movement @ active { }\n\nA movement was detected."
   },
   "classIdentifier": 293185353,
   "enums": {
