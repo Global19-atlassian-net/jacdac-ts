@@ -135,6 +135,7 @@ export default class DeviceHost extends JDEventSource {
             const ack = Packet.onlyHeader(crc)
             ack.serviceIndex = JD_SERVICE_INDEX_CRC_ACK;
             this.sendPacketAsync(ack);
+            console.log(`host send ack`, { pkt, ack })
         }
 
         if (pkt.isMultiCommand) {

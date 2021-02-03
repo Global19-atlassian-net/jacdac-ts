@@ -678,8 +678,9 @@ export class JDBus extends JDNode {
                     const ack = Packet.onlyHeader(pkt.crc)
                     ack.serviceIndex = JD_SERVICE_INDEX_CRC_ACK
                     ack.deviceIdentifier = this.selfDeviceId
-                    ack.sendReportAsync(this.selfDevice)
                     console.log('ack send', { dev: this.friendlyName, pkt, ack })
+                    // does not make it to the host
+                    ack.sendReportAsync(this.selfDevice)
                 }
             }
             pkt.device.processPacket(pkt);
