@@ -325,19 +325,19 @@ export class Packet {
         return bus.sendPacketAsync(this)
     }
 
-    sendReportAsync(dev: JDDevice) {
+    async sendReportAsync(dev: JDDevice) {
         if (!dev)
-            return Promise.resolve()
+            return;
         this.deviceIdentifier = dev.deviceId
-        return this.sendCoreAsync(dev.bus)
+        await this.sendCoreAsync(dev.bus)
     }
 
-    sendCmdAsync(dev: JDDevice) {
+    async sendCmdAsync(dev: JDDevice) {
         if (!dev)
-            return Promise.resolve()
+            return;
         this.deviceIdentifier = dev.deviceId
         this.isCommand = true
-        return this.sendCoreAsync(dev.bus)
+        await this.sendCoreAsync(dev.bus)
     }
 
     sendAsMultiCommandAsync(bus: JDBus, service_class: number) {

@@ -186,6 +186,7 @@ export default class TraceView extends JDClient {
                     && old.deviceIdentifier === did
                     && old.crc === crc) {
                     old.meta[META_ACK] = pkt;
+                    console.log("trace ack", { dev: old.device.friendlyName, msg: old, ack: pkt })
                     if (this._packetFilter?.props.collapseAck)
                         filtered = false;
                     break;

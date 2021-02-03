@@ -679,7 +679,7 @@ export class JDBus extends JDNode {
                     ack.serviceIndex = JD_SERVICE_INDEX_CRC_ACK
                     ack.deviceIdentifier = this.selfDeviceId
                     ack.sendReportAsync(this.selfDevice)
-                    console.log('send self ack')
+                    console.log('ack send', { dev: this.friendlyName, pkt, ack })
                 }
             }
             pkt.device.processPacket(pkt);

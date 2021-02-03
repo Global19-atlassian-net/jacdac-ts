@@ -74,6 +74,9 @@ export default class ServiceHost extends JDEventSource {
     }
 
     async handlePacket(pkt: Packet) {
+        if (pkt.isCRCAck) {
+            console.log(`host ack`, { srv: this })
+        }
         if (pkt.isRegisterGet || pkt.isRegisterSet) {
             // find register to handle
             const rid = pkt.registerIdentifier;

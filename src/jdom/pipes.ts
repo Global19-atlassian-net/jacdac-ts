@@ -57,15 +57,17 @@ export class OutPipe {
         const cmd = (this.port << PIPE_PORT_SHIFT) | flags | (this._count & PIPE_COUNTER_MASK)
         const pkt = Packet.from(cmd, buf)
         pkt.serviceIndex = JD_SERVICE_INDEX_PIPE
-        const p  = this.device.sendPktWithAck(pkt)
+        const p = this.device.sendPktWithAck(pkt)
             .then(
                 () => { },
                 err => {
                     console.log(err)
                     this.free()
                 })
-        if (this.hosted)
+        if (this.hosted) {
+            console.log("out pipe send", { dev: this.device.friendlyName, pkt })
             this.device.bus.processPacket(pkt);
+        }
         this._count++
     }
 

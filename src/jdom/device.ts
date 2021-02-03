@@ -364,7 +364,7 @@ export class JDDevice extends JDNode {
         this.emit(PACKET_RECEIVE, pkt)
         if (pkt.isReport)
             this.emit(PACKET_REPORT, pkt)
-        else if (pkt.serviceCommand == CMD_EVENT)
+        else if (pkt.isEvent)
             this.emit(PACKET_EVENT, pkt)
 
         const service = this.service(pkt.serviceIndex)
@@ -424,12 +424,13 @@ export class JDDevice extends JDNode {
         if (this._ackAwaiting) return;
 
         this._ackAwaiting = []
-        this.on(PACKET_REPORT, (rep: Packet) => {
-            if (rep.serviceIndex != JD_SERVICE_INDEX_CRC_ACK)
+        this.on(PACKET_RECEIVE, (rep: Packet) => {
+            if (!rep.isCRCAck)
                 return
+            console.log("ack recv", { dev: this.friendlyName, ack: rep })
             let numdone = 0
             for (const aa of this._ackAwaiting) {
-                if (aa.pkt && aa.pkt.crc == rep.serviceCommand) {
+                if (aa.pkt && aa.pkt.crc === rep.serviceCommand) {
                     //console.log(`ack`, aa.pkt)
                     aa.pkt = null
                     numdone++
@@ -445,6 +446,7 @@ export class JDDevice extends JDNode {
             for (const aa of this._ackAwaiting) {
                 if (aa.pkt) {
                     if (--aa.retriesLeft < 0) {
+                        console.log("ack failed", { dev: this.friendlyName, ack: aa.pkt, meta: aa.pkt.meta })
                         aa.pkt.meta[META_ACK_FAILED] = true;
                         aa.pkt = null
                         aa.errCb()
