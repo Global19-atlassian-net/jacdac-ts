@@ -1,15 +1,16 @@
 {
   "@type": "Interface",
   "@id": "dtmi:jacdac:services:x110d154b;1",
-  "displayName": "LED Matrix Display",
-  "description": "A sensor that streams the state of a rectangular LED matrix.\nTo control the state of the screen, use [LED Matrix Controller](/services/led-matrix-controller) instead.",
+  "displayName": "LED Matrix",
+  "description": "A rectangular monochrome LED matrix controller.",
   "contents": [
     {
-      "@type": "Telemetry",
+      "@type": "Property",
       "name": "brightness",
-      "@id": "dtmi:jacdac:x110d154b:ro:brightness;1",
+      "@id": "dtmi:jacdac:x110d154b:rw:brightness;1",
       "description": "Reads the general brightness of the LEDs. ``0`` when the screen is off.",
-      "schema": "integer"
+      "schema": "float",
+      "writable": true
     },
     {
       "@type": "Property",
@@ -27,8 +28,7 @@
     }
   ],
   "extends": [
-    "dtmi:jacdac:services:x1ffffff3;1",
-    "dtmi:jacdac:services:x1ffffff2;1"
+    "dtmi:jacdac:services:x1ffffff3;1"
   ],
   "schemas": [
     {

@@ -1660,62 +1660,17 @@
   },
   {
     "@type": "Interface",
-    "@id": "dtmi:jacdac:services:x1d35e393;1",
-    "displayName": "LED Matrix Controller",
-    "description": "A service that allows to control a rectangular matrix of monochrome LEDs.\nTo stream the state of the screen, use [LED Matrix display](/services/led-matrix-display) instead.",
-    "contents": [
-      {
-        "@type": "Property",
-        "name": "brightness",
-        "@id": "dtmi:jacdac:x1d35e393:rw:brightness;1",
-        "description": "Sets the general brightness of the LEDs. ``0`` turns off the screen.",
-        "schema": "integer",
-        "writable": true
-      },
-      {
-        "@type": "Property",
-        "name": "rows",
-        "@id": "dtmi:jacdac:x1d35e393:const:rows;1",
-        "description": "Number of rows on the screen",
-        "schema": "integer"
-      },
-      {
-        "@type": "Property",
-        "name": "columns",
-        "@id": "dtmi:jacdac:x1d35e393:const:columns;1",
-        "description": "Number of columns on the screen",
-        "schema": "integer"
-      }
-    ],
-    "extends": [
-      "dtmi:jacdac:services:x1ffffff3;1"
-    ],
-    "schemas": [
-      {
-        "@id": "dtmi:jacdac:x1d35e393:event;1",
-        "@type": "Object",
-        "fields": [
-          {
-            "name": "count",
-            "schema": "integer"
-          }
-        ]
-      }
-    ],
-    "@context": "dtmi:dtdl:context;2"
-  },
-  {
-    "@type": "Interface",
     "@id": "dtmi:jacdac:services:x110d154b;1",
-    "displayName": "LED Matrix Display",
-    "description": "A sensor that streams the state of a rectangular LED matrix.\nTo control the state of the screen, use [LED Matrix Controller](/services/led-matrix-controller) instead.",
+    "displayName": "LED Matrix",
+    "description": "A rectangular monochrome LED matrix controller.",
     "contents": [
       {
-        "@type": "Telemetry",
+        "@type": "Property",
         "name": "brightness",
-        "@id": "dtmi:jacdac:x110d154b:ro:brightness;1",
+        "@id": "dtmi:jacdac:x110d154b:rw:brightness;1",
         "description": "Reads the general brightness of the LEDs. ``0`` when the screen is off.",
-        "schema": "integer"
+        "schema": "float",
+        "writable": true
       },
       {
         "@type": "Property",
@@ -1733,8 +1688,7 @@
       }
     ],
     "extends": [
-      "dtmi:jacdac:services:x1ffffff3;1",
-      "dtmi:jacdac:services:x1ffffff2;1"
+      "dtmi:jacdac:services:x1ffffff3;1"
     ],
     "schemas": [
       {

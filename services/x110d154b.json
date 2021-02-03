@@ -1,15 +1,14 @@
 {
-  "name": "LED Matrix Display",
+  "name": "LED Matrix",
   "status": "experimental",
-  "shortId": "ledmatrixdisplay",
-  "camelName": "ledMatrixDisplay",
-  "shortName": "ledMatrixDisplay",
+  "shortId": "ledmatrix",
+  "camelName": "LEDMatrix",
+  "shortName": "LEDMatrix",
   "extends": [
-    "_base",
-    "_sensor"
+    "_base"
   ],
   "notes": {
-    "short": "A sensor that streams the state of a rectangular LED matrix.\nTo control the state of the screen, use [LED Matrix Controller](/services/led-matrix-controller) instead."
+    "short": "A rectangular monochrome LED matrix controller."
   },
   "classIdentifier": 286070091,
   "enums": {},
@@ -68,69 +67,9 @@
     },
     {
       "kind": "rw",
-      "name": "streaming_samples",
-      "identifier": 3,
-      "description": "Asks device to stream a given number of samples\n(clients will typically write `255` to this register every second or so, while streaming is required).",
-      "fields": [
-        {
-          "name": "_",
-          "unit": "",
-          "type": "u8",
-          "storage": 1,
-          "isSimpleType": true
-        }
-      ],
-      "internal": true,
-      "identifierName": "streaming_samples",
-      "packFormat": "u8",
-      "derived": "_sensor"
-    },
-    {
-      "kind": "rw",
-      "name": "streaming_interval",
-      "identifier": 4,
-      "description": "Period between packets of data when streaming in milliseconds.",
-      "fields": [
-        {
-          "name": "_",
-          "unit": "ms",
-          "type": "u32",
-          "storage": 4,
-          "isSimpleType": true,
-          "defaultValue": 100,
-          "typicalMin": 1,
-          "typicalMax": 60000
-        }
-      ],
-      "identifierName": "streaming_interval",
-      "packFormat": "u32",
-      "derived": "_sensor"
-    },
-    {
-      "kind": "const",
-      "name": "streaming_preferred_interval",
-      "identifier": 258,
-      "description": "Preferred default streaming interval for sensor in milliseconds.",
-      "fields": [
-        {
-          "name": "_",
-          "unit": "ms",
-          "type": "u32",
-          "storage": 4,
-          "isSimpleType": true
-        }
-      ],
-      "internal": true,
-      "optional": true,
-      "identifierName": "streaming_preferred_interval",
-      "packFormat": "u32",
-      "derived": "_sensor"
-    },
-    {
-      "kind": "ro",
       "name": "leds",
-      "identifier": 257,
-      "description": "Streams the state of the screen where pixel on/off state is \nstored as a bit, column by column. The column should be byte aligned.",
+      "identifier": 2,
+      "description": "The state of the screen where pixel on/off state is \nstored as a bit, column by column. The column should be byte aligned.",
       "fields": [
         {
           "name": "_",
@@ -140,24 +79,25 @@
           "isSimpleType": true
         }
       ],
-      "identifierName": "reading",
+      "identifierName": "value",
       "packFormat": "b"
     },
     {
-      "kind": "ro",
+      "kind": "rw",
       "name": "brightness",
-      "identifier": 384,
+      "identifier": 1,
       "description": "Reads the general brightness of the LEDs. ``0`` when the screen is off.",
       "fields": [
         {
           "name": "_",
-          "unit": "",
-          "type": "u8",
-          "storage": 1,
-          "isSimpleType": true
+          "unit": "/",
+          "shift": 8,
+          "type": "u0.8",
+          "storage": 1
         }
       ],
-      "packFormat": "u8"
+      "identifierName": "intensity",
+      "packFormat": "u0.8"
     },
     {
       "kind": "const",
