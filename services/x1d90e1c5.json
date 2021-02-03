@@ -1,7 +1,7 @@
 {
   "name": "Sensor Aggregator",
   "status": "experimental",
-  "shortId": "aggregator",
+  "shortId": "sensoraggregator",
   "camelName": "sensorAggregator",
   "shortName": "sensorAggregator",
   "extends": [
