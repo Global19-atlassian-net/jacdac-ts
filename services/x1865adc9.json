@@ -166,7 +166,6 @@
           "storage": 2
         }
       ],
-      "optional": true,
       "identifierName": "low_threshold",
       "packFormat": "u0.16"
     },
@@ -184,7 +183,6 @@
           "storage": 2
         }
       ],
-      "optional": true,
       "identifierName": "high_threshold",
       "packFormat": "u0.16"
     },
