@@ -2,7 +2,7 @@
   "@type": "Interface",
   "@id": "dtmi:jacdac:services:x16c7466a;1",
   "displayName": "Protocol Test",
-  "description": "This is test service to validate the protocol packet transmissions between the browser and a MCU.\nUse this page if you developing JACDAC HDK for a new platform.",
+  "description": "This is test service to validate the protocol packet transmissions between the browser and a MCU.\nUse this page if you developing Jacdac HDK for a new platform.",
   "contents": [
     {
       "@type": "Property",

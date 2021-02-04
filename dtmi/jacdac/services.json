@@ -9,7 +9,7 @@
         "@type": "Telemetry",
         "name": "status_code",
         "@id": "dtmi:jacdac:x1ffffff3:ro:statuscode;1",
-        "description": "Reports the current state or error status of the device. ``code`` is a standardized value from \nthe JACDAC status/error codes. ``vendor_code`` is any vendor specific error code describing the device\nstate. This report is typically not queried, when a device has an error, it will typically\nadd this report in frame along with the announce packet.",
+        "description": "Reports the current state or error status of the device. ``code`` is a standardized value from \nthe Jacdac status/error codes. ``vendor_code`` is any vendor specific error code describing the device\nstate. This report is typically not queried, when a device has an error, it will typically\nadd this report in frame along with the announce packet.",
         "schema": {
           "@type": "Object",
           "fields": [
@@ -493,7 +493,7 @@
     "@type": "Interface",
     "@id": "dtmi:jacdac:services:x1ffa9948;1",
     "displayName": "Bootloader",
-    "description": "Allows flashing (reprogramming) devices over JACDAC.",
+    "description": "Allows flashing (reprogramming) devices over Jacdac.",
     "contents": [],
     "extends": [
       "dtmi:jacdac:services:x1ffffff3;1"
@@ -1146,7 +1146,7 @@
     "@type": "Interface",
     "@id": "dtmi:jacdac:services:x166c6dc4;1",
     "displayName": "Heart Rate",
-    "description": "A sensor approximating the heart rate. \n\n\n**JACDAC is NOT suitable for medical devices and should NOT be used in any kind of device to diagnose or treat any medical conditions.**",
+    "description": "A sensor approximating the heart rate. \n\n\n**Jacdac is NOT suitable for medical devices and should NOT be used in any kind of device to diagnose or treat any medical conditions.**",
     "contents": [
       {
         "@type": "Telemetry",
@@ -2662,7 +2662,7 @@
     "@type": "Interface",
     "@id": "dtmi:jacdac:services:x16c7466a;1",
     "displayName": "Protocol Test",
-    "description": "This is test service to validate the protocol packet transmissions between the browser and a MCU.\nUse this page if you developing JACDAC HDK for a new platform.",
+    "description": "This is test service to validate the protocol packet transmissions between the browser and a MCU.\nUse this page if you developing Jacdac HDK for a new platform.",
     "contents": [
       {
         "@type": "Property",
@@ -2866,7 +2866,7 @@
     "@type": "Interface",
     "@id": "dtmi:jacdac:services:x10bb4eb6;1",
     "displayName": "Pulse Oximeter",
-    "description": "A sensor approximating the oxygen level. \n\n**JACDAC is not suitable for medical devices and should NOT be used in any kind of device to diagnose or treat any medical conditions.**",
+    "description": "A sensor approximating the oxygen level. \n\n**Jacdac is not suitable for medical devices and should NOT be used in any kind of device to diagnose or treat any medical conditions.**",
     "contents": [
       {
         "@type": "Telemetry",
@@ -3223,7 +3223,7 @@
     "@type": "Interface",
     "@id": "dtmi:jacdac:services:x1e4b7e66;1",
     "displayName": "Role Manager",
-    "description": "Assign roles to services on the JACDAC bus.\n\nInternally, the role manager stores a mapping from from `(device_id, service_idx)` to role name.\nUsers refer to services by using role names (eg., they instantiate an accelerometer client with a given role name).\nEach client has a role, and roles are unique to clients\n(ie., one should not have both a gyro and accelerometer service with role `left_leg`).\n\nRole names can be hierarchical, using slash character as a separator.\nExamples: `left_leg/acc`, `left_leg/gyro`, `right_leg/acc`.\nIf two roles share the prefix before first slash, it should be used as a hint that the services\nshould be co-located on a single device\n(eg., here the `left_leg` \"location\" is expected to have both an accelerometer and a gyro service on a single device).",
+    "description": "Assign roles to services on the Jacdac bus.\n\nInternally, the role manager stores a mapping from from `(device_id, service_idx)` to role name.\nUsers refer to services by using role names (eg., they instantiate an accelerometer client with a given role name).\nEach client has a role, and roles are unique to clients\n(ie., one should not have both a gyro and accelerometer service with role `left_leg`).\n\nRole names can be hierarchical, using slash character as a separator.\nExamples: `left_leg/acc`, `left_leg/gyro`, `right_leg/acc`.\nIf two roles share the prefix before first slash, it should be used as a hint that the services\nshould be co-located on a single device\n(eg., here the `left_leg` \"location\" is expected to have both an accelerometer and a gyro service on a single device).",
     "contents": [
       {
         "@type": "Telemetry",

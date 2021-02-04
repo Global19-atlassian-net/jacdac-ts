@@ -2,7 +2,7 @@
   "@type": "Interface",
   "@id": "dtmi:jacdac:services:x10bb4eb6;1",
   "displayName": "Pulse Oximeter",
-  "description": "A sensor approximating the oxygen level. \n\n**JACDAC is not suitable for medical devices and should NOT be used in any kind of device to diagnose or treat any medical conditions.**",
+  "description": "A sensor approximating the oxygen level. \n\n**Jacdac is not suitable for medical devices and should NOT be used in any kind of device to diagnose or treat any medical conditions.**",
   "contents": [
     {
       "@type": "Telemetry",
