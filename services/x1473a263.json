@@ -171,6 +171,13 @@
       "identifier": 129,
       "description": "Emitted together with `up` when the press time was more than 500ms.",
       "fields": []
+    },
+    {
+      "kind": "event",
+      "name": "hold",
+      "identifier": 130,
+      "description": "Emitted after the button is held for 1500ms. Hold events are followed by a separate up event.",
+      "fields": []
     }
   ]
 }

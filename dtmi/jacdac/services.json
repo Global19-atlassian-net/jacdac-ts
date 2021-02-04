@@ -596,6 +596,16 @@
         "@id": "dtmi:jacdac:x1473a263:event:longclick;1",
         "description": "Emitted together with `up` when the press time was more than 500ms.",
         "schema": "dtmi:jacdac:x1473a263:event;1"
+      },
+      {
+        "@type": [
+          "Telemetry",
+          "Event"
+        ],
+        "name": "hold",
+        "@id": "dtmi:jacdac:x1473a263:event:hold;1",
+        "description": "Emitted after the button is held for 1500ms. Hold events are followed by a separate up event.",
+        "schema": "dtmi:jacdac:x1473a263:event;1"
       }
     ],
     "extends": [
