@@ -1,5 +1,5 @@
 {
-  "name": "Equivalent CO²",
+  "name": "Equivalent CO₂",
   "status": "experimental",
   "shortId": "eco2",
   "camelName": "eCO2",
@@ -9,7 +9,7 @@
     "_sensor"
   ],
   "notes": {
-    "short": "Measures equivalent CO² levels."
+    "short": "Measures equivalent CO₂ levels."
   },
   "classIdentifier": 379362758,
   "enums": {
@@ -139,7 +139,7 @@
       "kind": "ro",
       "name": "e_CO2",
       "identifier": 257,
-      "description": "Equivalent CO² (eCO²) readings.",
+      "description": "Equivalent CO₂ (eCO₂) readings.",
       "fields": [
         {
           "name": "_",

@@ -1,14 +1,14 @@
 {
   "@type": "Interface",
   "@id": "dtmi:jacdac:services:x169c9dc6;1",
-  "displayName": "Equivalent CO²",
-  "description": "Measures equivalent CO² levels.",
+  "displayName": "Equivalent CO₂",
+  "description": "Measures equivalent CO₂ levels.",
   "contents": [
     {
       "@type": "Telemetry",
       "name": "e_CO2",
       "@id": "dtmi:jacdac:x169c9dc6:ro:eco2;1",
-      "description": "Equivalent CO² (eCO²) readings.",
+      "description": "Equivalent CO₂ (eCO₂) readings.",
       "schema": "float"
     },
     {
