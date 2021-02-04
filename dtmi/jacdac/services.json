@@ -2182,6 +2182,38 @@
   },
   {
     "@type": "Interface",
+    "@id": "dtmi:jacdac:services:x1a848cd7;1",
+    "displayName": "MIDI output",
+    "description": "A MIDI output device.",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "enabled",
+        "@id": "dtmi:jacdac:x1a848cd7:rw:enabled;1",
+        "description": "Opens or closes the port to the MIDI device",
+        "schema": "boolean",
+        "writable": true
+      }
+    ],
+    "extends": [
+      "dtmi:jacdac:services:x1ffffff3;1"
+    ],
+    "schemas": [
+      {
+        "@id": "dtmi:jacdac:x1a848cd7:event;1",
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "count",
+            "schema": "integer"
+          }
+        ]
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@type": "Interface",
     "@id": "dtmi:jacdac:services:x140f9a78;1",
     "displayName": "Model Runner",
     "description": "Run machine learning models.\nOnly models with a single input tensor and a single output tensor are supported at the moment.\nInput is provided by Sensor Aggregator service on the same device.\nMultiple instances of this service may be present, if more than one model format is supported by a device.",
