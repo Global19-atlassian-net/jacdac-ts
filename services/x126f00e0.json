@@ -139,7 +139,7 @@
       "kind": "rw",
       "name": "num_pixels",
       "identifier": 129,
-      "description": "Specifies the number of pixels in the strip.\nControllers which are sold with lights should default to the correct length\nand could not allow change.\nIncreasing length at runtime leads to ineffective use of memory and may lead to controller reboot.",
+      "description": "Specifies the number of pixels in the strip.\nControllers which are sold with lights should default to the correct length\nand could not allow change. Increasing length at runtime leads to ineffective use of memory and may lead to controller reboot.",
       "fields": [
         {
           "name": "_",
@@ -150,6 +150,23 @@
           "defaultValue": 15
         }
       ],
+      "packFormat": "u16"
+    },
+    {
+      "kind": "rw",
+      "name": "num_columns",
+      "identifier": 131,
+      "description": "If the LED pixel strip is a matrix, specifies the number of columns. Otherwise, a square shape is assumed. Controllers which are sold with lights should default to the correct length\nand could not allow change. Increasing length at runtime leads to ineffective use of memory and may lead to controller reboot.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "",
+          "type": "u16",
+          "storage": 2,
+          "isSimpleType": true
+        }
+      ],
+      "optional": true,
       "packFormat": "u16"
     },
     {

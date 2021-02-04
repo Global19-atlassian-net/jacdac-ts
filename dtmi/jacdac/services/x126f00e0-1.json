@@ -31,7 +31,15 @@
       "@type": "Property",
       "name": "num_pixels",
       "@id": "dtmi:jacdac:x126f00e0:rw:numpixels;1",
-      "description": "Specifies the number of pixels in the strip.\nControllers which are sold with lights should default to the correct length\nand could not allow change.\nIncreasing length at runtime leads to ineffective use of memory and may lead to controller reboot.",
+      "description": "Specifies the number of pixels in the strip.\nControllers which are sold with lights should default to the correct length\nand could not allow change. Increasing length at runtime leads to ineffective use of memory and may lead to controller reboot.",
+      "schema": "integer",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "num_columns",
+      "@id": "dtmi:jacdac:x126f00e0:rw:numcolumns;1",
+      "description": "If the LED pixel strip is a matrix, specifies the number of columns. Otherwise, a square shape is assumed. Controllers which are sold with lights should default to the correct length\nand could not allow change. Increasing length at runtime leads to ineffective use of memory and may lead to controller reboot.",
       "schema": "integer",
       "writable": true
     },
