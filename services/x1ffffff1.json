@@ -366,6 +366,22 @@
       "packFormat": "u16 u16"
     },
     {
+      "kind": "const",
+      "name": "instance_name",
+      "identifier": 265,
+      "description": "A friendly name that describes the role of this service instance in the device.",
+      "fields": [
+        {
+          "name": "_",
+          "unit": "",
+          "type": "string",
+          "storage": 0
+        }
+      ],
+      "optional": true,
+      "packFormat": "s"
+    },
+    {
       "kind": "event",
       "name": "active",
       "identifier": 1,
