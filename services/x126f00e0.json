@@ -29,7 +29,8 @@
         "Strip": 1,
         "Ring": 2,
         "Stick": 3,
-        "Jewel": 4
+        "Jewel": 4,
+        "Matrix": 5
       }
     }
   },

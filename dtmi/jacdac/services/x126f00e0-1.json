@@ -130,6 +130,11 @@
           "name": "jewel",
           "displayName": "Jewel",
           "enumValue": 4
+        },
+        {
+          "name": "matrix",
+          "displayName": "Matrix",
+          "enumValue": 5
         }
       ]
     }
