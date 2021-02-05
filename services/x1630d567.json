@@ -175,5 +175,6 @@
       "identifierName": "reading",
       "packFormat": "u0.16 u0.16 u0.16"
     }
-  ]
+  ],
+  "source": "# Color\n\nSenses RGB colors\n\n    identifier: 0x1630d567\n    extends: _sensor\n\n## Registers\n\n    ro color @ reading {\n        red: u0.16 /\n        green: u0.16 /\n        blue: u0.16 /\n    }\n\nDetected color in the RGB color space.\n"
 }

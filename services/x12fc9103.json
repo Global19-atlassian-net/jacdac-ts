@@ -230,5 +230,6 @@
       "optional": true,
       "packFormat": "u16.16"
     }
-  ]
+  ],
+  "source": "# Servo\n\n    identifier: 0x12fc9103\n\nServo is a small motor with arm that can be pointing at a specific direction.\n\n## Registers\n\n    rw angle: i16.16 ° { typical_min=-90, typical_max=90 } @ value\n\nSpecifies the angle of the arm.\n\n    rw enabled: bool @ intensity\n\nTurn the power to the servo on/off.\n\n    rw offset?: i16.16 ° @ 0x81\n\nCorrection applied to the angle to account for the servo arm drift.\n\n    const min_angle?: i16.16 ° @ min_reading\n\nLowest angle that can be set.\n\n    const max_angle?: i16.16 ° @ max_reading\n\nHighest angle that can be set.\n\n    enum Variant: u32 {\n        PositionalRotation = 1,\n        Linear = 2,\n    }\n    const variant: Variant @ variant\n\nSpecifies the type of servo motor.\n* Positional Rotation Servos: Positional servos can rotate the shaft in about half of the circle,\nwith features to avoid over-rotating. Most servo have a range of 180° but some allow 270° or 360°.\n* Linear Servos: linear servos are also like a positional servo, but with additional gears to the adjust the output from circular to back-and-forth.\n\n    const stall_torque?: u16.16 kg/cm @ 0x180\n\nThe servo motor will stop rotating when it is trying to move a ``stall_torque`` weight at a radial distance of ``1.0`` cm.\n\n    const response_speed?: u16.16 s/60° @ 0x181\n\nTime to move 60°.\n"
 }

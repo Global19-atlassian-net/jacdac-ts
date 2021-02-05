@@ -211,5 +211,6 @@
       "fields": [],
       "identifierName": "low"
     }
-  ]
+  ],
+  "source": "#  Sound level\n\n     identifier: 0x14ad1a5d\n     extends: _sensor\n\nA sound level detector sensor, gives a relative indication of the sound level.\n\n## Registers\n\n    ro sound_level: u0.16 / @ reading\n\nThe sound level detected by the microphone\n\n    rw loud_threshold: u0.16 / @ low_threshold\n\nThe sound level to trigger a loud event.\n\n    rw quiet_threshold: u0.16 / @ high_threshold\n\nThe sound level to trigger a quite event.\n\n## Events\n\n    event loud @ high {}\n\nRaised when a loud sound is detected\n\n    event quiet @ low {}\n\nRaised when a period of quietness is detected\n"
 }

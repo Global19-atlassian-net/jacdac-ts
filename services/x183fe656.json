@@ -159,5 +159,6 @@
       "optional": true,
       "packFormat": "u16"
     }
-  ]
+  ],
+  "source": "# Relay\n\n    identifier: 0x183fe656\n\nA switching relay.\n\n## Registers\n\n    rw closed: bool @ intensity\n\nIndicates whether the relay circuit is currently on (closed) or off (closed).\n\n    enum Variant: u32 {\n        Electromechanical = 1,\n        SolidState = 2,\n        Reed = 3\n    }\n    const variant?: Variant @ variant\n\nDescribes the type of relay used.\n\n## Events\n\n    event on @ active\n\nEmitted when relay goes from ``off`` to ``on`` state.\n\n    event off @ inactive\n\nEmitted when relay goes from ``on`` to ``off`` state.\n\n    const max_switching_current?: u16 A @ 0x180\n\nMaximum switching current for a resistive load."
 }

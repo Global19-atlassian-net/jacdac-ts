@@ -260,5 +260,6 @@
       "description": "Emitted when force in any direction exceeds given threshold.",
       "fields": []
     }
-  ]
+  ],
+  "source": "# Accelerometer\n\n    identifier: 0x1f140409\n    extends: _sensor\n\nA 3-axis accelerometer.\n\n## Registers\n\n    ro forces @ reading {\n        x: i6.10 g\n        y: i6.10 g\n        z: i6.10 g\n    }\n\nIndicates the current forces acting on accelerometer.\n\n## Events\n\nAll events are debounced.\n\n    event tilt_up @ 0x81\n    event tilt_down @ 0x82\n    event tilt_left @ 0x83\n    event tilt_right @ 0x84\n\nEmitted when accelerometer is tilted in the given direction.\n\n    event face_up @ 0x85\n    event face_down @ 0x86\n\nEmitted when accelerometer is laying flat in the given direction.\n\n    event freefall @ 0x87\n\nEmitted when total force acting on accelerometer is much less than 1g.\n\n    event shake @ 0x8b\n\nEmitted when forces change violently a few times.\n\n    event force_2g @ 0x8c\n    event force_3g @ 0x88\n    event force_6g @ 0x89\n    event force_8g @ 0x8a\n\nEmitted when force in any direction exceeds given threshold.\n"
 }

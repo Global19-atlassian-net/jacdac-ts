@@ -128,5 +128,6 @@
       ],
       "packFormat": "u8"
     }
-  ]
+  ],
+  "source": "# Traffic Light\n\nControls a mini traffic with a red, orange and green LED.\n\n        identifier: 0x15c38d9b\n\n## Registers\n\n    rw red: bool @ 0x80\n\nThe on/off state of the red light.\n\n    rw orange: bool @ 0x81\n\nThe on/off state of the red light.\n\n    rw green: bool @ 0x82\n\nThe on/off state of the red light.\n"
 }

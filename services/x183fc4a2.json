@@ -140,5 +140,6 @@
       ],
       "packFormat": "r: u8 u0.8"
     }
-  ]
+  ],
+  "source": "# Vibration motor\n\n    identifier: 0x183fc4a2\n\nA vibration motor.\n\n## Registers\n\n    ro speed: u0.8 / @ reading\n\nRotation speed of the motor. If only one rotation speed is supported,\nthen `0` shell be off, and any other number on. \nUse the ``vibrate`` command to control the register.\n\n    rw enabled: bool @ intensity\n\nDetermines if the vibration motor responds to vibrate commands.\n\n## Commands\n\n    command vibrate @ 0x80 {\n    repeats:\n        duration: u8 8ms,\n        speed: u0.8 /\n    }\n\nStarts a sequence of vibration and pauses.\n"
 }
