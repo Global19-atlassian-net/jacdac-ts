@@ -27,7 +27,7 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-f08abe761523ca31183d.js"
+    "url": "webpack-runtime-0756e7e687e857a55191.js"
   },
   {
     "url": "framework-f19c6c9d119c831d5054.js"
@@ -40,7 +40,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "f508a86f124cd14983bd77ad28506689"
+    "revision": "a5236208d7a22b3218781fdca20c3d71"
   },
   {
     "url": "static/webfonts/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"
@@ -60,7 +60,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2214083594.json",
-    "revision": "359bbb18facab14655a7a95efe816a2e"
+    "revision": "7494945705bac2a4ddb28d4b8dcceffe"
   },
   {
     "url": "page-data/sq/d/2270080012.json",
@@ -72,7 +72,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2744294623.json",
-    "revision": "4cfe3341dcc518c03d5ed9caa4e8c3da"
+    "revision": "7dc9f20b1f94510434d496b268fd67c0"
   },
   {
     "url": "page-data/sq/d/3159585216.json",
@@ -88,7 +88,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "e4d7a12c6e1ecaba6e0f8cded50182f8"
+    "revision": "41071683947c974dc408403ac16fb580"
   },
   {
     "url": "polyfill-541f5afd2cddfffa2584.js"
@@ -140,7 +140,7 @@ self.__precacheManifest = [
     "revision": "a2cb2967940b7b20a25d80d17b28b568"
   },
   {
-    "url": "component---src-pages-index-mdx-4ba0adbee1fc27faf204.js"
+    "url": "component---src-pages-index-mdx-b009b4e1bde14b0ede4f.js"
   },
   {
     "url": "page-data/index/page-data.json",
