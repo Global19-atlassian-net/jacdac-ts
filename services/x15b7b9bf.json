@@ -191,5 +191,6 @@
       "identifierName": "calibrate"
     }
   ],
-  "source": "# Compass\n\nA sensor that measures the heading.\n\n    identifier: 0x15b7b9bf\n    extends: _sensor\n\n## Registers\n\n    ro heading: u16 { absolute_min=0, absolute_max=359, preferred_interval=1000 } ° @ reading\n\nThe heading with respect to the magnetic north.\n\n    ro heading_error?: u16 ° @ reading_error\n\nError on the heading reading\n\n## Commands\n\n    command calibrate @ calibrate { }\n    \nStarts a calibration sequence for the compass.\n"
+  "source": "# Compass\n\nA sensor that measures the heading.\n\n    identifier: 0x15b7b9bf\n    extends: _sensor\n\n## Registers\n\n    ro heading: u16 { absolute_min=0, absolute_max=359, preferred_interval=1000 } ° @ reading\n\nThe heading with respect to the magnetic north.\n\n    ro heading_error?: u16 ° @ reading_error\n\nError on the heading reading\n\n## Commands\n\n    command calibrate @ calibrate { }\n    \nStarts a calibration sequence for the compass.\n",
+  "tags": []
 }

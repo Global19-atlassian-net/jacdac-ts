@@ -183,5 +183,6 @@
       "packFormat": "u22.10"
     }
   ],
-  "source": "# Humidity\n\n    identifier: 0x16c810b8\n    extends: _sensor\n\nA sensor measuring humidity of outside environment.\n\n## Registers\n\nDefault streaming interval is 1s.\n\n    ro humidity: u22.10 %RH { typical_max = 100, preferred_interval=5000 } @ reading\n\nThe relative humidity in percentage of full water saturation.\n\n    ro humidity_error: u22.10 %RH @ reading_error\n\nThe real humidity is between `humidity - humidity_error` and `humidity + humidity_error`."
+  "source": "# Humidity\n\n    identifier: 0x16c810b8\n    extends: _sensor\n    tags: environment\n\nA sensor measuring humidity of outside environment.\n\n## Registers\n\nDefault streaming interval is 1s.\n\n    ro humidity: u22.10 %RH { typical_max = 100, preferred_interval=5000 } @ reading\n\nThe relative humidity in percentage of full water saturation.\n\n    ro humidity_error: u22.10 %RH @ reading_error\n\nThe real humidity is between `humidity - humidity_error` and `humidity + humidity_error`.",
+  "tags": []
 }
