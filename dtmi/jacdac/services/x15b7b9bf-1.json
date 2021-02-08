@@ -1,0 +1,39 @@
+{
+  "@type": "Interface",
+  "@id": "dtmi:jacdac:services:x15b7b9bf;1",
+  "displayName": "Compass",
+  "description": "A sensor that measures the heading.",
+  "contents": [
+    {
+      "@type": "Telemetry",
+      "name": "heading",
+      "@id": "dtmi:jacdac:x15b7b9bf:ro:heading;1",
+      "description": "The heading with respect to the magnetic north.",
+      "schema": "integer"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "heading_error",
+      "@id": "dtmi:jacdac:x15b7b9bf:ro:headingerror;1",
+      "description": "Error on the heading reading",
+      "schema": "integer"
+    }
+  ],
+  "extends": [
+    "dtmi:jacdac:services:x1ffffff3;1",
+    "dtmi:jacdac:services:x1ffffff2;1"
+  ],
+  "schemas": [
+    {
+      "@id": "dtmi:jacdac:x15b7b9bf:event;1",
+      "@type": "Object",
+      "fields": [
+        {
+          "name": "count",
+          "schema": "integer"
+        }
+      ]
+    }
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}
