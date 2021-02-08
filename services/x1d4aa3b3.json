@@ -190,5 +190,7 @@
     }
   ],
   "source": "# Soil moisture\n\n    identifier: 0x1d4aa3b3\n    extends: _sensor\n    tags: environment\n\nA soil moisture sensor.\n\n## Registers\n\n    ro moisture: u0.16 / { preferred_interval=1000 } @ reading\n\nIndicates the wetness of the soil, from ``dry`` to ``wet``.\n\n    enum Variant: u8 {\n         Resistive = 1\n         Capacitive = 2\n    }\n    const variant?: Variant @ variant\n\nDescribe the type of physical sensor.\n",
-  "tags": []
+  "tags": [
+    "environment"
+  ]
 }
