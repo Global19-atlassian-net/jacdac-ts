@@ -33,6 +33,18 @@ var spec = __webpack_require__("ZF4C");
 // EXTERNAL MODULE: ./node_modules/gatsby/node_modules/core-js/modules/es.array.reduce.js
 var es_array_reduce = __webpack_require__("RUBk");
 
+// EXTERNAL MODULE: ./src/components/ui/Markdown.tsx
+var Markdown = __webpack_require__("kmB/");
+
+// EXTERNAL MODULE: ./src/components/useGridBreakpoints.ts
+var useGridBreakpoints = __webpack_require__("TD2k");
+
+// EXTERNAL MODULE: ../src/react/Context.tsx
+var Context = __webpack_require__("2Qkp");
+
+// EXTERNAL MODULE: ./src/jacdac/useChange.ts
+var useChange = __webpack_require__("IzqI");
+
 // EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/styles/makeStyles.js
 var makeStyles = __webpack_require__("R/WZ");
 
@@ -645,48 +657,25 @@ var StepContent_StepContent = /*#__PURE__*/react["forwardRef"](function StepCont
 /* harmony default export */ var esm_StepContent_StepContent = (Object(withStyles["a" /* default */])(StepContent_styles, {
   name: 'MuiStepContent'
 })(StepContent_StepContent));
-// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/Button/Button.js
-var Button = __webpack_require__("Z3vd");
-
-// EXTERNAL MODULE: ./src/components/ui/Markdown.tsx
-var Markdown = __webpack_require__("kmB/");
-
-// EXTERNAL MODULE: ./src/components/useGridBreakpoints.ts
-var useGridBreakpoints = __webpack_require__("TD2k");
-
-// EXTERNAL MODULE: ../src/react/Context.tsx
-var Context = __webpack_require__("2Qkp");
-
-// EXTERNAL MODULE: ./src/jacdac/useChange.ts
-var useChange = __webpack_require__("IzqI");
-
 // EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/Grid/Grid.js
 var Grid = __webpack_require__("tRbT");
 
 // EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/Card/Card.js
 var Card = __webpack_require__("30+C");
 
-// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/CardHeader/CardHeader.js
-var CardHeader = __webpack_require__("50B7");
-
 // EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/CardActions/CardActions.js
 var CardActions = __webpack_require__("o4QW");
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/Button/Button.js
+var Button = __webpack_require__("Z3vd");
 
 // EXTERNAL MODULE: ./src/components/ui/Alert.tsx
 var Alert = __webpack_require__("FQT7");
 
-// EXTERNAL MODULE: ./src/components/DeviceName.tsx
-var DeviceName = __webpack_require__("5eZE");
+// EXTERNAL MODULE: ./src/components/DeviceCardHeader.tsx + 2 modules
+var DeviceCardHeader = __webpack_require__("5oJA");
 
 // CONCATENATED MODULE: ./src/components/ServiceTest.tsx
-
-
-
-
-
-
-
-
 
 
 
@@ -724,9 +713,13 @@ function ServiceTest(props) {
 
   var classes = useStyles();
 
-  var _React$useState = react_default.a.useState(0),
-      activeStep = _React$useState[0],
-      setActiveStep = _React$useState[1];
+  var _useState = Object(react["useState"])(undefined),
+      selectedService = _useState[0],
+      setSelectedService = _useState[1];
+
+  var _useState2 = Object(react["useState"])(0),
+      activeStep = _useState2[0],
+      setActiveStep = _useState2[1];
 
   var tests = [{
     label: "this is a test",
@@ -745,6 +738,13 @@ function ServiceTest(props) {
       return l.concat(r);
     }, []);
   });
+
+  var handleSelect = function handleSelect(service) {
+    return function () {
+      setSelectedService(service);
+      setActiveStep(1);
+    };
+  };
 
   var handleNext = function handleNext() {
     setActiveStep(function (prevActiveStep) {
@@ -778,12 +778,13 @@ function ServiceTest(props) {
     return /*#__PURE__*/react_default.a.createElement(Grid["a" /* default */], Object.assign({
       item: true
     }, gridBreakpoints), /*#__PURE__*/react_default.a.createElement(Card["a" /* default */], {
-      key: "srv" + service.serviceClass
-    }, /*#__PURE__*/react_default.a.createElement(CardHeader["a" /* default */], null, /*#__PURE__*/react_default.a.createElement(DeviceName["a" /* default */], {
+      key: service.id
+    }, /*#__PURE__*/react_default.a.createElement(DeviceCardHeader["a" /* default */], {
       device: service.device
-    })), /*#__PURE__*/react_default.a.createElement(CardActions["a" /* default */], null, /*#__PURE__*/react_default.a.createElement(Button["a" /* default */], {
+    }), /*#__PURE__*/react_default.a.createElement(CardActions["a" /* default */], null, /*#__PURE__*/react_default.a.createElement(Button["a" /* default */], {
       variant: "contained",
-      color: "primary"
+      color: "primary",
+      onClick: handleSelect(service)
     }, "Select"))));
   })), !services.length && /*#__PURE__*/react_default.a.createElement(Alert["a" /* default */], {
     severity: "info"
@@ -906,4 +907,4 @@ var Page = function Page(_ref) {
 /***/ })
 
 }]);
-//# sourceMappingURL=component---src-templates-service-test-mdx-55544eca7051a9d4a69e.js.map
+//# sourceMappingURL=component---src-templates-service-test-mdx-2cd252bb07d7313e6640.js.map
