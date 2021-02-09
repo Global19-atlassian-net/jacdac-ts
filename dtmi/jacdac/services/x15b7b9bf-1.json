@@ -12,6 +12,14 @@
       "schema": "integer"
     },
     {
+      "@type": "Property",
+      "name": "enabled",
+      "@id": "dtmi:jacdac:x15b7b9bf:rw:enabled;1",
+      "description": "Turn on or off the sensor. Turning on the sensor may start a calibration sequence.",
+      "schema": "boolean",
+      "writable": true
+    },
+    {
       "@type": "Telemetry",
       "name": "heading_error",
       "@id": "dtmi:jacdac:x15b7b9bf:ro:headingerror;1",

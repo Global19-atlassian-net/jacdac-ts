@@ -9,8 +9,7 @@
     "_sensor"
   ],
   "notes": {
-    "short": "A thermometer measuring outside environment.",
-    "registers": "Default streaming interval is 1s."
+    "short": "A thermometer measuring outside or inside environment."
   },
   "classIdentifier": 337754823,
   "enums": {
@@ -20,9 +19,7 @@
       "members": {
         "Outdoor": 1,
         "Indoor": 2,
-        "Body": 3,
-        "HeatProbe": 4,
-        "Thermocouple": 5
+        "Body": 3
       }
     }
   },
@@ -31,7 +28,7 @@
       "kind": "ro",
       "name": "status_code",
       "identifier": 259,
-      "description": "Reports the current state or error status of the device. ``code`` is a standardized value from \nthe Jacdac status/error codes. ``vendor_code`` is any vendor specific error code describing the device\nstate. This report is typically not queried, when a device has an error, it will typically\nadd this report in frame along with the announce packet.",
+      "description": "Reports the current state or error status of the device. ``code`` is a standardized value from \nthe Jacdac status/error codes. ``vendor_code`` is any vendor specific error code describing the device\nstate. This report is typically not queried, when a device has an error, it will typically\nadd this report in frame along with the announce packet. If a service implements this register,\nit should also support the ``status_code_changed`` event defined below.",
       "fields": [
         {
           "name": "code",
@@ -243,7 +240,7 @@
       "packFormat": "u32"
     }
   ],
-  "source": "# Thermometer\n\n    identifier: 0x1421bac7\n    extends: _sensor\n    tags: environment\n\nA thermometer measuring outside environment.\n\n## Registers\n\nDefault streaming interval is 1s.\n\n    ro temperature: i22.10 °C { preferred_interval=1000 } @ reading\n\nThe temperature.\n\n    const min_temperature: i22.10 °C @ min_reading\n\nLowest temperature that can be reported.\n\n    const max_temperature: i22.10 °C @ max_reading\n\nHighest temperature that can be reported.\n\n    ro temperature_error: u22.10 °C  @ reading_error\n\nThe real temperature is between `temperature - temperature_error` and `temperature + temperature_error`.\n\n    enum Variant: u32 {\n        Outdoor = 1,\n        Indoor = 2,\n        Body = 3,\n        HeatProbe = 4,\n        Thermocouple = 5,\n    }\n    const variant: Variant @ variant\n\nSpecifies the type of thermometer.\n",
+  "source": "# Thermometer\n\n    identifier: 0x1421bac7\n    extends: _sensor\n    tags: environment\n\nA thermometer measuring outside or inside environment.\n\n## Registers\n\n    ro temperature: i22.10 °C { preferred_interval=1000 } @ reading\n\nThe temperature.\n\n    const min_temperature: i22.10 °C @ min_reading\n\nLowest temperature that can be reported.\n\n    const max_temperature: i22.10 °C @ max_reading\n\nHighest temperature that can be reported.\n\n    ro temperature_error: u22.10 °C  @ reading_error\n\nThe real temperature is between `temperature - temperature_error` and `temperature + temperature_error`.\n\n    enum Variant: u32 {\n        Outdoor = 1,\n        Indoor = 2,\n        Body = 3,\n    }\n    const variant: Variant @ variant\n\nSpecifies the type of thermometer.\n",
   "tags": [
     "environment"
   ]

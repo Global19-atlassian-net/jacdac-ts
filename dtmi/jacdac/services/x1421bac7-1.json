@@ -2,7 +2,7 @@
   "@type": "Interface",
   "@id": "dtmi:jacdac:services:x1421bac7;1",
   "displayName": "Thermometer",
-  "description": "A thermometer measuring outside environment.",
+  "description": "A thermometer measuring outside or inside environment.",
   "contents": [
     {
       "@type": "Telemetry",
@@ -74,16 +74,6 @@
           "name": "body",
           "displayName": "Body",
           "enumValue": 3
-        },
-        {
-          "name": "heatProbe",
-          "displayName": "HeatProbe",
-          "enumValue": 4
-        },
-        {
-          "name": "thermocouple",
-          "displayName": "Thermocouple",
-          "enumValue": 5
         }
       ]
     }
