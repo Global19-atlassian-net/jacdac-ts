@@ -54,13 +54,13 @@ function MDXContent(_ref) {
   return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__["mdx"])(MDXLayout, Object.assign({}, layoutProps, props, {
     components: components,
     mdxType: "MDXLayout"
-  }), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__["mdx"])("h1", {
+  }), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__["mdx"])("h2", {
     "id": "packet-inspector",
     "style": {
       "position": "relative"
     }
   }, Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__["mdx"])("a", Object.assign({
-    parentName: "h1"
+    parentName: "h2"
   }, {
     "href": "#packet-inspector",
     "aria-label": "packet inspector permalink",
@@ -89,4 +89,4 @@ MDXContent.isMDXComponent = true;
 /***/ })
 
 }]);
-//# sourceMappingURL=component---src-pages-tools-packet-inspector-mdx-b19a7c49dfbe417a50f9.js.map
+//# sourceMappingURL=component---src-pages-tools-packet-inspector-mdx-e5c4e820cde1c3948fdc.js.map

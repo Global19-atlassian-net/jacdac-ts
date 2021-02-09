@@ -36,13 +36,13 @@ function MDXContent(_ref) {
   return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__["mdx"])(MDXLayout, Object.assign({}, layoutProps, props, {
     components: components,
     mdxType: "MDXLayout"
-  }), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__["mdx"])("h1", {
+  }), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__["mdx"])("h2", {
     "id": "packet-player",
     "style": {
       "position": "relative"
     }
   }, Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__["mdx"])("a", Object.assign({
-    parentName: "h1"
+    parentName: "h2"
   }, {
     "href": "#packet-player",
     "aria-label": "packet player permalink",
@@ -163,4 +163,4 @@ var Page = function Page(_ref) {
 /***/ })
 
 }]);
-//# sourceMappingURL=component---src-pages-tools-player-mdx-982bb87f8a1a96fe9865.js.map
+//# sourceMappingURL=component---src-pages-tools-player-mdx-3cd060c29568998d2b61.js.map
