@@ -98,6 +98,12 @@ function MDXContent(_ref) {
   }, Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__["mdx"])("a", Object.assign({
     parentName: "li"
   }, {
+    "href": "/jacdac-ts/tools/player"
+  }), "packet player"), ", record traces in your logic analyser and replay them to test your services"), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__["mdx"])("li", {
+    parentName: "ul"
+  }, Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__["mdx"])("a", Object.assign({
+    parentName: "li"
+  }, {
     "href": "/jacdac-ts/tools/model-uploader"
   }), "model uploader"), ", deploy Machine Learning models (like TensorFlow Lite)"), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__["mdx"])("li", {
     parentName: "ul"
@@ -116,14 +122,14 @@ function MDXContent(_ref) {
   }, Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__["mdx"])("a", Object.assign({
     parentName: "li"
   }, {
-    "href": "/jacdac-ts/tools/azure-device-twin-designer"
-  }), "Azure device twin designer"), ", interface interface to design a device or digital twins"), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__["mdx"])("li", {
+    "href": "/jacdac-ts/tools/settings-manager"
+  }), "settings manager"), ", create or update settings in devices"), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__["mdx"])("li", {
     parentName: "ul"
   }, Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__["mdx"])("a", Object.assign({
     parentName: "li"
   }, {
-    "href": "/jacdac-ts/tools/settings-manager"
-  }), "Settings manager"), ", create or update settings in devices")), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__["mdx"])("h2", {
+    "href": "tools/led-animation-designer"
+  }), "LED Animation Designer"), ", design LED animation patterns for LED strips or module status light.")), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__["mdx"])("h2", {
     "id": "multitool",
     "style": {
       "position": "relative"
@@ -198,6 +204,75 @@ function MDXContent(_ref) {
   }, {
     "href": "/jacdac-ts/tools/proto-test"
   }), "protocol test"), ", a low leve protocol tester")), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__["mdx"])("h2", {
+    "id": "integration-points",
+    "style": {
+      "position": "relative"
+    }
+  }, Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__["mdx"])("a", Object.assign({
+    parentName: "h2"
+  }, {
+    "href": "#integration-points",
+    "aria-label": "integration points permalink",
+    "className": "anchor before"
+  }), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__["mdx"])("svg", Object.assign({
+    parentName: "a"
+  }, {
+    "aria-hidden": "true",
+    "focusable": "false",
+    "height": "16",
+    "version": "1.1",
+    "viewBox": "0 0 16 16",
+    "width": "16"
+  }), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__["mdx"])("path", Object.assign({
+    parentName: "svg"
+  }, {
+    "fillRule": "evenodd",
+    "d": "M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"
+  })))), "Integration points"), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__["mdx"])("ul", null, Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__["mdx"])("li", {
+    parentName: "ul"
+  }, Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__["mdx"])("a", Object.assign({
+    parentName: "li"
+  }, {
+    "href": "/jacdac-ts/tools/azure-device-twin-designer"
+  }), "Azure device twin designer"), ", interface interface to design a device or digital twins"), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__["mdx"])("li", {
+    parentName: "ul"
+  }, Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__["mdx"])("a", Object.assign({
+    parentName: "li"
+  }, {
+    "href": "/jacdac-ts/tools/edge-impulse"
+  }), "Edge Impulse"), ", use Jacdac to inject data and download models into ", Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__["mdx"])("a", Object.assign({
+    parentName: "li"
+  }, {
+    "href": "https://studio.edgeimpulse.com",
+    "target": "_blank",
+    "rel": "nofollow noopener noreferrer"
+  }), "https://studio.edgeimpulse.com")), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__["mdx"])("li", {
+    parentName: "ul"
+  }, Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__["mdx"])("a", Object.assign({
+    parentName: "li"
+  }, {
+    "href": "/jacdac-ts/tools/jupyterlab"
+  }), "JupyterLab"), ", an extension in JupyterLab, Jupyter's next-generation notebook interface."), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__["mdx"])("li", {
+    parentName: "ul"
+  }, Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__["mdx"])("a", Object.assign({
+    parentName: "li"
+  }, {
+    "href": "/jacdac-ts/tools/makecode"
+  }), "MakeCode"), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__["mdx"])("ul", {
+    parentName: "li"
+  }, Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__["mdx"])("li", {
+    parentName: "ul"
+  }, Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__["mdx"])("a", Object.assign({
+    parentName: "li"
+  }, {
+    "href": "/jacdac-ts/tools/makecode-editor-extension"
+  }), "MakeCode Editor Extension")), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__["mdx"])("li", {
+    parentName: "ul"
+  }, Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__["mdx"])("a", Object.assign({
+    parentName: "li"
+  }, {
+    "href": "/jacdac-ts/tools/makecode-sim"
+  }), "MakeCode Simulator"))))), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__["mdx"])("h2", {
     "id": "vanilla-javascript",
     "style": {
       "position": "relative"
@@ -290,4 +365,4 @@ var Page = function Page(_ref) {
 /***/ })
 
 }]);
-//# sourceMappingURL=component---src-pages-tools-mdx-8575eb656e6716538bd6.js.map
+//# sourceMappingURL=component---src-pages-tools-mdx-08172df404c8ea5fb106.js.map
