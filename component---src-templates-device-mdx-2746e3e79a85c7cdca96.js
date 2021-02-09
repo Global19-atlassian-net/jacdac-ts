@@ -264,7 +264,6 @@ function MDXContent(_ref) {
     mdxType: "MDXLayout"
   }), Object(esm["mdx"])(DeviceSpecification, {
     device: Object(jdom_spec["e" /* deviceSpecificationFromIdentifier */])(props.pageContext.node.id),
-    showSource: true,
     mdxType: "DeviceSpecification"
   }), Object(esm["mdx"])("h2", {
     "id": "see-also",
@@ -329,4 +328,4 @@ var Page = function Page(_ref) {
 /***/ })
 
 }]);
-//# sourceMappingURL=component---src-templates-device-mdx-94c790dc3e600334f40e.js.map
+//# sourceMappingURL=component---src-templates-device-mdx-2746e3e79a85c7cdca96.js.map
