@@ -27,7 +27,7 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-7d0b01292034450ad036.js"
+    "url": "webpack-runtime-e60dd1b0287b3a37ff59.js"
   },
   {
     "url": "framework-f19c6c9d119c831d5054.js"
@@ -40,7 +40,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "c31add1f1d9f22f62d41ff5d157b554b"
+    "revision": "db6a8a7f32ed8a2ee4df4838d1ea0f6e"
   },
   {
     "url": "static/webfonts/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"
@@ -60,7 +60,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2214083594.json",
-    "revision": "64dd2099988e053b6aca9c2d07013a7d"
+    "revision": "75cce17c04c5430b59fc8f034614034e"
   },
   {
     "url": "page-data/sq/d/2270080012.json",
@@ -72,7 +72,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2744294623.json",
-    "revision": "32eb8e5fad14a28b307df8adfbb99514"
+    "revision": "fde26be34ff64f1a0365c831c5802c36"
   },
   {
     "url": "page-data/sq/d/3159585216.json",
@@ -88,7 +88,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "d45e3e1cf81447381421acfc9b390812"
+    "revision": "d54ff1a3bfb89a645f171baf61c4cd33"
   },
   {
     "url": "polyfill-541f5afd2cddfffa2584.js"
@@ -470,130 +470,130 @@ self.__precacheManifest = [
     "revision": "2b1aba2949ceb24f37cb390f0e267aab"
   },
   {
-    "url": "component---src-pages-tools-azure-device-twin-designer-mdx-e61bc64a38e329c3c656.js"
+    "url": "component---src-pages-tools-azure-device-twin-designer-mdx-ec0ef989b52abdf87a06.js"
   },
   {
     "url": "page-data/tools/azure-device-twin-designer/page-data.json",
-    "revision": "31b793b39a1528a8c48024a68b91416c"
+    "revision": "81de1deee008b1ff4e2042c2434be47d"
   },
   {
-    "url": "component---src-pages-tools-azure-iot-hub-mdx-8b5fd2918ddc2b00051b.js"
+    "url": "component---src-pages-tools-azure-iot-hub-mdx-731af07ad5e318b4ce5c.js"
   },
   {
     "url": "page-data/tools/azure-iot-hub/page-data.json",
-    "revision": "2bd1339ffd8dd4418f67b6bbed5cf2a7"
+    "revision": "aec5bdbbdb7a971a45988b0a3d89f9b2"
   },
   {
-    "url": "component---src-pages-tools-collector-mdx-cb187c3b2de17f5d2a06.js"
+    "url": "component---src-pages-tools-collector-mdx-adf4eb58424f4685669d.js"
   },
   {
     "url": "page-data/tools/collector/page-data.json",
-    "revision": "e794e1985cb4abf4e3496339193577da"
+    "revision": "933265cc372a5cb001f6e54a1b98a01f"
   },
   {
-    "url": "component---src-pages-tools-device-designer-mdx-b3ea9c4addccbcb61ce2.js"
+    "url": "component---src-pages-tools-device-designer-mdx-50417b763c43fa6e9b80.js"
   },
   {
     "url": "page-data/tools/device-designer/page-data.json",
-    "revision": "66cd6bdc9d2f1fbd86502191a9295844"
+    "revision": "0302fd912d5f6cf35b982f1155235edf"
   },
   {
-    "url": "component---src-pages-tools-edge-impulse-mdx-fb959a17012ecb02220f.js"
+    "url": "component---src-pages-tools-edge-impulse-mdx-804d5ac67af22e253ee4.js"
   },
   {
     "url": "page-data/tools/edge-impulse/page-data.json",
-    "revision": "20770f6e99039931d28f33722c1efaef"
+    "revision": "c3c74787990c35b7e7f7febc9a3fa891"
   },
   {
-    "url": "component---src-pages-tools-jupyterlab-mdx-6491dca47faac4c17188.js"
+    "url": "component---src-pages-tools-jupyterlab-mdx-2158928e544af713f03d.js"
   },
   {
     "url": "page-data/tools/jupyterlab/page-data.json",
-    "revision": "312c3ecfca56255b9067d034380928cd"
+    "revision": "e22e4cfa0b340bde5117188b1ef48238"
   },
   {
-    "url": "component---src-pages-tools-led-animation-designer-mdx-3905bcce05d810985b79.js"
+    "url": "component---src-pages-tools-led-animation-designer-mdx-041e6a823e01ac1541db.js"
   },
   {
     "url": "page-data/tools/led-animation-designer/page-data.json",
-    "revision": "a3897cb8f319fde40ffaaa0fe6ef7dac"
+    "revision": "2b2311994a71c1cf1479bbad0634b8dc"
   },
   {
-    "url": "component---src-pages-tools-makecode-mdx-2c606c16f440cb333d77.js"
+    "url": "component---src-pages-tools-makecode-mdx-d0f2be42922339a877b6.js"
   },
   {
     "url": "page-data/tools/makecode/page-data.json",
-    "revision": "e885527c451bd0f2811d8db1b2baf2d7"
+    "revision": "c686649272314237951222a920e2d313"
   },
   {
-    "url": "component---src-pages-tools-makecode-editor-extension-mdx-2366c8007ccd44e82758.js"
+    "url": "component---src-pages-tools-makecode-editor-extension-mdx-50b375721e88cc5b61cd.js"
   },
   {
     "url": "page-data/tools/makecode-editor-extension/page-data.json",
-    "revision": "c3a55030623c794540240dbb2a688b43"
+    "revision": "7f819fc43722a1b5032c2656ab16ecd8"
   },
   {
-    "url": "component---src-pages-tools-makecode-sim-mdx-553ccbbd5171bf0468af.js"
+    "url": "component---src-pages-tools-makecode-sim-mdx-c620f232213e3f1ebe0e.js"
   },
   {
     "url": "page-data/tools/makecode-sim/page-data.json",
-    "revision": "a1d778395f76551022fba9a553460057"
+    "revision": "323935fa6c6963e8c613855f1654dda2"
   },
   {
-    "url": "component---src-pages-tools-model-uploader-mdx-00a034ad017a8977425f.js"
+    "url": "component---src-pages-tools-model-uploader-mdx-e5f9cd2ea1ff673f3334.js"
   },
   {
     "url": "page-data/tools/model-uploader/page-data.json",
     "revision": "9ddb900248cea078ba4afc550e5bcbad"
   },
   {
-    "url": "component---src-pages-tools-packet-inspector-mdx-e5c4e820cde1c3948fdc.js"
+    "url": "component---src-pages-tools-packet-inspector-mdx-1a9fb0314859165333ff.js"
   },
   {
     "url": "page-data/tools/packet-inspector/page-data.json",
     "revision": "e4c5f02829e3e5b7d2da09a0f84db0d9"
   },
   {
-    "url": "component---src-pages-tools-player-mdx-3cd060c29568998d2b61.js"
+    "url": "component---src-pages-tools-player-mdx-cbb7df36b181c5a3b18f.js"
   },
   {
     "url": "page-data/tools/player/page-data.json",
     "revision": "dd6362aa46899da6df2587bb69331e39"
   },
   {
-    "url": "component---src-pages-tools-prototest-mdx-48ec82d91770fbfdc16a.js"
+    "url": "component---src-pages-tools-prototest-mdx-16d89e644f48afebf3aa.js"
   },
   {
     "url": "page-data/tools/prototest/page-data.json",
-    "revision": "30fcf463a7302b11d835d8661a819759"
+    "revision": "0b60846b1397231e25409de852ed30a6"
   },
   {
-    "url": "component---src-pages-tools-role-manager-mdx-8351bce2678135dc059b.js"
+    "url": "component---src-pages-tools-role-manager-mdx-3399f8b610f59e80e433.js"
   },
   {
     "url": "page-data/tools/role-manager/page-data.json",
-    "revision": "ed7a773a99c2175eedfd824d5267b275"
+    "revision": "fc5e83313d9722b02452e1baa81f0447"
   },
   {
-    "url": "component---src-pages-tools-service-editor-mdx-e0082df9f8a9ab97e44b.js"
+    "url": "component---src-pages-tools-service-editor-mdx-46c0f878dc1ca2b778f2.js"
   },
   {
     "url": "page-data/tools/service-editor/page-data.json",
-    "revision": "6b3bc36acb849b191b503691aacc759b"
+    "revision": "457949a471557e32f4e79b400bcd4fbf"
   },
   {
-    "url": "component---src-pages-tools-settings-manager-mdx-e3081b3af545d69c1106.js"
+    "url": "component---src-pages-tools-settings-manager-mdx-78cb4ba2941bd7c7ad4e.js"
   },
   {
     "url": "page-data/tools/settings-manager/page-data.json",
-    "revision": "e8a0f54c2af652160ea7a82d8c437276"
+    "revision": "0682dbd0de85cea6d0cec00adada635a"
   },
   {
-    "url": "component---src-pages-tools-updater-mdx-9e163720275b4643efdc.js"
+    "url": "component---src-pages-tools-updater-mdx-bddfc671ff8759645f2a.js"
   },
   {
     "url": "page-data/tools/updater/page-data.json",
-    "revision": "935aad6b9d3f53102cfdf707a92ff98e"
+    "revision": "395d5bdbbb8a1cccd0f49b5e4ea58cf7"
   },
   {
     "url": "manifest.webmanifest",
