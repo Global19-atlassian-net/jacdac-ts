@@ -9,7 +9,7 @@
       "name": "heading",
       "@id": "dtmi:jacdac:x15b7b9bf:ro:heading;1",
       "description": "The heading with respect to the magnetic north.",
-      "schema": "integer"
+      "schema": "float"
     },
     {
       "@type": "Property",
@@ -24,7 +24,7 @@
       "name": "heading_error",
       "@id": "dtmi:jacdac:x15b7b9bf:ro:headingerror;1",
       "description": "Error on the heading reading",
-      "schema": "integer"
+      "schema": "float"
     }
   ],
   "extends": [

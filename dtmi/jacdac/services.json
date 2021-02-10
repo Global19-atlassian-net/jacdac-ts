@@ -942,7 +942,7 @@
         "name": "heading",
         "@id": "dtmi:jacdac:x15b7b9bf:ro:heading;1",
         "description": "The heading with respect to the magnetic north.",
-        "schema": "integer"
+        "schema": "float"
       },
       {
         "@type": "Property",
@@ -957,7 +957,7 @@
         "name": "heading_error",
         "@id": "dtmi:jacdac:x15b7b9bf:ro:headingerror;1",
         "description": "Error on the heading reading",
-        "schema": "integer"
+        "schema": "float"
       }
     ],
     "extends": [
@@ -1411,7 +1411,7 @@
     "@type": "Interface",
     "@id": "dtmi:jacdac:services:x18b05b6a;1",
     "displayName": "HID Keyboard",
-    "description": "Control a HID keyboard. This service cannot be simulated.\n\nThe codes for the key (selectors) is defined in the [HID Keyboard\nspecification](https://usb.org/sites/default/files/hut1_21.pdf), chapter 10 Keyboard/Keypad Page, page 81.\n\nThe device keeps tracks of the key state and is able to clear it all with the clear command.",
+    "description": "Control a HID keyboard. \n\nThis service cannot be simulated.\n\nThe codes for the key (selectors) is defined in the [HID Keyboard\nspecification](https://usb.org/sites/default/files/hut1_21.pdf), chapter 10 Keyboard/Keypad Page, page 81.\n\nThe device keeps tracks of the key state and is able to clear it all with the clear command.",
     "contents": [],
     "extends": [
       "dtmi:jacdac:services:x1ffffff3;1"
@@ -1503,7 +1503,7 @@
     "@type": "Interface",
     "@id": "dtmi:jacdac:services:x1885dc1c;1",
     "displayName": "HID Mouse",
-    "description": "Control a HID mouse. This service cannot be simulated.",
+    "description": "Controls a HID mouse. \n\nThis service cannot be simulated.",
     "contents": [],
     "extends": [
       "dtmi:jacdac:services:x1ffffff3;1"
@@ -1614,7 +1614,7 @@
     "@type": "Interface",
     "@id": "dtmi:jacdac:services:x1e6ecaf2;1",
     "displayName": "Illuminance",
-    "description": "Detects **illuminance**, the amount of light falling onto a given surface area.\nNote that this is different from **luminance**, the amount of light that passes through, emits from, or reflects off an object.",
+    "description": "Detects the amount of light falling onto a given surface area.\n\nNote that this is different from *luminance*, the amount of light that passes through, emits from, or reflects off an object.",
     "contents": [
       {
         "@type": "Telemetry",
@@ -2474,7 +2474,7 @@
     "@type": "Interface",
     "@id": "dtmi:jacdac:services:x140f9a78;1",
     "displayName": "Model Runner",
-    "description": "Run machine learning models.\nOnly models with a single input tensor and a single output tensor are supported at the moment.\nInput is provided by Sensor Aggregator service on the same device.\nMultiple instances of this service may be present, if more than one model format is supported by a device.",
+    "description": "Runs machine learning models.\n\nOnly models with a single input tensor and a single output tensor are supported at the moment.\nInput is provided by Sensor Aggregator service on the same device.\nMultiple instances of this service may be present, if more than one model format is supported by a device.",
     "contents": [
       {
         "@type": "Property",
@@ -3513,7 +3513,7 @@
     "@type": "Interface",
     "@id": "dtmi:jacdac:services:x1789f0a2;1",
     "displayName": "Random Number Generator",
-    "description": "A service that generates random numbers using entropy sourced from physical processes.\n\nThis typically uses a cryptographical pseudo-random number generator (for example [Fortuna](https://en.wikipedia.org/wiki/Fortuna_(PRNG))),\nwhich is periodically re-seeded with entropy coming from some hardware source.",
+    "description": "Generates random numbers using entropy sourced from physical processes.\n\nThis typically uses a cryptographical pseudo-random number generator (for example [Fortuna](https://en.wikipedia.org/wiki/Fortuna_(PRNG))),\nwhich is periodically re-seeded with entropy coming from some hardware source.",
     "contents": [
       {
         "@type": "Property",
