@@ -40,7 +40,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "0381d5be44d9c42730fb580e77b6970f"
+    "revision": "1ae549ed35e317e2dd80a9d995277812"
   },
   {
     "url": "static/webfonts/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2"
@@ -60,7 +60,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2214083594.json",
-    "revision": "f24951583fec421e58951155afa307c1"
+    "revision": "c207778f7aa8c0cbf540fe076e0ca87e"
   },
   {
     "url": "page-data/sq/d/2270080012.json",
@@ -72,7 +72,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/2744294623.json",
-    "revision": "2d3a995bfa20df7bdb8cdf2e640cb37f"
+    "revision": "66738438add2a16042511f3379c7af8a"
   },
   {
     "url": "page-data/sq/d/3159585216.json",
@@ -88,7 +88,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "bba5ba49698280dc4ef003bd12d6c962"
+    "revision": "ab9a82489a427a88c256bdc74d30e591"
   },
   {
     "url": "polyfill-541f5afd2cddfffa2584.js"
@@ -220,6 +220,10 @@ self.__precacheManifest = [
   {
     "url": "page-data/services/arcadegamepad/page-data.json",
     "revision": "58495fa8596a7a7479330cb7113df144"
+  },
+  {
+    "url": "page-data/services/barcodereader/page-data.json",
+    "revision": "8a792c5afc462052c95e5d335a015c75"
   },
   {
     "url": "page-data/services/barometer/page-data.json",
@@ -689,7 +693,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/jacdac-ts/app-e607d3e82764acaed24b.js`))) {
+  if (!resources || !(await caches.match(`/jacdac-ts/app-a4225636e97059dcb863.js`))) {
     return await fetch(event.request)
   }
 
