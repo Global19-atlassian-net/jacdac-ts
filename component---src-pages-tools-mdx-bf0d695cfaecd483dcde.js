@@ -128,7 +128,7 @@ function MDXContent(_ref) {
   }, Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__["mdx"])("a", Object.assign({
     parentName: "li"
   }, {
-    "href": "tools/led-animation-designer"
+    "href": "/jacdac-ts/tools/led-animation-designer"
   }), "LED Animation Designer"), ", design LED animation patterns for LED strips or module status light.")), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__["mdx"])("h2", {
     "id": "multitool",
     "style": {
@@ -157,7 +157,7 @@ function MDXContent(_ref) {
   })))), "Multitool"), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__["mdx"])("p", null, "The ", Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__["mdx"])("a", Object.assign({
     parentName: "p"
   }, {
-    "href": "https://microsoft.github.io/jacdac-multitool/",
+    "href": "https://github.com/microsoft/jacdac-multitool",
     "target": "_blank",
     "rel": "nofollow noopener noreferrer"
   }), "jacdac multitool"), "\nallows to explore and monitor the Jacdac bus from a ", Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__["mdx"])("a", Object.assign({
@@ -202,7 +202,7 @@ function MDXContent(_ref) {
   }, Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__["mdx"])("a", Object.assign({
     parentName: "li"
   }, {
-    "href": "/jacdac-ts/tools/proto-test"
+    "href": "/jacdac-ts/tools/prototest"
   }), "protocol test"), ", a low leve protocol tester")), Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__["mdx"])("h2", {
     "id": "integration-points",
     "style": {
@@ -365,4 +365,4 @@ var Page = function Page(_ref) {
 /***/ })
 
 }]);
-//# sourceMappingURL=component---src-pages-tools-mdx-08172df404c8ea5fb106.js.map
+//# sourceMappingURL=component---src-pages-tools-mdx-bf0d695cfaecd483dcde.js.map
